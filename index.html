@@ -180,7 +180,23 @@ li {
                 Copy Bitcoin Address
             </button>
 
-            <div class="success" id="message"></div>
+            <div class="success" id="message"></div><div class="success" id="message"></div>
+
+<h3>Scan QR Code</h3>
+
+<div id="qrcode" style="margin: 20px auto;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+<script>
+new QRCode(document.getElementById("qrcode"), {
+    text: "166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ",
+    width: 256,
+    height: 256
+});
+</script>
+
+</div>
 
         </div>
 
