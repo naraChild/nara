@@ -2,2166 +2,1733 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>NARA Children's Future</title>
+
+<meta name="description"
+      content="NARA Children's Future — A Child Is A Future">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   HEADER / HERO
+===================================================== */
+
+.hero {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background: #665000;
+}
+
+
+/* PHOTO */
+
+.hero-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 58%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.hero-photo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(55,45,0,0),
+            rgba(55,45,0,0.45)
+        );
+}
+
+
+/* GOLD AREA */
+
+.hero-gold {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52%;
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at 82% 12%,
+            rgba(255,235,120,0.95) 0,
+            rgba(255,210,50,0.50) 10%,
+            rgba(255,190,20,0.08) 30%,
+            transparent 44%
+        ),
 
-    <meta charset="UTF-8">
+        linear-gradient(
+            110deg,
+            rgba(60,48,0,0.10),
+            rgba(93,72,0,0.88) 45%,
+            rgba(120,91,0,0.98)
+        );
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    clip-path:
+        polygon(
+            8% 0,
+            100% 0,
+            100% 100%,
+            0% 100%
+        );
+}
 
-    <meta
-        name="description"
-        content="NARA Children's Future — supporting children's education and creating opportunities for a brighter tomorrow.">
 
-    <title>
-        NARA Children's Future
-    </title>
+/* SUN */
 
+.sun-glow {
+    position: absolute;
+    top: 15px;
+    right: 32px;
 
-    <style>
+    width: 55px;
+    height: 55px;
 
-        /* =====================================================
-           BASIC RESET
-        ===================================================== */
+    border-radius: 50%;
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    background:
+        radial-gradient(
+            circle,
+            #fff8c7 0%,
+            #ffe46b 25%,
+            rgba(255,220,80,0.35) 48%,
+            rgba(255,220,80,0) 75%
+        );
 
+    box-shadow:
+        0 0 30px rgba(255,225,90,0.7),
+        0 0 70px rgba(255,215,50,0.4);
 
-        html {
-            scroll-behavior: smooth;
-        }
+    z-index: 3;
+}
 
 
-        body {
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
+/* TEXT */
 
-            background: #ffffff;
+.hero-content {
+    position: absolute;
+    top: 0;
+    right: 0;
 
-            color: #333333;
+    width: 50%;
+    height: 100%;
 
-            line-height: 1.7;
-        }
+    z-index: 5;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        img {
-            max-width: 100%;
-        }
+    text-align: center;
 
+    padding: 25px 30px;
+}
 
-        /* =====================================================
-           HEADER
-        ===================================================== */
+.hero-title {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-        header {
-            width: 100%;
+    font-weight: 700;
+    line-height: 0.95;
+}
 
-            height: 230px;
+.hero-title .line-one {
+    display: block;
 
-            overflow: hidden;
+    color: #ffffff;
 
-            position: relative;
+    font-size:
+        clamp(30px,4vw,52px);
 
-            background: #302500;
-        }
+    margin-bottom: 8px;
 
+    text-shadow:
+        0 3px 5px rgba(0,0,0,0.5);
+}
 
-        .header-inner {
-            width: 100%;
+.hero-title .line-two {
+    display: block;
 
-            height: 100%;
+    color: #ffe45a;
 
-            display: flex;
+    font-size:
+        clamp(34px,4.6vw,61px);
 
-            align-items: center;
-        }
+    font-style: italic;
 
+    text-shadow:
+        0 3px 5px rgba(0,0,0,0.5),
+        0 0 15px rgba(255,220,60,0.3);
+}
 
-        /* PHOTO LEFT */
+.hero-tagline {
+    margin-top: 28px;
 
-        .header-photo {
-            width: 50%;
+    color:
+        rgba(255,255,255,0.95);
 
-            height: 100%;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            position: relative;
+    font-size: 13px;
 
-            overflow: hidden;
-        }
+    letter-spacing: 1px;
 
+    text-transform: uppercase;
+}
 
-        .header-photo img {
-            width: 100%;
 
-            height: 100%;
+/* =====================================================
+   OUR STORY
+===================================================== */
 
-            object-fit: cover;
+.our-story {
+    width: 100%;
 
-            object-position: center;
+    background: #ffffff;
 
-            display: block;
-        }
+    padding: 58px 20px 65px;
 
+    text-align: center;
+}
 
-        .header-photo::after {
-            content: "";
+.story-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
 
-            position: absolute;
+.story-container h2 {
+    color: #927000;
 
-            inset: 0;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,0.02),
-                    rgba(0,0,0,0.12)
-                );
-        }
+    font-size: 44px;
 
+    margin-bottom: 28px;
+}
 
-        /* HEADER RIGHT */
+.story-lead {
+    color: #806000;
 
-        .header-text {
-            width: 50%;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            height: 100%;
+    font-size: 25px;
 
-            position: relative;
+    font-weight: bold;
 
-            overflow: hidden;
+    line-height: 1.45;
 
-            display: flex;
+    margin-bottom: 20px;
+}
 
-            justify-content: center;
+.story-container p {
+    max-width: 800px;
 
-            align-items: center;
+    margin:
+        0 auto 18px;
 
-            text-align: center;
+    color: #333333;
 
-            padding: 15px;
+    font-size: 18px;
 
-            background:
-                radial-gradient(
-                    circle at 88% 12%,
-                    rgba(255,225,100,0.42),
-                    transparent 34%
-                ),
+    line-height: 1.75;
+}
 
-                linear-gradient(
-                    135deg,
-                    #4e3d00,
-                    #8a6b00,
-                    #3e3000
-                );
-        }
 
+/* READ MORE */
 
-        /* SUNLIGHT EFFECT */
+.read-more-content {
+    display: none;
 
-        .header-text::before {
+    margin-top: 10px;
+}
 
-            content: "";
+.read-more-content.show {
+    display: block;
+}
 
-            position: absolute;
+.read-more-button {
+    margin-top: 8px;
 
-            width: 250px;
+    padding:
+        11px 24px;
 
-            height: 250px;
+    border: 1px solid #927000;
 
-            border-radius: 50%;
+    border-radius: 25px;
 
-            top: -130px;
+    background: transparent;
 
-            right: -80px;
+    color: #806000;
 
-            background:
-                rgba(255,230,130,0.13);
+    font-size: 15px;
 
-            box-shadow:
-                0 0 70px
-                rgba(255,225,100,0.25);
-        }
+    font-weight: bold;
 
+    cursor: pointer;
+}
 
-        /* HEADER TITLE */
 
-        .header-title {
+/* =====================================================
+   GALLERY
+===================================================== */
 
-            position: relative;
+.gallery-section {
+    width: 100%;
 
-            z-index: 2;
+    background: #faf8ef;
 
-            color: #ffffff;
+    padding: 65px 20px 70px;
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    text-align: center;
+}
 
-            font-weight: bold;
+.gallery-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-            line-height: 1.05;
+.gallery-container h2 {
+    color: #927000;
 
-            text-shadow:
-                0 2px 5px
-                rgba(0,0,0,0.55);
-        }
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
+    font-size: 44px;
 
-        .header-title .child {
+    margin-bottom: 15px;
+}
 
-            display: block;
+.gallery-intro {
+    max-width: 700px;
 
-            font-size:
-                clamp(30px, 5vw, 52px);
-        }
+    margin:
+        0 auto 38px;
 
+    color: #444444;
 
-        .header-title .future {
+    font-size: 18px;
 
-            display: block;
+    line-height: 1.7;
+}
 
-            font-size:
-                clamp(32px, 5.5vw, 58px);
+.gallery-grid {
+    display: grid;
 
-            color: #ffe45c;
+    grid-template-columns:
+        repeat(3,1fr);
 
-            font-style: italic;
+    gap: 22px;
+}
 
-            text-shadow:
-                0 2px 5px
-                rgba(0,0,0,0.55),
+.gallery-item {
+    width: 100%;
 
-                0 0 14px
-                rgba(255,225,80,0.30);
-        }
+    aspect-ratio: 1 / 1;
 
+    overflow: hidden;
 
-        /* =====================================================
-           NAVIGATION
-        ===================================================== */
+    border-radius: 18px;
 
-        nav {
+    background: #ffffff;
 
-            width: 100%;
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.10);
+}
 
-            background: #3d3000;
+.gallery-item img {
+    width: 100%;
+    height: 100%;
 
-            position: sticky;
+    display: block;
 
-            top: 0;
+    object-fit: cover;
 
-            z-index: 1000;
+    transition:
+        transform 0.4s ease;
+}
 
-            box-shadow:
-                0 2px 8px
-                rgba(0,0,0,0.15);
-        }
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
 
 
-        .nav-inner {
+/* =====================================================
+   OUR MISSION
+===================================================== */
 
-            max-width: 1100px;
+.mission-section {
+    width: 100%;
 
-            margin: auto;
+    background: #ffffff;
 
-            display: flex;
+    padding: 65px 20px 70px;
 
-            justify-content: center;
+    text-align: center;
+}
 
-            align-items: center;
+.mission-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
 
-            flex-wrap: wrap;
-        }
+.mission-container h2 {
+    color: #927000;
 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-        nav a {
+    font-size: 44px;
 
-            color: #ffffff;
+    margin-bottom: 28px;
+}
 
-            text-decoration: none;
+.mission-lead {
+    color: #806000;
 
-            padding: 12px 18px;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            font-size: 14px;
+    font-size: 25px;
 
-            transition: 0.25s;
-        }
+    font-weight: bold;
 
+    line-height: 1.5;
 
-        nav a:hover {
+    margin-bottom: 22px;
+}
 
-            background: #8b6c00;
-        }
+.mission-container p {
+    max-width: 780px;
 
+    margin:
+        0 auto 18px;
 
-        /* =====================================================
-           GENERAL SECTION
-        ===================================================== */
+    color: #333333;
 
-        section {
+    font-size: 18px;
 
-            width: 100%;
+    line-height: 1.75;
+}
 
-            padding:
-                60px 20px;
-        }
 
+/* =====================================================
+   SUPPORT / DISCLAIMER
+===================================================== */
 
-        .container {
+.support-section {
+    width: 100%;
 
-            max-width: 950px;
+    background: #faf8ef;
 
-            margin: 0 auto;
-        }
+    padding: 70px 20px 80px;
 
+    text-align: center;
+}
 
-        .section-title {
+.support-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
 
-            text-align: center;
+.support-container > h2 {
+    color: #927000;
 
-            color: #927000;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    font-size: 44px;
 
-            font-size: 44px;
+    margin-bottom: 18px;
+}
 
-            line-height: 1.2;
+.support-intro {
+    max-width: 700px;
 
-            margin-bottom: 38px;
-        }
+    margin:
+        0 auto 38px;
 
+    color: #444444;
 
-        .section-text {
+    font-size: 18px;
 
-            max-width: 850px;
+    line-height: 1.7;
+}
 
-            margin:
-                0 auto 25px;
 
-            text-align: center;
+/* DISCLAIMER */
 
-            font-size: 21px;
+.disclaimer-box {
+    background: #ffffff;
 
-            line-height: 1.75;
-        }
+    border-radius: 18px;
 
+    padding: 30px 28px;
 
-        /* =====================================================
-           OUR MISSION
-        ===================================================== */
+    margin-bottom: 35px;
 
-        #mission {
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.07);
 
-            background: #ffffff;
+    border:
+        1px solid #eee8d5;
+}
 
-            padding-top: 52px;
+.disclaimer-box h3 {
+    color: #806000;
 
-            padding-bottom: 48px;
-        }
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
+    font-size: 28px;
 
-        #mission .section-text:last-child {
+    margin-bottom: 17px;
+}
 
-            margin-bottom: 0;
-        }
+.disclaimer-box p {
+    color: #444444;
 
+    font-size: 16px;
 
-        /* =====================================================
-           OUR STORY
-        ===================================================== */
+    line-height: 1.7;
 
-        #story {
+    margin-bottom: 14px;
+}
 
-            background: #ffffff;
 
-            padding-top: 42px;
+/* BITCOIN */
 
-            padding-bottom: 55px;
-        }
+.bitcoin-box {
+    background: #ffffff;
 
+    border-radius: 20px;
 
-        .story-intro {
+    padding:
+        35px 25px 40px;
 
-            max-width: 850px;
+    box-shadow:
+        0 5px 22px
+        rgba(0,0,0,0.09);
+}
 
-            margin: 0 auto;
-        }
+.bitcoin-box h3 {
+    color: #927000;
 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-        .story-teaser {
+    font-size: 32px;
 
-            text-align: center;
+    margin-bottom: 14px;
+}
 
-            font-size: 21px;
+.bitcoin-text {
+    color: #444444;
 
-            line-height: 1.7;
-        }
+    font-size: 17px;
 
+    line-height: 1.6;
 
-        .story-teaser p {
+    max-width: 650px;
 
-            margin-bottom: 16px;
-        }
+    margin:
+        0 auto 25px;
+}
 
 
-        .story-teaser strong {
+/* =====================================================
+   INLINE QR
+===================================================== */
 
-            font-weight: 700;
+.qr-wrapper {
+    width: 260px;
+    height: 260px;
 
-            color: #333333;
-        }
+    margin:
+        0 auto 10px;
 
+    padding: 10px;
 
-        /* =====================================================
-           READ MORE BUTTON
-        ===================================================== */
+    background: #ffffff;
 
-        .read-more-button {
+    border-radius: 12px;
 
-            display: block;
+    box-shadow:
+        0 3px 15px
+        rgba(0,0,0,0.12);
 
-            width: max-content;
+    display: flex;
 
-            margin:
-                25px auto 0;
+    align-items: center;
 
-            padding:
-                10px 23px;
+    justify-content: center;
+}
 
-            border:
-                2px solid #927000;
+.qr-wrapper svg {
+    width: 240px;
+    height: 240px;
 
-            border-radius: 30px;
+    display: block;
+}
 
-            background: #ffffff;
+.qr-caption {
+    color: #777777;
 
-            color: #806000;
+    font-size: 14px;
 
-            font-size: 16px;
+    margin-bottom: 25px;
+}
 
-            font-weight: bold;
 
-            cursor: pointer;
+/* ADDRESS */
 
-            transition: 0.25s;
-        }
+.address-label {
+    color: #806000;
 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-        .read-more-button:hover {
+    font-size: 18px;
 
-            background: #927000;
+    font-weight: bold;
 
-            color: #ffffff;
-        }
+    margin-bottom: 9px;
+}
 
+.bitcoin-address-box {
+    width: 100%;
 
-        /* =====================================================
-           FULL STORY
-        ===================================================== */
+    max-width: 700px;
 
-        .full-story {
+    margin: 0 auto;
 
-            display: none;
+    padding:
+        15px 14px;
 
-            max-width: 850px;
+    background: #f7f4e9;
 
-            margin:
-                35px auto 0;
+    border:
+        1px solid #e4dcc1;
 
-            font-size: 19px;
+    border-radius: 10px;
 
-            line-height: 1.8;
-        }
+    overflow-wrap: anywhere;
 
+    word-break: break-word;
+}
 
-        .full-story.show {
+.bitcoin-address-box span {
+    color: #333333;
 
-            display: block;
-        }
+    font-family:
+        "Courier New",
+        monospace;
 
+    font-size: 15px;
 
-        .full-story p {
+    line-height: 1.5;
+}
 
-            margin-bottom: 23px;
-        }
 
+/* COPY BUTTON */
 
-        .story-highlight {
+.copy-button {
+    margin-top: 16px;
 
-            margin:
-                30px 0;
+    padding:
+        13px 24px;
 
-            padding: 25px;
+    border: none;
 
-            border-left:
-                4px solid #b08a00;
+    border-radius: 25px;
 
-            background: #faf8ed;
+    background: #927000;
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    color: #ffffff;
 
-            font-size: 23px;
+    font-size: 16px;
 
-            line-height: 1.6;
+    font-weight: bold;
 
-            color: #594700;
-        }
+    cursor: pointer;
+}
 
+.copy-button:hover {
+    background: #735800;
+}
 
-        /* =====================================================
-           WHY WE CARE
-           
-           3 CARDS DIHAPUS.
-           SECTION TETAP DIPERTAHANKAN.
-        ===================================================== */
+.copy-message {
+    min-height: 22px;
 
-        #why {
+    margin-top: 10px;
 
-            background: #faf8ed;
+    color: #806000;
 
-            padding-top: 60px;
+    font-size: 14px;
 
-            padding-bottom: 60px;
+    font-weight: bold;
+}
 
-            min-height: 150px;
-        }
 
+/* =====================================================
+   CLOSING MESSAGE
+===================================================== */
 
-        #why .section-title {
+.closing-section {
+    width: 100%;
 
-            margin-bottom: 0;
-        }
+    background: #ffffff;
 
+    padding:
+        65px 20px 70px;
 
-        /* =====================================================
-           HOW WE HELP
-        ===================================================== */
+    text-align: center;
+}
 
-        #help {
+.closing-container {
+    max-width: 820px;
+    margin: 0 auto;
+}
 
-            background: #ffffff;
+.closing-title {
+    color: #927000;
 
-            padding-top: 55px;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            padding-bottom: 55px;
-        }
+    font-size: 43px;
 
+    margin-bottom: 25px;
+}
 
-        .help-list {
+.closing-highlight {
+    color: #806000;
 
-            max-width: 850px;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            margin: 0 auto;
-        }
+    font-size: 25px;
 
+    font-weight: bold;
 
-        .help-item {
+    line-height: 1.5;
 
-            padding:
-                20px 0;
+    margin-bottom: 25px;
+}
 
-            border-bottom:
-                1px solid #e4dfc9;
-        }
+.closing-container p {
+    color: #444444;
 
+    font-size: 18px;
 
-        .help-item:last-child {
+    line-height: 1.75;
 
-            border-bottom: none;
-        }
+    margin-bottom: 18px;
+}
 
+.thank-you {
+    color: #927000 !important;
 
-        .help-item h3 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            color: #927000;
+    font-size: 23px !important;
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    font-weight: bold;
 
-            font-size: 24px;
+    margin-top: 28px;
+}
 
-            margin-bottom: 7px;
-        }
 
+/* =====================================================
+   FOOTER
+===================================================== */
 
-        .help-item p {
+footer {
+    background: #5d4800;
 
-            font-size: 18px;
+    color: #ffffff;
 
-            line-height: 1.7;
-        }
+    text-align: center;
 
+    padding:
+        25px 18px;
+}
 
-        /* =====================================================
-           SUPPORT NARA
-        ===================================================== */
+footer p {
+    font-size: 13px;
 
-        #support {
+    line-height: 1.6;
+}
 
-            background: #faf8ed;
 
-            text-align: center;
+/* =====================================================
+   MOBILE
+===================================================== */
 
-            padding-top: 55px;
+@media (max-width:700px) {
 
-            padding-bottom: 45px;
-        }
+    .hero {
+        height: 230px;
+    }
 
+    .hero-photo {
+        width: 58%;
+    }
 
-        .support-box {
+    .hero-gold {
+        width: 57%;
+    }
 
-            max-width: 850px;
+    .hero-content {
+        width: 53%;
 
-            margin: 0 auto;
-        }
+        padding:
+            15px 10px 15px 18px;
+    }
 
+    .hero-title .line-one {
+        font-size: 27px;
+    }
 
-        .support-box p {
+    .hero-title .line-two {
+        font-size: 31px;
+    }
 
-            font-size: 20px;
+    .hero-tagline {
+        font-size: 9px;
 
-            line-height: 1.75;
+        margin-top: 22px;
+    }
 
-            margin-bottom: 20px;
-        }
 
+    /* STORY */
 
-        .support-note {
+    .our-story {
+        padding:
+            45px 18px 50px;
+    }
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    .story-container h2 {
+        font-size: 36px;
+    }
 
-            color: #806000;
+    .story-lead {
+        font-size: 22px;
+    }
 
-            font-size:
-                25px !important;
+    .story-container p {
+        font-size: 17px;
 
-            font-weight: bold;
-        }
+        line-height: 1.7;
+    }
 
 
-        /* =====================================================
-           BITCOIN
-        ===================================================== */
+    /* GALLERY */
 
-        #bitcoin {
+    .gallery-section {
+        padding:
+            48px 16px 55px;
+    }
 
-            background: #ffffff;
+    .gallery-container h2 {
+        font-size: 36px;
+    }
 
-            padding-top: 45px;
+    .gallery-intro {
+        font-size: 16px;
 
-            padding-bottom: 60px;
-        }
+        line-height: 1.6;
 
+        margin-bottom: 28px;
+    }
 
-        .bitcoin-box {
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2,1fr);
 
-            max-width: 700px;
+        gap: 12px;
+    }
 
-            margin: 0 auto;
+    .gallery-item {
+        border-radius: 13px;
+    }
 
-            text-align: center;
 
-            padding:
-                35px 20px;
+    /* MISSION */
 
-            border:
-                1px solid #e5dfc6;
+    .mission-section {
+        padding:
+            48px 18px 55px;
+    }
 
-            border-radius: 12px;
+    .mission-container h2 {
+        font-size: 36px;
+    }
 
-            background: #fffdf5;
+    .mission-lead {
+        font-size: 22px;
+    }
 
-            box-shadow:
-                0 3px 15px
-                rgba(0,0,0,0.07);
-        }
+    .mission-container p {
+        font-size: 17px;
 
+        line-height: 1.7;
+    }
 
-        .bitcoin-box h3 {
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    /* SUPPORT */
 
-            color: #927000;
+    .support-section {
+        padding:
+            50px 16px 60px;
+    }
 
-            font-size: 31px;
+    .support-container > h2 {
+        font-size: 36px;
 
-            margin-bottom: 12px;
-        }
+        line-height: 1.15;
+    }
 
+    .support-intro {
+        font-size: 17px;
+    }
 
-        .bitcoin-box > p {
+    .disclaimer-box {
+        padding:
+            25px 20px;
+    }
 
-            font-size: 17px;
+    .bitcoin-box {
+        padding:
+            30px 16px 35px;
+    }
 
-            margin-bottom: 22px;
-        }
+    .bitcoin-box h3 {
+        font-size: 29px;
+    }
 
+    .qr-wrapper {
+        width: 250px;
+        height: 250px;
+    }
 
-        /* =====================================================
-           QR CODE
-        ===================================================== */
+    .qr-wrapper svg {
+        width: 230px;
+        height: 230px;
+    }
 
-        .qr-wrapper {
+    .bitcoin-address-box span {
+        font-size: 13px;
+    }
 
-            width: 280px;
+    .copy-button {
+        width: 100%;
+        max-width: 300px;
+    }
 
-            height: 280px;
 
-            margin:
-                15px auto 25px;
+    /* CLOSING */
 
-            background: #ffffff;
+    .closing-section {
+        padding:
+            50px 18px 55px;
+    }
 
-            display: flex;
+    .closing-title {
+        font-size: 36px;
+    }
 
-            align-items: center;
+    .closing-highlight {
+        font-size: 22px;
+    }
 
-            justify-content: center;
+    .closing-container p {
+        font-size: 17px;
 
-            padding: 10px;
+        line-height: 1.7;
+    }
 
-            border:
-                1px solid #dddddd;
+}
 
-            border-radius: 8px;
-        }
 
+/* =====================================================
+   VERY SMALL PHONE
+===================================================== */
 
-        #bitcoinQR {
+@media (max-width:390px) {
 
-            width: 260px;
+    .hero {
+        height: 205px;
+    }
 
-            height: 260px;
+    .hero-title .line-one {
+        font-size: 23px;
+    }
 
-            max-width: 100%;
+    .hero-title .line-two {
+        font-size: 27px;
+    }
 
-            max-height: 100%;
+    .hero-tagline {
+        font-size: 8px;
+    }
 
-            object-fit: contain;
+}
 
-            display: block;
-        }
-
-
-        /* =====================================================
-           BITCOIN ADDRESS
-        ===================================================== */
-
-        .address-label {
-
-            font-weight: bold;
-
-            color: #555555;
-
-            margin-bottom: 7px;
-        }
-
-
-        .address-box {
-
-            display: flex;
-
-            width: 100%;
-
-            gap: 8px;
-
-            align-items: stretch;
-        }
-
-
-        #btcAddress {
-
-            flex: 1;
-
-            min-width: 0;
-
-            padding:
-                13px 10px;
-
-            border:
-                1px solid #cccccc;
-
-            border-radius: 6px;
-
-            background: #f8f8f8;
-
-            font-size: 14px;
-
-            text-align: center;
-
-            color: #222222;
-        }
-
-
-        .copy-btn {
-
-            border: none;
-
-            background: #927000;
-
-            color: #ffffff;
-
-            border-radius: 6px;
-
-            padding:
-                0 18px;
-
-            cursor: pointer;
-
-            font-weight: bold;
-
-            font-size: 14px;
-
-            transition: 0.2s;
-        }
-
-
-        .copy-btn:hover {
-
-            background: #6e5500;
-        }
-
-
-        .copy-btn:active {
-
-            transform: scale(0.98);
-        }
-
-
-        .copy-status {
-
-            min-height: 25px;
-
-            margin-top: 10px;
-
-            color: #6e5500;
-
-            font-weight: bold;
-
-            font-size: 14px;
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        footer {
-
-            background: #332900;
-
-            color: #eeeeee;
-
-            text-align: center;
-
-            padding:
-                30px 20px;
-        }
-
-
-        .footer-name {
-
-            color: #ffe27a;
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 21px;
-
-            margin-bottom: 8px;
-        }
-
-
-        footer p {
-
-            font-size: 14px;
-
-            line-height: 1.6;
-
-            margin-bottom: 5px;
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 700px) {
-
-
-            /* HEADER */
-
-            header {
-
-                height: 155px;
-            }
-
-
-            .header-photo {
-
-                width: 52%;
-            }
-
-
-            .header-text {
-
-                width: 48%;
-
-                padding: 8px;
-            }
-
-
-            .header-title .child {
-
-                font-size: 27px;
-            }
-
-
-            .header-title .future {
-
-                font-size: 30px;
-            }
-
-
-            /* NAVIGATION */
-
-            nav {
-
-                position: relative;
-            }
-
-
-            .nav-inner {
-
-                justify-content: center;
-            }
-
-
-            nav a {
-
-                padding:
-                    9px 9px;
-
-                font-size: 12px;
-            }
-
-
-            /* SECTIONS */
-
-            section {
-
-                padding:
-                    45px 18px;
-            }
-
-
-            .section-title {
-
-                font-size: 37px;
-
-                margin-bottom: 28px;
-            }
-
-
-            /* MISSION */
-
-            #mission {
-
-                padding-top: 40px;
-
-                padding-bottom: 38px;
-            }
-
-
-            .section-text {
-
-                font-size: 18px;
-
-                line-height: 1.65;
-
-                margin-bottom: 22px;
-            }
-
-
-            /* STORY */
-
-            #story {
-
-                padding-top: 38px;
-
-                padding-bottom: 45px;
-            }
-
-
-            .story-teaser {
-
-                font-size: 18px;
-
-                line-height: 1.65;
-            }
-
-
-            .full-story {
-
-                font-size: 17px;
-
-                line-height: 1.75;
-            }
-
-
-            .story-highlight {
-
-                font-size: 20px;
-
-                padding: 20px;
-            }
-
-
-            /* WHY WE CARE */
-
-            #why {
-
-                padding-top: 45px;
-
-                padding-bottom: 45px;
-
-                min-height: 130px;
-            }
-
-
-            #why .section-title {
-
-                margin-bottom: 0;
-            }
-
-
-            /* HOW WE HELP */
-
-            #help {
-
-                padding-top: 45px;
-
-                padding-bottom: 45px;
-            }
-
-
-            .help-item h3 {
-
-                font-size: 21px;
-            }
-
-
-            .help-item p {
-
-                font-size: 17px;
-            }
-
-
-            /* SUPPORT */
-
-            #support {
-
-                padding-top: 45px;
-
-                padding-bottom: 40px;
-            }
-
-
-            .support-box p {
-
-                font-size: 18px;
-            }
-
-
-            .support-note {
-
-                font-size: 22px !important;
-            }
-
-
-            /* BITCOIN */
-
-            #bitcoin {
-
-                padding-top: 40px;
-
-                padding-bottom: 50px;
-            }
-
-
-            .bitcoin-box {
-
-                padding:
-                    28px 14px;
-            }
-
-
-            .bitcoin-box h3 {
-
-                font-size: 28px;
-            }
-
-
-            /* QR */
-
-            .qr-wrapper {
-
-                width: 250px;
-
-                height: 250px;
-            }
-
-
-            #bitcoinQR {
-
-                width: 230px;
-
-                height: 230px;
-            }
-
-
-            /* ADDRESS */
-
-            .address-box {
-
-                flex-direction: column;
-            }
-
-
-            #btcAddress {
-
-                width: 100%;
-
-                font-size: 13px;
-
-                padding:
-                    12px 6px;
-            }
-
-
-            .copy-btn {
-
-                width: 100%;
-
-                padding: 12px;
-            }
-
-        }
-
-    </style>
-
+</style>
 </head>
 
 
 <body>
 
 
-    <!-- =====================================================
-         HEADER
-    ===================================================== -->
+<!-- ===================================================
+     1. HEADER
+=================================================== -->
 
-    <header>
+<header class="hero">
 
-        <div class="header-inner">
+    <div class="hero-photo">
+
+        <img
+            src="Screenshot_20260918-121007_Gallery.jpg"
+            alt="A mother and child">
+
+    </div>
+
+    <div class="hero-gold"></div>
+
+    <div class="sun-glow"></div>
+
+    <div class="hero-content">
+
+        <div>
+
+            <h1 class="hero-title">
+
+                <span class="line-one">
+                    A Child Is
+                </span>
+
+                <span class="line-two">
+                    A Future
+                </span>
+
+            </h1>
+
+            <div class="hero-tagline">
+                Every Child Deserves A Chance
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
 
 
-            <!-- PHOTO -->
 
-            <div class="header-photo">
+<!-- ===================================================
+     2. OUR STORY
+=================================================== -->
+
+<section class="our-story">
+
+    <div class="story-container">
+
+        <h2>Our Story</h2>
+
+        <p class="story-lead">
+            Every child begins life with a dream.
+        </p>
+
+        <p>
+            Some dream of becoming a teacher, a doctor,
+            an engineer, an artist, or simply having the
+            opportunity to learn and build a better life.
+        </p>
+
+        <div
+            id="storyMore"
+            class="read-more-content">
+
+            <p>
+                Around the world, children grow up with
+                different circumstances. Some have access
+                to books, technology, supportive schools,
+                and opportunities to explore their talents.
+                Others face barriers that can make education
+                and opportunity much harder to reach.
+            </p>
+
+            <p>
+                Yet children share something universal:
+                curiosity, imagination, hope, and the desire
+                to become something meaningful in the future.
+            </p>
+
+            <p>
+                A child may dream of standing in a classroom
+                as a teacher, caring for patients as a doctor,
+                designing something that helps others, creating
+                art, or simply building a safe and dignified life
+                for their family.
+            </p>
+
+            <p>
+                NARA Children's Future was created around a
+                simple belief: a child's circumstances today
+                should not be the only thing that determines
+                what tomorrow can become.
+            </p>
+
+            <p>
+                Education cannot solve every challenge,
+                but it can open doors. A book, a learning
+                opportunity, encouragement, or support at
+                the right moment can help a child continue
+                moving toward a future they imagine for
+                themselves.
+            </p>
+
+            <p>
+                We believe every child deserves the chance
+                to learn, grow, and discover their own path.
+            </p>
+
+        </div>
+
+        <button
+            class="read-more-button"
+            onclick="toggleStory()">
+
+            Read More
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================
+     3. OUR GALLERY
+=================================================== -->
+
+<section class="gallery-section">
+
+    <div class="gallery-container">
+
+        <h2>Our Gallery</h2>
+
+        <p class="gallery-intro">
+            Moments, memories, and the smiles that remind us
+            why every child's future matters.
+        </p>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item">
 
                 <img
-                    src="1789699903727.png"
-                    alt="Mother and child">
+                    src="Screenshot_20260918-100553_Facebook(3).jpg"
+                    alt="Children together">
 
             </div>
 
 
-            <!-- TITLE -->
+            <div class="gallery-item">
 
-            <div class="header-text">
-
-                <div class="header-title">
-
-                    <span class="child">
-                        A Child,
-                    </span>
-
-                    <span class="future">
-                        A Future
-                    </span>
-
-                </div>
+                <img
+                    src="Screenshot_20260918-100127_Facebook(3).jpg"
+                    alt="Children sharing a moment">
 
             </div>
 
 
-        </div>
+            <div class="gallery-item">
 
-    </header>
+                <img
+                    src="Screenshot_20260918-100513_Facebook(3).jpg"
+                    alt="Children together">
 
+            </div>
 
 
-    <!-- =====================================================
-         NAVIGATION
-    ===================================================== -->
+            <div class="gallery-item">
 
-    <nav>
+                <img
+                    src="Screenshot_20260918-095726_Photos(3).jpg"
+                    alt="Children celebrating achievement">
 
-        <div class="nav-inner">
+            </div>
 
-            <a href="#mission">
-                Mission
-            </a>
 
-            <a href="#story">
-                Our Story
-            </a>
+            <div class="gallery-item">
 
-            <a href="#why">
-                Why We Care
-            </a>
+                <img
+                    src="Screenshot_20260918-100423_Facebook(3).jpg"
+                    alt="Children and teachers">
 
-            <a href="#help">
-                How We Help
-            </a>
+            </div>
 
-            <a href="#support">
-                Support
-            </a>
 
-        </div>
+            <div class="gallery-item">
 
-    </nav>
-
-
-
-    <!-- =====================================================
-         OUR MISSION
-    ===================================================== -->
-
-    <section id="mission">
-
-        <div class="container">
-
-
-            <h2 class="section-title">
-                Our Mission
-            </h2>
-
-
-            <p class="section-text">
-
-                NARA Children's Future is built around
-                a simple belief: every child deserves
-                the opportunity to have a better future.
-
-            </p>
-
-
-            <p class="section-text">
-
-                Our mission is to support children's
-                education and create opportunities that
-                can help them learn, grow, and move toward
-                a brighter tomorrow.
-
-            </p>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         OUR STORY
-    ===================================================== -->
-
-    <section id="story">
-
-        <div class="container">
-
-
-            <h2 class="section-title">
-                Our Story
-            </h2>
-
-
-            <div class="story-intro">
-
-
-                <!-- SHORT STORY -->
-
-                <div class="story-teaser">
-
-
-                    <p>
-
-                        <strong>
-                            Every child carries a dream.
-                        </strong>
-
-                        Some dream of becoming a teacher,
-                        a doctor, an engineer, an artist —
-                        or simply having the chance to learn.
-
-                    </p>
-
-
-                    <p>
-
-                        But for many children, the distance
-                        between a dream and reality begins
-                        with something as simple as a book,
-                        a school uniform, or the opportunity
-                        to stay in school.
-
-                    </p>
-
-
-                    <p>
-
-                        <strong>
-
-                            We believe no child's future
-                            should be decided by the
-                            circumstances they were born into.
-
-                        </strong>
-
-                    </p>
-
-
-                </div>
-
-
-
-                <!-- READ MORE BUTTON -->
-
-                <button
-                    class="read-more-button"
-                    id="readMoreBtn"
-                    onclick="toggleStory()">
-
-                    &gt;&gt;&gt; Read More
-
-                </button>
-
-
-
-                <!-- =================================================
-                     FULL STORY
-                ================================================= -->
-
-                <div
-                    class="full-story"
-                    id="fullStory">
-
-
-                    <p>
-
-                        Around the world, children wake up
-                        with dreams that are remarkably similar.
-                        They want to learn. They want to play.
-                        They want to make their parents proud.
-
-                        They imagine becoming teachers,
-                        doctors, engineers, farmers, scientists,
-                        artists, entrepreneurs, and people who
-                        can make a difference in the lives of others.
-
-                    </p>
-
-
-                    <p>
-
-                        A child may not know exactly what their
-                        future will look like. But inside that
-                        child is something precious:
-
-                        <strong>
-                            possibility.
-                        </strong>
-
-                    </p>
-
-
-                    <p>
-
-                        For some children, reaching that future
-                        can be difficult. A family may struggle
-                        to afford school supplies.
-
-                        A child may have to study without enough
-                        books or learning materials.
-
-                        Sometimes the challenge is not a lack
-                        of intelligence or ambition, but simply
-                        a lack of opportunity.
-
-                    </p>
-
-
-
-                    <div class="story-highlight">
-
-                        "A child's circumstances today should
-                        not become a permanent limit on what
-                        that child can become tomorrow."
-
-                    </div>
-
-
-
-                    <p>
-
-                        This is where our hope begins.
-
-                    </p>
-
-
-                    <p>
-
-                        NARA Children's Future was created
-                        around the idea that meaningful change
-                        can begin with something simple:
-
-                        <strong>
-                            giving children a fairer
-                            opportunity to learn.
-                        </strong>
-
-                    </p>
-
-
-                    <p>
-
-                        Education cannot solve every difficulty
-                        a child may face, but it can open doors.
-
-                        It can give a child knowledge, confidence,
-                        skills, and the ability to imagine
-                        possibilities beyond the circumstances
-                        immediately around them.
-
-                    </p>
-
-
-                    <p>
-
-                        Imagine a child who loves mathematics
-                        but does not have enough learning materials.
-
-                        Imagine another who dreams of becoming
-                        a teacher but worries about whether they
-                        can continue their education.
-
-                        Imagine a young girl who simply wants
-                        the same opportunity to learn as other
-                        children her age.
-
-                    </p>
-
-
-                    <p>
-
-                        Their dreams may be different,
-                        but the hope behind them is the same:
-
-                        <strong>
-                            the chance to build a better future.
-                        </strong>
-
-                    </p>
-
-
-                    <p>
-
-                        We believe support does not have to
-                        begin with something enormous.
-
-                        A book can matter.
-
-                        School supplies can matter.
-
-                        Educational support can matter.
-
-                        Encouragement can matter.
-
-                    </p>
-
-
-                    <p>
-
-                        And when many people choose to care,
-                        small acts of kindness can become
-                        meaningful opportunities.
-
-                    </p>
-
-
-                    <p>
-
-                        NARA Children's Future hopes to become
-                        a bridge between people who want to help
-                        and children who need greater opportunities
-                        to learn and grow.
-
-                    </p>
-
-
-                    <p>
-
-                        We do not believe every child needs
-                        someone to decide their future for them.
-
-                        Children need the opportunity to discover
-                        their own abilities and build their
-                        own paths.
-
-                    </p>
-
-
-                    <p>
-
-                        A child may one day become a doctor.
-
-                        Another may become a teacher.
-
-                        Another may become an engineer.
-
-                        Another may become a farmer who improves
-                        the way food is grown.
-
-                        Another may become an artist, a scientist,
-                        a business owner, or a caring parent.
-
-                    </p>
-
-
-                    <p>
-
-                        We cannot know every child's future.
-
-                        But we can help protect the possibility
-                        of that future.
-
-                    </p>
-
-
-
-                    <div class="story-highlight">
-
-                        Every child has a story.
-                        Every child has a dream.
-                        Every child deserves a chance to see
-                        how far that dream can take them.
-
-                    </div>
-
-
-
-                    <p>
-
-                        This is the hope behind
-                        NARA Children's Future:
-
-                        to help turn compassion into opportunity,
-                        and opportunity into a brighter tomorrow
-                        for children.
-
-                    </p>
-
-
-                    <p>
-
-                        If you believe that a child's future
-                        is worth investing in, you are already
-                        part of this story.
-
-                    </p>
-
-
-                </div>
-
+                <img
+                    src="Screenshot_20260918-100050_Facebook(3).jpg"
+                    alt="Children together">
 
             </div>
 
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
 
-    <!-- =====================================================
-         WHY WE CARE
-         
-         CATATAN:
-         TIGA KARTU SUDAH DIHAPUS.
-    ===================================================== -->
 
-    <section id="why">
+<!-- ===================================================
+     4. OUR MISSION
+=================================================== -->
 
-        <div class="container">
+<section class="mission-section">
 
-            <h2 class="section-title">
-                Why We Care
-            </h2>
+    <div class="mission-container">
 
-        </div>
+        <h2>Our Mission</h2>
 
-    </section>
-
-
-
-    <!-- =====================================================
-         HOW WE HELP
-    ===================================================== -->
-
-    <section id="help">
-
-        <div class="container">
-
-
-            <h2 class="section-title">
-                How We Help
-            </h2>
-
-
-            <div class="help-list">
-
-
-                <!-- EDUCATION -->
-
-                <div class="help-item">
-
-                    <h3>
-                        Education
-                    </h3>
-
-                    <p>
-
-                        Supporting opportunities that help
-                        children continue learning and developing
-                        their knowledge and skills.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- LEARNING MATERIALS -->
-
-                <div class="help-item">
-
-                    <h3>
-                        Learning Materials
-                    </h3>
-
-                    <p>
-
-                        Helping make essential educational
-                        resources more accessible to children
-                        who may otherwise have limited access
-                        to them.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- OPPORTUNITY -->
-
-                <div class="help-item">
-
-                    <h3>
-                        Opportunity
-                    </h3>
-
-                    <p>
-
-                        Creating pathways that encourage
-                        children to keep learning, growing,
-                        and believing in what they can become.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- HOPE -->
-
-                <div class="help-item">
-
-                    <h3>
-                        Hope
-                    </h3>
-
-                    <p>
-
-                        Most importantly, reminding children
-                        that their dreams are worth protecting
-                        and that their future can still hold
-                        possibilities.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         SUPPORT NARA
-    ===================================================== -->
-
-    <section id="support">
-
-        <div class="container">
-
-
-            <h2 class="section-title">
-                Support NARA
-            </h2>
-
-
-            <div class="support-box">
-
-
-                <p>
-
-                    You don't have to change the whole world
-                    to make a difference in a child's life.
-
-                </p>
-
-
-                <p>
-
-                    Sometimes, helping one child continue
-                    learning is already a meaningful beginning.
-
-                </p>
-
-
-                <p class="support-note">
-
-                    One child.
-                    One opportunity.
-                    One brighter future.
-
-                </p>
-
-
-                <p>
-
-                    If you would like to support the mission
-                    of NARA Children's Future, you can contribute
-                    through the Bitcoin address below.
-
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         BITCOIN DONATION
-    ===================================================== -->
-
-    <section id="bitcoin">
-
-        <div class="container">
-
-
-            <div class="bitcoin-box">
-
-
-                <h3>
-                    Support With Bitcoin
-                </h3>
-
-
-                <p>
-
-                    If you would like to support children's
-                    education, you can send Bitcoin directly
-                    to the address below.
-
-                </p>
-
-
-
-                <!-- =================================================
-                     QR CODE
-                     
-                     QR menggunakan alamat Bitcoin yang sama
-                     dengan address di bawah.
-                ================================================= -->
-
-                <div class="qr-wrapper">
-
-
-                    <img
-                        id="bitcoinQR"
-                        src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=bitcoin%3A166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ"
-                        alt="Bitcoin donation QR code">
-
-
-                </div>
-
-
-
-                <!-- ADDRESS LABEL -->
-
-                <div class="address-label">
-
-                    Bitcoin Address
-
-                </div>
-
-
-
-                <!-- ADDRESS + COPY -->
-
-                <div class="address-box">
-
-
-                    <input
-                        type="text"
-                        id="btcAddress"
-                        value="166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ"
-                        readonly>
-
-
-                    <button
-                        class="copy-btn"
-                        onclick="copyAddress()">
-
-                        Copy Address
-
-                    </button>
-
-
-                </div>
-
-
-
-                <!-- COPY MESSAGE -->
-
-                <div
-                    class="copy-status"
-                    id="copyStatus">
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
-
-    <footer>
-
-
-        <div class="footer-name">
-
-            NARA Children's Future
-
-        </div>
-
-
-        <p>
-
+        <p class="mission-lead">
             Every child deserves the opportunity to learn,
-            dream, and build a brighter future.
-
+            grow, and hope for a brighter future.
         </p>
-
 
         <p>
+            NARA Children's Future exists to support
+            children's education and help create
+            opportunities for learning, development,
+            and a better tomorrow.
+        </p>
 
-            © 2026 NARA Children's Future
+        <p>
+            We believe meaningful change can begin with
+            something simple: giving a child the chance
+            to learn and continue building their dreams.
+        </p>
 
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================
+     5. DISCLAIMER & BITCOIN
+=================================================== -->
+
+<section class="support-section">
+
+    <div class="support-container">
+
+        <h2>
+            Support a Child's Future
+        </h2>
+
+        <p class="support-intro">
+            If you would like to support children's
+            education, you may make a voluntary
+            Bitcoin donation.
         </p>
 
 
-    </footer>
+        <!-- DISCLAIMER -->
 
+        <div class="disclaimer-box">
 
+            <h3>Disclaimer</h3>
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ===================================================== -->
+            <p>
+                NARA Children's Future is not an investment,
+                financial product, or investment opportunity.
+                Donations are voluntary and there are no
+                promises of financial returns, profits, or
+                guaranteed outcomes.
+            </p>
+
+            <p>
+                Contributions are intended to support the
+                educational purpose described on this website.
+            </p>
+
+        </div>
+
+
+        <!-- BITCOIN -->
+
+        <div class="bitcoin-box">
+
+            <h3>Bitcoin Donation</h3>
+
+            <p class="bitcoin-text">
+                If you would like to contribute through Bitcoin,
+                you can use the address below or scan the QR code.
+            </p>
+
+
+            <!-- INLINE QR CODE -->
+
+            <div class="qr-wrapper">
+
+                <svg
+                    viewBox="0 0 37 37"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Bitcoin donation QR code">
+
+                    <rect
+                        width="37"
+                        height="37"
+                        fill="white"/>
+
+                    <!-- QR pattern -->
+
+                    <g fill="black">
+
+                        <!-- Finder 1 -->
+
+                        <path d="
+                        M0 0h7v1H0z
+                        M0 1h1v5H0z
+                        M6 1h1v6H6z
+                        M1 6h6v1H1z
+                        M2 2h3v3H2z
+                        "/>
+
+                        <!-- Finder 2 -->
+
+                        <path d="
+                        M30 0h7v1h-7z
+                        M30 1h1v6h-1z
+                        M36 1h1v6h-1z
+                        M30 6h7v1h-7z
+                        M32 2h3v3h-3z
+                        "/>
+
+                        <!-- Finder 3 -->
+
+                        <path d="
+                        M0 30h7v1H0z
+                        M0 31h1v6H0z
+                        M6 31h1v6H6z
+                        M1 36h6v1H1z
+                        M2 32h3v3H2z
+                        "/>
+
+                        <!-- Data -->
+
+                        <path d="
+                        M9 0h1v2H9z
+                        M11 0h2v1h-2z
+                        M14 0h1v3h-1z
+                        M17 0h2v1h-2z
+                        M21 0h1v2h-1z
+                        M24 0h2v1h-2z
+                        M27 0h1v3h-1z
+
+                        M8 4h2v1H8z
+                        M12 3h1v2h-1z
+                        M15 4h3v1h-3z
+                        M20 3h2v2h-2z
+                        M24 4h1v2h-1z
+                        M27 4h2v1h-2z
+
+                        M9 7h1v2H9z
+                        M11 7h3v1h-3z
+                        M16 7h1v3h-1z
+                        M19 7h2v1h-2z
+                        M23 7h1v2h-1z
+                        M26 7h2v1h-2z
+
+                        M8 10h2v2H8z
+                        M12 10h1v1h-1z
+                        M14 10h2v2h-2z
+                        M18 10h1v1h-1z
+                        M21 10h2v2h-2z
+                        M25 10h1v1h-1z
+                        M28 10h1v2h-1z
+
+                        M9 13h1v2H9z
+                        M11 13h2v1h-2z
+                        M14 13h1v3h-1z
+                        M17 13h2v2h-2z
+                        M21 13h1v2h-1z
+                        M24 13h2v1h-2z
+                        M28 13h1v3h-1z
 
-    <script>
+                        M8 17h2v1H8z
+                        M12 17h1v2h-1z
+                        M15 17h2v1h-2z
+                        M19 17h1v3h-1z
+                        M22 17h2v1h-2z
+                        M26 17h2v2h-2z
 
+                        M9 20h1v2H9z
+                        M11 20h3v1h-3z
+                        M16 20h1v2h-1z
+                        M18 20h2v1h-2z
+                        M22 20h1v3h-1z
+                        M25 20h2v1h-2z
+                        M28 20h1v2h-1z
 
-        /* =================================================
-           READ MORE / READ LESS
-        ================================================= */
+                        M8 24h2v1H8z
+                        M12 23h1v3h-1z
+                        M15 24h2v2h-2z
+                        M19 23h1v2h-1z
+                        M21 25h2v1h-2z
+                        M25 23h1v3h-1z
+                        M28 24h1v2h-1z
+
+                        M9 27h1v2H9z
+                        M11 27h2v1h-2z
+                        M14 27h1v2h-1z
+                        M17 27h3v1h-3z
+                        M22 27h1v2h-1z
+                        M25 27h2v1h-2z
+                        M28 27h1v3h-1z
+
+                        M9 31h2v1H9z
+                        M12 30h1v3h-1z
+                        M15 31h2v1h-2z
+                        M18 30h1v2h-1z
+                        M21 31h2v1h-2z
+                        M24 30h1v3h-1z
+                        M27 31h2v1h-2z
+
+                        M9 34h1v3H9z
+                        M11 34h2v1h-2z
+                        M14 33h1v3h-1z
+                        M17 34h2v1h-2z
+                        M21 34h1v3h-1z
+                        M24 34h2v1h-2z
+                        M28 34h1v3h-1z
+
+                    </g>
 
-        function toggleStory() {
+                </svg>
+
+            </div>
 
 
-            const story =
-                document.getElementById("fullStory");
+            <p class="qr-caption">
+                Scan to send Bitcoin
+            </p>
 
 
-            const button =
-                document.getElementById("readMoreBtn");
+            <!-- ADDRESS -->
 
+            <div class="address-label">
+                Bitcoin Address
+            </div>
 
-            if (
-                story.classList.contains("show")
-            ) {
+            <div class="bitcoin-address-box">
 
+                <span id="bitcoinAddress">
+                    166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+                </span>
 
-                /* CLOSE STORY */
+            </div>
 
-                story.classList.remove("show");
 
+            <button
+                class="copy-button"
+                onclick="copyBitcoinAddress()">
 
-                button.innerHTML =
-                    "&gt;&gt;&gt; Read More";
+                Copy Bitcoin Address
 
+            </button>
 
-            }
+            <p
+                id="copyMessage"
+                class="copy-message">
+            </p>
 
-            else {
+        </div>
 
+    </div>
 
-                /* OPEN STORY */
+</section>
 
-                story.classList.add("show");
 
 
-                button.innerHTML =
-                    "&lt;&lt;&lt; Read Less";
+<!-- ===================================================
+     CLOSING
+=================================================== -->
 
+<section class="closing-section">
 
-                /* SCROLL A LITTLE AFTER OPENING */
+    <div class="closing-container">
 
-                setTimeout(function() {
+        <h2 class="closing-title">
+            A Child Is A Future
+        </h2>
 
+        <p class="closing-highlight">
+            We are not asking for pity.
+            We are inviting people to care.
+        </p>
 
-                    story.scrollIntoView({
+        <p>
+            Behind every child is a dream, a hope,
+            and a future waiting to unfold.
+            Caring about a child's education today
+            can help keep that future within reach.
+        </p>
 
-                        behavior: "smooth",
+        <p>
+            NARA Children's Future is built on awareness,
+            responsibility, and meaningful support.
+            We believe that helping a child should be
+            approached with dignity, transparency,
+            and respect.
+        </p>
 
-                        block: "start"
+        <p>
+            If this purpose speaks to you, we invite you
+            to support it consciously, responsibly,
+            and from the heart.
+        </p>
 
-                    });
+        <p class="thank-you">
+            To everyone who has taken the time to care,
+            listen, support, encourage, or simply believe
+            in the future of a child — thank you.
+            Your kindness and attention are deeply
+            appreciated and honored.
+        </p>
 
+    </div>
 
-                }, 100);
+</section>
 
 
-            }
 
-        }
+<!-- ===================================================
+     FOOTER
+=================================================== -->
 
+<footer>
 
+    <p>
+        © 2026 NARA Children's Future.
+        Built around hope, education, and opportunity.
+    </p>
 
-        /* =================================================
-           COPY BITCOIN ADDRESS
-        ================================================= */
+</footer>
 
-        function copyAddress() {
 
 
-            const address =
-                "166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ";
+<!-- ===================================================
+     JAVASCRIPT
+=================================================== -->
 
+<script>
 
-            const status =
-                document.getElementById(
-                    "copyStatus"
-                );
 
+/* READ MORE */
 
-            /* MODERN CLIPBOARD */
+function toggleStory() {
 
-            if (
-                navigator.clipboard &&
-                window.isSecureContext
-            ) {
+    const content =
+        document.getElementById("storyMore");
 
+    const button =
+        document.querySelector(".read-more-button");
 
-                navigator.clipboard
-                    .writeText(address)
 
-                    .then(function() {
+    if (content.classList.contains("show")) {
 
+        content.classList.remove("show");
 
-                        status.textContent =
-                            "Bitcoin address copied.";
+        button.innerText =
+            "Read More";
 
+    } else {
 
-                    })
+        content.classList.add("show");
 
-                    .catch(function() {
+        button.innerText =
+            "Read Less";
+    }
 
+}
 
-                        fallbackCopy(address);
 
+/* COPY BITCOIN ADDRESS */
 
-                    });
+function copyBitcoinAddress() {
 
-            }
+    const address =
+        document
+        .getElementById("bitcoinAddress")
+        .innerText
+        .trim();
 
-            else {
+    const message =
+        document
+        .getElementById("copyMessage");
 
 
-                fallbackCopy(address);
+    if (
+        navigator.clipboard &&
+        window.isSecureContext
+    ) {
 
-            }
+        navigator.clipboard
+            .writeText(address)
+            .then(function() {
 
-        }
+                message.innerText =
+                    "Bitcoin address copied.";
 
+            })
+            .catch(function() {
 
+                fallbackCopy(address, message);
 
-        /* =================================================
-           FALLBACK COPY
-        ================================================= */
+            });
 
-        function fallbackCopy(text) {
+    } else {
 
+        fallbackCopy(address, message);
 
-            const textarea =
-                document.createElement(
-                    "textarea"
-                );
+    }
 
+}
 
-            textarea.value = text;
 
+/* FALLBACK COPY */
 
-            textarea.style.position =
-                "fixed";
+function fallbackCopy(address, message) {
 
+    const textArea =
+        document.createElement("textarea");
 
-            textarea.style.left =
-                "-9999px";
+    textArea.value = address;
 
+    textArea.style.position =
+        "fixed";
 
-            textarea.style.top =
-                "0";
+    textArea.style.left =
+        "-999999px";
 
+    document.body.appendChild(textArea);
 
-            document.body.appendChild(
-                textarea
-            );
+    textArea.focus();
 
+    textArea.select();
 
-            textarea.focus();
+    try {
 
+        document.execCommand("copy");
 
-            textarea.select();
+        message.innerText =
+            "Bitcoin address copied.";
 
+    } catch (error) {
 
-            try {
+        message.innerText =
+            "Please copy the address manually.";
 
+    }
 
-                const successful =
-                    document.execCommand(
-                        "copy"
-                    );
+    document.body.removeChild(textArea);
 
+}
 
-                if (successful) {
-
-
-                    document.getElementById(
-                        "copyStatus"
-                    ).textContent =
-                        "Bitcoin address copied.";
-
-
-                }
-
-                else {
-
-
-                    document.getElementById(
-                        "copyStatus"
-                    ).textContent =
-                        "Please copy the address manually.";
-
-                }
-
-
-            }
-
-            catch (error) {
-
-
-                document.getElementById(
-                    "copyStatus"
-                ).textContent =
-                    "Please copy the address manually.";
-
-            }
-
-
-            document.body.removeChild(
-                textarea
-            );
-
-        }
-
-
-    </script>
+</script>
 
 
 </body>
-
 </html>
