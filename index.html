@@ -2,1215 +2,682 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NARA Children's Future</title>
 
-<meta name="description"
-content="NARA Children's Future — creating opportunities for children through education and meaningful support.">
-
 <style>
-
-:root{
-  --gold:#e3a000;
-  --gold-dark:#c88900;
-  --yellow:#ffd21c;
-  --black:#17202a;
-  --cream:#fffaf0;
-  --white:#ffffff;
-  --soft:#fff5dc;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--cream);
-  color:var(--black);
-  line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+color:#20252b;
+background:#fffaf0;
+line-height:1.6
 }
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-/* ================= NAVIGATION ================= */
+a{text-decoration:none;color:inherit}
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:white;
-  box-shadow:0 2px 15px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:999;
+background:#fff;
+box-shadow:0 2px 12px #0002
 }
 
-.navbar{
-  max-width:1200px;
-  margin:auto;
-  min-height:70px;
-  padding:10px 25px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+.nav{
+max-width:1200px;
+margin:auto;
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 24px
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
+display:flex;
+align-items:center;
+gap:10px
 }
 
-.logo-mark{
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  background:var(--gold);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-size:24px;
-  font-weight:bold;
+.logo-icon{
+width:46px;
+height:46px;
+border-radius:50%;
+background:#dfa000;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px
 }
 
-.logo-text{
-  font-size:22px;
-  font-weight:800;
-  line-height:1.05;
+.logo-name{
+font-size:22px;
+font-weight:900;
+line-height:1
 }
 
-.logo-text span{
-  display:block;
-  font-size:12px;
-  font-weight:500;
+.logo-name small{
+display:block;
+font-size:12px;
+font-weight:500;
+margin-top:4px
 }
 
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:28px;
-  font-weight:600;
-  font-size:14px;
+.menu{
+display:flex;
+gap:25px;
+align-items:center;
+font-weight:bold;
+font-size:14px
 }
 
-.nav-links a:hover{
-  color:var(--gold-dark);
+.menu a:hover{color:#c88700}
+
+.donate-btn{
+background:#dfa000;
+color:white!important;
+padding:10px 18px;
+border-radius:25px
 }
 
-.donate-nav{
-  background:var(--gold);
-  color:white!important;
-  padding:10px 20px;
-  border-radius:30px;
+.hamburger{
+display:none;
+border:0;
+background:none;
+font-size:32px;
+cursor:pointer
 }
 
-.menu-btn{
-  display:none;
-  border:0;
-  background:none;
-  font-size:30px;
-  cursor:pointer;
-}
-
-
-/* ================= HERO ================= */
-
+/* HERO */
 .hero{
-  width:100%;
-  height:33.33vw;
-  min-height:120px;
-  max-height:480px;
-  position:relative;
-  overflow:hidden;
-  background:#39474d;
+height:33.333vw;
+min-height:120px;
+max-height:430px;
+position:relative;
+overflow:hidden;
+background:#35434a
 }
 
-.hero-photo{
-  position:absolute;
-  left:0;
-  top:0;
-  width:56%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
+.hero img{
+position:absolute;
+left:0;
+top:0;
+width:56%;
+height:100%;
+object-fit:cover
 }
-
-/* Dark atmospheric overlay */
 
 .hero:after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:
-  linear-gradient(
-    90deg,
-    rgba(0,0,0,.03) 0%,
-    rgba(0,0,0,.10) 40%,
-    rgba(15,25,30,.65) 65%,
-    rgba(10,20,25,.82) 100%
-  );
-
-  pointer-events:none;
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+90deg,
+transparent 0%,
+rgba(15,25,30,.10) 38%,
+rgba(15,25,30,.68) 68%,
+rgba(10,18,22,.88) 100%
+)
 }
-
-
-/* Sun */
 
 .sun{
-  position:absolute;
-  right:5%;
-  top:4%;
-
-  width:90px;
-  height:90px;
-
-  border-radius:50%;
-
-  background:rgba(255,210,50,.65);
-
-  filter:blur(18px);
-
-  box-shadow:
-    0 0 40px 20px rgba(255,190,20,.35),
-    0 0 100px 50px rgba(255,190,20,.15);
-
-  z-index:2;
+position:absolute;
+right:5%;
+top:5%;
+width:75px;
+height:75px;
+border-radius:50%;
+background:#ffd21c;
+filter:blur(16px);
+box-shadow:0 0 60px 30px #ffc40055;
+z-index:2
 }
 
-
-/* Hero text */
-
-.hero-content{
-  position:absolute;
-  z-index:3;
-
-  right:6%;
-  top:50%;
-
-  transform:translateY(-50%);
-
-  width:43%;
+.hero-text{
+position:absolute;
+z-index:3;
+right:6%;
+top:50%;
+transform:translateY(-50%);
+width:43%
 }
 
-.hero-child{
-  color:white;
-
-  font-family:Georgia,serif;
-
-  font-size:clamp(28px,5vw,72px);
-
-  font-weight:bold;
-  font-style:italic;
-
-  line-height:.95;
-
-  text-shadow:
-    2px 3px 8px rgba(0,0,0,.5);
+.child{
+color:white;
+font-family:Georgia,serif;
+font-size:clamp(25px,5vw,70px);
+font-weight:bold;
+font-style:italic;
+line-height:1
 }
 
-.hero-future{
-  color:var(--yellow);
-
-  font-family:
-    "Brush Script MT",
-    "Segoe Script",
-    cursive;
-
-  font-size:clamp(40px,6vw,88px);
-
-  font-weight:bold;
-  font-style:italic;
-
-  line-height:.95;
-
-  text-shadow:
-    3px 4px 8px rgba(0,0,0,.6);
+.future{
+color:#ffd21c;
+font-family:"Brush Script MT","Segoe Script",cursive;
+font-size:clamp(38px,6vw,82px);
+font-weight:bold;
+font-style:italic;
+line-height:1;
+text-shadow:3px 4px 8px #0009
 }
 
-.hero-line{
-  width:70%;
-  height:5px;
-
-  background:var(--yellow);
-
-  margin-top:10px;
-
-  transform:rotate(-3deg);
-
-  border-radius:5px;
+.line{
+width:70%;
+height:5px;
+background:#ffd21c;
+margin-top:10px;
+transform:rotate(-3deg);
+border-radius:5px
 }
 
-
-/* ================= GENERAL ================= */
+section{padding:55px 0}
 
 .container{
-  width:min(1100px,92%);
-  margin:auto;
+width:92%;
+max-width:1100px;
+margin:auto
 }
 
-section{
-  padding:55px 0;
+.title{
+color:#c88700;
+font-size:clamp(30px,4vw,46px);
+font-weight:900;
+margin-bottom:10px
 }
 
-.section-title{
-  color:var(--gold-dark);
-
-  font-size:
-    clamp(28px,4vw,45px);
-
-  font-weight:900;
-
-  margin-bottom:8px;
+.text{
+font-size:19px
 }
 
-.section-text{
-  font-size:18px;
-  color:#202830;
+/* STORY */
+.story{
+background:#fff8e9
 }
-
-
-/* ================= MISSION ================= */
-
-#mission{
-  background:white;
-}
-
-
-/* ================= STORY ================= */
 
 .gallery{
-  margin-top:25px;
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:14px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+margin-top:28px
 }
 
-.gallery-item{
-  height:190px;
-
-  overflow:hidden;
-
-  border-radius:12px;
-
-  box-shadow:
-    0 5px 18px rgba(0,0,0,.12);
-
-  background:#ddd;
+.gallery img{
+width:100%;
+height:190px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 5px 18px #0002;
+transition:.3s
 }
 
-.gallery-item img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  transition:.35s;
+.gallery img:hover{
+transform:scale(1.03)
 }
 
-.gallery-item:hover img{
-  transform:scale(1.05);
-}
-
-
-/* ================= IMPACT ================= */
-
-.impact{
-  background:#fff8e8;
-}
-
+/* IMPACT */
 .impact-grid{
-  display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:35px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px
 }
 
-.impact-box{
-  padding:10px 0;
+.subtitle{
+color:#c88700;
+font-size:28px;
+font-weight:900;
+margin-bottom:8px
 }
 
-.impact-title{
-  color:var(--gold-dark);
-
-  font-size:28px;
-
-  font-weight:900;
-
-  margin-bottom:7px;
+/* DONATION */
+.donate-section{
+background:white
 }
 
-.impact-text{
-  font-size:18px;
+.donate-card{
+background:linear-gradient(135deg,#fffaf0,#fff0c9);
+border-radius:20px;
+padding:35px;
+box-shadow:0 8px 30px #0002
 }
 
-
-/* ================= DONATION ================= */
-
-#donate{
-  background:white;
+.donate-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center
 }
 
-.donation-card{
-  background:
-    linear-gradient(
-      135deg,
-      #fffaf0,
-      #fff4d6
-    );
-
-  border-radius:20px;
-
-  padding:35px;
-
-  box-shadow:
-    0 8px 30px rgba(0,0,0,.09);
-}
-
-.donation-grid{
-  display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:40px;
-
-  align-items:center;
-}
-
-.donation-title{
-  color:var(--gold-dark);
-
-  font-size:32px;
-
-  font-weight:900;
-
-  margin-bottom:10px;
-}
-
-.donation-text{
-  font-size:17px;
-
-  margin-bottom:18px;
-}
-
-.btn{
-  display:inline-flex;
-
-  align-items:center;
-  justify-content:center;
-
-  gap:8px;
-
-  border:none;
-
-  cursor:pointer;
-
-  background:var(--gold);
-
-  color:white;
-
-  font-weight:bold;
-
-  padding:13px 24px;
-
-  border-radius:30px;
-
-  font-size:16px;
-
-  transition:.2s;
-}
-
-.btn:hover{
-  background:var(--gold-dark);
-
-  transform:translateY(-2px);
-}
-
-
-/* Wallet */
-
-.wallet-box{
-  background:white;
-
-  border:1px solid #e5d7b5;
-
-  border-radius:14px;
-
-  padding:16px;
+.wallet{
+background:white;
+border:1px solid #e3d3aa;
+border-radius:14px;
+padding:17px;
+margin-top:15px
 }
 
 .wallet-label{
-  font-size:13px;
-
-  font-weight:bold;
-
-  color:#777;
-
-  margin-bottom:5px;
+font-size:12px;
+font-weight:bold;
+color:#777;
+margin-bottom:7px
 }
 
-.wallet-address{
-  font-family:monospace;
-
-  font-size:15px;
-
-  word-break:break-all;
-
-  margin-bottom:12px;
+.address{
+font-family:monospace;
+font-size:14px;
+word-break:break-all;
+margin-bottom:12px
 }
 
-.copy-btn{
-  background:#222;
-
-  color:white;
-
-  border:none;
-
-  padding:9px 15px;
-
-  border-radius:20px;
-
-  cursor:pointer;
+.copy{
+border:0;
+background:#20252b;
+color:white;
+padding:10px 16px;
+border-radius:22px;
+cursor:pointer;
+font-weight:bold
 }
 
-.copy-btn:hover{
-  background:#000;
+.copy:hover{background:#000}
+
+.copy-msg{
+margin-left:8px;
+color:#c88700;
+font-size:13px
 }
 
-
-/* QR */
-
-.qr-box{
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  margin-bottom:15px;
+.qr{
+text-align:center;
+margin-top:20px
 }
 
-.qr-box img{
-  width:190px;
-  height:190px;
-
-  border:10px solid white;
-
-  border-radius:12px;
-
-  box-shadow:
-    0 4px 18px rgba(0,0,0,.12);
+.qr img{
+width:180px;
+height:180px;
+border:8px solid white;
+border-radius:10px
 }
 
-.qr-caption{
-  text-align:center;
-
-  font-weight:bold;
-
-  color:#555;
+.button{
+display:inline-block;
+background:#dfa000;
+color:white;
+padding:12px 22px;
+border-radius:25px;
+font-weight:bold;
+margin-top:12px
 }
 
-
-/* ================= SUPPORT ================= */
-
+/* SUPPORT */
 .support{
-  background:#fffaf0;
+background:#fffaf0
 }
 
 .support-grid{
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:30px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px
 }
 
-.support-box{
-  padding:10px;
+/* FOOTER */
+.thanks{
+background:#202b31;
+color:white;
+text-align:center;
+padding:60px 20px
 }
 
-.support-title{
-  color:var(--gold-dark);
-
-  font-size:22px;
-
-  font-weight:900;
-
-  margin-bottom:8px;
+.thanks h2{
+color:#ffd21c;
+font-family:Georgia,serif;
+font-style:italic;
+font-size:42px;
+margin-bottom:10px
 }
-
-.support-text{
-  font-size:16px;
-}
-
-
-/* ================= THANK YOU ================= */
-
-.thank-you{
-  text-align:center;
-
-  background:#202b31;
-
-  color:white;
-
-  padding:60px 20px;
-}
-
-.thank-you h2{
-  color:var(--yellow);
-
-  font-family:Georgia,serif;
-
-  font-size:42px;
-
-  font-style:italic;
-
-  margin-bottom:10px;
-}
-
-.thank-you p{
-  font-size:18px;
-}
-
-
-/* ================= FOOTER ================= */
 
 footer{
-  background:#11181c;
-
-  color:#aaa;
-
-  text-align:center;
-
-  padding:18px;
-
-  font-size:13px;
+background:#11181c;
+color:#aaa;
+text-align:center;
+padding:18px;
+font-size:13px
 }
 
-
-/* ================= MOBILE ================= */
-
+/* MOBILE */
 @media(max-width:760px){
 
-  .navbar{
-    min-height:62px;
-    padding:8px 15px;
-  }
-
-  .logo-mark{
-    width:38px;
-    height:38px;
-    font-size:20px;
-  }
-
-  .logo-text{
-    font-size:18px;
-  }
-
-  .nav-links{
-    display:none;
-
-    position:absolute;
-
-    top:62px;
-    left:0;
-    right:0;
-
-    background:white;
-
-    flex-direction:column;
-
-    gap:0;
-
-    padding:
-      8px 20px 18px;
-
-    box-shadow:
-      0 8px 15px rgba(0,0,0,.1);
-  }
-
-  .nav-links.show{
-    display:flex;
-  }
-
-  .nav-links a{
-    width:100%;
-
-    padding:12px;
-
-    text-align:center;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-
-  /* HERO 3:1 */
-
-  .hero{
-    height:33.33vw;
-    min-height:120px;
-  }
-
-  .hero-photo{
-    width:55%;
-  }
-
-  .hero-content{
-    right:3%;
-    width:48%;
-  }
-
-  .hero-child{
-    font-size:
-      clamp(22px,7vw,42px);
-  }
-
-  .hero-future{
-    font-size:
-      clamp(30px,9vw,55px);
-  }
-
-  .hero-line{
-    height:3px;
-    width:80%;
-  }
-
-  .sun{
-    width:50px;
-    height:50px;
-  }
-
-
-  section{
-    padding:35px 0;
-  }
-
-  .section-title{
-    font-size:30px;
-  }
-
-  .section-text{
-    font-size:16px;
-  }
-
-
-  /* Gallery */
-
-  .gallery{
-    grid-template-columns:
-      repeat(3,1fr);
-
-    gap:6px;
-  }
-
-  .gallery-item{
-    height:100px;
-
-    border-radius:7px;
-  }
-
-
-  /* Impact */
-
-  .impact-grid{
-    grid-template-columns:1fr;
-
-    gap:25px;
-  }
-
-  .impact-title{
-    font-size:25px;
-  }
-
-
-  /* Donation */
-
-  .donation-card{
-    padding:22px 17px;
-  }
-
-  .donation-grid{
-    grid-template-columns:1fr;
-
-    gap:28px;
-  }
-
-  .donation-title{
-    font-size:28px;
-  }
-
-  .wallet-address{
-    font-size:13px;
-  }
-
-  .qr-box img{
-    width:170px;
-    height:170px;
-  }
-
-
-  /* Support */
-
-  .support-grid{
-    grid-template-columns:1fr;
-
-    gap:25px;
-  }
-
-
-  .thank-you h2{
-    font-size:35px;
-  }
+.nav{
+min-height:62px;
+padding:8px 15px
 }
 
-
-/* Small phones */
-
-@media(max-width:380px){
-
-  .hero-child{
-    font-size:20px;
-  }
-
-  .hero-future{
-    font-size:28px;
-  }
-
-  .gallery-item{
-    height:85px;
-  }
-
+.logo-icon{
+width:38px;
+height:38px;
+font-size:20px
 }
 
+.logo-name{
+font-size:18px
+}
+
+.hamburger{
+display:block
+}
+
+.menu{
+display:none;
+position:absolute;
+left:0;
+right:0;
+top:62px;
+background:white;
+flex-direction:column;
+gap:0;
+padding:8px 20px 18px;
+box-shadow:0 8px 15px #0002
+}
+
+.menu.open{
+display:flex
+}
+
+.menu a{
+width:100%;
+text-align:center;
+padding:12px
+}
+
+.hero{
+height:33.333vw;
+min-height:115px
+}
+
+.hero img{
+width:55%
+}
+
+.hero-text{
+right:3%;
+width:48%
+}
+
+.child{
+font-size:clamp(20px,7vw,40px)
+}
+
+.future{
+font-size:clamp(29px,9vw,55px)
+}
+
+.line{
+height:3px
+}
+
+.sun{
+width:50px;
+height:50px
+}
+
+section{
+padding:35px 0
+}
+
+.title{
+font-size:30px
+}
+
+.text{
+font-size:16px
+}
+
+.gallery{
+grid-template-columns:repeat(3,1fr);
+gap:6px
+}
+
+.gallery img{
+height:100px;
+border-radius:7px
+}
+
+.impact-grid,
+.donate-grid,
+.support-grid{
+grid-template-columns:1fr
+}
+
+.impact-grid{
+gap:28px
+}
+
+.donate-card{
+padding:22px 17px
+}
+
+.donate-grid{
+gap:30px
+}
+
+.subtitle{
+font-size:25px
+}
+
+.wallet{
+padding:14px
+}
+
+.address{
+font-size:12px
+}
+
+.qr img{
+width:170px;
+height:170px
+}
+
+.support-grid{
+gap:25px
+}
+
+.thanks h2{
+font-size:35px
+}
+}
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ================= NAVIGATION ================= -->
-
 <header>
+<nav class="nav">
 
-<nav class="navbar">
+<a href="#home" class="logo">
+<div class="logo-icon">♥</div>
+<div class="logo-name">
+NARA
+<small>Children's Future</small>
+</div>
+</a>
 
-  <a href="#home" class="logo">
+<button class="hamburger" onclick="toggleMenu()">☰</button>
 
-    <div class="logo-mark">
-      ♥
-    </div>
-
-    <div class="logo-text">
-
-      NARA
-
-      <span>
-        Children's Future
-      </span>
-
-    </div>
-
-  </a>
-
-
-  <button
-    class="menu-btn"
-    onclick="toggleMenu()"
-    aria-label="Open navigation menu">
-
-    ☰
-
-  </button>
-
-
-  <div
-    class="nav-links"
-    id="navLinks">
-
-    <a
-      href="#home"
-      onclick="closeMenu()">
-      Home
-    </a>
-
-    <a
-      href="#mission"
-      onclick="closeMenu()">
-      Our Mission
-    </a>
-
-    <a
-      href="#story"
-      onclick="closeMenu()">
-      Our Story
-    </a>
-
-    <a
-      href="#donate"
-      onclick="closeMenu()">
-      Donate
-    </a>
-
-    <a
-      href="#about"
-      onclick="closeMenu()">
-      About
-    </a>
-
-    <a
-      href="#donate"
-      class="donate-nav"
-      onclick="closeMenu()">
-
-      ₿ Donate BTC
-
-    </a>
-
-  </div>
+<div class="menu" id="menu">
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#mission" onclick="closeMenu()">Our Mission</a>
+<a href="#story" onclick="closeMenu()">Our Story</a>
+<a href="#impact" onclick="closeMenu()">Why We Care</a>
+<a href="#donate" onclick="closeMenu()">Donate</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#donate" class="donate-btn" onclick="closeMenu()">₿ Donate BTC</a>
+</div>
 
 </nav>
-
 </header>
 
 
-
-<!-- ================= HOME / HERO ================= -->
-
 <main id="home">
 
+<!-- HEADER -->
 <section class="hero">
 
-  <!-- Main photo -->
+<img src="header.jpg" alt="A mother and child">
 
-  <img
-    class="hero-photo"
-    src="photo1.jpg"
-    alt="A mother and child">
+<div class="sun"></div>
 
-
-  <!-- Golden sunlight -->
-
-  <div class="sun"></div>
-
-
-  <!-- Hero message -->
-
-  <div class="hero-content">
-
-    <div class="hero-child">
-      A Child,
-    </div>
-
-    <div class="hero-future">
-      A Future
-    </div>
-
-    <div class="hero-line"></div>
-
-  </div>
+<div class="hero-text">
+<div class="child">A Child,</div>
+<div class="future">A Future</div>
+<div class="line"></div>
+</div>
 
 </section>
 
 
-
-<!-- ================= OUR MISSION ================= -->
-
+<!-- MISSION -->
 <section id="mission">
-
 <div class="container">
 
-  <h2 class="section-title">
-    Our Mission
-  </h2>
+<h2 class="title">Our Mission</h2>
 
-  <p class="section-text">
-    Creating better educational opportunities for children who need them most.
-  </p>
+<p class="text">
+Creating better educational opportunities for children who need them most.
+</p>
 
 </div>
-
 </section>
 
 
-
-<!-- ================= OUR STORY ================= -->
-
-<section id="story">
-
+<!-- STORY -->
+<section id="story" class="story">
 <div class="container">
 
-  <h2 class="section-title">
-    Our Story
-  </h2>
+<h2 class="title">Our Story</h2>
 
-  <p class="section-text">
-    Every child carries a dream. Our story is about helping those dreams
-    grow through education, opportunity, and meaningful support.
-  </p>
+<p class="text">
+Every child carries a dream. Our story is about helping those dreams grow through education, opportunity, and meaningful support.
+</p>
 
+<div class="gallery">
 
-  <div class="gallery">
+<a href="story1.jpg" target="_blank">
+<img src="story1.jpg" alt="Children together">
+</a>
 
+<a href="story2.jpg" target="_blank">
+<img src="story2.jpg" alt="Children receiving certificates">
+</a>
 
-    <a
-      href="photo2.jpg"
-      target="_blank"
-      class="gallery-item">
+<a href="story3.jpg" target="_blank">
+<img src="story3.jpg" alt="Children together">
+</a>
 
-      <img
-        src="photo2.jpg"
-        alt="Children together">
+<a href="story4.jpg" target="_blank">
+<img src="story4.jpg" alt="Children with their community">
+</a>
 
-    </a>
+<a href="story5.jpg" target="_blank">
+<img src="story5.jpg" alt="Two children together">
+</a>
 
-
-    <a
-      href="photo3.jpg"
-      target="_blank"
-      class="gallery-item">
-
-      <img
-        src="photo3.jpg"
-        alt="Children receiving certificates">
-
-    </a>
-
-
-    <a
-      href="photo4.jpg"
-      target="_blank"
-      class="gallery-item">
-
-      <img
-        src="photo4.jpg"
-        alt="Children together">
-
-    </a>
-
-
-    <a
-      href="photo5.jpg"
-      target="_blank"
-      class="gallery-item">
-
-      <img
-        src="photo5.jpg"
-        alt="Children with their community">
-
-    </a>
-
-
-    <a
-      href="photo6.jpg"
-      target="_blank"
-      class="gallery-item">
-
-      <img
-        src="photo6.jpg"
-        alt="Two children together">
-
-    </a>
-
-
-    <a
-      href="photo7.jpg"
-      target="_blank"
-      class="gallery-item">
-
-      <img
-        src="photo7.jpg"
-        alt="Children in a group">
-
-    </a>
-
-  </div>
+<a href="story6.jpg" target="_blank">
+<img src="story6.jpg" alt="Children in a group">
+</a>
 
 </div>
 
+</div>
 </section>
 
 
-
-<!-- ================= WHY WE CARE ================= -->
-
-<section class="impact">
-
+<!-- IMPACT -->
+<section id="impact">
 <div class="container">
 
-  <div class="impact-grid">
+<div class="impact-grid">
 
+<div>
+<h2 class="subtitle">Why Should We Care?</h2>
 
-    <div class="impact-box">
+<p class="text">
+Every child deserves the chance to learn, dream, and build a better future.
+</p>
+</div>
 
-      <h2 class="impact-title">
-        Why Should We Care?
-      </h2>
+<div>
+<h2 class="subtitle">What Can We Do?</h2>
 
-      <p class="impact-text">
-        Every child deserves the chance to learn, dream, and build a better future.
-      </p>
-
-    </div>
-
-
-    <div class="impact-box">
-
-      <h2 class="impact-title">
-        What Can We Do?
-      </h2>
-
-      <p class="impact-text">
-        A small act can create a big impact for children.
-      </p>
-
-    </div>
-
-
-  </div>
+<p class="text">
+A small act can create a big impact for children.
+</p>
+</div>
 
 </div>
 
+</div>
 </section>
 
 
-
-<!-- ================= HOW TO BE OUR PART ================= -->
-
-<section id="donate">
-
+<!-- DONATION -->
+<section id="donate" class="donate-section">
 <div class="container">
 
-<div class="donation-card">
+<div class="donate-card">
 
-<div class="donation-grid">
+<div class="donate-grid">
 
+<div>
 
-  <div>
+<h2 class="subtitle">How You Can Be Part</h2>
 
-    <h2 class="donation-title">
-      How You Can Be Part
-    </h2>
+<p class="text">
+Support children's education through a meaningful Bitcoin contribution. Together, we can help create opportunities that shape a brighter future.
+</p>
 
-    <p class="donation-text">
+<a href="#how-help" class="button">
+See the Impact
+</a>
 
-      Support children's education through a meaningful
-      Bitcoin contribution. Together, we can help create
-      opportunities that can shape a brighter future.
-
-    </p>
-
-    <a
-      href="#how-help"
-      class="btn">
-
-      See the Impact
-
-    </a>
-
-  </div>
+</div>
 
 
+<div>
 
-  <!-- ================= HOW TO DONATE ================= -->
+<h2 class="subtitle">How to Donate</h2>
 
-  <div>
+<p class="text">
+You can contribute using Bitcoin. Copy the wallet address or scan the QR code below.
+</p>
 
-    <h2 class="donation-title">
-      How to Donate
-    </h2>
+<div class="wallet">
 
-    <p class="donation-text">
+<div class="wallet-label">
+BITCOIN DONATION ADDRESS
+</div>
 
-      You can contribute using Bitcoin.
-      Scan the QR code or copy the wallet address below.
+<div class="address" id="btc">
+166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+</div>
 
-    </p>
+<button class="copy" onclick="copyBTC()">
+📋 Copy Address
+</button>
 
+<span class="copy-msg" id="msg"></span>
 
-    <div class="wallet-box">
-
-      <div class="wallet-label">
-        BITCOIN DONATION ADDRESS
-      </div>
-
-
-      <div
-        class="wallet-address"
-        id="btcAddress">
-
-        166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
-
-      </div>
+</div>
 
 
-      <button
-        class="copy-btn"
-        onclick="copyBTC()">
+<div class="qr">
 
-        📋 Copy Address
+<a href="bitcoin:166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ">
+<img src="qr-bitcoin.png" alt="Bitcoin donation QR code">
+</a>
 
-      </button>
-
-
-      <span
-        id="copyMessage"
-        style="
-        margin-left:8px;
-        font-size:13px;
-        color:#c88900;">
-
-      </span>
-
-    </div>
-
-
-    <div
-      class="qr-box"
-      style="margin-top:20px;">
-
-      <a
-        href="bitcoin:166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ"
-        title="Open Bitcoin wallet">
-
-        <img
-          src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=bitcoin%3A166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ"
-          alt="Bitcoin donation QR code">
-
-      </a>
-
-    </div>
-
-
-    <div class="qr-caption">
-
-      Scan to donate with Bitcoin
-
-    </div>
-
-  </div>
-
+<p>Scan to donate with Bitcoin</p>
 
 </div>
 
@@ -1218,291 +685,138 @@ footer{
 
 </div>
 
+</div>
+
+</div>
 </section>
 
 
-
-<!-- ================= HOW DONATION HELPS ================= -->
-
-<section
-  id="how-help"
-  class="support">
-
+<!-- SUPPORT -->
+<section id="how-help" class="support">
 <div class="container">
 
 <div class="support-grid">
 
+<div>
+<h3 class="subtitle">How Your Donation Helps</h3>
 
-  <div class="support-box">
-
-    <h3 class="support-title">
-      How Your Donation Helps
-    </h3>
-
-    <p class="support-text">
-
-      Your contribution can help provide educational
-      opportunities, learning resources, and greater
-      possibilities for children.
-
-    </p>
-
-  </div>
+<p class="text">
+Your contribution can help provide educational opportunities, learning resources, and greater possibilities for children.
+</p>
+</div>
 
 
+<div id="about">
+<h3 class="subtitle">Transparency</h3>
 
-  <!-- ================= TRANSPARENCY ================= -->
-
-  <div
-    class="support-box"
-    id="about">
-
-    <h3 class="support-title">
-      Transparency
-    </h3>
-
-    <p class="support-text">
-
-      We are committed to responsible stewardship,
-      clear communication, and transparency in how
-      support is managed.
-
-    </p>
-
-  </div>
+<p class="text">
+We are committed to responsible stewardship, clear communication, and transparency in how support is managed.
+</p>
+</div>
 
 
+<div>
+<h3 class="subtitle">Our Commitment</h3>
 
-  <!-- ================= COMMITMENT ================= -->
-
-  <div class="support-box">
-
-    <h3 class="support-title">
-      Our Commitment
-    </h3>
-
-    <p class="support-text">
-
-      We believe lasting change begins when children
-      are given the opportunity to learn, grow, and
-      shape their own future.
-
-    </p>
-
-  </div>
-
-
+<p class="text">
+We believe lasting change begins when children are given the opportunity to learn, grow, and shape their own future.
+</p>
 </div>
 
 </div>
 
+</div>
 </section>
 
 
+<!-- THANK YOU -->
+<section class="thanks">
 
-<!-- ================= THANK YOU ================= -->
+<h2>Thank You!</h2>
 
-<section class="thank-you">
-
-  <h2>
-    Thank You!
-  </h2>
-
-  <p>
-
-    Thank you for your care, trust, and support
-    for a brighter future for children.
-
-  </p>
+<p>
+Thank you for your care, trust, and support for a brighter future for children.
+</p>
 
 </section>
-
 
 </main>
 
 
-
-<!-- ================= FOOTER ================= -->
-
 <footer>
-
-  NARA Children's Future © 2026
-
+NARA Children's Future © 2026
 </footer>
 
 
-
-<!-- ================= JAVASCRIPT ================= -->
-
 <script>
 
-
-/* ================= MOBILE MENU ================= */
-
 function toggleMenu(){
-
-  const menu =
-    document.getElementById("navLinks");
-
-  menu.classList.toggle("show");
-
+document.getElementById("menu").classList.toggle("open");
 }
-
 
 function closeMenu(){
-
-  document
-    .getElementById("navLinks")
-    .classList.remove("show");
-
+document.getElementById("menu").classList.remove("open");
 }
-
-
-
-/* ================= COPY BTC ================= */
 
 function copyBTC(){
 
-  const address =
-    document
-      .getElementById("btcAddress")
-      .innerText
-      .trim();
+const address =
+document.getElementById("btc").innerText.trim();
 
-  const message =
-    document.getElementById("copyMessage");
+const msg =
+document.getElementById("msg");
 
+if(navigator.clipboard){
 
-  if(navigator.clipboard){
+navigator.clipboard.writeText(address)
+.then(function(){
 
-    navigator.clipboard
-      .writeText(address)
+msg.innerText="Copied ✓";
 
-      .then(function(){
+setTimeout(function(){
+msg.innerText="";
+},2500);
 
-        message.innerText =
-          "Copied ✓";
+})
+.catch(function(){
+fallbackCopy(address);
+});
 
-        setTimeout(function(){
+}else{
 
-          message.innerText = "";
-
-        },2500);
-
-      })
-
-      .catch(function(){
-
-        fallbackCopy(
-          address,
-          message
-        );
-
-      });
-
-  }
-
-  else{
-
-    fallbackCopy(
-      address,
-      message
-    );
-
-  }
+fallbackCopy(address);
 
 }
 
+}
 
+function fallbackCopy(address){
 
-/* ================= BACKUP COPY ================= */
+const box=document.createElement("textarea");
 
-function fallbackCopy(
-  address,
-  message
-){
+box.value=address;
 
-  const textarea =
-    document.createElement("textarea");
+document.body.appendChild(box);
 
-  textarea.value =
-    address;
+box.select();
 
-  textarea.style.position =
-    "fixed";
+try{
 
-  textarea.style.opacity =
-    "0";
+document.execCommand("copy");
 
-  document
-    .body
-    .appendChild(textarea);
+document.getElementById("msg").innerText="Copied ✓";
 
-  textarea.focus();
+}catch(e){
 
-  textarea.select();
-
-
-  try{
-
-    document.execCommand("copy");
-
-    message.innerText =
-      "Copied ✓";
-
-  }
-
-  catch(e){
-
-    message.innerText =
-      "Please copy the address manually.";
-
-  }
-
-
-  document
-    .body
-    .removeChild(textarea);
-
-
-  setTimeout(function(){
-
-    message.innerText = "";
-
-  },2500);
+document.getElementById("msg").innerText="Copy manually";
 
 }
 
+document.body.removeChild(box);
 
-
-/* ================= CLOSE MENU ================= */
-
-document.addEventListener(
-  "click",
-  function(event){
-
-    const menu =
-      document.getElementById("navLinks");
-
-    const button =
-      document.querySelector(".menu-btn");
-
-
-    if(
-      window.innerWidth <= 760 &&
-      !menu.contains(event.target) &&
-      !button.contains(event.target)
-    ){
-
-      menu.classList.remove("show");
-
-    }
-
-  }
-);
+}
 
 </script>
-
 
 </body>
 </html>
