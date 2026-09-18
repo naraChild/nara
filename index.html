@@ -1,922 +1,1020 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>NARA Children's Future</title>
+<title>NARA Children's Future</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #fffdf8;
-      color: #333;
-      line-height: 1.7;
-    }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:#333;
+    line-height:1.7;
+}
 
-    /* =========================
-       HEADER / NAVIGATION
-    ========================= */
+/* =========================
+   HEADER
+========================= */
 
-    header {
-      background: #ffffff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
+.hero{
+    width:100%;
+    min-height:290px;
+    position:relative;
+    overflow:hidden;
 
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 28px;
-    }
-
-    .logo {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 42px;
-      font-weight: bold;
-      letter-spacing: 6px;
-      color: #b88a18;
-    }
-
-    .menu-button {
-      border: none;
-      background: transparent;
-      font-size: 42px;
-      cursor: pointer;
-      color: #444;
-      line-height: 1;
-    }
-
-    .menu {
-      display: none;
-      position: absolute;
-      top: 78px;
-      right: 0;
-      width: 240px;
-      background: #ffffff;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-      padding: 15px 0;
-    }
-
-    .menu.active {
-      display: block;
-    }
-
-    .menu a {
-      display: block;
-      padding: 13px 25px;
-      text-decoration: none;
-      color: #333;
-      font-size: 16px;
-    }
-
-    .menu a:hover {
-      background: #fff8e6;
-      color: #b88a18;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-      background: #ddd;
-    }
-
-    .hero img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(
-          circle at 92% 10%,
-          rgba(255,220,120,0.30),
-          transparent 28%
-        ),
+    background-image:
         linear-gradient(
-          90deg,
-          rgba(0,0,0,0.08),
-          rgba(0,0,0,0.18)
-        );
-    }
-
-    .hero-text {
-      position: absolute;
-      right: 5%;
-      top: 50%;
-      transform: translateY(-50%);
-      text-align: center;
-      color: white;
-      text-shadow: 0 3px 12px rgba(0,0,0,0.45);
-    }
-
-    .hero-text .line1 {
-      display: block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(28px, 5vw, 70px);
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    .hero-text .line2 {
-      display: block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(32px, 5.5vw, 76px);
-      font-weight: bold;
-      color: #ffd84d;
-      letter-spacing: 2px;
-      font-style: italic;
-    }
-
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
-
-    section {
-      padding: 80px 20px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: Georgia, "Times New Roman", serif;
-      color: #b88a18;
-      font-size: clamp(34px, 5vw, 56px);
-      line-height: 1.2;
-      margin-bottom: 25px;
-    }
-
-    .section-text {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      font-size: 20px;
-      color: #444;
-    }
-
-
-    /* =========================
-       OUR MISSION
-    ========================= */
-
-    .mission {
-      background: #ffffff;
-      padding-top: 65px;
-      padding-bottom: 65px;
-    }
-
-    .mission .section-title {
-      margin-bottom: 18px;
-    }
-
-    .mission-box {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      font-size: 19px;
-    }
-
-
-    /* =========================
-       OUR STORY
-    ========================= */
-
-    .story {
-      background: #fffaf0;
-      padding-top: 65px;
-      padding-bottom: 65px;
-    }
-
-    .story-box {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      font-size: 19px;
-    }
-
-    .story-box p {
-      margin-bottom: 18px;
-    }
-
-
-    /* =========================
-       WHAT CAN WE DO
-    ========================= */
-
-    .what-we-can-do {
-      background: #ffffff;
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-
-    .what-we-can-do .section-title {
-      margin-bottom: 25px;
-    }
-
-    .impact-text {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      font-size: 21px;
-    }
-
-    .impact-text strong {
-      color: #b88a18;
-    }
-
-
-    /* =========================
-       HOW TO HELP
-    ========================= */
-
-    .help {
-      background: #fffdf8;
-      padding-top: 70px;
-      padding-bottom: 80px;
-    }
-
-    .help-intro {
-      max-width: 850px;
-      margin: -5px auto 40px;
-      text-align: center;
-      font-size: 20px;
-      color: #444;
-    }
-
-    .cards {
-      max-width: 950px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 40px 28px;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-    }
-
-    .card h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      color: #b88a18;
-      font-size: 38px;
-      margin-bottom: 18px;
-    }
-
-    .card p {
-      font-size: 18px;
-      color: #444;
-    }
-
-    .card .extra {
-      margin-top: 15px;
-      font-size: 16px;
-      color: #555;
-    }
-
-
-    /* =========================
-       GALLERY
-    ========================= */
-
-    .gallery {
-      background: #ffffff;
-    }
-
-    .gallery-grid {
-      max-width: 1050px;
-      margin: 40px auto 0;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 18px;
-      display: block;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-    }
-
-
-    /* =========================
-       CALL TO ACTION
-    ========================= */
-
-    .cta {
-      background: #fff8e6;
-      text-align: center;
-    }
-
-    .cta p {
-      max-width: 750px;
-      margin: 0 auto 28px;
-      font-size: 20px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 14px 30px;
-      border-radius: 30px;
-      background: #b88a18;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 17px;
-      box-shadow: 0 5px 15px rgba(184,138,24,0.25);
-    }
-
-    .cta-button:hover {
-      background: #967015;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #222;
-      color: #ffffff;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    footer .footer-logo {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 32px;
-      letter-spacing: 5px;
-      color: #d3a52a;
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      font-size: 14px;
-      color: #ccc;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 768px) {
-
-      .nav {
-        height: 72px;
-        padding: 0 20px;
-      }
-
-      .logo {
-        font-size: 34px;
-        letter-spacing: 5px;
-      }
-
-      .menu-button {
-        font-size: 38px;
-      }
-
-      .menu {
-        top: 72px;
-        width: 220px;
-      }
-
-      /* Header HP dibuat lebih pendek */
-      .hero {
-        height: 190px;
-      }
-
-      .hero img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: left center;
-      }
-
-      .hero-overlay {
-        background:
-          radial-gradient(
-            circle at 92% 8%,
-            rgba(255,220,120,0.25),
-            transparent 30%
-          ),
-          linear-gradient(
             90deg,
-            rgba(0,0,0,0.05),
-            rgba(0,0,0,0.25)
-          );
-      }
+            rgba(0,0,0,0.10),
+            rgba(0,0,0,0.05)
+        ),
+        url("1789699903727.png");
 
-      .hero-text {
-        right: 5%;
-        top: 50%;
-      }
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+}
 
-      .hero-text .line1 {
-        font-size: 27px;
-      }
+.hero-content{
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:25px 7%;
+}
 
-      .hero-text .line2 {
-        font-size: 31px;
-      }
+.hero-title{
+    color:white;
+    text-align:left;
+    text-shadow:
+        0 2px 5px rgba(0,0,0,0.65),
+        0 3px 12px rgba(0,0,0,0.45);
+}
 
-      section {
-        padding: 55px 18px;
-      }
+.hero-title .child{
+    display:block;
+    font-size:clamp(30px,5vw,58px);
+    font-weight:700;
+    letter-spacing:1px;
+}
 
-      .mission,
-      .story {
-        padding-top: 48px;
-        padding-bottom: 48px;
-      }
+.hero-title .future{
+    display:block;
+    font-family:Georgia, "Times New Roman", serif;
+    font-style:italic;
+    font-size:clamp(38px,6vw,68px);
+    font-weight:bold;
+    color:#ffd83d;
+    line-height:1;
+    margin-top:5px;
+}
 
-      .section-title {
-        font-size: 39px;
-        margin-bottom: 18px;
-      }
+/* =========================
+   NAVIGATION
+========================= */
 
-      .section-text,
-      .impact-text,
-      .help-intro {
-        font-size: 18px;
-        line-height: 1.6;
-      }
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.10);
+}
 
-      .mission-box,
-      .story-box {
-        font-size: 17px;
-        line-height: 1.7;
-      }
+.nav-container{
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-      .help {
-        padding-top: 52px;
-        padding-bottom: 60px;
-      }
+.nav-links{
+    display:flex;
+    list-style:none;
+}
 
-      .help-intro {
-        margin-bottom: 28px;
-      }
+.nav-links a{
+    display:block;
+    padding:14px 18px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    font-size:14px;
+}
 
-      .cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
+.nav-links a:hover{
+    color:#b58b00;
+}
 
-      .card {
-        border-radius: 22px;
-        padding: 32px 22px;
-      }
+.menu-button{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+    padding:10px 15px;
+}
 
-      .card h3 {
-        font-size: 35px;
-        margin-bottom: 14px;
-      }
+/* =========================
+   GENERAL
+========================= */
 
-      .card p {
-        font-size: 17px;
-      }
+section{
+    max-width:1050px;
+    margin:auto;
+    padding-left:20px;
+    padding-right:20px;
+}
 
-      .card .extra {
-        font-size: 15px;
-      }
+.section-title{
+    text-align:center;
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:34px;
+    color:#8c6b00;
+    margin-bottom:15px;
+}
 
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        margin-top: 28px;
-      }
+.section-text{
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
+    font-size:17px;
+    color:#555;
+}
 
-      .gallery-grid img {
-        border-radius: 14px;
-      }
+/* =========================
+   WELCOME
+========================= */
 
-      .cta p {
-        font-size: 18px;
-      }
+#welcome{
+    padding-top:55px;
+    padding-bottom:40px;
+}
 
-      footer {
-        padding: 32px 18px;
-      }
+#welcome h1{
+    text-align:center;
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:clamp(30px,5vw,46px);
+    color:#806000;
+    margin-bottom:12px;
+}
+
+#welcome .lead{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    color:#555;
+}
+
+/* =========================
+   MISSION
+========================= */
+
+#mission{
+    padding-top:45px;
+    padding-bottom:30px;
+}
+
+.info-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.info-box p{
+    margin-bottom:14px;
+}
+
+/* =========================
+   STORY
+========================= */
+
+#story{
+    padding-top:28px;
+    padding-bottom:45px;
+}
+
+.story-text{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.story-text p{
+    margin-bottom:15px;
+}
+
+/* =========================
+   WHY WE CARE
+========================= */
+
+#why{
+    background:#faf7ed;
+    max-width:none;
+    padding-top:55px;
+    padding-bottom:55px;
+}
+
+#why .inner{
+    max-width:900px;
+    margin:auto;
+    padding:0 20px;
+}
+
+.reason-list{
+    max-width:760px;
+    margin:25px auto 0;
+}
+
+.reason-list p{
+    margin-bottom:15px;
+}
+
+/* =========================
+   HOW TO HELP
+========================= */
+
+#help{
+    padding-top:55px;
+    padding-bottom:55px;
+}
+
+.help-grid{
+    max-width:900px;
+    margin:30px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.help-card{
+    background:#fff;
+    border-radius:12px;
+    padding:25px 20px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,0.08);
+    border:1px solid #eee;
+}
+
+.help-card h3{
+    font-family:Georgia, "Times New Roman", serif;
+    color:#8c6b00;
+    margin-bottom:8px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+#gallery{
+    background:#fafafa;
+    max-width:none;
+    padding-top:50px;
+    padding-bottom:55px;
+}
+
+.gallery-inner{
+    max-width:1050px;
+    margin:auto;
+    padding:0 20px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:28px;
+}
+
+.gallery-grid img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+    transition:transform .25s ease;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.02);
+}
+
+/* =========================
+   DONATE
+========================= */
+
+#donate{
+    padding-top:60px;
+    padding-bottom:70px;
+}
+
+.donate-box{
+    max-width:700px;
+    margin:30px auto 0;
+    padding:30px 25px;
+    border-radius:15px;
+    background:#fffdf5;
+    border:1px solid #eadca8;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.donate-box p{
+    margin-bottom:18px;
+}
+
+/* QR */
+
+.qr-wrapper{
+    margin:20px auto;
+    width:230px;
+    height:230px;
+    padding:12px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.10);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.qr-wrapper img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+/* BTC address */
+
+.btc-label{
+    font-weight:bold;
+    margin-top:20px;
+    margin-bottom:8px;
+}
+
+.btc-address{
+    width:100%;
+    background:#f1f1f1;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:12px 10px;
+    font-size:14px;
+    word-break:break-all;
+    color:#333;
+    margin-bottom:12px;
+}
+
+.copy-button{
+    border:0;
+    border-radius:8px;
+    padding:11px 25px;
+    background:#c79b16;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.copy-button:hover{
+    background:#a9820e;
+}
+
+.copy-status{
+    min-height:25px;
+    margin-top:8px;
+    font-weight:bold;
+    color:#8a6a00;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#222;
+    color:#ddd;
+    text-align:center;
+    padding:30px 20px;
+    font-size:14px;
+}
+
+footer strong{
+    color:#fff;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .hero{
+        min-height:180px;
+        height:33vw;
+        min-height:170px;
+        max-height:230px;
+        background-position:center;
     }
 
-
-    /* =========================
-       VERY SMALL PHONES
-    ========================= */
-
-    @media (max-width: 400px) {
-
-      .hero {
-        height: 175px;
-      }
-
-      .hero-text .line1 {
-        font-size: 23px;
-      }
-
-      .hero-text .line2 {
-        font-size: 27px;
-      }
-
-      .section-title {
-        font-size: 34px;
-      }
-
-      .logo {
-        font-size: 30px;
-      }
+    .hero-content{
+        padding:15px 5%;
+        justify-content:flex-end;
     }
 
-  </style>
+    .hero-title{
+        max-width:48%;
+    }
+
+    .hero-title .child{
+        font-size:27px;
+        line-height:1.05;
+    }
+
+    .hero-title .future{
+        font-size:34px;
+        margin-top:3px;
+    }
+
+    nav{
+        position:relative;
+    }
+
+    .nav-container{
+        justify-content:flex-end;
+    }
+
+    .menu-button{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        background:white;
+        position:absolute;
+        top:100%;
+        left:0;
+        box-shadow:0 5px 10px rgba(0,0,0,.10);
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:12px 20px;
+        border-top:1px solid #eee;
+    }
+
+    section{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .section-title{
+        font-size:28px;
+    }
+
+    #welcome{
+        padding-top:35px;
+        padding-bottom:25px;
+    }
+
+    #mission{
+        padding-top:28px;
+        padding-bottom:20px;
+    }
+
+    #story{
+        padding-top:20px;
+        padding-bottom:35px;
+    }
+
+    #why,
+    #help{
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+
+    .help-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .gallery-inner{
+        padding:0 10px;
+    }
+
+    #donate{
+        padding-top:45px;
+        padding-bottom:50px;
+    }
+
+    .donate-box{
+        padding:25px 15px;
+    }
+
+    .qr-wrapper{
+        width:210px;
+        height:210px;
+    }
+
+    .btc-address{
+        font-size:13px;
+    }
+}
+
+@media(max-width:380px){
+
+    .hero-title .child{
+        font-size:23px;
+    }
+
+    .hero-title .future{
+        font-size:29px;
+    }
+
+    .qr-wrapper{
+        width:190px;
+        height:190px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================== -->
+<!-- =========================
+     HEADER
+========================= -->
 
-  <header>
-    <div class="nav">
+<header class="hero">
 
-      <div class="logo">NARA</div>
+    <div class="hero-content">
 
-      <button
-        class="menu-button"
-        onclick="toggleMenu()"
-        aria-label="Open menu">
-        ☰
-      </button>
-
-      <nav class="menu" id="menu">
-        <a href="#home" onclick="closeMenu()">Home</a>
-        <a href="#mission" onclick="closeMenu()">Our Mission</a>
-        <a href="#story" onclick="closeMenu()">Our Story</a>
-        <a href="#impact" onclick="closeMenu()">What We Can Do</a>
-        <a href="#help" onclick="closeMenu()">Be Part of a Child's Future</a>
-        <a href="#gallery" onclick="closeMenu()">Gallery</a>
-      </nav>
-
-    </div>
-  </header>
-
-
-  <!-- =========================
-       HERO
-  ========================== -->
-
-  <section class="hero" id="home">
-
-    <img
-      src="178969903727.png"
-      alt="A mother and child">
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-text">
-      <span class="line1">A Child,</span>
-      <span class="line2">A Future</span>
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       OUR MISSION
-  ========================== -->
-
-  <section class="mission" id="mission">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        Our Mission
-      </h2>
-
-      <div class="mission-box">
-
-        <p>
-          NARA believes that every child deserves the opportunity
-          to learn, grow, and build a brighter future.
-        </p>
-
-        <p>
-          Our mission is to help create meaningful opportunities
-          for children through education, care, kindness, and
-          support from people who believe in their potential.
-        </p>
-
-      </div>
+        <div class="hero-title">
+            <span class="child">A Child,</span>
+            <span class="future">A Future</span>
+        </div>
 
     </div>
 
-  </section>
+</header>
 
 
-  <!-- =========================
-       OUR STORY
-  ========================== -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-  <section class="story" id="story">
+<nav>
+    <div class="nav-container">
 
-    <div class="container">
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open menu"
+            aria-expanded="false">
+            ☰
+        </button>
 
-      <h2 class="section-title">
-        Our Story
-      </h2>
+        <ul class="nav-links" id="navLinks">
 
-      <div class="story-box">
+            <li>
+                <a href="#welcome">Home</a>
+            </li>
+
+            <li>
+                <a href="#mission">Our Mission</a>
+            </li>
+
+            <li>
+                <a href="#story">Our Story</a>
+            </li>
+
+            <li>
+                <a href="#why">Why We Care</a>
+            </li>
+
+            <li>
+                <a href="#help">How You Can Help</a>
+            </li>
+
+            <li>
+                <a href="#donate">Donate</a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- =========================
+     WELCOME
+========================= -->
+
+<section id="welcome">
+
+    <h1>NARA Children's Future</h1>
+
+    <p class="lead">
+        Every child deserves a chance to learn, grow, and dream.
+        Together, even a small act of kindness can help build
+        a brighter future.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     OUR MISSION
+========================= -->
+
+<section id="mission">
+
+    <h2 class="section-title">Our Mission</h2>
+
+    <div class="info-box">
 
         <p>
-          Every child carries a dream. Sometimes, all they need
-          is a little support and someone who believes in them.
+            NARA Children's Future is built around a simple belief:
+            every child deserves the opportunity to have a better future.
         </p>
 
         <p>
-          NARA was created from a simple belief:
-          <strong>when we help a child today, we help shape
-          tomorrow.</strong>
+            Our mission is to support children's education and create
+            opportunities that can help them learn, grow, and move
+            toward a brighter tomorrow.
         </p>
-
-        <p>
-          This is a journey of hope, opportunity, and the belief
-          that a brighter future can begin with one small act.
-        </p>
-
-      </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- =========================
-       WHAT WE CAN DO
-  ========================== -->
+<!-- =========================
+     OUR STORY
+========================= -->
 
-  <section class="what-we-can-do" id="impact">
+<section id="story">
 
-    <div class="container">
+    <h2 class="section-title">Our Story</h2>
 
-      <h2 class="section-title">
-        Together, We Can Make a Difference
-      </h2>
-
-      <div class="impact-text">
+    <div class="story-text">
 
         <p>
-          <strong>Every child deserves a chance to learn,
-          grow, and dream.</strong>
+            Behind every child is a story, a dream, and a future
+            waiting to be built.
         </p>
 
         <p>
-          Together, even a small act of kindness can help build
-          a brighter future.
+            NARA Children's Future began with a hope that simple
+            kindness can become meaningful opportunity.
         </p>
 
-      </div>
+        <p>
+            We believe that education can open doors and that helping
+            one child today can create possibilities for tomorrow.
+        </p>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- =========================
-       HOW TO BE PART
-  ========================== -->
+<!-- =========================
+     WHY WE CARE
+========================= -->
 
-  <section class="help" id="help">
+<section id="why">
 
-    <div class="container">
+    <div class="inner">
 
-      <h2 class="section-title">
+        <h2 class="section-title">Why We Care</h2>
+
+        <div class="reason-list">
+
+            <p>
+                A child's future should not be limited by circumstances
+                they did not choose.
+            </p>
+
+            <p>
+                Education can give children knowledge, confidence,
+                and a stronger foundation for their future.
+            </p>
+
+            <p>
+                When people come together to help, small contributions
+                can become meaningful support.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HOW YOU CAN HELP
+========================= -->
+
+<section id="help">
+
+    <h2 class="section-title">
         Be Part of a Child's Future
-      </h2>
+    </h2>
 
-      <p class="help-intro">
-        There are many ways to help a child move closer
-        to a brighter tomorrow.
-      </p>
+    <p class="section-text">
+        There are many ways to help a child move closer to a
+        brighter tomorrow.
+    </p>
 
+    <div class="help-grid">
 
-      <div class="cards">
+        <div class="help-card">
 
-        <!-- SUPPORT -->
+            <h3>Support Education</h3>
 
-        <div class="card">
-
-          <h3>Support</h3>
-
-          <p>
-            Your support can help create opportunities
-            for children and their future.
-          </p>
-
-          <p class="extra">
-            Every contribution can become a step toward
-            education, hope, and a better tomorrow.
-          </p>
+            <p>
+                Help provide support that can contribute to a
+                child's education and learning journey.
+            </p>
 
         </div>
 
 
-        <!-- SHARE -->
+        <div class="help-card">
 
-        <div class="card">
+            <h3>Share the Mission</h3>
 
-          <h3>Share</h3>
-
-          <p>
-            Share NARA with people who believe that every
-            child deserves a brighter future.
-          </p>
-
-          <p class="extra">
-            Sometimes, sharing a story is the first step
-            toward changing a life.
-          </p>
+            <p>
+                Sharing NARA Children's Future can help more people
+                discover the mission and its purpose.
+            </p>
 
         </div>
 
 
-        <!-- CONTRIBUTE -->
+        <div class="help-card">
 
-        <div class="card">
+            <h3>Make a Difference</h3>
 
-          <h3>Contribute</h3>
-
-          <p>
-            Every contribution, large or small, can make
-            a meaningful difference.
-          </p>
-
-          <p class="extra">
-            Together, we can turn kindness into opportunity
-            and give children a reason to keep dreaming.
-          </p>
+            <p>
+                Every meaningful act of kindness can help create
+                another opportunity for a child.
+            </p>
 
         </div>
 
-      </div>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section id="gallery">
+
+    <div class="gallery-inner">
+
+        <h2 class="section-title">NARA Gallery</h2>
+
+        <p class="section-text">
+            Moments that remind us why every child deserves
+            hope, opportunity, and a future.
+        </p>
+
+        <div class="gallery-grid">
+
+            <img src="nara-03.jpg" alt="NARA">
+            <img src="nara-04.jpg" alt="NARA">
+            <img src="nara-05.jpg" alt="NARA">
+            <img src="nara-06.jpg" alt="NARA">
+            <img src="nara-07.jpg" alt="NARA">
+            <img src="nara-08.jpg" alt="NARA">
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- =========================
-       GALLERY
-  ========================== -->
+<!-- =========================
+     DONATE BITCOIN
+========================= -->
 
-  <section class="gallery" id="gallery">
+<section id="donate">
 
-    <div class="container">
+    <h2 class="section-title">Support NARA</h2>
 
-      <h2 class="section-title">
-        NARA Gallery
-      </h2>
-
-      <p class="section-text">
-        Moments that remind us why every child deserves
-        hope, opportunity, and a future.
-      </p>
+    <p class="section-text">
+        If you would like to support a child's education,
+        you can contribute through Bitcoin.
+    </p>
 
 
-      <div class="gallery-grid">
+    <div class="donate-box">
 
-        <img src="nara-03.jpg" alt="NARA">
-        <img src="nara-04.jpg" alt="NARA">
-        <img src="nara-05.jpg" alt="NARA">
-        <img src="nara-06.jpg" alt="NARA">
-        <img src="nara-07.jpg" alt="NARA">
-        <img src="nara-08.jpg" alt="NARA">
+        <p>
+            Your support can help create an opportunity for
+            a child to learn, grow, and dream.
+        </p>
 
-      </div>
+
+        <!-- QR CODE -->
+
+        <div class="qr-wrapper">
+
+            <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=bitcoin%3A166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ"
+                alt="Bitcoin Donation QR Code"
+                onerror="this.style.display='none';"
+            >
+
+        </div>
+
+
+        <!-- BITCOIN ADDRESS -->
+
+        <div class="btc-label">
+            Bitcoin Donation Address
+        </div>
+
+        <div
+            class="btc-address"
+            id="btcAddress">
+            166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+        </div>
+
+
+        <!-- COPY BUTTON -->
+
+        <button
+            class="copy-button"
+            id="copyButton"
+            type="button">
+            Copy Bitcoin Address
+        </button>
+
+        <div
+            class="copy-status"
+            id="copyStatus"
+            aria-live="polite">
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- =========================
-       FINAL MESSAGE
-  ========================== -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-  <section class="cta">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        A Brighter Future Begins With Us
-      </h2>
-
-      <p>
-        When we come together for children, small acts
-        can become meaningful opportunities for tomorrow.
-      </p>
-
-      <a href="#help" class="cta-button">
-        Be Part of the Journey
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
-  <footer>
-
-    <div class="footer-logo">
-      NARA
-    </div>
+<footer>
 
     <p>
-      NARA Children's Future
+        <strong>NARA Children's Future</strong>
     </p>
 
     <p>
-      Every Child. Every Dream. A Brighter Future.
+        A Child, A Future.
     </p>
 
-  </footer>
+    <p>
+        © 2026 NARA Children's Future
+    </p>
+
+</footer>
 
 
-  <!-- =========================
-       JAVASCRIPT MENU
-  ========================== -->
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-  <script>
+<script>
 
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("active");
-    }
+const menuButton = document.getElementById("menuButton");
+const navLinks = document.getElementById("navLinks");
 
-    function closeMenu() {
-      document.getElementById("menu").classList.remove("active");
-    }
+/* Mobile menu */
 
-    document.addEventListener("click", function(event) {
+menuButton.addEventListener("click", function(){
 
-      const menu = document.getElementById("menu");
-      const button = document.querySelector(".menu-button");
+    const isOpen = navLinks.classList.toggle("open");
 
-      if (
-        !menu.contains(event.target) &&
-        !button.contains(event.target)
-      ) {
-        menu.classList.remove("active");
-      }
+    menuButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+    );
+
+});
+
+
+/* Close mobile menu after clicking link */
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        navLinks.classList.remove("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
     });
 
-  </script>
+});
+
+
+/* Bitcoin Copy */
+
+const copyButton = document.getElementById("copyButton");
+const btcAddress = document.getElementById("btcAddress");
+const copyStatus = document.getElementById("copyStatus");
+
+copyButton.addEventListener("click", async function(){
+
+    const address = btcAddress.textContent.trim();
+
+    try{
+
+        await navigator.clipboard.writeText(address);
+
+        copyStatus.textContent = "Copied ✓";
+
+        setTimeout(function(){
+            copyStatus.textContent = "";
+        }, 2500);
+
+    }catch(error){
+
+        /* Fallback for browsers that block Clipboard API */
+
+        const textArea = document.createElement("textarea");
+
+        textArea.value = address;
+
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+
+        document.body.appendChild(textArea);
+
+        textArea.focus();
+        textArea.select();
+
+        try{
+
+            document.execCommand("copy");
+
+            copyStatus.textContent = "Copied ✓";
+
+        }catch(e){
+
+            copyStatus.textContent =
+                "Please copy the address manually.";
+
+        }
+
+        document.body.removeChild(textArea);
+
+        setTimeout(function(){
+            copyStatus.textContent = "";
+        }, 3000);
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
