@@ -1,553 +1,446 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NARA — Every Child a Future</title>
+<title>NARA — Every Child, A Future</title>
 
 <style>
-
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
-    color: #222;
+    background: #f8fbff;
+    color: #18324a;
     line-height: 1.6;
 }
 
-.container {
-    max-width: 720px;
-    margin: auto;
-    padding: 20px 15px;
-}
-
-.card {
-    background: #fff;
-    padding: 25px;
-    margin-bottom: 18px;
-    border-radius: 16px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-}
+/* =========================
+   HEADER
+========================= */
 
 .hero {
-    text-align: center;
-    padding: 32px 22px;
+    width: 100%;
+    height: 145px;
+    display: flex;
+    overflow: hidden;
+    background: #12395b;
 }
 
-.logo {
-    width: 90px;
-    height: 90px;
+.hero-photo {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 12px;
+    object-position: center;
+    display: block;
 }
 
-.brand {
-    font-size: 38px;
-    font-weight: bold;
-    margin: 0;
+.hero-text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
 }
 
-.tagline {
-    font-size: 21px;
-    color: #555;
-    margin-top: 5px;
-    margin-bottom: 20px;
+.hero-text h1 {
+    color: white;
+    font-size: clamp(22px, 6vw, 42px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
-h1 {
-    font-size: 30px;
-    line-height: 1.2;
-    margin: 10px 0 12px;
+.hero-text span {
+    display: block;
+    color: #ffd85c;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: #174a72;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    background: #eaf5ff;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 28px 18px;
+}
+
+section {
+    margin-bottom: 35px;
 }
 
 h2 {
-    margin-top: 0;
-    font-size: 22px;
+    color: #174a72;
+    font-size: 28px;
+    margin-bottom: 12px;
 }
 
-.subtitle {
+p {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 30px;
+}
+
+.tagline {
+    color: #e39b00;
     font-size: 18px;
-    color: #666;
+    font-weight: bold;
 }
 
+/* =========================
+   CARDS
+========================= */
 
-/* GALERI — 3 FOTO PER BARIS */
-
-.gallery {
+.cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-top: 20px;
+    gap: 18px;
 }
 
-.gallery img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-
-/* BITCOIN */
-
-.btc-box {
-    background: #f1f3f5;
-    padding: 18px;
-    border-radius: 12px;
-    margin-top: 15px;
-}
-
-.address {
-    font-family: monospace;
-    font-size: 14px;
-    word-break: break-all;
+.card {
     background: white;
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-button {
-    width: 100%;
-    padding: 15px;
-    margin-top: 12px;
-    border: none;
-    border-radius: 9px;
-    background: #222;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.success {
+    border-radius: 15px;
+    padding: 22px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #228b22;
 }
 
-.qr {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.qr img {
-    max-width: 256px;
-    width: 100%;
-}
-
-
-/* WARNING */
-
-.warning {
-    background: #fff8e6;
-    border-left: 5px solid #d99a00;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-ul {
-    padding-left: 22px;
-}
-
-li {
+.card h3 {
+    color: #174a72;
     margin-bottom: 8px;
 }
 
-.footer {
+.card p {
+    font-size: 14px;
+}
+
+/* =========================
+   DONATION
+========================= */
+
+.donation {
+    background: #12395b;
+    color: white;
+    border-radius: 18px;
+    padding: 28px 20px;
     text-align: center;
-    color: #777;
-    font-size: 14px;
-    padding: 10px 0 30px;
 }
 
-.small {
-    font-size: 14px;
-    color: #666;
+.donation h2 {
+    color: white;
 }
 
+.donation-address {
+    background: white;
+    color: #18324a;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 18px auto;
+    max-width: 700px;
+    font-size: 14px;
+    word-break: break-all;
+    font-weight: bold;
+}
 
-/* HP */
+.donate-button {
+    display: inline-block;
+    background: #f5b400;
+    color: #172b3d;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-top: 5px;
+}
 
-@media (max-width: 500px) {
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0d2941;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+    font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: 105px;
+    }
+
+    .hero-photo {
+        width: 50%;
+    }
+
+    .hero-text {
+        width: 50%;
+        padding: 6px;
+    }
+
+    .hero-text h1 {
+        font-size: 22px;
+        letter-spacing: 0.5px;
+    }
+
+    nav {
+        gap: 3px;
+        padding: 7px 4px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 6px 7px;
+    }
+
+    .container {
+        padding: 22px 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
 
     .card {
-        padding: 20px;
+        padding: 18px;
     }
-
-    .brand {
-        font-size: 34px;
-    }
-
-    h1 {
-        font-size: 27px;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 7px;
-    }
-
 }
 
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 601px) {
+
+    .hero {
+        height: 180px;
+    }
+
+    .hero-photo {
+        width: 50%;
+    }
+
+    .hero-text {
+        width: 50%;
+    }
+}
 </style>
 </head>
 
-
 <body>
 
-<div class="container">
+<!-- =========================
+     HEADER
+========================= -->
 
+<header class="hero">
 
-<!-- NARA HEADER -->
+    <div class="hero-photo">
+        <!-- GANTI nama file jika nama foto berbeda -->
+        <img src="nara.jpg" alt="Mother and child">
+    </div>
 
-<div class="card hero">
+    <div class="hero-text">
+        <h1>
+            A Child,
+            <span>A Future</span>
+        </h1>
+    </div>
 
-    <img src="nara-02.jpg" class="logo" alt="NARA">
+</header>
 
-    <p class="brand">
-        NARA
-    </p>
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#mission">Mission</a>
+    <a href="#donate">Donate</a>
+</nav>
+
+<!-- =========================
+     CONTENT
+========================= -->
+
+<main class="container">
+
+<section id="home" class="intro">
+
+    <h2>NARA</h2>
 
     <p class="tagline">
-        Every Child a Future
-    </p>
-
-    <h1>
-        Help Support a Child's Education
-    </h1>
-
-    <p class="subtitle">
-        Voluntary Bitcoin Donations
+        Every Child, A Future
     </p>
 
     <p>
-        Hello, my name is Jonea.
+        NARA is a simple initiative created to support children
+        and help give them access to education and a better future.
+    </p>
+
+</section>
+
+<section id="about">
+
+    <h2>About NARA</h2>
+
+    <p>
+        Every child deserves the opportunity to learn, grow,
+        and build a better future.
     </p>
 
     <p>
-        I am a parent seeking voluntary support to help
-        with my child's education.
+        NARA exists to help turn that opportunity into reality,
+        one child at a time.
     </p>
 
-    <p>
-        If you have Bitcoin and genuinely wish to help
-        with educational expenses, any amount would be
-        greatly appreciated.
-    </p>
+</section>
 
-    <p>
-        This is a personal request for voluntary assistance.
-        There is no investment opportunity and no financial
-        return is promised.
-    </p>
+<section id="mission">
 
-</div>
+    <h2>Our Mission</h2>
 
+    <div class="cards">
 
-<!-- OUR STORY -->
+        <div class="card">
+            <h3>Education</h3>
+            <p>
+                Supporting children's access to education
+                and learning opportunities.
+            </p>
+        </div>
 
-<div class="card">
+        <div class="card">
+            <h3>Opportunity</h3>
+            <p>
+                Helping children have the opportunity
+                to build a better future.
+            </p>
+        </div>
 
-    <h2>
-        Our Story
-    </h2>
-
-    <h3 style="
-        text-align:center;
-        font-size:28px;
-        margin-top:35px;
-        margin-bottom:0;
-        line-height:1.2;
-    ">
-        One Pen, One Child
-    </h3>
-
-    <p style="
-        text-align:center;
-        font-size:21px;
-        font-weight:bold;
-        font-style:italic;
-        margin-top:2px;
-        margin-bottom:25px;
-    ">
-        They Deserve to Be Happy.
-    </p>
-
-
-    <p>
-        Every child has a dream.
-        A dream to learn, to grow, to smile, and to build
-        a better future.
-    </p>
-
-    <p>
-        Sometimes, that dream begins with something very simple —
-        a book, a school bag, or even just one pen.
-    </p>
-
-    <p>
-        <strong>
-            One pen may be small to us,
-            but it can mean so much to a child.
-        </strong>
-    </p>
-
-    <p>
-        NARA is a small story about hope.
-        A story about giving a child the chance to learn,
-        to dream, and to believe that their future matters.
-    </p>
-
-    <p>
-        We believe that every child deserves to learn.
-        Every child deserves a chance.
-        And every child deserves to be happy.
-    </p>
-
-
-    <!-- 6 FOTO — 3 PER BARIS -->
-
-    <div class="gallery">
-
-        <img src="nara-02.jpg" alt="NARA photo 2">
-
-        <img src="nara-03.jpg" alt="NARA photo 3">
-
-        <img src="nara-04.jpg" alt="NARA photo 4">
-
-        <img src="nara-05.jpg" alt="NARA photo 5">
-
-        <img src="nara-06.jpg" alt="NARA photo 6">
-
-        <img src="nara-07.jpg" alt="NARA photo 7">
+        <div class="card">
+            <h3>Hope</h3>
+            <p>
+                Creating hope through simple acts
+                of support and kindness.
+            </p>
+        </div>
 
     </div>
 
-</div>
+</section>
 
+<!-- =========================
+     DONATION
+========================= -->
 
-<!-- BITCOIN DONATION -->
+<section id="donate">
 
-<div class="card">
+    <div class="donation">
 
-    <h2>
-        Donate Bitcoin
-    </h2>
-
-    <p>
-        If you would like to help, you can send Bitcoin
-        directly to the following public Bitcoin address:
-    </p>
-
-    <div class="btc-box">
+        <h2>Support a Child's Future</h2>
 
         <p>
-            <strong>
-                BTC Donation Address
-            </strong>
+            If you would like to support NARA,
+            your contribution can help toward a child's education.
         </p>
 
-        <div class="address" id="btcAddress">
+        <div class="donation-address">
             166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
         </div>
 
-        <button onclick="copyAddress()">
-            Copy Bitcoin Address
-        </button>
-
-        <div class="success" id="message"></div>
-
-        <div class="qr">
-
-            <h3>
-                Scan QR Code
-            </h3>
-
-            <div id="qrcode"></div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- PURPOSE -->
-
-<div class="card">
-
-    <h2>
-        How Donations Can Help
-    </h2>
-
-    <p>
-        Donations may help with necessary educational
-        expenses, including:
-    </p>
-
-    <ul>
-
-        <li>
-            School or education fees
-        </li>
-
-        <li>
-            Books and learning materials
-        </li>
-
-        <li>
-            School transportation
-        </li>
-
-        <li>
-            Educational supplies
-        </li>
-
-        <li>
-            Other necessary education-related expenses
-        </li>
-
-    </ul>
-
-</div>
-
-
-<!-- TRANSPARENCY -->
-
-<div class="card">
-
-    <h2>
-        Transparency
-    </h2>
-
-    <p>
-        Bitcoin transactions can be independently verified
-        on the public blockchain.
-    </p>
-
-    <p>
-        The Bitcoin address displayed on this page is a
-        public receiving address.
-    </p>
-
-    <div class="warning">
-
-        <strong>
-            Important:
-        </strong>
-
         <p>
-            I will never ask a donor for a seed phrase,
-            private key, password, or other confidential
-            information.
+            Bitcoin donation address
         </p>
 
+        <a class="donate-button"
+           href="bitcoin:166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ">
+            Donate with Bitcoin
+        </a>
+
     </div>
 
-</div>
+</section>
 
+</main>
 
-<!-- DONOR NOTE -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-<div class="card">
-
-    <h2>
-        A Note to Donors
-    </h2>
-
-    <p>
-        Please donate only if you can afford to do so.
-    </p>
-
-    <p>
-        There is no investment opportunity associated
-        with this page, and no financial return is promised.
-    </p>
-
-    <p>
-        If you cannot donate, sharing this page with someone
-        who may genuinely wish to help is also appreciated.
-    </p>
-
-</div>
-
-
-<!-- THANK YOU -->
-
-<div class="card hero">
-
-    <h2>
-        Thank You
-    </h2>
-
-    <p>
-        Thank you for taking the time to read our story.
-    </p>
-
-    <p>
-        Whether you donate or simply share this page,
-        your kindness and consideration are appreciated.
-    </p>
-
-    <p class="small">
-        NARA — Every Child a Future
-    </p>
-
-</div>
-
-
-<div class="footer">
-    © 2026 NARA — Every Child a Future
-</div>
-
-
-</div>
-
-
-<!-- QR CODE LIBRARY -->
-
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-
-<script>
-
-new QRCode(document.getElementById("qrcode"), {
-
-    text: "bitcoin:166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ",
-
-    width: 256,
-
-    height: 256
-
-});
-
-
-function copyAddress() {
-
-    const address =
-        document.getElementById("btcAddress").innerText.trim();
-
-    navigator.clipboard.writeText(address).then(function() {
-
-        document.getElementById("message").innerText =
-            "Bitcoin address copied.";
-
-    }).catch(function() {
-
-        document.getElementById("message").innerText =
-            "Please copy the address manually.";
-
-    });
-
-}
-
-</script>
+<footer>
+    <p>NARA — Every Child, A Future</p>
+    <p>Education • Opportunity • Hope</p>
+</footer>
 
 </body>
 </html>
+```
