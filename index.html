@@ -7,6 +7,11 @@
 <title>NARA Children's Future</title>
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -21,7 +26,7 @@ body{
     font-family:Arial,Helvetica,sans-serif;
     background:#faf9f5;
     color:#20252b;
-    line-height:1.6;
+    line-height:1.55;
 }
 
 a{
@@ -29,64 +34,70 @@ a{
     color:inherit;
 }
 
-/* ================= HEADER ================= */
+
+/* =========================
+   NAVIGATION
+========================= */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:#ffffff;
-    box-shadow:0 2px 12px rgba(0,0,0,.12);
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
 }
 
 .navbar{
     max-width:1200px;
+    height:64px;
     margin:auto;
-    height:65px;
+    padding:0 22px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 22px;
 }
 
 .logo{
     font-size:23px;
     font-weight:800;
     letter-spacing:2px;
-    color:#c79a00;
+    color:#c49600;
 }
 
 .menu{
     display:flex;
-    gap:25px;
     align-items:center;
+    gap:25px;
 }
 
 .menu a{
     font-size:14px;
     font-weight:600;
     color:#333;
-    transition:.2s;
 }
 
 .menu a:hover{
-    color:#c79a00;
+    color:#c49600;
 }
 
 .menu-button{
     display:none;
     border:0;
     background:none;
-    font-size:29px;
+    font-size:30px;
     cursor:pointer;
 }
 
-/* ================= HERO ================= */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     position:relative;
     width:100%;
-    min-height:430px;
+    height:430px;
     overflow:hidden;
     background:#222;
 }
@@ -94,8 +105,10 @@ header{
 .hero-image{
     position:absolute;
     inset:0;
+
     width:100%;
     height:100%;
+
     object-fit:cover;
     object-position:center;
 }
@@ -103,127 +116,185 @@ header{
 .hero-overlay{
     position:absolute;
     inset:0;
+
     background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.18) 0%,
-            rgba(0,0,0,.30) 45%,
-            rgba(0,0,0,.62) 100%
-        );
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.12),
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.58)
+    );
 }
 
 .sun{
     position:absolute;
-    width:230px;
-    height:230px;
+
+    width:240px;
+    height:240px;
+
     right:-70px;
-    top:-80px;
+    top:-85px;
+
     border-radius:50%;
-    background:radial-gradient(
+
+    background:
+    radial-gradient(
         circle,
-        rgba(255,222,74,.75) 0%,
-        rgba(255,210,30,.30) 35%,
+        rgba(255,225,50,.75) 0%,
+        rgba(255,210,30,.32) 35%,
         rgba(255,210,30,0) 72%
     );
+
     filter:blur(4px);
 }
 
 .hero-content{
     position:relative;
     z-index:2;
-    min-height:430px;
+
     max-width:1200px;
+    height:100%;
     margin:auto;
+
     display:flex;
-    align-items:center;
     justify-content:flex-end;
+    align-items:center;
+
     padding:40px 7%;
 }
 
 .hero-title{
+    max-width:540px;
+
+    color:#fff;
+
     text-align:left;
-    max-width:530px;
-    color:white;
-    text-shadow:0 3px 12px rgba(0,0,0,.65);
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.65);
 }
 
 .hero-title .child{
     display:block;
+
     font-family:Georgia,serif;
-    font-size:clamp(38px,6vw,72px);
+
+    font-size:clamp(40px,6vw,72px);
+
     font-weight:700;
-    color:#ffffff;
+
     line-height:1.05;
+
+    color:#fff;
 }
 
 .hero-title .future{
     display:block;
+
     font-family:Georgia,serif;
-    font-size:clamp(42px,7vw,80px);
-    font-style:italic;
+
+    font-size:clamp(44px,7vw,80px);
+
     font-weight:800;
-    color:#ffe01b;
+    font-style:italic;
+
     line-height:1.05;
-    letter-spacing:1px;
+
+    color:#ffe01b;
 }
 
-.hero-subtitle{
-    margin-top:16px;
-    color:#fff;
-    font-size:17px;
-    max-width:430px;
-}
 
-/* ================= CONTENT ================= */
+/* =========================
+   MAIN
+========================= */
 
 main{
     max-width:1050px;
     margin:auto;
-    padding:20px;
+
+    padding:0 20px;
 }
 
 section{
-    padding:65px 10px;
     scroll-margin-top:75px;
+}
+
+
+/* =========================
+   MISSION
+========================= */
+
+#mission{
+    padding:45px 10px 30px;
 }
 
 .section-title{
     color:#c49600;
+
     font-size:30px;
+
     font-weight:800;
-    margin-bottom:16px;
+
     text-align:center;
+
+    margin-bottom:12px;
 }
 
 .section-text{
     max-width:800px;
-    margin:0 auto;
+
+    margin:auto;
+
     text-align:center;
+
     font-size:17px;
 }
 
-/* ================= STORY GALLERY ================= */
+
+/* =========================
+   STORY
+========================= */
+
+#story{
+    padding:28px 10px 45px;
+}
+
+#story .section-text{
+    max-width:820px;
+}
 
 .gallery{
-    margin-top:30px;
+    margin-top:25px;
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:14px;
 }
 
 .gallery a{
     display:block;
+
     overflow:hidden;
-    border-radius:12px;
+
+    border-radius:14px;
+
     background:#ddd;
-    box-shadow:0 3px 12px rgba(0,0,0,.12);
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.12);
 }
 
 .gallery img{
     display:block;
+
     width:100%;
+
     aspect-ratio:1/1;
+
     object-fit:cover;
+
     transition:transform .3s ease;
 }
 
@@ -231,82 +302,152 @@ section{
     transform:scale(1.05);
 }
 
-/* ================= IMPACT ================= */
+
+/* =========================
+   WHY CARE
+========================= */
+
+#impact{
+    padding:45px 10px;
+}
 
 .impact-box{
     max-width:850px;
-    margin:25px auto 0;
-    padding:30px;
-    border-radius:15px;
+
+    margin:20px auto 0;
+
+    padding:28px;
+
     background:#fff;
-    box-shadow:0 4px 18px rgba(0,0,0,.08);
+
+    border-radius:15px;
+
     text-align:center;
+
+    box-shadow:
+        0 4px 18px rgba(0,0,0,.08);
 }
 
 .impact-box p{
     font-size:18px;
 }
 
-/* ================= HELP ================= */
+
+/* =========================
+   WHAT WE CAN DO
+========================= */
+
+.what-we-do{
+    padding:45px 10px;
+}
+
+
+/* =========================
+   HOW TO HELP
+========================= */
+
+#how-help{
+    padding:45px 10px;
+}
 
 .help-list{
     max-width:800px;
-    margin:25px auto 0;
+
+    margin:22px auto 0;
+
     display:grid;
-    gap:15px;
+
+    gap:13px;
 }
 
 .help-item{
     background:#fff;
-    padding:20px;
+
+    padding:18px 20px;
+
     border-left:5px solid #c49600;
+
     border-radius:8px;
-    box-shadow:0 2px 10px rgba(0,0,0,.07);
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,.07);
 }
 
-/* ================= DONATION ================= */
+
+/* =========================
+   DONATION
+========================= */
+
+#donate{
+    padding:45px 0;
+}
 
 .donate-section{
     background:#f3eedc;
+
     border-radius:18px;
-    padding:55px 25px;
+
+    padding:45px 25px;
 }
 
 .btc-box{
     max-width:750px;
-    margin:25px auto;
+
+    margin:22px auto;
+
     background:#fff;
-    padding:25px;
+
+    padding:23px;
+
     border-radius:14px;
+
     text-align:center;
-    box-shadow:0 4px 16px rgba(0,0,0,.1);
+
+    box-shadow:
+        0 4px 16px rgba(0,0,0,.10);
 }
 
 .btc-label{
     font-size:14px;
+
     color:#666;
-    margin-bottom:10px;
+
+    margin-bottom:9px;
 }
 
 .btc-address{
     word-break:break-all;
+
     font-family:monospace;
-    font-size:17px;
+
+    font-size:16px;
+
     font-weight:bold;
+
     background:#f5f5f5;
-    padding:15px;
+
+    padding:14px;
+
     border-radius:8px;
 }
 
 .copy-button{
-    margin-top:15px;
-    padding:12px 25px;
-    border:none;
+    margin-top:14px;
+
+    padding:12px 24px;
+
+    border:0;
+
     border-radius:8px;
+
     background:#c49600;
-    color:white;
-    font-size:16px;
+
+    color:#fff;
+
+    font-size:15px;
+
     font-weight:bold;
+
     cursor:pointer;
 }
 
@@ -316,41 +457,62 @@ section{
 
 .copy-message{
     display:block;
-    margin-top:10px;
+
+    margin-top:9px;
+
+    min-height:22px;
+
     color:#39803d;
+
     font-weight:bold;
-    min-height:24px;
 }
 
-/* ================= QR ================= */
+
+/* =========================
+   QR
+========================= */
 
 .qr-area{
-    margin:30px auto 0;
     text-align:center;
+
+    margin-top:25px;
 }
 
 .qr-area img{
     width:210px;
     height:210px;
+
     padding:10px;
-    background:white;
+
+    background:#fff;
+
     border-radius:12px;
-    box-shadow:0 3px 15px rgba(0,0,0,.12);
+
+    box-shadow:
+        0 3px 15px rgba(0,0,0,.12);
 }
 
 .qr-caption{
-    margin-top:10px;
+    margin-top:9px;
+
     font-size:14px;
+
     color:#555;
 }
 
 .donate-button{
     display:inline-block;
-    margin-top:20px;
-    padding:13px 28px;
+
+    margin-top:18px;
+
+    padding:13px 27px;
+
     border-radius:8px;
+
     background:#222;
+
     color:#fff;
+
     font-weight:bold;
 }
 
@@ -358,46 +520,69 @@ section{
     background:#444;
 }
 
-/* ================= TRANSPARENCY ================= */
 
-.transparency{
-    text-align:center;
-    max-width:750px;
-    margin:auto;
+/* =========================
+   OTHER SECTIONS
+========================= */
+
+.simple-section{
+    padding:45px 10px;
 }
 
-/* ================= FOOTER ================= */
+.transparency{
+    max-width:750px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#20252b;
+
     color:#fff;
+
     text-align:center;
-    padding:40px 20px;
+
+    padding:38px 20px;
 }
 
-footer .footer-title{
+.footer-title{
     color:#ffe01b;
+
     font-family:Georgia,serif;
+
     font-size:25px;
-    margin-bottom:10px;
+
+    margin-bottom:8px;
 }
 
 footer p{
     color:#ddd;
+
     font-size:14px;
 }
 
-/* ================= MOBILE ================= */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:700px){
 
     .navbar{
         height:58px;
+
         padding:0 15px;
     }
 
     .logo{
-        font-size:19px;
+        font-size:20px;
     }
 
     .menu-button{
@@ -406,14 +591,22 @@ footer p{
 
     .menu{
         display:none;
+
         position:absolute;
+
         top:58px;
         left:0;
+
         width:100%;
+
         background:#fff;
+
         flex-direction:column;
+
         gap:0;
-        box-shadow:0 5px 12px rgba(0,0,0,.12);
+
+        box-shadow:
+            0 5px 12px rgba(0,0,0,.12);
     }
 
     .menu.open{
@@ -422,31 +615,31 @@ footer p{
 
     .menu a{
         width:100%;
-        padding:15px 20px;
+
+        padding:14px 20px;
+
         border-bottom:1px solid #eee;
     }
 
-    /*
-       MOBILE HERO:
-       width = full phone width
-       height ≈ one third of phone screen width
-    */
+
+    /* MOBILE HERO */
 
     .hero{
         height:33.333vw;
+
         min-height:125px;
-        max-height:230px;
+
+        max-height:220px;
     }
 
     .hero-content{
-        min-height:0;
-        height:100%;
-        padding:10px 18px;
+        padding:8px 18px;
+
         justify-content:flex-end;
     }
 
     .hero-title{
-        max-width:52%;
+        max-width:55%;
     }
 
     .hero-title .child{
@@ -457,48 +650,83 @@ footer p{
         font-size:clamp(25px,8vw,45px);
     }
 
-    .hero-subtitle{
-        display:none;
-    }
-
     .sun{
         width:150px;
         height:150px;
+
         right:-55px;
         top:-55px;
     }
 
+
+    /* MAIN MOBILE */
+
     main{
-        padding:10px 15px;
+        padding:0 14px;
     }
 
-    section{
-        padding:45px 5px;
+
+    /* MISSION MOBILE */
+
+    #mission{
+        padding:28px 5px 20px;
     }
 
     .section-title{
         font-size:26px;
+
+        margin-bottom:9px;
     }
 
     .section-text{
         font-size:16px;
+
+        line-height:1.5;
+    }
+
+
+    /* STORY MOBILE */
+
+    #story{
+        padding:20px 5px 35px;
     }
 
     .gallery{
+        margin-top:20px;
+
         grid-template-columns:repeat(2,1fr);
-        gap:10px;
+
+        gap:9px;
+    }
+
+    .gallery a{
+        border-radius:12px;
+    }
+
+
+    /* OTHER MOBILE SECTIONS */
+
+    #impact,
+    .what-we-do,
+    #how-help,
+    .simple-section{
+        padding:35px 5px;
     }
 
     .impact-box{
-        padding:22px 18px;
+        padding:22px 17px;
+    }
+
+    .impact-box p{
+        font-size:17px;
     }
 
     .donate-section{
-        padding:40px 15px;
+        padding:38px 14px;
     }
 
     .btc-box{
-        padding:18px 12px;
+        padding:18px 11px;
     }
 
     .btc-address{
@@ -509,62 +737,112 @@ footer p{
         width:190px;
         height:190px;
     }
+
 }
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media(max-width:380px){
+
+    .hero-title .child{
+        font-size:21px;
+    }
+
+    .hero-title .future{
+        font-size:24px;
+    }
+
+    .hero{
+        min-height:115px;
+    }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <header>
-    <nav class="navbar">
 
-        <div class="logo">
-            NARA
-        </div>
+<nav class="navbar">
 
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open menu"
-            aria-expanded="false">
-            ☰
-        </button>
+    <div class="logo">
+        NARA
+    </div>
 
-        <div class="menu" id="menu">
 
-            <a href="#home">Home</a>
+    <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open menu"
+        aria-expanded="false">
 
-            <a href="#mission">Our Mission</a>
+        ☰
 
-            <a href="#story">Our Story</a>
+    </button>
 
-            <a href="#impact">Why We Care</a>
 
-            <a href="#how-help">How You Can Help</a>
+    <div class="menu" id="menu">
 
-            <a href="#donate">Donate</a>
+        <a href="#home">
+            Home
+        </a>
 
-        </div>
+        <a href="#mission">
+            Our Mission
+        </a>
 
-    </nav>
+        <a href="#story">
+            Our Story
+        </a>
+
+        <a href="#impact">
+            Why We Care
+        </a>
+
+        <a href="#how-help">
+            How You Can Help
+        </a>
+
+        <a href="#donate">
+            Donate
+        </a>
+
+    </div>
+
+</nav>
+
 </header>
 
 
-<!-- ================= HERO ================= -->
 
-<section class="hero" id="home">
+<!-- =========================
+     HERO
+========================= -->
 
-    <!-- ACTUAL FILE IN YOUR REPOSITORY -->
+<section
+    class="hero"
+    id="home">
+
     <img
-            class="hero-image"
-    src="1789699903727.png"
-    alt="Mother and child">
+        class="hero-image"
+        src="1789699903727.png"
+        alt="Mother and child">
 
     <div class="hero-overlay"></div>
 
     <div class="sun"></div>
+
 
     <div class="hero-content">
 
@@ -585,9 +863,13 @@ footer p{
 </section>
 
 
+
 <main>
 
-<!-- ================= MISSION ================= -->
+
+<!-- =========================
+     OUR MISSION
+========================= -->
 
 <section id="mission">
 
@@ -596,13 +878,17 @@ footer p{
     </h2>
 
     <p class="section-text">
-        To help children have the opportunity to grow, learn, and build a brighter future.
+        To help children have the opportunity to grow, learn,
+        and build a brighter future.
     </p>
 
 </section>
 
 
-<!-- ================= STORY ================= -->
+
+<!-- =========================
+     OUR STORY
+========================= -->
 
 <section id="story">
 
@@ -611,43 +897,90 @@ footer p{
     </h2>
 
     <p class="section-text">
-        Every child has a story, a dream, and a future worth protecting.
-        NARA exists to bring attention and support to children who need a helping hand.
+        Every child has a story, a dream, and a future worth
+        protecting. NARA exists to bring attention and support
+        to children who need a helping hand.
     </p>
 
 
     <div class="gallery">
 
-        <a href="nara-03.jpg" target="_blank">
-            <img src="nara-03.jpg" alt="Children">
+
+        <a
+            href="nara-03.jpg"
+            target="_blank">
+
+            <img
+                src="nara-03.jpg"
+                alt="Children">
+
         </a>
 
-        <a href="nara-04.jpg" target="_blank">
-            <img src="nara-04.jpg" alt="Children">
+
+        <a
+            href="nara-04.jpg"
+            target="_blank">
+
+            <img
+                src="nara-04.jpg"
+                alt="Children">
+
         </a>
 
-        <a href="nara-05.jpg" target="_blank">
-            <img src="nara-05.jpg" alt="Children">
+
+        <a
+            href="nara-05.jpg"
+            target="_blank">
+
+            <img
+                src="nara-05.jpg"
+                alt="Children">
+
         </a>
 
-        <a href="nara-06.jpg" target="_blank">
-            <img src="nara-06.jpg" alt="Children">
+
+        <a
+            href="nara-06.jpg"
+            target="_blank">
+
+            <img
+                src="nara-06.jpg"
+                alt="Children">
+
         </a>
 
-        <a href="nara-07.jpg" target="_blank">
-            <img src="nara-07.jpg" alt="Children">
+
+        <a
+            href="nara-07.jpg"
+            target="_blank">
+
+            <img
+                src="nara-07.jpg"
+                alt="Children">
+
         </a>
 
-        <a href="nara-08.jpg" target="_blank">
-            <img src="nara-08.jpg" alt="Children">
+
+        <a
+            href="nara-08.jpg"
+            target="_blank">
+
+            <img
+                src="nara-08.jpg"
+                alt="Children">
+
         </a>
+
 
     </div>
 
 </section>
 
 
-<!-- ================= WHY CARE ================= -->
+
+<!-- =========================
+     WHY SHOULD WE CARE
+========================= -->
 
 <section id="impact">
 
@@ -655,10 +988,12 @@ footer p{
         Why Should We Care?
     </h2>
 
+
     <div class="impact-box">
 
         <p>
-            A child's future can be changed by a small act of kindness today.
+            A child's future can be changed by a small act
+            of kindness today.
         </p>
 
     </div>
@@ -666,13 +1001,17 @@ footer p{
 </section>
 
 
-<!-- ================= WHAT CAN WE DO ================= -->
 
-<section>
+<!-- =========================
+     WHAT CAN WE DO
+========================= -->
+
+<section class="what-we-do">
 
     <h2 class="section-title">
         What Can We Do?
     </h2>
+
 
     <p class="section-text">
         A small act, big impact for children.
@@ -681,7 +1020,10 @@ footer p{
 </section>
 
 
-<!-- ================= HOW TO HELP ================= -->
+
+<!-- =========================
+     HOW YOU CAN BE PART
+========================= -->
 
 <section id="how-help">
 
@@ -689,83 +1031,132 @@ footer p{
         How You Can Be Part
     </h2>
 
+
     <p class="section-text">
-        You can become part of this effort by helping provide opportunities
-        for children and supporting their journey toward a better future.
+
+        You can become part of this effort by helping provide
+        opportunities for children and supporting their journey
+        toward a better future.
+
     </p>
 
 
     <div class="help-list">
 
+
         <div class="help-item">
-            <strong>Support</strong><br>
+
+            <strong>
+                Support
+            </strong>
+
+            <br>
+
             Help make opportunities possible for children.
+
         </div>
 
+
         <div class="help-item">
-            <strong>Share</strong><br>
+
+            <strong>
+                Share
+            </strong>
+
+            <br>
+
             Help others discover the mission and its purpose.
+
         </div>
 
+
         <div class="help-item">
-            <strong>Contribute</strong><br>
-            Bitcoin contributions can be made directly through this website.
+
+            <strong>
+                Contribute
+            </strong>
+
+            <br>
+
+            Bitcoin contributions can be made directly
+            through this website.
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ================= DONATE ================= -->
+
+<!-- =========================
+     DONATE
+========================= -->
 
 <section id="donate">
 
     <div class="donate-section">
 
+
         <h2 class="section-title">
             How to Donate
         </h2>
 
+
         <p class="section-text">
+
             If you would like to contribute through Bitcoin,
             you can send your donation directly to the address below.
+
         </p>
 
 
         <div class="btc-box">
 
+
             <div class="btc-label">
                 Bitcoin Donation Address
             </div>
 
+
             <div
                 class="btc-address"
                 id="btcAddress">
+
                 166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+
             </div>
 
 
             <button
                 class="copy-button"
                 id="copyButton">
+
                 Copy Bitcoin Address
+
             </button>
+
 
             <span
                 class="copy-message"
                 id="copyMessage">
             </span>
 
+
         </div>
 
 
+
+        <!-- QR CODE -->
+
         <div class="qr-area">
 
-            <!-- QR generated from the same Bitcoin address -->
+
             <img
                 src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=bitcoin%3A166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ"
                 alt="Bitcoin donation QR code">
+
 
             <p class="qr-caption">
                 Scan to send Bitcoin
@@ -775,8 +1166,11 @@ footer p{
             <a
                 class="donate-button"
                 href="bitcoin:166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ">
+
                 Open Bitcoin Wallet
+
             </a>
+
 
         </div>
 
@@ -785,35 +1179,48 @@ footer p{
 </section>
 
 
-<!-- ================= HOW DONATION HELPS ================= -->
 
-<section>
+<!-- =========================
+     HOW DONATION HELPS
+========================= -->
+
+<section class="simple-section">
 
     <h2 class="section-title">
         How Your Donation Helps
     </h2>
 
+
     <p class="section-text">
-        Every contribution can help create opportunities that support
-        a child's education, growth, and future.
+
+        Every contribution can help create opportunities that
+        support a child's education, growth, and future.
+
     </p>
 
 </section>
 
 
-<!-- ================= TRANSPARENCY ================= -->
 
-<section>
+<!-- =========================
+     TRANSPARENCY
+========================= -->
+
+<section class="simple-section">
 
     <h2 class="section-title">
         Transparency
     </h2>
 
+
     <div class="transparency">
 
         <p>
-            We believe supporters deserve clear information about the purpose
-            of this initiative and how contributions are intended to support children.
+
+            We believe supporters deserve clear information
+            about the purpose of this initiative and how
+            contributions are intended to support children.
+
         </p>
 
     </div>
@@ -821,25 +1228,35 @@ footer p{
 </section>
 
 
-<!-- ================= FINAL ================= -->
 
-<section>
+<!-- =========================
+     THANK YOU
+========================= -->
+
+<section class="simple-section">
 
     <h2 class="section-title">
         Thank You
     </h2>
 
+
     <p class="section-text">
+
         Thank you for caring about a child's future.
         Every act of support begins with compassion.
+
     </p>
 
 </section>
 
+
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -847,9 +1264,11 @@ footer p{
         A Child, A Future
     </div>
 
+
     <p>
         NARA Children's Future
     </p>
+
 
     <p>
         Every child deserves a chance to build a brighter tomorrow.
@@ -858,106 +1277,160 @@ footer p{
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
-/* MOBILE MENU */
 
-const menuButton = document.getElementById("menuButton");
-const menu = document.getElementById("menu");
+/* =========================
+   MOBILE MENU
+========================= */
 
-menuButton.addEventListener("click", function(){
+const menuButton =
+    document.getElementById("menuButton");
 
-    menu.classList.toggle("open");
+const menu =
+    document.getElementById("menu");
 
-    const opened = menu.classList.contains("open");
 
-    menuButton.setAttribute(
-        "aria-expanded",
-        opened ? "true" : "false"
+menuButton.addEventListener(
+    "click",
+    function(){
+
+        menu.classList.toggle("open");
+
+        const opened =
+            menu.classList.contains("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            opened ? "true" : "false"
+        );
+
+    }
+);
+
+
+
+/* =========================
+   CLOSE MENU AFTER CLICK
+========================= */
+
+document
+.querySelectorAll(".menu a")
+.forEach(function(link){
+
+    link.addEventListener(
+        "click",
+        function(){
+
+            menu.classList.remove("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
     );
 
 });
 
 
-/* CLOSE MENU AFTER CLICK */
 
-document.querySelectorAll(".menu a").forEach(function(link){
+/* =========================
+   COPY BITCOIN ADDRESS
+========================= */
 
-    link.addEventListener("click", function(){
+const copyButton =
+    document.getElementById("copyButton");
 
-        menu.classList.remove("open");
-
-        menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    });
-
-});
+const copyMessage =
+    document.getElementById("copyMessage");
 
 
-/* COPY BITCOIN ADDRESS */
+copyButton.addEventListener(
+    "click",
+    async function(){
 
-const copyButton = document.getElementById("copyButton");
-const copyMessage = document.getElementById("copyMessage");
+        const address =
+            document
+            .getElementById("btcAddress")
+            .innerText
+            .trim();
 
-copyButton.addEventListener("click", async function(){
-
-    const address =
-        document.getElementById("btcAddress").innerText.trim();
-
-    try{
-
-        await navigator.clipboard.writeText(address);
-
-        copyMessage.textContent = "Copied ✓";
-
-        setTimeout(function(){
-            copyMessage.textContent = "";
-        },3000);
-
-    }catch(error){
-
-        /*
-        Fallback for browsers where clipboard API
-        is unavailable.
-        */
-
-        const temp = document.createElement("textarea");
-
-        temp.value = address;
-
-        document.body.appendChild(temp);
-
-        temp.select();
 
         try{
 
-            document.execCommand("copy");
-
-            copyMessage.textContent = "Copied ✓";
-
-        }catch(e){
+            await navigator.clipboard
+                .writeText(address);
 
             copyMessage.textContent =
-                "Please copy the address manually.";
+                "Copied ✓";
+
+
+            setTimeout(
+                function(){
+
+                    copyMessage.textContent = "";
+
+                },
+                3000
+            );
+
+
+        }catch(error){
+
+            const temp =
+                document.createElement("textarea");
+
+
+            temp.value = address;
+
+
+            document.body.appendChild(temp);
+
+
+            temp.select();
+
+
+            try{
+
+                document.execCommand("copy");
+
+                copyMessage.textContent =
+                    "Copied ✓";
+
+            }catch(e){
+
+                copyMessage.textContent =
+                    "Please copy the address manually.";
+
+            }
+
+
+            document.body.removeChild(temp);
+
+
+            setTimeout(
+                function(){
+
+                    copyMessage.textContent = "";
+
+                },
+                3000
+            );
 
         }
 
-        document.body.removeChild(temp);
-
-        setTimeout(function(){
-            copyMessage.textContent = "";
-        },3000);
-
     }
-
-});
+);
 
 </script>
+
 
 </body>
 </html>
