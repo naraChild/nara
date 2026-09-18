@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,19 +75,23 @@ h2 {
     color: #666;
 }
 
+
+/* GALERI — 3 FOTO PER BARIS */
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 20px;
 }
 
 .gallery img {
     width: 100%;
-    height: 210px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 10px;
 }
+
 
 .btc-box {
     background: #f1f3f5;
@@ -164,6 +166,7 @@ li {
     color: #666;
 }
 
+
 @media (max-width: 500px) {
 
     .card {
@@ -178,259 +181,312 @@ li {
         font-size: 27px;
     }
 
-    .gallery img {
-        height: 170px;
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7px;
     }
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
-    <!-- NARA HEADER -->
 
-    <div class="card hero">
+<!-- NARA HEADER -->
 
-        <img src="nara-02.jpg" class="logo" alt="NARA">
+<div class="card hero">
 
-        <p class="brand">NARA</p>
+    <img src="nara-02.jpg" class="logo" alt="NARA">
 
-        <p class="tagline">
-            Every Child a Future
-        </p>
+    <p class="brand">NARA</p>
 
-        <h1>Help Support a Child's Education</h1>
+    <p class="tagline">
+        Every Child a Future
+    </p>
 
-        <p class="subtitle">
-            Voluntary Bitcoin Donations
-        </p>
+    <h1>
+        Help Support a Child's Education
+    </h1>
 
-        <p>
-            Hello, my name is Jonea.
-        </p>
+    <p class="subtitle">
+        Voluntary Bitcoin Donations
+    </p>
 
-        <p>
-            I am a parent seeking voluntary support to help
-            with my child's education.
-        </p>
+    <p>
+        Hello, my name is Jonea.
+    </p>
 
-        <p>
-            If you have Bitcoin and genuinely wish to help
-            with educational expenses, any amount would be
-            greatly appreciated.
-        </p>
+    <p>
+        I am a parent seeking voluntary support to help
+        with my child's education.
+    </p>
 
-        <p>
-            This is a personal request for voluntary assistance.
-            There is no investment opportunity and no financial
-            return is promised.
-        </p>
+    <p>
+        If you have Bitcoin and genuinely wish to help
+        with educational expenses, any amount would be
+        greatly appreciated.
+    </p>
 
-    </div>
+    <p>
+        This is a personal request for voluntary assistance.
+        There is no investment opportunity and no financial
+        return is promised.
+    </p>
 
+</div>
 
-    <!-- PHOTOS -->
 
-    <div class="card">
+<!-- OUR STORY -->
 
-        <h2>Our Story</h2>
+<div class="card">
 
-        <p>
-               <h3 style="text-align:center; font-size:26px; margin-bottom:5px;">
-    One Pen, One Child
-</h3>
+    <h2>Our Story</h2>
 
-<p style="text-align:center; font-size:20px; font-weight:bold;">
-    They Deserve to Be Happy.
-</p>
+    <h3 style="text-align:center; font-size:28px; margin-bottom:5px;">
+        One Pen, One Child
+    </h3>
 
-<p>
-    Every child deserves the opportunity to learn,
-    to dream, and to have a happy childhood.
-</p>
+    <p style="text-align:center; font-size:21px; font-weight:bold;">
+        They Deserve to Be Happy.
+    </p>
 
-<p>
-    A simple pen may seem small, but for a child,
-    it can be a symbol of hope and a step toward
-    a better future.
-</p>
+    <p>
+        Every child has a dream.
+        A dream to learn, to grow, to smile, and to build
+        a better future.
+    </p>
 
-        <div class="gallery">
+    <p>
+        Sometimes, that dream begins with something very simple —
+        a book, a school bag, or even just one pen.
+    </p>
 
-            <img src="nara-02.jpg" alt="NARA photo 2">
+    <p>
+        <strong>
+            One pen may be small to us,
+            but it can mean so much to a child.
+        </strong>
+    </p>
 
-            <img src="nara-03.jpg" alt="NARA photo 3">
+    <p>
+        NARA is a small story about hope.
+        A story about giving a child the chance to learn,
+        to dream, and to believe that their future matters.
+    </p>
 
-            <img src="nara-04.jpg" alt="NARA photo 4">
+    <p>
+        We believe that every child deserves to learn.
+        Every child deserves a chance.
+        And every child deserves to be happy.
+    </p>
 
-            <img src="nara-05.jpg" alt="NARA photo 5">
+    <p style="text-align:center; font-size:20px; font-weight:bold;">
+        One Pen, One Child.<br>
+        One Hope, One Future.
+    </p>
 
-            <img src="nara-06.jpg" alt="NARA photo 6">
 
-            <img src="nara-07.jpg" alt="NARA photo 7">
+    <!-- 6 FOTO — 3 PER BARIS -->
 
-            <img src="nara-08.jpg" alt="NARA photo 8">
+    <div class="gallery">
 
-        </div>
+        <img src="nara-02.jpg" alt="NARA photo 2">
 
-    </div>
+        <img src="nara-03.jpg" alt="NARA photo 3">
 
+        <img src="nara-04.jpg" alt="NARA photo 4">
 
-    <!-- BITCOIN DONATION -->
+        <img src="nara-05.jpg" alt="NARA photo 5">
 
-    <div class="card">
+        <img src="nara-06.jpg" alt="NARA photo 6">
 
-        <h2>Donate Bitcoin</h2>
+        <img src="nara-07.jpg" alt="NARA photo 7">
 
-        <p>
-            If you would like to help, you can send Bitcoin
-            directly to the following public Bitcoin address:
-        </p>
-
-        <div class="btc-box">
-
-            <p><strong>BTC Donation Address</strong></p>
-
-            <div class="address" id="btcAddress">
-                166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
-            </div>
-
-            <button onclick="copyAddress()">
-                Copy Bitcoin Address
-            </button>
-
-            <div class="success" id="message"></div>
-
-            <div class="qr">
-
-                <h3>Scan QR Code</h3>
-
-                <div id="qrcode"></div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- PURPOSE -->
-
-    <div class="card">
-
-        <h2>How Donations Can Help</h2>
-
-        <p>
-            Donations may help with necessary educational
-            expenses, including:
-        </p>
-
-        <ul>
-            <li>School or education fees</li>
-            <li>Books and learning materials</li>
-            <li>School transportation</li>
-            <li>Educational supplies</li>
-            <li>Other necessary education-related expenses</li>
-        </ul>
-
-    </div>
-
-
-    <!-- TRANSPARENCY -->
-
-    <div class="card">
-
-        <h2>Transparency</h2>
-
-        <p>
-            Bitcoin transactions can be independently verified
-            on the public blockchain.
-        </p>
-
-        <p>
-            The Bitcoin address displayed on this page is a
-            public receiving address.
-        </p>
-
-        <div class="warning">
-
-            <strong>Important:</strong>
-
-            <p>
-                I will never ask a donor for a seed phrase,
-                private key, password, or other confidential
-                information.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- DONOR NOTE -->
-
-    <div class="card">
-
-        <h2>A Note to Donors</h2>
-
-        <p>
-            Please donate only if you can afford to do so.
-        </p>
-
-        <p>
-            There is no investment opportunity associated
-            with this page, and no financial return is promised.
-        </p>
-
-        <p>
-            If you cannot donate, sharing this page with someone
-            who may genuinely wish to help is also appreciated.
-        </p>
-
-    </div>
-
-
-    <!-- THANK YOU -->
-
-    <div class="card hero">
-
-        <h2>Thank You</h2>
-
-        <p>
-            Thank you for taking the time to read our story.
-        </p>
-
-        <p>
-            Whether you donate or simply share this page,
-            your kindness and consideration are appreciated.
-        </p>
-
-        <p class="small">
-            NARA — Every Child a Future
-        </p>
-
-    </div>
-
-
-    <div class="footer">
-        © 2026 NARA — Every Child a Future
     </div>
 
 </div>
 
 
-<!-- QR CODE LIBRARY -->
+<!-- BITCOIN DONATION -->
+
+<div class="card">
+
+    <h2>Donate Bitcoin</h2>
+
+    <p>
+        If you would like to help, you can send Bitcoin
+        directly to the following public Bitcoin address:
+    </p>
+
+    <div class="btc-box">
+
+        <p>
+            <strong>BTC Donation Address</strong>
+        </p>
+
+        <div class="address" id="btcAddress">
+            166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+        </div>
+
+        <button onclick="copyAddress()">
+            Copy Bitcoin Address
+        </button>
+
+        <div class="success" id="message"></div>
+
+        <div class="qr">
+
+            <h3>Scan QR Code</h3>
+
+            <div id="qrcode"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PURPOSE -->
+
+<div class="card">
+
+    <h2>How Donations Can Help</h2>
+
+    <p>
+        Donations may help with necessary educational
+        expenses, including:
+    </p>
+
+    <ul>
+
+        <li>
+            School or education fees
+        </li>
+
+        <li>
+            Books and learning materials
+        </li>
+
+        <li>
+            School transportation
+        </li>
+
+        <li>
+            Educational supplies
+        </li>
+
+        <li>
+            Other necessary education-related expenses
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- TRANSPARENCY -->
+
+<div class="card">
+
+    <h2>Transparency</h2>
+
+    <p>
+        Bitcoin transactions can be independently verified
+        on the public blockchain.
+    </p>
+
+    <p>
+        The Bitcoin address displayed on this page is a
+        public receiving address.
+    </p>
+
+    <div class="warning">
+
+        <strong>Important:</strong>
+
+        <p>
+            I will never ask a donor for a seed phrase,
+            private key, password, or other confidential
+            information.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- DONOR NOTE -->
+
+<div class="card">
+
+    <h2>A Note to Donors</h2>
+
+    <p>
+        Please donate only if you can afford to do so.
+    </p>
+
+    <p>
+        There is no investment opportunity associated
+        with this page, and no financial return is promised.
+    </p>
+
+    <p>
+        If you cannot donate, sharing this page with someone
+        who may genuinely wish to help is also appreciated.
+    </p>
+
+</div>
+
+
+<!-- THANK YOU -->
+
+<div class="card hero">
+
+    <h2>Thank You</h2>
+
+    <p>
+        Thank you for taking the time to read our story.
+    </p>
+
+    <p>
+        Whether you donate or simply share this page,
+        your kindness and consideration are appreciated.
+    </p>
+
+    <p class="small">
+        NARA — Every Child a Future
+    </p>
+
+</div>
+
+
+<div class="footer">
+    © 2026 NARA — Every Child a Future
+</div>
+
+
+</div>
+
+
+<!-- QR CODE -->
 
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
 <script>
 
 new QRCode(document.getElementById("qrcode"), {
+
     text: "bitcoin:166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ",
+
     width: 256,
+
     height: 256
+
 });
 
 
