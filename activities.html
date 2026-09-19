@@ -14,37 +14,36 @@
 
 <style>
 
-/* =====================================================
+/* =========================================================
    BASIC
-   ===================================================== */
+   ========================================================= */
 
 * {
     box-sizing: border-box;
 }
 
-body {
+html {
+    scroll-behavior: smooth;
+}
 
+body {
     margin: 0;
+    padding: 0;
 
     background: #ffffff;
+    color: #151515;
 
-    color: #171717;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: Arial, sans-serif;
 }
 
 
-/* =====================================================
-   HEADER / BANNER
-   ===================================================== */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .activities-header {
 
     width: 100%;
-
     max-width: 980px;
 
     height: 170px;
@@ -53,110 +52,108 @@ body {
 
     overflow: hidden;
 
-    border-radius:
-        0 0 24px 24px;
+    border-radius: 0 0 18px 18px;
 }
 
 .activities-header img {
 
     width: 100%;
-
     height: 100%;
-
-    display: block;
 
     object-fit: cover;
 
-    object-position: center;
+    display: block;
 }
 
 
-/* =====================================================
-   MAIN PAGE
-   ===================================================== */
+/* =========================================================
+   MAIN
+   ========================================================= */
 
-.activities-page {
+.activities-main {
 
     width: 100%;
-
     max-width: 980px;
 
     margin: 0 auto;
 
-    padding:
-        18px 28px 50px;
+    padding: 25px 20px 60px;
 }
 
 
-/* =====================================================
+/* =========================================================
    BACK TO NARA
-   ===================================================== */
+   ========================================================= */
 
 .back-nara {
 
     display: inline-block;
 
-    color: #222;
+    margin-bottom: 25px;
 
-    font-family:
-        Arial,
-        sans-serif;
+    color: #151515;
 
-    font-size: 14px;
+    font-size: 15px;
 
-    font-weight: 700;
+    font-weight: 800;
 
     text-decoration: none;
 
-    border-bottom:
-        2px solid #ffd400;
-
-    padding-bottom: 3px;
-
-    margin-bottom: 12px;
+    letter-spacing: 0.5px;
 }
 
 .back-nara:hover {
 
-    color: #c49d00;
+    color: #d4a900;
 }
 
 
-/* =====================================================
+/* =========================================================
    TITLE
-   ===================================================== */
+   ========================================================= */
 
-.activities-title {
+.page-title {
 
     margin: 0;
 
     text-align: center;
 
-    font-size: 44px;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    line-height: 1.05;
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
 }
 
-.activities-intro {
+.page-intro {
 
-    max-width: 650px;
+    max-width: 700px;
 
-    margin:
-        12px auto 28px;
+    margin: 12px auto 35px;
 
     text-align: center;
 
-    color: #777;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 17px;
 
-    line-height: 1.45;
+    line-height: 1.6;
+
+    color: #555;
 }
 
 
-/* =====================================================
+/* =========================================================
    PHOTO GRID
-   ===================================================== */
+   ========================================================= */
 
 .photo-grid {
 
@@ -165,19 +162,19 @@ body {
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 16px;
+    gap: 18px;
 
-    max-width: 850px;
-
-    margin: 0 auto;
+    width: 100%;
 }
 
 
-/* =====================================================
+/* =========================================================
    PHOTO CARD
-   ===================================================== */
+   ========================================================= */
 
 .photo-card {
+
+    position: relative;
 
     width: 100%;
 
@@ -185,208 +182,268 @@ body {
 
     overflow: hidden;
 
+    border-radius: 12px;
+
     background: #eeeeee;
 
-    border-radius: 5px;
-
-    cursor: zoom-in;
+    cursor: pointer;
 
     box-shadow:
-        0 2px 8px
-        rgba(0,0,0,0.10);
+        0 6px 18px rgba(0,0,0,0.10);
 }
 
 .photo-card img {
 
     width: 100%;
-
     height: 100%;
-
-    display: block;
 
     object-fit: cover;
 
+    display: block;
+
     transition:
-        transform 0.25s ease;
+        transform 0.35s ease;
 }
 
 .photo-card:hover img {
 
-    transform:
-        scale(1.035);
+    transform: scale(1.05);
 }
 
 
-/* =====================================================
-   DONATION SECTION
-   ===================================================== */
+/* =========================================================
+   NARA DIGITAL PICKS
+   ========================================================= */
+
+.digital-picks-box {
+
+    width: 100%;
+    max-width: 760px;
+
+    margin: 45px auto;
+
+    padding: 30px 20px;
+
+    background: #151515;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+}
+
+.digital-picks-small {
+
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+.digital-picks-link {
+
+    display: inline-block;
+
+    color: #ffd400;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 26px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    animation:
+        digitalPickPulse 1.5s infinite;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.digital-picks-link:hover {
+
+    color: #ffffff;
+
+    transform: scale(1.04);
+}
+
+
+@keyframes digitalPickPulse {
+
+    0%,
+    100% {
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        opacity: 0.55;
+
+    }
+}
+
+
+/* =========================================================
+   SUPPORT NARA
+   ========================================================= */
 
 .donation-section {
 
-    max-width: 850px;
+    width: 100%;
 
-    margin:
-        45px auto 0;
+    margin-top: 20px;
 
-    padding:
-        30px 20px 35px;
+    padding: 35px 20px 40px;
 
-    background: #f7f7f7;
+    background: #f5f5f5;
 
-    border-radius: 12px;
-
-    text-align: center;
+    border-radius: 16px;
 }
-
 
 .donation-title {
 
-    margin:
-        0 0 8px;
+    margin: 0 0 25px;
 
-    font-size: 30px;
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 28px;
 
     font-weight: 700;
 }
 
 
-.donation-intro {
-
-    max-width: 620px;
-
-    margin:
-        0 auto 25px;
-
-    color: #777;
-
-    font-size: 16px;
-
-    line-height: 1.5;
-}
-
-
-/* =====================================================
+/* =========================================================
    DONATION BOX
-   ===================================================== */
+   ========================================================= */
 
 .donation-box {
 
-    max-width: 700px;
+    max-width: 760px;
 
-    margin:
-        14px auto;
+    margin: 0 auto 18px;
 
-    padding: 16px;
+    padding: 20px;
 
     background: #151515;
 
-    border-radius: 7px;
-
-    text-align: left;
+    border-radius: 12px;
 }
-
 
 .donation-label {
 
-    display: block;
-
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 
     color: #ffd400;
 
-    font-family:
-        Arial,
-        sans-serif;
+    font-size: 17px;
 
-    font-size: 14px;
+    font-weight: 900;
 
-    font-weight: 800;
-
-    letter-spacing: .5px;
+    letter-spacing: 0.8px;
 }
-
-
-.donation-address-row {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
 
 .donation-address {
 
-    flex: 1;
+    display: block;
 
-    min-width: 0;
+    width: 100%;
 
-    color: #ffffff;
+    padding: 12px 13px;
 
-    font-family:
-        Arial,
-        sans-serif;
+    background: #ffffff;
+
+    color: #151515;
+
+    border-radius: 7px;
 
     font-size: 13px;
 
-    line-height: 1.4;
+    line-height: 1.5;
 
     word-break: break-all;
+
+    user-select: all;
 }
 
+.copy-button {
 
-.copy-donation {
+    margin-top: 12px;
 
-    flex-shrink: 0;
-
-    padding:
-        9px 13px;
+    padding: 9px 18px;
 
     border: none;
 
-    border-radius: 5px;
+    border-radius: 6px;
 
     background: #ffd400;
 
-    color: #111;
+    color: #151515;
 
-    font-family:
-        Arial,
-        sans-serif;
+    font-size: 13px;
 
-    font-size: 12px;
-
-    font-weight: 800;
+    font-weight: 900;
 
     cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
-.copy-donation:hover {
+.copy-button:hover {
 
     background: #ffffff;
+
+    transform: translateY(-1px);
 }
 
+
+/* =========================================================
+   DONATION NOTE
+   ========================================================= */
 
 .donation-note {
 
-    margin-top: 22px;
+    max-width: 760px;
 
-    color: #777;
+    margin: 22px auto 0;
 
-    font-family:
-        Arial,
-        sans-serif;
+    text-align: center;
 
-    font-size: 12px;
+    color: #555;
 
-    line-height: 1.5;
+    font-size: 13px;
+
+    line-height: 1.6;
 }
 
 
-/* =====================================================
-   ZOOM / LIGHTBOX
-   ===================================================== */
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
 
 .lightbox {
 
@@ -394,8 +451,7 @@ body {
 
     inset: 0;
 
-    background:
-        rgba(0,0,0,0.88);
+    z-index: 9999;
 
     display: none;
 
@@ -403,288 +459,209 @@ body {
 
     justify-content: center;
 
-    padding:
-        50px 70px;
+    padding: 20px;
 
-    z-index: 9999;
+    background:
+        rgba(0,0,0,0.94);
 }
 
-
-.lightbox.show {
+.lightbox.active {
 
     display: flex;
 }
 
+.lightbox-image {
 
-.zoom-image {
+    max-width: 92vw;
 
-    max-width: 88vw;
-
-    max-height: 88vh;
-
-    width: auto;
-
-    height: auto;
+    max-height: 86vh;
 
     object-fit: contain;
 
-    border-radius: 6px;
+    border-radius: 8px;
 
     box-shadow:
-        0 10px 40px
-        rgba(0,0,0,0.45);
+        0 10px 40px rgba(0,0,0,0.5);
 }
 
 
-/* =====================================================
+/* =========================================================
    CLOSE BUTTON
-   ===================================================== */
+   ========================================================= */
 
 .close-btn {
 
-    position: fixed;
+    position: absolute;
 
     top: 18px;
+    right: 22px;
 
-    right: 24px;
+    z-index: 10001;
 
     width: 42px;
-
     height: 42px;
 
-    border: 0;
+    border: none;
 
     border-radius: 50%;
 
-    background:
-        rgba(255,255,255,0.90);
+    background: #ffffff;
 
-    color: #111;
+    color: #151515;
 
-    font-size: 30px;
+    font-size: 25px;
 
-    line-height: 40px;
+    font-weight: 700;
 
     cursor: pointer;
-
-    z-index: 10001;
 }
 
 
-/* =====================================================
+/* =========================================================
    PREVIOUS / NEXT
-   ===================================================== */
+   ========================================================= */
 
-.nav-btn {
+.lightbox-prev,
+.lightbox-next {
 
-    position: fixed;
+    position: absolute;
 
     top: 50%;
 
     transform:
         translateY(-50%);
 
-    width: 48px;
+    z-index: 10001;
 
+    width: 48px;
     height: 48px;
 
-    border: 0;
+    border: none;
 
     border-radius: 50%;
 
-    background:
-        rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.92);
 
-    color: #ffffff;
+    color: #151515;
 
-    font-size: 34px;
+    font-size: 25px;
 
-    line-height: 44px;
+    font-weight: 700;
 
     cursor: pointer;
-
-    z-index: 10000;
 }
 
-.nav-btn:hover {
+.lightbox-prev {
 
-    background:
-        rgba(255,255,255,0.32);
+    left: 18px;
 }
 
+.lightbox-next {
 
-.prev-btn {
-
-    left: 22px;
+    right: 18px;
 }
 
 
-.next-btn {
-
-    right: 22px;
-}
-
-
-/* =====================================================
+/* =========================================================
    MOBILE
-   ===================================================== */
+   ========================================================= */
 
 @media (max-width: 700px) {
 
-
     .activities-header {
 
-        height: 118px;
+        height: 135px;
 
         border-radius:
-            0 0 18px 18px;
+            0 0 14px 14px;
     }
 
-
-    .activities-page {
+    .activities-main {
 
         padding:
-            14px 14px 40px;
+            22px
+            15px
+            50px;
     }
 
+    .page-title {
 
-    .back-nara {
-
-        font-size: 12px;
-
-        margin-bottom: 10px;
+        font-size: 29px;
     }
 
+    .page-intro {
 
-    .activities-title {
+        font-size: 16px;
 
-        font-size: 36px;
+        margin-bottom: 28px;
     }
-
-
-    .activities-intro {
-
-        font-size: 15px;
-
-        margin-bottom: 22px;
-    }
-
 
     .photo-grid {
 
         grid-template-columns:
-            repeat(3, 1fr);
+            repeat(2, 1fr);
 
-        gap: 9px;
+        gap: 12px;
     }
 
+    .digital-picks-box {
 
-    .photo-card {
+        margin:
+            35px auto;
 
-        border-radius: 3px;
+        padding:
+            25px 15px;
     }
 
+    .digital-picks-small {
 
-    /* DONATION */
+        font-size: 17px;
+    }
+
+    .digital-picks-link {
+
+        font-size: 22px;
+    }
 
     .donation-section {
 
-        margin-top: 35px;
-
         padding:
-            25px 14px 30px;
+            28px 12px 32px;
     }
-
 
     .donation-title {
 
-        font-size: 27px;
+        font-size: 25px;
     }
 
+    .donation-box {
 
-    .donation-intro {
-
-        font-size: 14px;
+        padding: 16px;
     }
-
-
-    .donation-address-row {
-
-        align-items: stretch;
-    }
-
 
     .donation-address {
 
-        font-size: 11px;
+        font-size: 12px;
     }
 
-
-    .copy-donation {
-
-        padding:
-            8px 10px;
-
-        font-size: 11px;
-    }
-
-
-    /* LIGHTBOX */
-
-    .lightbox {
-
-        padding:
-            35px 18px;
-    }
-
-
-    .zoom-image {
-
-        max-width: 94vw;
-
-        max-height: 82vh;
-    }
-
-
-    .close-btn {
-
-        top: 10px;
-
-        right: 12px;
-
-        width: 38px;
-
-        height: 38px;
-
-        font-size: 27px;
-
-        line-height: 36px;
-    }
-
-
-    .nav-btn {
+    .lightbox-prev,
+    .lightbox-next {
 
         width: 42px;
-
         height: 42px;
 
-        font-size: 29px;
-
-        line-height: 38px;
+        font-size: 21px;
     }
 
+    .lightbox-prev {
 
-    .prev-btn {
-
-        left: 7px;
+        left: 10px;
     }
 
+    .lightbox-next {
 
-    .next-btn {
-
-        right: 7px;
+        right: 10px;
     }
-
 }
 
 </style>
@@ -695,325 +672,292 @@ body {
 <body>
 
 
-<!-- =====================================================
+<!-- =======================================================
      HEADER
-     
-     NANTI KALAU MAU GANTI FOTO HEADER,
-     CUKUP GANTI NAMA FILE DI SINI.
-     ===================================================== -->
+     ======================================================= -->
 
 <header class="activities-header">
 
     <img
         src="Act.dewii9.jpg"
-        alt="NARA"
-    >
+        alt="NARA Activities">
 
 </header>
 
 
 
-<main class="activities-page">
+<!-- =======================================================
+     MAIN
+     ======================================================= -->
+
+<main class="activities-main">
 
 
-<!-- =====================================================
-     BACK TO NARA
-     ===================================================== -->
+    <!-- BACK TO NARA -->
 
-<a
-    href="index.html"
-    class="back-nara">
+    <a
+        href="index.html"
+        class="back-nara">
 
-    ← BACK TO NARA
+        ← BACK TO NARA
 
-</a>
-
-
-
-<!-- =====================================================
-     TITLE
-     ===================================================== -->
-
-<h1 class="activities-title">
-
-    Activities
-
-</h1>
-
-
-<p class="activities-intro">
-
-    Real moments. Happy faces. A brighter tomorrow.
-    <br>
-
-    Here are some of the activities and programs
-    we've been part of.
-
-</p>
+    </a>
 
 
 
-<!-- =====================================================
-     PHOTO GALLERY
-     
-     NANTI FOTO BISA DIGANTI
-     DENGAN Act1.jpg s/d Act6.jpg
-     ===================================================== -->
+    <!-- TITLE -->
 
-<section class="photo-grid">
+    <h1 class="page-title">
 
+        OUR ACTIVITIES
 
-    <div
-        class="photo-card"
-        onclick="openLightbox(0)">
-
-        <img
-            src="Act1.jpg"
-            alt="NARA Activity 1">
-
-    </div>
+    </h1>
 
 
-    <div
-        class="photo-card"
-        onclick="openLightbox(1)">
+    <p class="page-intro">
 
-        <img
-            src="Act2.jpg"
-            alt="NARA Activity 2">
-
-    </div>
-
-
-    <div
-        class="photo-card"
-        onclick="openLightbox(2)">
-
-        <img
-            src="Act3.jpg"
-            alt="NARA Activity 3">
-
-    </div>
-
-
-    <div
-        class="photo-card"
-        onclick="openLightbox(3)">
-
-        <img
-            src="Act4.jpg"
-            alt="NARA Activity 4">
-
-    </div>
-
-
-    <div
-        class="photo-card"
-        onclick="openLightbox(4)">
-
-        <img
-            src="Act5.jpg"
-            alt="NARA Activity 5">
-
-    </div>
-
-
-    <div
-        class="photo-card"
-        onclick="openLightbox(5)">
-
-        <img
-            src="Act6.jpg"
-            alt="NARA Activity 6">
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     DONATION
-     ===================================================== -->
-
-<section class="donation-section">
-
-
-    <h2 class="donation-title">
-
-        SUPPORT NARA
-
-    </h2>
-
-
-    <p class="donation-intro">
-
-        Your support can help us continue creating
-        meaningful opportunities and a brighter future
-        for children.
+        A glimpse of the moments, activities,
+        and memories that are part of the NARA journey.
 
     </p>
 
 
 
-    <!-- =========================
-         BITCOIN
-         ========================= -->
+    <!-- ===================================================
+         PHOTO GALLERY
+         =================================================== -->
 
-    <div class="donation-box">
-
-
-        <span class="donation-label">
-
-            BITCOIN (BTC)
-
-        </span>
+    <div class="photo-grid">
 
 
-        <div class="donation-address-row">
+        <div
+            class="photo-card"
+            onclick="openLightbox(0)">
+
+            <img
+                src="Act1.jpg"
+                alt="NARA Activity 1">
+
+        </div>
 
 
-            <span
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(1)">
+
+            <img
+                src="Act2.jpg"
+                alt="NARA Activity 2">
+
+        </div>
+
+
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(2)">
+
+            <img
+                src="Act3.jpg"
+                alt="NARA Activity 3">
+
+        </div>
+
+
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(3)">
+
+            <img
+                src="Act4.jpg"
+                alt="NARA Activity 4">
+
+        </div>
+
+
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(4)">
+
+            <img
+                src="Act5.jpg"
+                alt="NARA Activity 5">
+
+        </div>
+
+
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(5)">
+
+            <img
+                src="Act6.jpg"
+                alt="NARA Activity 6">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         NARA DIGITAL PICKS
+         =================================================== -->
+
+    <section class="digital-picks-box">
+
+        <p class="digital-picks-small">
+
+            A LITTLE SOMETHING FOR YOU…
+
+        </p>
+
+
+        <a
+            href="affiliates.html"
+            class="digital-picks-link">
+
+            NARA DIGITAL PICKS →
+
+        </a>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SUPPORT NARA
+         =================================================== -->
+
+    <section class="donation-section">
+
+
+        <h2 class="donation-title">
+
+            SUPPORT NARA
+
+        </h2>
+
+
+
+        <!-- BITCOIN -->
+
+        <div class="donation-box">
+
+            <div class="donation-label">
+
+                BITCOIN
+
+            </div>
+
+
+            <div
                 class="donation-address"
                 id="btcAddress">
 
                 166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
 
-            </span>
+            </div>
 
 
             <button
-                class="copy-donation"
-                onclick="
-                    copyDonation(
-                        'btcAddress',
-                        this
-                    );
-                ">
+                class="copy-button"
+                onclick="copyDonation('btcAddress', this)">
 
                 COPY
 
             </button>
 
-
         </div>
 
-    </div>
 
 
+        <!-- USDT TRC20 -->
 
-    <!-- =========================
-         USDT TRC20
-         ========================= -->
+        <div class="donation-box">
 
-    <div class="donation-box">
+            <div class="donation-label">
 
+                USDT TRC20
 
-        <span class="donation-label">
-
-            USDT — TRC20
-
-        </span>
+            </div>
 
 
-        <div class="donation-address-row">
-
-
-            <span
+            <div
                 class="donation-address"
                 id="usdtTrcAddress">
 
                 TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
 
-            </span>
+            </div>
 
 
             <button
-                class="copy-donation"
-                onclick="
-                    copyDonation(
-                        'usdtTrcAddress',
-                        this
-                    );
-                ">
+                class="copy-button"
+                onclick="copyDonation('usdtTrcAddress', this)">
 
                 COPY
 
             </button>
 
-
         </div>
 
-    </div>
 
 
+        <!-- USDT BEP20 -->
 
-    <!-- =========================
-         USDT BEP20
-         ========================= -->
+        <div class="donation-box">
 
-    <div class="donation-box">
+            <div class="donation-label">
 
+                USDT BEP20
 
-        <span class="donation-label">
-
-            USDT — BEP20
-
-        </span>
+            </div>
 
 
-        <div class="donation-address-row">
-
-
-            <span
+            <div
                 class="donation-address"
                 id="usdtBepAddress">
 
                 0x5a56e760f487c252f3f878e5a5e3719b39d63075
 
-            </span>
+            </div>
 
 
             <button
-                class="copy-donation"
-                onclick="
-                    copyDonation(
-                        'usdtBepAddress',
-                        this
-                    );
-                ">
+                class="copy-button"
+                onclick="copyDonation('usdtBepAddress', this)">
 
                 COPY
 
             </button>
 
-
         </div>
 
-    </div>
 
 
+        <p class="donation-note">
 
-    <p class="donation-note">
+            Please make sure you send each cryptocurrency
+            using the correct network and address.
 
-        Please make sure you use the correct network
-        before sending USDT.
-
-    </p>
+        </p>
 
 
-</section>
-
+    </section>
 
 
 </main>
 
 
 
-<!-- =====================================================
-     ZOOM LIGHTBOX
-     ===================================================== -->
+<!-- =======================================================
+     LIGHTBOX
+     ======================================================= -->
 
 <div
     class="lightbox"
@@ -1021,14 +965,9 @@ body {
     onclick="backgroundClose(event)">
 
 
-    <!-- CLOSE -->
-
     <button
         class="close-btn"
-        onclick="
-            closeLightbox();
-        "
-        aria-label="Close">
+        onclick="closeLightbox()">
 
         ×
 
@@ -1036,15 +975,9 @@ body {
 
 
 
-    <!-- PREVIOUS -->
-
     <button
-        class="nav-btn prev-btn"
-        onclick="
-            changePhoto(-1);
-            event.stopPropagation();
-        "
-        aria-label="Previous">
+        class="lightbox-prev"
+        onclick="changePhoto(-1)">
 
         ‹
 
@@ -1052,29 +985,16 @@ body {
 
 
 
-    <!-- LARGE PHOTO -->
-
     <img
         id="zoomImage"
-        class="zoom-image"
+        class="lightbox-image"
         src=""
-        alt="NARA Activity"
-        onclick="
-            event.stopPropagation();
-        "
-    >
+        alt="NARA Activity">
 
-
-
-    <!-- NEXT -->
 
     <button
-        class="nav-btn next-btn"
-        onclick="
-            changePhoto(1);
-            event.stopPropagation();
-        "
-        aria-label="Next">
+        class="lightbox-next"
+        onclick="changePhoto(1)">
 
         ›
 
@@ -1087,206 +1007,154 @@ body {
 
 <script>
 
-
-/* =====================================================
-   PHOTO LIST
-   ===================================================== */
+/* =========================================================
+   ACTIVITY PHOTOS
+   ========================================================= */
 
 const activityPhotos = [
 
     "Act1.jpg",
-
     "Act2.jpg",
-
     "Act3.jpg",
-
     "Act4.jpg",
-
     "Act5.jpg",
-
     "Act6.jpg"
 
 ];
 
-
 let currentPhoto = 0;
 
 
-
-/* =====================================================
-   OPEN ZOOM
-   ===================================================== */
+/* =========================================================
+   OPEN LIGHTBOX
+   ========================================================= */
 
 function openLightbox(index) {
 
-
     currentPhoto = index;
 
-
-    document
-        .getElementById("zoomImage")
-        .src =
+    document.getElementById("zoomImage").src =
         activityPhotos[currentPhoto];
-
 
     document
         .getElementById("lightbox")
         .classList
-        .add("show");
+        .add("active");
 
-
-    document.body.style.overflow =
-        "hidden";
-
+    document.body.style.overflow = "hidden";
 }
 
 
-
-/* =====================================================
-   CLOSE ZOOM
-   ===================================================== */
+/* =========================================================
+   CLOSE LIGHTBOX
+   ========================================================= */
 
 function closeLightbox() {
 
-
     document
         .getElementById("lightbox")
         .classList
-        .remove("show");
+        .remove("active");
 
-
-    document.body.style.overflow =
-        "";
-
+    document.body.style.overflow = "";
 }
 
 
-
-/* =====================================================
-   NEXT / PREVIOUS PHOTO
-   ===================================================== */
+/* =========================================================
+   CHANGE PHOTO
+   ========================================================= */
 
 function changePhoto(direction) {
 
-
     currentPhoto += direction;
 
-
-    if (
-        currentPhoto < 0
-    ) {
+    if (currentPhoto < 0) {
 
         currentPhoto =
             activityPhotos.length - 1;
-
     }
 
-
-    if (
-        currentPhoto >=
-        activityPhotos.length
-    ) {
+    if (currentPhoto >= activityPhotos.length) {
 
         currentPhoto = 0;
-
     }
 
-
-    document
-        .getElementById("zoomImage")
-        .src =
+    document.getElementById("zoomImage").src =
         activityPhotos[currentPhoto];
-
 }
 
 
-
-/* =====================================================
-   CLICK OUTSIDE PHOTO
-   ===================================================== */
+/* =========================================================
+   CLOSE WHEN CLICKING BACKGROUND
+   ========================================================= */
 
 function backgroundClose(event) {
 
-
     if (
-        event.target.id ===
-        "lightbox"
+        event.target.id === "lightbox"
     ) {
 
         closeLightbox();
 
     }
-
 }
 
 
-
-/* =====================================================
-   COPY DONATION ADDRESS
-   ===================================================== */
+/* =========================================================
+   COPY DONATION
+   ========================================================= */
 
 function copyDonation(
     elementId,
     button
 ) {
 
-
     const address =
-        document
-            .getElementById(elementId)
+        document.getElementById(elementId)
             .innerText
             .trim();
 
-
     navigator.clipboard
         .writeText(address)
-        .then(function() {
-
+        .then(function () {
 
             const originalText =
                 button.innerText;
 
-
             button.innerText =
-                "COPIED!";
+                "COPIED ✓";
 
+            setTimeout(function () {
 
-            setTimeout(
-                function() {
+                button.innerText =
+                    originalText;
 
-                    button.innerText =
-                        originalText;
+            }, 1800);
 
-                },
-                1500
+        })
+        .catch(function () {
+
+            alert(
+                "Unable to copy. Please copy the address manually."
             );
 
-
         });
-
 }
 
 
-
-/* =====================================================
+/* =========================================================
    KEYBOARD CONTROL
-   ===================================================== */
+   ========================================================= */
 
 document.addEventListener(
     "keydown",
     function(event) {
 
-
         const lightbox =
-            document.getElementById(
-                "lightbox"
-            );
-
+            document.getElementById("lightbox");
 
         if (
-            !lightbox
-                .classList
-                .contains("show")
+            !lightbox.classList.contains("active")
         ) {
 
             return;
@@ -1295,8 +1163,7 @@ document.addEventListener(
 
 
         if (
-            event.key ===
-            "Escape"
+            event.key === "Escape"
         ) {
 
             closeLightbox();
@@ -1305,8 +1172,7 @@ document.addEventListener(
 
 
         if (
-            event.key ===
-            "ArrowLeft"
+            event.key === "ArrowLeft"
         ) {
 
             changePhoto(-1);
@@ -1315,14 +1181,12 @@ document.addEventListener(
 
 
         if (
-            event.key ===
-            "ArrowRight"
+            event.key === "ArrowRight"
         ) {
 
             changePhoto(1);
 
         }
-
 
     }
 );
