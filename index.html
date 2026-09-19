@@ -8,6 +8,10 @@
 
 <style>
 
+/* =========================
+   BASIC
+   ========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -90,7 +94,7 @@ body {
     padding-top: 10px;
     padding-left: 24px;
     padding-right: 24px;
-    padding-bottom: 55px;
+    padding-bottom: 50px;
 }
 
 .why-matters h2 {
@@ -116,16 +120,77 @@ body {
 }
 
 .why-text p {
-    margin: 0 0 18px 0;
+    margin: 0;
 }
 
-.why-text .final-call {
+
+/* =========================
+   WHY — FINAL CALL
+   ========================= */
+
+.final-call {
+    margin-top: 18px !important;
+
+    font-style: italic;
+    font-weight: 700;
+
+    color: #151515;
+}
+
+
+/* =========================
+   READ MORE
+   ========================= */
+
+.read-more {
+    margin-top: 16px;
+}
+
+.read-more summary {
+    display: inline-block;
+
+    cursor: pointer;
+    list-style: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
     font-style: italic;
     font-weight: 700;
 
     color: #151515;
 
-    margin-top: 8px;
+    border-bottom: 1px solid #999999;
+
+    padding-bottom: 3px;
+}
+
+.read-more summary::-webkit-details-marker {
+    display: none;
+}
+
+.read-more summary::after {
+    content: "  →";
+    font-style: normal;
+}
+
+.read-more[open] summary::after {
+    content: "  ↑";
+}
+
+.read-more-content {
+    margin-top: 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #444444;
+
+    line-height: 1.55;
+}
+
+.read-more-content p {
+    margin: 0 0 18px 0;
 }
 
 
@@ -137,16 +202,16 @@ body {
     width: 100%;
     background: #ffffff;
 
-    padding: 20px 18px 60px 18px;
+    padding: 15px 12px 55px 12px;
 }
 
 .children-cheers h2 {
-    margin: 0 0 30px 0;
+    margin: 0 0 25px 0;
 
     text-align: center;
 
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 30px;
+    font-size: 28px;
     font-style: italic;
     font-weight: 700;
 
@@ -165,7 +230,7 @@ body {
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 10px;
+    gap: 7px;
 
     width: 100%;
 }
@@ -187,14 +252,14 @@ body {
    ========================= */
 
 .children-message {
-    margin-top: 38px;
+    margin-top: 30px;
 
-    padding: 0 8px;
+    padding: 0 5px;
 
     text-align: center;
 
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 19px;
+    font-size: 17px;
     font-style: italic;
     font-weight: 700;
 
@@ -249,6 +314,15 @@ body {
         line-height: 1.55;
     }
 
+    .read-more summary {
+        font-size: 16px;
+    }
+
+    .read-more-content {
+        font-size: 18px;
+        line-height: 1.55;
+    }
+
 
     .children-cheers {
         padding: 15px 12px 50px 12px;
@@ -268,7 +342,6 @@ body {
         margin-top: 30px;
         font-size: 17px;
         line-height: 1.45;
-        padding: 0 5px;
     }
 
 }
@@ -322,25 +395,38 @@ body {
 
     <div class="why-text">
 
+        <!-- PARAGRAPH UTAMA -->
         <p>
             A child should never have to lose the chance to learn
             simply because life gave them less.
         </p>
 
-        <p>
-            Education is more than a classroom. It is a door to a
-            different future — and sometimes, a small act of care
-            is what keeps that door open.
-        </p>
 
-        <p>
-            We can see the need. We can understand the struggle.
-            But understanding alone changes nothing.
-        </p>
+        <!-- READ MORE -->
+        <details class="read-more">
 
-        <p class="final-call">
-            There is no other way forward. We must act.
-        </p>
+            <summary>Read More</summary>
+
+            <div class="read-more-content">
+
+                <p>
+                    Education is more than a classroom. It is a door
+                    to a different future — and sometimes, a small
+                    act of care is what keeps that door open.
+                </p>
+
+                <p>
+                    We can see the need. We can understand the
+                    struggle. But understanding alone changes nothing.
+                </p>
+
+                <p class="final-call">
+                    There is no other way forward. We must act.
+                </p>
+
+            </div>
+
+        </details>
 
     </div>
 
