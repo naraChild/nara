@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -416,6 +417,93 @@ body {
 
 
 /* =========================
+   USDT DONATION
+   ========================= */
+
+.usdt-donation {
+    margin-top: 35px;
+}
+
+.usdt-donation h3 {
+    margin: 0 0 20px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #151515;
+}
+
+.usdt-item {
+    margin-bottom: 24px;
+}
+
+.usdt-label {
+    margin: 0 0 8px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #555;
+}
+
+.usdt-box {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    border: 1px solid #ccc;
+
+    padding: 10px;
+
+    background: #fafafa;
+}
+
+.usdt-box span {
+    flex: 1;
+
+    min-width: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    color: #333;
+
+    word-break: break-all;
+}
+
+.usdt-box button {
+    flex-shrink: 0;
+
+    border: 1px solid #777;
+
+    background: #fff;
+
+    padding: 7px 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.usdt-copy-message {
+    margin-top: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-style: italic;
+
+    color: #555;
+}
+
+
+/* =========================
    BITCOIN WARNING
    ========================= */
 
@@ -570,6 +658,10 @@ body {
     }
 
     .bitcoin-donation {
+        margin-top: 32px;
+    }
+
+    .usdt-donation {
         margin-top: 32px;
     }
 
@@ -776,6 +868,71 @@ body {
         <p id="copyMessage" class="copy-message"></p>
 
 
+        <!-- =========================
+             USDT DONATION
+             ========================= -->
+
+        <div class="usdt-donation">
+
+            <h3>DONATE USDT</h3>
+
+
+            <!-- USDT TRC20 -->
+
+            <div class="usdt-item">
+
+                <p class="usdt-label">
+                    USDT TRC20
+                </p>
+
+                <div class="usdt-box">
+
+                    <span id="usdtTrc20Address">
+                        TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
+                    </span>
+
+                    <button
+                        type="button"
+                        onclick="copyUsdtTrc20()">
+                        COPY
+                    </button>
+
+                </div>
+
+                <p id="usdtTrc20Message" class="usdt-copy-message"></p>
+
+            </div>
+
+
+            <!-- USDT BEP20 -->
+
+            <div class="usdt-item">
+
+                <p class="usdt-label">
+                    USDT BEP20
+                </p>
+
+                <div class="usdt-box">
+
+                    <span id="usdtBep20Address">
+                        0x5a56e760f487c252f3f878e5a5e3719b39d63075
+                    </span>
+
+                    <button
+                        type="button"
+                        onclick="copyUsdtBep20()">
+                        COPY
+                    </button>
+
+                </div>
+
+                <p id="usdtBep20Message" class="usdt-copy-message"></p>
+
+            </div>
+
+        </div>
+
+
         <!-- Bitcoin Warning -->
 
         <div class="bitcoin-warning">
@@ -913,8 +1070,57 @@ function copyBitcoinAddress() {
 
 }
 
+
+/* =========================
+   COPY USDT TRC20
+   ========================= */
+
+function copyUsdtTrc20() {
+
+    const address =
+        document.getElementById("usdtTrc20Address").innerText.trim();
+
+    navigator.clipboard.writeText(address).then(function() {
+
+        document.getElementById("usdtTrc20Message").innerText =
+            "USDT TRC20 address copied.";
+
+    }).catch(function() {
+
+        document.getElementById("usdtTrc20Message").innerText =
+            "Unable to copy. Please copy the address manually.";
+
+    });
+
+}
+
+
+/* =========================
+   COPY USDT BEP20
+   ========================= */
+
+function copyUsdtBep20() {
+
+    const address =
+        document.getElementById("usdtBep20Address").innerText.trim();
+
+    navigator.clipboard.writeText(address).then(function() {
+
+        document.getElementById("usdtBep20Message").innerText =
+            "USDT BEP20 address copied.";
+
+    }).catch(function() {
+
+        document.getElementById("usdtBep20Message").innerText =
+            "Unable to copy. Please copy the address manually.";
+
+    });
+
+}
+
 </script>
 
 
 </body>
 </html>
+```
