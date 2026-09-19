@@ -1473,29 +1473,18 @@ body {
 <script>
 
 /* =========================================================
-   NARA ACCESS MEMORY
+   NARA LANDING PAGE
    ========================================================= */
 
-const naraAccessGranted =
-    localStorage.getItem("naraAccessGranted") === "true";
+/*
+   IMPORTANT:
+   NARA ALWAYS STARTS FROM THE LANDING PAGE.
+   No localStorage access memory is used.
+*/
 
+document.getElementById("naraLanding").style.display = "flex";
 
-/* =========================
-   INITIAL PAGE STATE
-   ========================= */
-
-if (naraAccessGranted) {
-
-    document.getElementById("naraLanding").style.display = "none";
-
-    document.getElementById("naraMain").style.display = "block";
-
-} else {
-
-    document.getElementById("naraLanding").style.display = "flex";
-
-    document.getElementById("naraMain").style.display = "none";
-}
+document.getElementById("naraMain").style.display = "none";
 
 
 /* =========================================================
@@ -1556,10 +1545,10 @@ function enterNara(event) {
     error.style.display = "none";
 
 
-    localStorage.setItem(
-        "naraAccessGranted",
-        "true"
-    );
+    /*
+       NO localStorage here.
+       Every new visit starts from the landing page.
+    */
 
 
     document.getElementById("naraLanding").style.display = "none";
