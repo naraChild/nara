@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -24,10 +25,9 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background: #000;
     color: #fff;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -35,99 +35,85 @@ body {
    HEADER
    ========================================================= */
 
-.activities-header {
-    width: 100%;
-    padding: 22px 20px 18px;
+header {
     text-align: center;
-    background: #000;
+    padding: 28px 20px 20px;
 }
 
-.activities-header h1 {
+header h1 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 34px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 32px;
+    font-weight: bold;
 }
 
-.activities-header h1 span {
+header h1 span {
     color: #ffd400;
 }
 
-.activities-header p {
-    margin-top: 5px;
-    color: #ccc;
+header p {
+    margin-top: 8px;
+    color: #aaa;
     font-size: 14px;
-    letter-spacing: 1px;
 }
 
 
 /* =========================================================
-   HERO
+   TITLE
    ========================================================= */
 
-.activities-hero {
-    width: 100%;
-    padding: 45px 20px 35px;
+.activities-title {
     text-align: center;
+    padding: 35px 20px 30px;
 }
 
-.activities-hero h2 {
+.activities-title h2 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 12px;
 }
 
-.activities-hero h2 span {
+.activities-title h2 span {
     color: #ffd400;
 }
 
-.activities-hero p {
-    max-width: 700px;
-    margin: 0 auto;
-    color: #d6d6d6;
-    font-size: 15px;
+.activities-title p {
+    max-width: 650px;
+    margin: auto;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   ACTIVITIES CONTAINER
+   PHOTO GRID
    ========================================================= */
 
 .activities-container {
-    width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 10px 18px 60px;
+    margin: auto;
+    padding: 10px 20px 50px;
 }
-
-
-/* =========================================================
-   ACTIVITY GRID
-   ========================================================= */
 
 .activities-grid {
     display: grid;
+
+    /* 3 FOTO DALAM 1 BARIS */
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+
+    gap: 20px;
 }
 
 
 /* =========================================================
-   ACTIVITY CARD
+   PHOTO CARD
    ========================================================= */
 
 .activity-card {
     background: #111;
     border: 1px solid #292929;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease,
-                border-color 0.3s ease;
-}
-
-.activity-card:hover {
-    transform: translateY(-4px);
-    border-color: #ffd400;
 }
 
 
@@ -137,8 +123,10 @@ body {
 
 .activity-card img {
     width: 100%;
-    height: 240px;
+    height: 230px;
+
     display: block;
+
     object-fit: cover;
 }
 
@@ -148,33 +136,35 @@ body {
    ========================================================= */
 
 .activity-caption {
-    padding: 15px 16px 18px;
+    padding: 14px 15px 17px;
 }
 
 .activity-caption h3 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
-    margin-bottom: 6px;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .activity-caption p {
-    color: #bdbdbd;
-    font-size: 13px;
+    color: #aaa;
+    font-size: 12px;
 }
 
 
 /* =========================================================
-   VIDEO AREA
+   VIDEO
    ========================================================= */
 
 .video-section {
-    margin-top: 55px;
+    max-width: 850px;
+    margin: 20px auto 60px;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .video-section h2 {
-    text-align: center;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 28px;
+    font-size: 27px;
     margin-bottom: 20px;
 }
 
@@ -182,26 +172,22 @@ body {
     color: #ffd400;
 }
 
-.video-placeholder {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    min-height: 220px;
+.video-box {
+    min-height: 180px;
+
+    border: 1px dashed #555;
+    border-radius: 10px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border: 1px dashed #555;
-    border-radius: 12px;
+    color: #777;
     background: #0d0d0d;
-    color: #888;
-    text-align: center;
-    padding: 30px;
 }
 
-.video-placeholder p {
-    font-size: 14px;
+.video-box p {
+    font-size: 13px;
 }
 
 
@@ -211,13 +197,13 @@ body {
 
 .back-section {
     text-align: center;
-    padding: 5px 20px 50px;
+    padding-bottom: 50px;
 }
 
 .back-button {
     display: inline-block;
 
-    padding: 12px 24px;
+    padding: 12px 25px;
 
     background: #fff;
     color: #000;
@@ -228,13 +214,10 @@ body {
 
     font-size: 14px;
     font-weight: bold;
-
-    transition: all 0.3s ease;
 }
 
 .back-button:hover {
     background: #ffd400;
-    color: #000;
 }
 
 
@@ -242,15 +225,17 @@ body {
    FOOTER
    ========================================================= */
 
-.activities-footer {
+footer {
     border-top: 1px solid #222;
     text-align: center;
+
     padding: 25px 20px 30px;
+
     color: #777;
     font-size: 12px;
 }
 
-.activities-footer strong {
+footer strong {
     color: #fff;
 }
 
@@ -259,31 +244,33 @@ body {
    MOBILE
    ========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
     .activities-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 12px;
     }
 
     .activity-card img {
-        height: 210px;
+        height: 180px;
     }
 
 }
 
-@media (max-width: 560px) {
 
-    .activities-header h1 {
-        font-size: 28px;
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 26px;
     }
 
-    .activities-hero {
-        padding: 35px 18px 25px;
+    .activities-title h2 {
+        font-size: 26px;
     }
 
-    .activities-hero h2 {
-        font-size: 27px;
+    .activities-container {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     .activities-grid {
@@ -292,7 +279,6 @@ body {
 
     .activity-card img {
         height: auto;
-        max-height: 420px;
     }
 
 }
@@ -309,7 +295,7 @@ body {
      HEADER
      ========================================================= -->
 
-<header class="activities-header">
+<header>
 
     <h1>
         NARA — <span>A Child Is A Future</span>
@@ -324,10 +310,10 @@ body {
 
 
 <!-- =========================================================
-     HERO
+     TITLE
      ========================================================= -->
 
-<section class="activities-hero">
+<section class="activities-title">
 
     <h2>
         OUR <span>ACTIVITIES</span>
@@ -335,8 +321,8 @@ body {
 
     <p>
         Every action begins with compassion.
-        Here we share moments, activities and stories
-        from NARA's journey of caring for children.
+        Here we share moments and memories
+        from NARA's journey.
     </p>
 
 </section>
@@ -344,10 +330,10 @@ body {
 
 
 <!-- =========================================================
-     PHOTO ACTIVITIES
+     PHOTO GALLERY
      ========================================================= -->
 
-<main class="activities-container">
+<section class="activities-container">
 
     <div class="activities-grid">
 
@@ -359,8 +345,8 @@ body {
         <div class="activity-card">
 
             <img
-                src="activities/gpt.jpg"
-                alt="NARA Activity"
+                src="Child1.jpg"
+                alt="NARA Activity 1"
             >
 
             <div class="activity-caption">
@@ -370,7 +356,7 @@ body {
                 </h3>
 
                 <p>
-                    A moment from our activities.
+                    A moment from our journey.
                 </p>
 
             </div>
@@ -386,8 +372,8 @@ body {
         <div class="activity-card">
 
             <img
-                src="activities/activity2.jpg"
-                alt="NARA Activity"
+                src="Child2.jpg"
+                alt="NARA Activity 2"
             >
 
             <div class="activity-caption">
@@ -397,7 +383,7 @@ body {
                 </h3>
 
                 <p>
-                    A moment from our activities.
+                    A moment from our journey.
                 </p>
 
             </div>
@@ -413,8 +399,8 @@ body {
         <div class="activity-card">
 
             <img
-                src="activities/activity3.jpg"
-                alt="NARA Activity"
+                src="Child3.jpg"
+                alt="NARA Activity 3"
             >
 
             <div class="activity-caption">
@@ -424,7 +410,7 @@ body {
                 </h3>
 
                 <p>
-                    A moment from our activities.
+                    A moment from our journey.
                 </p>
 
             </div>
@@ -433,31 +419,111 @@ body {
 
 
 
-    </div>
+        <!-- =================================================
+             PHOTO 4
+             ================================================= -->
 
+        <div class="activity-card">
 
+            <img
+                src="Child4.jpg"
+                alt="NARA Activity 4"
+            >
 
-    <!-- =====================================================
-         VIDEO SECTION
-         ===================================================== -->
+            <div class="activity-caption">
 
-    <section class="video-section">
+                <h3>
+                    NARA Activity
+                </h3>
 
-        <h2>
-            NARA <span>VIDEOS</span>
-        </h2>
+                <p>
+                    A moment from our journey.
+                </p>
 
-        <div class="video-placeholder">
-
-            <p>
-                NARA activity videos will appear here.
-            </p>
+            </div>
 
         </div>
 
-    </section>
 
-</main>
+
+        <!-- =================================================
+             PHOTO 5
+             ================================================= -->
+
+        <div class="activity-card">
+
+            <img
+                src="Child5.jpg"
+                alt="NARA Activity 5"
+            >
+
+            <div class="activity-caption">
+
+                <h3>
+                    NARA Activity
+                </h3>
+
+                <p>
+                    A moment from our journey.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PHOTO 6
+             ================================================= -->
+
+        <div class="activity-card">
+
+            <img
+                src="Child6.jpg"
+                alt="NARA Activity 6"
+            >
+
+            <div class="activity-caption">
+
+                <h3>
+                    NARA Activity
+                </h3>
+
+                <p>
+                    A moment from our journey.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VIDEO SECTION
+     ========================================================= -->
+
+<section class="video-section">
+
+    <h2>
+        NARA <span>VIDEOS</span>
+    </h2>
+
+    <div class="video-box">
+
+        <p>
+            NARA activity videos will appear here.
+        </p>
+
+    </div>
+
+</section>
 
 
 
@@ -482,7 +548,7 @@ body {
      FOOTER
      ========================================================= -->
 
-<footer class="activities-footer">
+<footer>
 
     <p>
         <strong>NARA</strong> — A Child Is A Future
@@ -496,4 +562,5 @@ body {
 
 
 </body>
+
 </html>
