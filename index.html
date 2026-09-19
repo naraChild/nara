@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,7 +111,7 @@ body {
 
 
 /* =========================
-   READ MORE SECTION
+   READ MORE
    ========================= */
 
 .read-more-section {
@@ -131,11 +130,6 @@ body {
 .read-more-intro {
     margin: 0;
 }
-
-
-/* =========================
-   READ MORE BUTTON
-   ========================= */
 
 .read-more-button {
     display: inline-block;
@@ -159,15 +153,6 @@ body {
     cursor: pointer;
 }
 
-.read-more-button::after {
-    content: "";
-}
-
-
-/* =========================
-   MORE CONTENT
-   ========================= */
-
 .more-content {
     display: none;
 
@@ -177,11 +162,6 @@ body {
 .more-content p {
     margin: 0 0 18px 0;
 }
-
-
-/* =========================
-   SEE LESS BUTTON
-   ========================= */
 
 .see-less-button {
     display: inline-block;
@@ -204,11 +184,6 @@ body {
 
     cursor: pointer;
 }
-
-
-/* =========================
-   FINAL CALL
-   ========================= */
 
 .final-call {
     margin-top: 18px !important;
@@ -387,6 +362,9 @@ body {
     color: #333;
 
     word-break: break-all;
+
+    direction: ltr;
+    text-align: left;
 }
 
 .bitcoin-box button {
@@ -474,6 +452,9 @@ body {
     color: #333;
 
     word-break: break-all;
+
+    direction: ltr;
+    text-align: left;
 }
 
 .usdt-box button {
@@ -504,7 +485,7 @@ body {
 
 
 /* =========================
-   BITCOIN WARNING
+   BITCOIN / USDT WARNING
    ========================= */
 
 .bitcoin-warning {
@@ -597,7 +578,6 @@ body {
         margin-bottom: 7px;
     }
 
-
     .why-matters {
         padding-top: 10px;
         padding-left: 24px;
@@ -621,7 +601,6 @@ body {
         font-size: 16px;
     }
 
-
     .children-cheers {
         padding: 15px 12px 50px 12px;
     }
@@ -641,7 +620,6 @@ body {
         font-size: 17px;
         line-height: 1.45;
     }
-
 
     .what-we-support {
         padding: 10px 24px 50px 24px;
@@ -664,7 +642,6 @@ body {
     .usdt-donation {
         margin-top: 32px;
     }
-
 
     .disclaimer {
         padding: 10px 24px 45px 24px;
@@ -703,15 +680,15 @@ body {
 
 <section class="who-how">
 
-    <h2>WHO &amp; HOW NARA</h2>
+    <h2 data-i18n="whoHow">WHO &amp; HOW NARA</h2>
 
     <div class="nara-statement">
 
-        <p>Called by compassion.</p>
+        <p data-i18n="calledBy">Called by compassion.</p>
 
-        <p>Driven by care.</p>
+        <p data-i18n="drivenBy">Driven by care.</p>
 
-        <p>Committed to real action.</p>
+        <p data-i18n="committed">Committed to real action.</p>
 
     </div>
 
@@ -724,48 +701,50 @@ body {
 
 <section class="why-matters">
 
-    <h2>WHY IT MATTERS?</h2>
+    <h2 data-i18n="whyMatters">WHY IT MATTERS?</h2>
 
     <div class="read-more-section">
 
-        <!-- SHORT VERSION -->
-        <p class="read-more-intro">
+        <p
+            class="read-more-intro"
+            data-i18n="whyIntro">
             A child should never have to lose the chance to learn simply because life gave them less.
         </p>
 
 
-        <!-- READ MORE BUTTON -->
         <button
             type="button"
             class="read-more-button"
-            onclick="showMore()">
+            onclick="showMore()"
+            data-i18n="readMore">
             Read More →
         </button>
 
 
-        <!-- FULL CONTENT -->
         <div id="moreContent" class="more-content">
 
-            <p>
+            <p data-i18n="education">
                 Education is more than a classroom. It is a door to a different future —
                 and sometimes, a small act of care is what keeps that door open.
             </p>
 
-            <p>
+            <p data-i18n="understanding">
                 We can see the need. We can understand the struggle.
                 But understanding alone changes nothing.
             </p>
 
-            <p class="final-call">
+            <p
+                class="final-call"
+                data-i18n="finalCall">
                 There is no other way forward. We must act.
             </p>
 
 
-            <!-- SEE LESS AT THE END -->
             <button
                 type="button"
                 class="see-less-button"
-                onclick="showLess()">
+                onclick="showLess()"
+                data-i18n="seeLess">
                 See Less ↑
             </button>
 
@@ -782,7 +761,9 @@ body {
 
 <section class="children-cheers">
 
-    <h2>Children Cheers</h2>
+    <h2 data-i18n="childrenCheers">
+        Children Cheers
+    </h2>
 
     <div class="children-gallery">
 
@@ -803,9 +784,17 @@ body {
 
     <div class="children-message">
 
-        Don't let their hopes pass by.<br>
-        Don't let their dreams fade away.<br>
-        Don't let their ambitions fall short.
+        <span data-i18n="hope1">
+            Don't let their hopes pass by.
+        </span><br>
+
+        <span data-i18n="hope2">
+            Don't let their dreams fade away.
+        </span><br>
+
+        <span data-i18n="hope3">
+            Don't let their ambitions fall short.
+        </span>
 
     </div>
 
@@ -818,20 +807,22 @@ body {
 
 <section class="what-we-support">
 
-    <h2>WHAT WE SUPPORT?</h2>
+    <h2 data-i18n="whatSupport">
+        WHAT WE SUPPORT?
+    </h2>
 
     <div class="support-text">
 
-        <p>
+        <p data-i18n="support1">
             Let them keep running toward their dreams and aspirations,
             reaching for hope.
         </p>
 
-        <p>
+        <p data-i18n="support2">
             Let our helping hands become part of their journey.
         </p>
 
-        <p>
+        <p data-i18n="support3">
             No matter how small our contribution may be,
             it can help shape their future.
         </p>
@@ -845,9 +836,13 @@ body {
 
     <div class="bitcoin-donation">
 
-        <h3>DONATE BITCOIN</h3>
+        <h3 data-i18n="donateBitcoin">
+            DONATE BITCOIN
+        </h3>
 
-        <p class="bitcoin-label">
+        <p
+            class="bitcoin-label"
+            data-i18n="bitcoinAddress">
             BITCOIN ADDRESS
         </p>
 
@@ -859,13 +854,17 @@ body {
 
             <button
                 type="button"
-                onclick="copyBitcoinAddress()">
+                onclick="copyBitcoinAddress()"
+                data-i18n="copy">
                 COPY
             </button>
 
         </div>
 
-        <p id="copyMessage" class="copy-message"></p>
+        <p
+            id="copyMessage"
+            class="copy-message">
+        </p>
 
 
         <!-- =========================
@@ -874,7 +873,9 @@ body {
 
         <div class="usdt-donation">
 
-            <h3>DONATE USDT</h3>
+            <h3 data-i18n="donateUsdt">
+                DONATE USDT
+            </h3>
 
 
             <!-- USDT TRC20 -->
@@ -893,13 +894,17 @@ body {
 
                     <button
                         type="button"
-                        onclick="copyUsdtTrc20()">
+                        onclick="copyUsdtTrc20()"
+                        data-i18n="copy">
                         COPY
                     </button>
 
                 </div>
 
-                <p id="usdtTrc20Message" class="usdt-copy-message"></p>
+                <p
+                    id="usdtTrc20Message"
+                    class="usdt-copy-message">
+                </p>
 
             </div>
 
@@ -920,26 +925,34 @@ body {
 
                     <button
                         type="button"
-                        onclick="copyUsdtBep20()">
+                        onclick="copyUsdtBep20()"
+                        data-i18n="copy">
                         COPY
                     </button>
 
                 </div>
 
-                <p id="usdtBep20Message" class="usdt-copy-message"></p>
+                <p
+                    id="usdtBep20Message"
+                    class="usdt-copy-message">
+                </p>
 
             </div>
 
         </div>
 
 
-        <!-- Bitcoin Warning -->
+        <!-- =========================
+             WARNING
+             ========================= -->
 
         <div class="bitcoin-warning">
 
-            <h4>Important — Before You Send Bitcoin and USDT</h4>
+            <h4 data-i18n="warningTitle">
+                Important — Before You Send Bitcoin and USDT
+            </h4>
 
-            <p>
+            <p data-i18n="warning1">
                 Please carefully check the Bitcoin and USDT address before sending any funds.
                 Make sure the address you copied is exactly correct.
                 Bitcoin and USDT transactions are generally irreversible, and funds sent
@@ -947,15 +960,20 @@ body {
             </p>
 
             <p>
-                <strong>
+
+                <strong data-i18n="neverShare">
                     Never share your private key or seed phrase with anyone.
                 </strong>
-                They give access to your Bitcoin and USDT wallet and should always remain private.
-                NARA will never ask you for your private key, seed phrase, password,
-                or wallet recovery information.
+
+                <span data-i18n="warning2Rest">
+                    They give access to your Bitcoin and USDT wallet and should always remain private.
+                    NARA will never ask you for your private key, seed phrase, password,
+                    or wallet recovery information.
+                </span>
+
             </p>
 
-            <p>
+            <p data-i18n="warning3">
                 Please send only what you can afford to give, and make sure you
                 understand the risks before making a donation.
             </p>
@@ -973,31 +991,33 @@ body {
 
 <section class="disclaimer">
 
-    <h2>DISCLAIMER</h2>
+    <h2 data-i18n="disclaimer">
+        DISCLAIMER
+    </h2>
 
     <div class="disclaimer-text">
 
-        <p>
+        <p data-i18n="disclaimer1">
             NARA is not an investment advisor.
         </p>
 
-        <p>
+        <p data-i18n="disclaimer2">
             No promise of profit or return of funds is made.
         </p>
 
-        <p>
+        <p data-i18n="disclaimer3">
             There is no obligation or pressure to donate.
         </p>
 
-        <p>
+        <p data-i18n="disclaimer4">
             Please contribute only if you are able and willing to do so.
         </p>
 
-        <p>
+        <p data-i18n="disclaimer5">
             Bitcoin donations are voluntary and made at your own risk.
         </p>
 
-        <p>
+        <p data-i18n="disclaimer6">
             Please make sure you understand the risks before donating.
         </p>
 
@@ -1012,115 +1032,46 @@ body {
 
 <script>
 
-/* =========================
-   READ MORE
-   ========================= */
 
-function showMore() {
+/* =========================================================
+   NARA MULTI-LANGUAGE SYSTEM
+   ========================================================= */
 
-    const moreContent = document.getElementById("moreContent");
-    const readMoreButton = document.querySelector(".read-more-button");
-
-    /* Tampilkan isi lengkap */
-    moreContent.style.display = "block";
-
-    /* Hilangkan Read More */
-    readMoreButton.style.display = "none";
-}
+const naraTranslations = {
 
 
 /* =========================
-   SEE LESS
+   ENGLISH
    ========================= */
 
-function showLess() {
+en: {
 
-    const moreContent = document.getElementById("moreContent");
-    const readMoreButton = document.querySelector(".read-more-button");
+    pageTitle: "NARA — A Child Is A Future",
 
-    /* Sembunyikan isi lengkap */
-    moreContent.style.display = "none";
+    whoHow: "WHO & HOW NARA",
+    calledBy: "Called by compassion.",
+    drivenBy: "Driven by care.",
+    committed: "Committed to real action.",
 
-    /* Tampilkan kembali Read More */
-    readMoreButton.style.display = "inline-block";
+    whyMatters: "WHY IT MATTERS?",
+    whyIntro: "A child should never have to lose the chance to learn simply because life gave them less.",
+    readMore: "Read More →",
 
-}
+    education: "Education is more than a classroom. It is a door to a different future — and sometimes, a small act of care is what keeps that door open.",
+    understanding: "We can see the need. We can understand the struggle. But understanding alone changes nothing.",
+    finalCall: "There is no other way forward. We must act.",
+    seeLess: "See Less ↑",
 
+    childrenCheers: "Children Cheers",
+    hope1: "Don't let their hopes pass by.",
+    hope2: "Don't let their dreams fade away.",
+    hope3: "Don't let their ambitions fall short.",
 
-/* =========================
-   COPY BITCOIN ADDRESS
-   ========================= */
+    whatSupport: "WHAT WE SUPPORT?",
+    support1: "Let them keep running toward their dreams and aspirations, reaching for hope.",
+    support2: "Let our helping hands become part of their journey.",
+    support3: "No matter how small our contribution may be, it can help shape their future.",
 
-function copyBitcoinAddress() {
-
-    const address =
-        document.getElementById("bitcoinAddress").innerText.trim();
-
-    navigator.clipboard.writeText(address).then(function() {
-
-        document.getElementById("copyMessage").innerText =
-            "Bitcoin address copied.";
-
-    }).catch(function() {
-
-        document.getElementById("copyMessage").innerText =
-            "Unable to copy. Please copy the address manually.";
-
-    });
-
-}
-
-
-/* =========================
-   COPY USDT TRC20
-   ========================= */
-
-function copyUsdtTrc20() {
-
-    const address =
-        document.getElementById("usdtTrc20Address").innerText.trim();
-
-    navigator.clipboard.writeText(address).then(function() {
-
-        document.getElementById("usdtTrc20Message").innerText =
-            "USDT TRC20 address copied.";
-
-    }).catch(function() {
-
-        document.getElementById("usdtTrc20Message").innerText =
-            "Unable to copy. Please copy the address manually.";
-
-    });
-
-}
-
-
-/* =========================
-   COPY USDT BEP20
-   ========================= */
-
-function copyUsdtBep20() {
-
-    const address =
-        document.getElementById("usdtBep20Address").innerText.trim();
-
-    navigator.clipboard.writeText(address).then(function() {
-
-        document.getElementById("usdtBep20Message").innerText =
-            "USDT BEP20 address copied.";
-
-    }).catch(function() {
-
-        document.getElementById("usdtBep20Message").innerText =
-            "Unable to copy. Please copy the address manually.";
-
-    });
-
-}
-
-</script>
-
-
-</body>
-</html>
-```
+    donateBitcoin: "DONATE BITCOIN",
+    bitcoinAddress: "BITCOIN ADDRESS",
+    donateUsdt: "DONATE USDT",
