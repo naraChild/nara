@@ -109,23 +109,104 @@ body {
     letter-spacing: 0.5px;
 }
 
-.why-text {
+
+/* =========================
+   READ MORE SECTION
+   ========================= */
+
+.read-more-section {
+    width: 100%;
+}
+
+.read-more-intro,
+.more-content {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 18px;
     font-weight: 400;
-
     color: #444444;
-
     line-height: 1.55;
 }
 
-.why-text p {
+.read-more-intro {
     margin: 0;
 }
 
 
 /* =========================
-   WHY — FINAL CALL
+   READ MORE BUTTON
+   ========================= */
+
+.read-more-button {
+    display: inline-block;
+
+    margin-top: 16px;
+
+    padding: 0 0 3px 0;
+
+    border: none;
+    border-bottom: 1px solid #999999;
+
+    background: transparent;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+
+    color: #151515;
+
+    cursor: pointer;
+}
+
+.read-more-button::after {
+    content: "";
+}
+
+
+/* =========================
+   MORE CONTENT
+   ========================= */
+
+.more-content {
+    display: none;
+
+    margin-top: 20px;
+}
+
+.more-content p {
+    margin: 0 0 18px 0;
+}
+
+
+/* =========================
+   SEE LESS BUTTON
+   ========================= */
+
+.see-less-button {
+    display: inline-block;
+
+    margin-top: 0;
+
+    padding: 0 0 3px 0;
+
+    border: none;
+    border-bottom: 1px solid #999999;
+
+    background: transparent;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+
+    color: #151515;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FINAL CALL
    ========================= */
 
 .final-call {
@@ -139,63 +220,7 @@ body {
 
 
 /* =========================
-   READ MORE
-   ========================= */
-
-.read-more {
-    margin-top: 16px;
-}
-
-.read-more summary {
-    display: inline-block;
-
-    cursor: pointer;
-    list-style: none;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 700;
-
-    color: #151515;
-
-    border-bottom: 1px solid #999999;
-
-    padding-bottom: 3px;
-}
-
-.read-more summary::-webkit-details-marker {
-    display: none;
-}
-
-.read-more summary::after {
-    content: "  →";
-    font-style: normal;
-}
-
-.read-more[open] summary::after {
-    content: "  ↑";
-}
-
-.read-more-content {
-    margin-top: 20px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
-    font-weight: 400;
-
-    color: #444444;
-
-    line-height: 1.55;
-}
-
-.read-more-content p {
-    margin: 0 0 18px 0;
-}
-
-
-/* =========================
-   CHILREN CHEERS
+   CHILDREN CHEERS
    ========================= */
 
 .children-cheers {
@@ -270,6 +295,194 @@ body {
 
 
 /* =========================
+   WHAT WE SUPPORT
+   ========================= */
+
+.what-we-support {
+    width: 100%;
+    background: #fff;
+
+    padding: 10px 24px 55px 24px;
+}
+
+.what-we-support h2 {
+    margin: 0 0 25px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: #151515;
+    letter-spacing: .5px;
+}
+
+.support-text {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #444;
+
+    line-height: 1.55;
+}
+
+.support-text p {
+    margin: 0 0 18px 0;
+}
+
+
+/* =========================
+   BITCOIN DONATION
+   ========================= */
+
+.bitcoin-donation {
+    margin-top: 35px;
+}
+
+.bitcoin-donation h3 {
+    margin: 0 0 20px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #151515;
+}
+
+.bitcoin-label {
+    margin: 0 0 8px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #555;
+}
+
+.bitcoin-box {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    border: 1px solid #ccc;
+
+    padding: 10px;
+
+    background: #fafafa;
+}
+
+.bitcoin-box span {
+    flex: 1;
+
+    min-width: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    color: #333;
+
+    word-break: break-all;
+}
+
+.bitcoin-box button {
+    flex-shrink: 0;
+
+    border: 1px solid #777;
+
+    background: #fff;
+
+    padding: 7px 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.copy-message {
+    margin-top: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-style: italic;
+
+    color: #555;
+}
+
+
+/* =========================
+   BITCOIN WARNING
+   ========================= */
+
+.bitcoin-warning {
+    margin-top: 25px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+
+    color: #555;
+
+    line-height: 1.45;
+}
+
+.bitcoin-warning h4 {
+    margin: 0 0 12px 0;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #333;
+}
+
+.bitcoin-warning p {
+    margin: 0 0 14px 0;
+}
+
+
+/* =========================
+   DISCLAIMER
+   ========================= */
+
+.disclaimer {
+    width: 100%;
+
+    background: #fff;
+
+    padding: 10px 24px 50px 24px;
+}
+
+.disclaimer h2 {
+    margin: 0 0 20px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: 700;
+
+    color: #151515;
+
+    letter-spacing: .5px;
+}
+
+.disclaimer-text {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+
+    color: #666;
+
+    line-height: 1.3;
+}
+
+.disclaimer-text p {
+    margin: 0 0 10px 0;
+}
+
+
+/* =========================
    MOBILE
    ========================= */
 
@@ -309,18 +522,15 @@ body {
         margin-bottom: 25px;
     }
 
-    .why-text {
+    .read-more-intro,
+    .more-content {
         font-size: 18px;
         line-height: 1.55;
     }
 
-    .read-more summary {
+    .read-more-button,
+    .see-less-button {
         font-size: 16px;
-    }
-
-    .read-more-content {
-        font-size: 18px;
-        line-height: 1.55;
     }
 
 
@@ -344,6 +554,39 @@ body {
         line-height: 1.45;
     }
 
+
+    .what-we-support {
+        padding: 10px 24px 50px 24px;
+    }
+
+    .what-we-support h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .support-text {
+        font-size: 18px;
+        line-height: 1.55;
+    }
+
+    .bitcoin-donation {
+        margin-top: 32px;
+    }
+
+
+    .disclaimer {
+        padding: 10px 24px 45px 24px;
+    }
+
+    .disclaimer h2 {
+        font-size: 22px;
+    }
+
+    .disclaimer-text {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
 }
 
 </style>
@@ -360,7 +603,6 @@ body {
 <div class="header">
     <img src="header.png" alt="A Child Is A Future">
 </div>
-
 
 
 <!-- =========================
@@ -384,7 +626,6 @@ body {
 </section>
 
 
-
 <!-- =========================
      WHY IT MATTERS
      ========================= -->
@@ -393,40 +634,54 @@ body {
 
     <h2>WHY IT MATTERS?</h2>
 
-<div class="read-more-section">
+    <div class="read-more-section">
 
-  <p class="read-more-intro">
-    A child should never have to lose the chance to learn simply because life gave them less.
-  </p>
+        <!-- SHORT VERSION -->
+        <p class="read-more-intro">
+            A child should never have to lose the chance to learn simply because life gave them less.
+        </p>
 
-  <button class="read-more-button" onclick="showMore()">
-    Read More →
-  </button>
 
-  <div id="moreContent" class="more-content">
+        <!-- READ MORE BUTTON -->
+        <button
+            type="button"
+            class="read-more-button"
+            onclick="showMore()">
+            Read More →
+        </button>
 
-    <p>
-      Education is more than a classroom. It is a door to a different future —
-      and sometimes, a small act of care is what keeps that door open.
-    </p>
 
-    <p>
-      We can see the need. We can understand the struggle.
-      But understanding alone changes nothing.
-    </p>
+        <!-- FULL CONTENT -->
+        <div id="moreContent" class="more-content">
 
-    <p class="final-call">
-      There is no other way forward. We must act.
-    </p>
+            <p>
+                Education is more than a classroom. It is a door to a different future —
+                and sometimes, a small act of care is what keeps that door open.
+            </p>
 
-    <button class="see-less-button" onclick="showLess()">
-      See Less ↑
-    </button>
+            <p>
+                We can see the need. We can understand the struggle.
+                But understanding alone changes nothing.
+            </p>
+
+            <p class="final-call">
+                There is no other way forward. We must act.
+            </p>
+
+
+            <!-- SEE LESS AT THE END -->
+            <button
+                type="button"
+                class="see-less-button"
+                onclick="showLess()">
+                See Less ↑
+            </button>
+
+        </div>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -436,7 +691,6 @@ body {
 <section class="children-cheers">
 
     <h2>Children Cheers</h2>
-
 
     <div class="children-gallery">
 
@@ -465,253 +719,202 @@ body {
 
 </section>
 
-<!-- WHAT WE SUPPORT -->
+
+<!-- =========================
+     WHAT WE SUPPORT
+     ========================= -->
+
 <section class="what-we-support">
 
-  <h2>WHAT WE SUPPORT?</h2>
+    <h2>WHAT WE SUPPORT?</h2>
 
-  <div class="support-text">
-    <p>
-      Let them keep running toward their dreams and aspirations,
-      reaching for hope.
-    </p>
+    <div class="support-text">
 
-    <p>
-      Let our helping hands become part of their journey.
-    </p>
+        <p>
+            Let them keep running toward their dreams and aspirations,
+            reaching for hope.
+        </p>
 
-    <p>
-      No matter how small our contribution may be,
-      it can help shape their future.
-    </p>
-  </div>
+        <p>
+            Let our helping hands become part of their journey.
+        </p>
 
-  <div class="bitcoin-donation">
-    <h3>DONATE BITCOIN</h3>
+        <p>
+            No matter how small our contribution may be,
+            it can help shape their future.
+        </p>
 
-    <p class="bitcoin-label">BITCOIN ADDRESS</p>
-
-    <div class="bitcoin-box">
-      <span id="bitcoinAddress">
-        166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
-      </span>
-      <button onclick="copyBitcoinAddress()">COPY</button>
     </div>
 
-    <p id="copyMessage" class="copy-message"></p>
 
-     <!-- Bitcoin Warning -->
-<div class="bitcoin-warning">
+    <!-- =========================
+         BITCOIN DONATION
+         ========================= -->
 
-  <h4>Important — Before You Send Bitcoin</h4>
+    <div class="bitcoin-donation">
 
-  <p>
-    Please carefully check the Bitcoin address before sending any funds.
-    Make sure the address you copied is exactly correct.
-    Bitcoin transactions are generally irreversible, and funds sent
-    to the wrong address may not be recoverable.
-  </p>
+        <h3>DONATE BITCOIN</h3>
 
-  <p>
-    <strong>Never share your private key or seed phrase with anyone.</strong>
-    They give access to your Bitcoin wallet and should always remain private.
-    NARA will never ask you for your private key, seed phrase, password,
-    or wallet recovery information.
-  </p>
+        <p class="bitcoin-label">
+            BITCOIN ADDRESS
+        </p>
 
-  <p>
-    Please send only what you can afford to give, and make sure you
-    understand the risks before making a donation.
-  </p>
+        <div class="bitcoin-box">
 
-</div>
-  </div>
+            <span id="bitcoinAddress">
+                166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+            </span>
+
+            <button
+                type="button"
+                onclick="copyBitcoinAddress()">
+                COPY
+            </button>
+
+        </div>
+
+        <p id="copyMessage" class="copy-message"></p>
+
+
+        <!-- Bitcoin Warning -->
+
+        <div class="bitcoin-warning">
+
+            <h4>Important — Before You Send Bitcoin</h4>
+
+            <p>
+                Please carefully check the Bitcoin address before sending any funds.
+                Make sure the address you copied is exactly correct.
+                Bitcoin transactions are generally irreversible, and funds sent
+                to the wrong address may not be recoverable.
+            </p>
+
+            <p>
+                <strong>
+                    Never share your private key or seed phrase with anyone.
+                </strong>
+                They give access to your Bitcoin wallet and should always remain private.
+                NARA will never ask you for your private key, seed phrase, password,
+                or wallet recovery information.
+            </p>
+
+            <p>
+                Please send only what you can afford to give, and make sure you
+                understand the risks before making a donation.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
-<style>
-.what-we-support {
-  width: 100%;
-  background: #fff;
-  padding: 10px 24px 55px 24px;
-}
 
-.what-we-support h2 {
-  margin: 0 0 25px 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #151515;
-  letter-spacing: .5px;
-}
+<!-- =========================
+     DISCLAIMER
+     ========================= -->
 
-.support-text {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: #444;
-  line-height: 1.55;
-}
-
-.support-text p {
-  margin: 0 0 18px 0;
-}
-
-.bitcoin-donation {
-  margin-top: 35px;
-}
-
-.bitcoin-donation h3 {
-  margin: 0 0 20px 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 21px;
-  font-weight: 700;
-  color: #151515;
-}
-
-.bitcoin-label {
-  margin: 0 0 8px 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: #555;
-}
-
-.bitcoin-box {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  border: 1px solid #ccc;
-  padding: 10px;
-  background: #fafafa;
-}
-
-.bitcoin-box span {
-  flex: 1;
-  min-width: 0;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  color: #333;
-  word-break: break-all;
-}
-
-.bitcoin-box button {
-  flex-shrink: 0;
-  border: 1px solid #777;
-  background: #fff;
-  padding: 7px 10px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.copy-message {
-  margin-top: 8px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 13px;
-  font-style: italic;
-  color: #555;
-}
-
-@media (max-width: 600px) {
-  .what-we-support {
-    padding: 10px 24px 50px 24px;
-  }
-
-  .what-we-support h2 {
-    font-size: 26px;
-    margin-bottom: 25px;
-  }
-
-  .support-text {
-    font-size: 18px;
-    line-height: 1.55;
-  }
-
-  .bitcoin-donation {
-    margin-top: 32px;
-  }
-}
-</style>
-
-<script>
-function copyBitcoinAddress() {
-  const address = document.getElementById("bitcoinAddress").innerText.trim();
-
-  navigator.clipboard.writeText(address).then(function() {
-    document.getElementById("copyMessage").innerText =
-      "Bitcoin address copied.";
-  });
-}
-</script>
-
-   <!-- DISCLAIMER -->
 <section class="disclaimer">
 
-  <h2>DISCLAIMER</h2>
+    <h2>DISCLAIMER</h2>
 
-  <div class="disclaimer-text">
-    <p>NARA is not an investment advisor.</p>
+    <div class="disclaimer-text">
 
-    <p>No promise of profit or return of funds is made.</p>
+        <p>
+            NARA is not an investment advisor.
+        </p>
 
-    <p>There is no obligation or pressure to donate.</p>
+        <p>
+            No promise of profit or return of funds is made.
+        </p>
 
-    <p>Please contribute only if you are able and willing to do so.</p>
+        <p>
+            There is no obligation or pressure to donate.
+        </p>
 
-    <p>Bitcoin donations are voluntary and made at your own risk.</p>
+        <p>
+            Please contribute only if you are able and willing to do so.
+        </p>
 
-    <p>Please make sure you understand the risks before donating.</p>
-  </div>
+        <p>
+            Bitcoin donations are voluntary and made at your own risk.
+        </p>
+
+        <p>
+            Please make sure you understand the risks before donating.
+        </p>
+
+    </div>
 
 </section>
 
-<style>
-.disclaimer {
-  width: 100%;
-  background: #fff;
-  padding: 10px 24px 50px 24px;
+
+<!-- =========================
+     JAVASCRIPT
+     ========================= -->
+
+<script>
+
+/* =========================
+   READ MORE
+   ========================= */
+
+function showMore() {
+
+    const moreContent = document.getElementById("moreContent");
+    const readMoreButton = document.querySelector(".read-more-button");
+
+    /* Tampilkan isi lengkap */
+    moreContent.style.display = "block";
+
+    /* Hilangkan Read More */
+    readMoreButton.style.display = "none";
 }
 
-.disclaimer h2 {
-  margin: 0 0 20px 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #151515;
-  letter-spacing: .5px;
+
+/* =========================
+   SEE LESS
+   ========================= */
+
+function showLess() {
+
+    const moreContent = document.getElementById("moreContent");
+    const readMoreButton = document.querySelector(".read-more-button");
+
+    /* Sembunyikan isi lengkap */
+    moreContent.style.display = "none";
+
+    /* Tampilkan kembali Read More */
+    readMoreButton.style.display = "inline-block";
+
 }
 
-.disclaimer-text {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 14px;
-  color: #666;
-  line-height: 1.3;
+
+/* =========================
+   COPY BITCOIN ADDRESS
+   ========================= */
+
+function copyBitcoinAddress() {
+
+    const address =
+        document.getElementById("bitcoinAddress").innerText.trim();
+
+    navigator.clipboard.writeText(address).then(function() {
+
+        document.getElementById("copyMessage").innerText =
+            "Bitcoin address copied.";
+
+    }).catch(function() {
+
+        document.getElementById("copyMessage").innerText =
+            "Unable to copy. Please copy the address manually.";
+
+    });
+
 }
 
-.disclaimer-text p {
-  margin: 0 0 10px 0;
-}
+</script>
 
-@media (max-width: 600px) {
-  .disclaimer {
-    padding: 10px 24px 45px 24px;
-  }
 
-  .disclaimer h2 {
-    font-size: 22px;
-  }
-
-  .disclaimer-text {
-    font-size: 14px;
-    line-height: 1.3;
-  }
-}
-</style>
 </body>
-
-</style>
 </html>
