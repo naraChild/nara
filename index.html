@@ -470,6 +470,161 @@ body {
 
 </section>
 
+<!-- WHAT WE SUPPORT -->
+<section class="what-we-support">
 
+  <h2>WHAT WE SUPPORT?</h2>
+
+  <div class="support-text">
+    <p>
+      Let them keep running toward their dreams and aspirations,
+      reaching for hope.
+    </p>
+
+    <p>
+      Let our helping hands become part of their journey.
+    </p>
+
+    <p>
+      No matter how small our contribution may be,
+      it can help shape their future.
+    </p>
+  </div>
+
+  <div class="bitcoin-donation">
+    <h3>DONATE BITCOIN</h3>
+
+    <p class="bitcoin-label">BITCOIN ADDRESS</p>
+
+    <div class="bitcoin-box">
+      <span id="bitcoinAddress">
+        166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+      </span>
+      <button onclick="copyBitcoinAddress()">COPY</button>
+    </div>
+
+    <p id="copyMessage" class="copy-message"></p>
+  </div>
+
+</section>
+
+<style>
+.what-we-support {
+  width: 100%;
+  background: #fff;
+  padding: 10px 24px 55px 24px;
+}
+
+.what-we-support h2 {
+  margin: 0 0 25px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #151515;
+  letter-spacing: .5px;
+}
+
+.support-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.55;
+}
+
+.support-text p {
+  margin: 0 0 18px 0;
+}
+
+.bitcoin-donation {
+  margin-top: 35px;
+}
+
+.bitcoin-donation h3 {
+  margin: 0 0 20px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #151515;
+}
+
+.bitcoin-label {
+  margin: 0 0 8px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #555;
+}
+
+.bitcoin-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fafafa;
+}
+
+.bitcoin-box span {
+  flex: 1;
+  min-width: 0;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #333;
+  word-break: break-all;
+}
+
+.bitcoin-box button {
+  flex-shrink: 0;
+  border: 1px solid #777;
+  background: #fff;
+  padding: 7px 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.copy-message {
+  margin-top: 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .what-we-support {
+    padding: 10px 24px 50px 24px;
+  }
+
+  .what-we-support h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .support-text {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  .bitcoin-donation {
+    margin-top: 32px;
+  }
+}
+</style>
+
+<script>
+function copyBitcoinAddress() {
+  const address = document.getElementById("bitcoinAddress").innerText.trim();
+
+  navigator.clipboard.writeText(address).then(function() {
+    document.getElementById("copyMessage").innerText =
+      "Bitcoin address copied.";
+  });
+}
+</script>
 </body>
 </html>
