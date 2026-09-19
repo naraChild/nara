@@ -1,1 +1,719 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>NARA — Digital Picks</title>
+
+
+<style>
+
+/* =========================================================
+   BASIC
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #151515;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.digital-header {
+
+    width: 100%;
+    max-width: 980px;
+
+    height: 170px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 0 0 18px 18px;
+}
+
+.digital-header img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.digital-main {
+
+    width: 100%;
+    max-width: 980px;
+
+    margin: 0 auto;
+
+    padding: 25px 20px 60px;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-activities {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: #151515;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    letter-spacing: 0.5px;
+}
+
+.back-activities:hover {
+
+    color: #d4a900;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+.page-title {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.page-subtitle {
+
+    max-width: 700px;
+
+    margin: 12px auto 35px;
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   AFFILIATE DISCLOSURE
+   ========================================================= */
+
+.disclosure {
+
+    max-width: 850px;
+
+    margin: 0 auto 40px;
+
+    padding: 25px 25px 27px;
+
+    background: #151515;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.disclosure-title {
+
+    margin: 0 0 12px;
+
+    color: #ffd400;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.disclosure-text {
+
+    margin: 0 auto;
+
+    max-width: 760px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   PICKS TITLE
+   ========================================================= */
+
+.section-title {
+
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.pick-card {
+
+    max-width: 760px;
+
+    margin: 0 auto 45px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+}
+
+
+/* =========================================================
+   CANVA AREA
+   ========================================================= */
+
+.pick-brand {
+
+    padding: 35px 25px;
+
+    background: #151515;
+
+    text-align: center;
+}
+
+.pick-brand-name {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.pick-brand-subtitle {
+
+    margin-top: 8px;
+
+    color: #ffd400;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PRODUCT CONTENT
+   ========================================================= */
+
+.pick-content {
+
+    padding: 30px 28px;
+
+    text-align: center;
+}
+
+.pick-heading {
+
+    margin: 0 0 14px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+.pick-description {
+
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    color: #444;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   VISIT BUTTON
+   ========================================================= */
+
+.visit-button {
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: #ffd400;
+
+    color: #151515;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.7px;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.visit-button:hover {
+
+    background: #151515;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SUPPORT MESSAGE
+   ========================================================= */
+
+.support-message {
+
+    max-width: 760px;
+
+    margin: 45px auto 0;
+
+    text-align: center;
+
+    padding: 28px 20px;
+
+    border-top: 1px solid #e5e5e5;
+}
+
+.support-message-title {
+
+    margin: 0 0 12px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+.support-message-text {
+
+    margin: 0;
+
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .digital-header {
+
+        height: 135px;
+
+        border-radius: 0 0 14px 14px;
+    }
+
+    .digital-main {
+
+        padding:
+            22px
+            15px
+            50px;
+    }
+
+    .page-title {
+
+        font-size: 29px;
+    }
+
+    .page-subtitle {
+
+        font-size: 16px;
+
+        margin-bottom: 28px;
+    }
+
+    .disclosure {
+
+        padding: 22px 18px;
+    }
+
+    .disclosure-title {
+
+        font-size: 18px;
+    }
+
+    .disclosure-text {
+
+        font-size: 14px;
+    }
+
+    .section-title {
+
+        font-size: 24px;
+    }
+
+    .pick-brand {
+
+        padding: 28px 20px;
+    }
+
+    .pick-brand-name {
+
+        font-size: 36px;
+    }
+
+    .pick-content {
+
+        padding:
+            25px
+            20px;
+    }
+
+    .pick-heading {
+
+        font-size: 22px;
+    }
+
+    .pick-description {
+
+        font-size: 15px;
+    }
+
+    .visit-button {
+
+        width: 100%;
+
+        padding: 14px 20px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     HEADER
+     ======================================================= -->
+
+<header class="digital-header">
+
+    <img
+        src="header.png"
+        alt="NARA">
+
+</header>
+
+
+
+<!-- =======================================================
+     MAIN
+     ======================================================= -->
+
+<main class="digital-main">
+
+
+    <!-- BACK TO ACTIVITIES -->
+
+    <a
+        href="activities.html"
+        class="back-activities">
+
+        ← BACK TO ACTIVITIES
+
+    </a>
+
+
+
+    <!-- PAGE TITLE -->
+
+    <h1 class="page-title">
+
+        NARA DIGITAL PICKS
+
+    </h1>
+
+
+    <p class="page-subtitle">
+
+        Digital tools and resources to create,
+        learn, and grow.
+
+    </p>
+
+
+
+    <!-- ===================================================
+         AFFILIATE DISCLOSURE
+         =================================================== -->
+
+    <section class="disclosure">
+
+        <h2 class="disclosure-title">
+
+            SUPPORT NARA THROUGH OUR LINKS
+
+        </h2>
+
+
+        <p class="disclosure-text">
+
+            Some links on this page are affiliate links.
+            When you make a purchase or sign up through
+            one of these links, NARA may receive a small
+            commission at no additional cost to you.
+
+            <br><br>
+
+            These commissions help support our social
+            activities and our commitment to children
+            and their future.
+
+            <br><br>
+
+            Thank you for supporting NARA.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         PICKS
+         =================================================== -->
+
+    <h2 class="section-title">
+
+        OUR DIGITAL PICK
+
+    </h2>
+
+
+
+    <!-- ===================================================
+         CANVA
+         =================================================== -->
+
+    <section class="pick-card">
+
+
+        <div class="pick-brand">
+
+            <h2 class="pick-brand-name">
+
+                Canva
+
+            </h2>
+
+
+            <div class="pick-brand-subtitle">
+
+                CREATE • LEARN • INSPIRE
+
+            </div>
+
+        </div>
+
+
+
+        <div class="pick-content">
+
+            <h3 class="pick-heading">
+
+                Create Something Meaningful
+
+            </h3>
+
+
+            <p class="pick-description">
+
+                Canva is an online design platform that
+                makes it easier to create presentations,
+                educational materials, social media content,
+                posters, and many other visual projects.
+
+                <br><br>
+
+                We believe creative digital tools can help
+                people learn, communicate, and turn ideas
+                into something meaningful.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 CANVA AFFILIATE LINK
+                 =================================================
+
+                 IMPORTANT:
+
+                 Replace the "#" below with the official
+                 NARA Canva affiliate link once you have
+                 received it.
+
+                 ================================================= -->
+
+            <a
+                href="#"
+                class="visit-button"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                VISIT CANVA →
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SUPPORT MESSAGE
+         =================================================== -->
+
+    <section class="support-message">
+
+        <h2 class="support-message-title">
+
+            Every Click Can Make A Difference
+
+        </h2>
+
+
+        <p class="support-message-text">
+
+            When you choose to support NARA through our
+            affiliate links, you help us continue our
+            social activities and our commitment to
+            children and their future.
+
+            <br><br>
+
+            Thank you for being part of the journey.
+
+        </p>
+
+    </section>
+
+
+</main>
+
+
+</body>
+
+</html>
