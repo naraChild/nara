@@ -1,1077 +1,1132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>NARA — A Child Is A Future</title>
-
-<style>
-
-/* =========================
-   BASIC
-   ========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    width: 100%;
-    background: #ffffff;
-}
-
-
-/* =========================
-   HEADER
-   ========================= */
-
-.header {
-    width: 100%;
-    overflow: hidden;
-}
-
-.header img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-
-/* =========================
-   WHO & HOW NARA
-   ========================= */
-
-.who-how {
-    width: 100%;
-    background: #ffffff;
-
-    padding-top: 48px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 45px;
-}
-
-.who-how h2 {
-    margin: 0 0 25px 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.2;
-
-    color: #151515;
-    letter-spacing: 0.5px;
-}
-
-.nara-statement {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 400;
-
-    color: #444444;
-
-    line-height: 1.15;
-}
-
-.nara-statement p {
-    margin: 0 0 7px 0;
-}
-
-
-/* =========================
-   WHY IT MATTERS
-   ========================= */
-
-.why-matters {
-    width: 100%;
-    background: #ffffff;
-
-    padding-top: 10px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 50px;
-}
-
-.why-matters h2 {
-    margin: 0 0 25px 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.2;
-
-    color: #151515;
-    letter-spacing: 0.5px;
-}
-
-
-/* =========================
-   READ MORE
-   ========================= */
-
-.read-more-section {
-    width: 100%;
-}
-
-.read-more-intro,
-.more-content {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #444444;
-    line-height: 1.55;
-}
-
-.read-more-intro {
-    margin: 0;
-}
-
-.read-more-button {
-    display: inline-block;
-
-    margin-top: 16px;
-
-    padding: 0 0 3px 0;
-
-    border: none;
-    border-bottom: 1px solid #999999;
-
-    background: transparent;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 700;
-
-    color: #151515;
-
-    cursor: pointer;
-}
-
-.more-content {
-    display: none;
-
-    margin-top: 20px;
-}
-
-.more-content p {
-    margin: 0 0 18px 0;
-}
-
-.see-less-button {
-    display: inline-block;
-
-    margin-top: 0;
-
-    padding: 0 0 3px 0;
-
-    border: none;
-    border-bottom: 1px solid #999999;
-
-    background: transparent;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 700;
-
-    color: #151515;
-
-    cursor: pointer;
-}
-
-.final-call {
-    margin-top: 18px !important;
-
-    font-style: italic;
-    font-weight: 700;
-
-    color: #151515;
-}
-
-
-/* =========================
-   CHILDREN CHEERS
-   ========================= */
-
-.children-cheers {
-    width: 100%;
-    background: #ffffff;
-
-    padding: 15px 12px 55px 12px;
-}
-
-.children-cheers h2 {
-    margin: 0 0 25px 0;
-
-    text-align: center;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 28px;
-    font-style: italic;
-    font-weight: 700;
-
-    color: #151515;
-
-    line-height: 1.2;
-}
-
-
-/* =========================
-   PHOTO GALLERY
-   ========================= */
-
-.children-gallery {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 7px;
-
-    width: 100%;
-}
-
-.children-gallery img {
-    display: block;
-
-    width: 100%;
-    aspect-ratio: 4 / 3;
-
-    object-fit: cover;
-
-    border-radius: 0;
-}
-
-
-/* =========================
-   GALLERY MESSAGE
-   ========================= */
-
-.children-message {
-    margin-top: 30px;
-
-    padding: 0 5px;
-
-    text-align: center;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 17px;
-    font-style: italic;
-    font-weight: 700;
-
-    color: #333333;
-
-    line-height: 1.45;
-}
-
-
-/* =========================
-   WHAT WE SUPPORT
-   ========================= */
-
-.what-we-support {
-    width: 100%;
-    background: #fff;
-
-    padding: 10px 24px 55px 24px;
-}
-
-.what-we-support h2 {
-    margin: 0 0 25px 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.2;
-
-    color: #151515;
-    letter-spacing: .5px;
-}
-
-.support-text {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
-    font-weight: 400;
-
-    color: #444;
-
-    line-height: 1.55;
-}
-
-.support-text p {
-    margin: 0 0 18px 0;
-}
-
-
-/* =========================
-   BITCOIN DONATION
-   ========================= */
-
-.bitcoin-donation {
-    margin-top: 35px;
-}
-
-.bitcoin-donation h3 {
-    margin: 0 0 20px 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 21px;
-    font-weight: 700;
-
-    color: #151515;
-}
-
-.bitcoin-label {
-    margin: 0 0 8px 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
-    font-weight: 700;
-
-    color: #555;
-}
-
-.bitcoin-box {
-    display: flex;
-    align-items: center;
-
-    gap: 8px;
-
-    width: 100%;
-
-    border: 1px solid #ccc;
-
-    padding: 10px;
-
-    background: #fafafa;
-}
-
-.bitcoin-box span {
-    flex: 1;
-
-    min-width: 0;
-
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-
-    color: #333;
-
-    word-break: break-all;
-
-    direction: ltr;
-    text-align: left;
-}
-
-.bitcoin-box button {
-    flex-shrink: 0;
-
-    border: 1px solid #777;
-
-    background: #fff;
-
-    padding: 7px 10px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 12px;
-    font-weight: 700;
-
-    cursor: pointer;
-}
-
-.copy-message {
-    margin-top: 8px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 13px;
-    font-style: italic;
-
-    color: #555;
-}
-
-
-/* =========================
-   USDT DONATION
-   ========================= */
-
-.usdt-donation {
-    margin-top: 35px;
-}
-
-.usdt-donation h3 {
-    margin: 0 0 20px 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 21px;
-    font-weight: 700;
-
-    color: #151515;
-}
-
-.usdt-item {
-    margin-bottom: 24px;
-}
-
-.usdt-label {
-    margin: 0 0 8px 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
-    font-weight: 700;
-
-    color: #555;
-}
-
-.usdt-box {
-    display: flex;
-    align-items: center;
-
-    gap: 8px;
-
-    width: 100%;
-
-    border: 1px solid #ccc;
-
-    padding: 10px;
-
-    background: #fafafa;
-}
-
-.usdt-box span {
-    flex: 1;
-
-    min-width: 0;
-
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-
-    color: #333;
-
-    word-break: break-all;
-
-    direction: ltr;
-    text-align: left;
-}
-
-.usdt-box button {
-    flex-shrink: 0;
-
-    border: 1px solid #777;
-
-    background: #fff;
-
-    padding: 7px 10px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 12px;
-    font-weight: 700;
-
-    cursor: pointer;
-}
-
-.usdt-copy-message {
-    margin-top: 8px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 13px;
-    font-style: italic;
-
-    color: #555;
-}
-
-
-/* =========================
-   BITCOIN / USDT WARNING
-   ========================= */
-
-.bitcoin-warning {
-    margin-top: 25px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
-
-    color: #555;
-
-    line-height: 1.45;
-}
-
-.bitcoin-warning h4 {
-    margin: 0 0 12px 0;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    color: #333;
-}
-
-.bitcoin-warning p {
-    margin: 0 0 14px 0;
-}
-
-
-/* =========================
-   DISCLAIMER
-   ========================= */
-
-.disclaimer {
-    width: 100%;
-
-    background: #fff;
-
-    padding: 10px 24px 50px 24px;
-}
-
-.disclaimer h2 {
-    margin: 0 0 20px 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 22px;
-    font-weight: 700;
-
-    color: #151515;
-
-    letter-spacing: .5px;
-}
-
-.disclaimer-text {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
-
-    color: #666;
-
-    line-height: 1.3;
-}
-
-.disclaimer-text p {
-    margin: 0 0 10px 0;
-}
-
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 600px) {
-
-    .who-how {
-        padding-top: 48px;
-        padding-left: 24px;
-        padding-right: 24px;
-        padding-bottom: 45px;
-    }
-
-    .who-how h2 {
-        font-size: 26px;
-        margin-bottom: 25px;
-    }
-
-    .nara-statement {
-        font-size: 18px;
-        line-height: 1.15;
-    }
-
-    .nara-statement p {
-        margin-bottom: 7px;
-    }
-
-    .why-matters {
-        padding-top: 10px;
-        padding-left: 24px;
-        padding-right: 24px;
-        padding-bottom: 50px;
-    }
-
-    .why-matters h2 {
-        font-size: 26px;
-        margin-bottom: 25px;
-    }
-
-    .read-more-intro,
-    .more-content {
-        font-size: 18px;
-        line-height: 1.55;
-    }
-
-    .read-more-button,
-    .see-less-button {
-        font-size: 16px;
-    }
-
-    .children-cheers {
-        padding: 15px 12px 50px 12px;
-    }
-
-    .children-cheers h2 {
-        font-size: 28px;
-        margin-bottom: 25px;
-    }
-
-    .children-gallery {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 7px;
-    }
-
-    .children-message {
-        margin-top: 30px;
-        font-size: 17px;
-        line-height: 1.45;
-    }
-
-    .what-we-support {
-        padding: 10px 24px 50px 24px;
-    }
-
-    .what-we-support h2 {
-        font-size: 26px;
-        margin-bottom: 25px;
-    }
-
-    .support-text {
-        font-size: 18px;
-        line-height: 1.55;
-    }
-
-    .bitcoin-donation {
-        margin-top: 32px;
-    }
-
-    .usdt-donation {
-        margin-top: 32px;
-    }
-
-    .disclaimer {
-        padding: 10px 24px 45px 24px;
-    }
-
-    .disclaimer h2 {
-        font-size: 22px;
-    }
-
-    .disclaimer-text {
-        font-size: 14px;
-        line-height: 1.3;
-    }
-
-}
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- =========================
-     NARA HEADER
-     ========================= -->
-
-<div class="header">
-    <img src="header.png" alt="A Child Is A Future">
-</div>
-
-
-<!-- =========================
-     WHO & HOW NARA
-     ========================= -->
-
-<section class="who-how">
-
-    <h2 data-i18n="whoHow">WHO &amp; HOW NARA</h2>
-
-    <div class="nara-statement">
-
-        <p data-i18n="calledBy">Called by compassion.</p>
-
-        <p data-i18n="drivenBy">Driven by care.</p>
-
-        <p data-i18n="committed">Committed to real action.</p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     WHY IT MATTERS
-     ========================= -->
-
-<section class="why-matters">
-
-    <h2 data-i18n="whyMatters">WHY IT MATTERS?</h2>
-
-    <div class="read-more-section">
-
-        <p
-            class="read-more-intro"
-            data-i18n="whyIntro">
-            A child should never have to lose the chance to learn simply because life gave them less.
-        </p>
-
-
-        <button
-            type="button"
-            class="read-more-button"
-            onclick="showMore()"
-            data-i18n="readMore">
-            Read More →
-        </button>
-
-
-        <div id="moreContent" class="more-content">
-
-            <p data-i18n="education">
-                Education is more than a classroom. It is a door to a different future —
-                and sometimes, a small act of care is what keeps that door open.
-            </p>
-
-            <p data-i18n="understanding">
-                We can see the need. We can understand the struggle.
-                But understanding alone changes nothing.
-            </p>
-
-            <p
-                class="final-call"
-                data-i18n="finalCall">
-                There is no other way forward. We must act.
-            </p>
-
-
-            <button
-                type="button"
-                class="see-less-button"
-                onclick="showLess()"
-                data-i18n="seeLess">
-                See Less ↑
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CHILDREN CHEERS
-     ========================= -->
-
-<section class="children-cheers">
-
-    <h2 data-i18n="childrenCheers">
-        Children Cheers
-    </h2>
-
-    <div class="children-gallery">
-
-        <img src="Child1.jpg" alt="Children together">
-
-        <img src="Child2.jpg" alt="Children receiving certificates">
-
-        <img src="Child3.jpg" alt="Children together at home">
-
-        <img src="Child4.jpg" alt="Children together">
-
-        <img src="Child5.jpg" alt="Children celebrating together">
-
-        <img src="Child6.jpg" alt="Children together">
-
-    </div>
-
-
-    <div class="children-message">
-
-        <span data-i18n="hope1">
-            Don't let their hopes pass by.
-        </span><br>
-
-        <span data-i18n="hope2">
-            Don't let their dreams fade away.
-        </span><br>
-
-        <span data-i18n="hope3">
-            Don't let their ambitions fall short.
-        </span>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     WHAT WE SUPPORT
-     ========================= -->
-
-<section class="what-we-support">
-
-    <h2 data-i18n="whatSupport">
-        WHAT WE SUPPORT?
-    </h2>
-
-    <div class="support-text">
-
-        <p data-i18n="support1">
-            Let them keep running toward their dreams and aspirations,
-            reaching for hope.
-        </p>
-
-        <p data-i18n="support2">
-            Let our helping hands become part of their journey.
-        </p>
-
-        <p data-i18n="support3">
-            No matter how small our contribution may be,
-            it can help shape their future.
-        </p>
-
-    </div>
-
-
-    <!-- =========================
-         BITCOIN DONATION
-         ========================= -->
-
-    <div class="bitcoin-donation">
-
-        <h3 data-i18n="donateBitcoin">
-            DONATE BITCOIN
-        </h3>
-
-        <p
-            class="bitcoin-label"
-            data-i18n="bitcoinAddress">
-            BITCOIN ADDRESS
-        </p>
-
-        <div class="bitcoin-box">
-
-            <span id="bitcoinAddress">
-                166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
-            </span>
-
-            <button
-                type="button"
-                onclick="copyBitcoinAddress()"
-                data-i18n="copy">
-                COPY
-            </button>
-
-        </div>
-
-        <p
-            id="copyMessage"
-            class="copy-message">
-        </p>
-
-
-        <!-- =========================
-             USDT DONATION
-             ========================= -->
-
-        <div class="usdt-donation">
-
-            <h3 data-i18n="donateUsdt">
-                DONATE USDT
-            </h3>
-
-
-            <!-- USDT TRC20 -->
-
-            <div class="usdt-item">
-
-                <p class="usdt-label">
-                    USDT TRC20
-                </p>
-
-                <div class="usdt-box">
-
-                    <span id="usdtTrc20Address">
-                        TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
-                    </span>
-
-                    <button
-                        type="button"
-                        onclick="copyUsdtTrc20()"
-                        data-i18n="copy">
-                        COPY
-                    </button>
-
-                </div>
-
-                <p
-                    id="usdtTrc20Message"
-                    class="usdt-copy-message">
-                </p>
-
-            </div>
-
-
-            <!-- USDT BEP20 -->
-
-            <div class="usdt-item">
-
-                <p class="usdt-label">
-                    USDT BEP20
-                </p>
-
-                <div class="usdt-box">
-
-                    <span id="usdtBep20Address">
-                        0x5a56e760f487c252f3f878e5a5e3719b39d63075
-                    </span>
-
-                    <button
-                        type="button"
-                        onclick="copyUsdtBep20()"
-                        data-i18n="copy">
-                        COPY
-                    </button>
-
-                </div>
-
-                <p
-                    id="usdtBep20Message"
-                    class="usdt-copy-message">
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- =========================
-             WARNING
-             ========================= -->
-
-        <div class="bitcoin-warning">
-
-            <h4 data-i18n="warningTitle">
-                Important — Before You Send Bitcoin and USDT
-            </h4>
-
-            <p data-i18n="warning1">
-                Please carefully check the Bitcoin and USDT address before sending any funds.
-                Make sure the address you copied is exactly correct.
-                Bitcoin and USDT transactions are generally irreversible, and funds sent
-                to the wrong address may not be recoverable.
-            </p>
-
-            <p>
-
-                <strong data-i18n="neverShare">
-                    Never share your private key or seed phrase with anyone.
-                </strong>
-
-                <span data-i18n="warning2Rest">
-                    They give access to your Bitcoin and USDT wallet and should always remain private.
-                    NARA will never ask you for your private key, seed phrase, password,
-                    or wallet recovery information.
-                </span>
-
-            </p>
-
-            <p data-i18n="warning3">
-                Please send only what you can afford to give, and make sure you
-                understand the risks before making a donation.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     DISCLAIMER
-     ========================= -->
-
-<section class="disclaimer">
-
-    <h2 data-i18n="disclaimer">
-        DISCLAIMER
-    </h2>
-
-    <div class="disclaimer-text">
-
-        <p data-i18n="disclaimer1">
-            NARA is not an investment advisor.
-        </p>
-
-        <p data-i18n="disclaimer2">
-            No promise of profit or return of funds is made.
-        </p>
-
-        <p data-i18n="disclaimer3">
-            There is no obligation or pressure to donate.
-        </p>
-
-        <p data-i18n="disclaimer4">
-            Please contribute only if you are able and willing to do so.
-        </p>
-
-        <p data-i18n="disclaimer5">
-            Bitcoin donations are voluntary and made at your own risk.
-        </p>
-
-        <p data-i18n="disclaimer6">
-            Please make sure you understand the risks before donating.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     JAVASCRIPT
-     ========================= -->
-
 <script>
 
-
 /* =========================================================
-   NARA MULTI-LANGUAGE SYSTEM
+   NARA LANGUAGE SYSTEM
    ========================================================= */
 
 const naraTranslations = {
 
+    en: {
+        pageTitle: "NARA — A Child Is A Future",
 
-/* =========================
-   ENGLISH
-   ========================= */
+        whoHow: "WHO & HOW NARA",
+        calledBy: "Called by compassion.",
+        drivenBy: "Driven by care.",
+        committed: "Committed to real action.",
 
-en: {
+        whyMatters: "WHY IT MATTERS?",
+        whyIntro: "A child should never have to lose the chance to learn simply because life gave them less.",
+        readMore: "Read More →",
 
-    pageTitle: "NARA — A Child Is A Future",
+        education: "Education is more than a classroom. It is a door to a different future — and sometimes, a small act of care is what keeps that door open.",
+        understanding: "We can see the need. We can understand the struggle. But understanding alone changes nothing.",
+        finalCall: "There is no other way forward. We must act.",
+        seeLess: "See Less ↑",
 
-    whoHow: "WHO & HOW NARA",
-    calledBy: "Called by compassion.",
-    drivenBy: "Driven by care.",
-    committed: "Committed to real action.",
+        childrenCheers: "Children Cheers",
+        hope1: "Don't let their hopes pass by.",
+        hope2: "Don't let their dreams fade away.",
+        hope3: "Don't let their ambitions fall short.",
 
-    whyMatters: "WHY IT MATTERS?",
-    whyIntro: "A child should never have to lose the chance to learn simply because life gave them less.",
-    readMore: "Read More →",
+        whatSupport: "WHAT WE SUPPORT?",
+        support1: "Let them keep running toward their dreams and aspirations, reaching for hope.",
+        support2: "Let our helping hands become part of their journey.",
+        support3: "No matter how small our contribution may be, it can help shape their future.",
 
-    education: "Education is more than a classroom. It is a door to a different future — and sometimes, a small act of care is what keeps that door open.",
-    understanding: "We can see the need. We can understand the struggle. But understanding alone changes nothing.",
-    finalCall: "There is no other way forward. We must act.",
-    seeLess: "See Less ↑",
+        donateBitcoin: "DONATE BITCOIN",
+        bitcoinAddress: "BITCOIN ADDRESS",
+        donateUsdt: "DONATE USDT",
+        copy: "COPY",
 
-    childrenCheers: "Children Cheers",
-    hope1: "Don't let their hopes pass by.",
-    hope2: "Don't let their dreams fade away.",
-    hope3: "Don't let their ambitions fall short.",
+        bitcoinCopied: "Bitcoin address copied.",
+        usdtTrcCopied: "USDT TRC20 address copied.",
+        usdtBepCopied: "USDT BEP20 address copied.",
+        unableCopy: "Unable to copy. Please copy the address manually.",
 
-    whatSupport: "WHAT WE SUPPORT?",
-    support1: "Let them keep running toward their dreams and aspirations, reaching for hope.",
-    support2: "Let our helping hands become part of their journey.",
-    support3: "No matter how small our contribution may be, it can help shape their future.",
+        warningTitle: "Important — Before You Send Bitcoin and USDT",
+        warning1: "Please carefully check the Bitcoin and USDT address before sending any funds. Make sure the address you copied is exactly correct. Bitcoin and USDT transactions are generally irreversible, and funds sent to the wrong address may not be recoverable.",
+        neverShare: "Never share your private key or seed phrase with anyone.",
+        warning2Rest: "They give access to your Bitcoin and USDT wallet and should always remain private. NARA will never ask you for your private key, seed phrase, password, or wallet recovery information.",
+        warning3: "Please send only what you can afford to give, and make sure you understand the risks before making a donation.",
 
-    donateBitcoin: "DONATE BITCOIN",
-    bitcoinAddress: "BITCOIN ADDRESS",
-    donateUsdt: "DONATE USDT",
+        disclaimer: "DISCLAIMER",
+        disclaimer1: "NARA is not an investment advisor.",
+        disclaimer2: "No promise of profit or return of funds is made.",
+        disclaimer3: "There is no obligation or pressure to donate.",
+        disclaimer4: "Please contribute only if you are able and willing to do so.",
+        disclaimer5: "Bitcoin donations are voluntary and made at your own risk.",
+        disclaimer6: "Please make sure you understand the risks before donating."
+    },
+
+    id: {
+        pageTitle: "NARA — Seorang Anak Adalah Masa Depan",
+
+        whoHow: "SIAPA & BAGAIMANA NARA",
+        calledBy: "Dipanggil oleh kepedulian.",
+        drivenBy: "Digerakkan oleh kepedulian.",
+        committed: "Berkomitmen untuk tindakan nyata.",
+
+        whyMatters: "MENGAPA INI PENTING?",
+        whyIntro: "Seorang anak seharusnya tidak pernah kehilangan kesempatan untuk belajar hanya karena hidup memberinya lebih sedikit.",
+        readMore: "Baca Selengkapnya →",
+
+        education: "Pendidikan lebih dari sekadar ruang kelas. Pendidikan adalah pintu menuju masa depan yang berbeda — dan terkadang, sebuah kepedulian kecil dapat membuat pintu itu tetap terbuka.",
+        understanding: "Kita dapat melihat kebutuhan. Kita dapat memahami perjuangan mereka. Namun memahami saja tidak akan mengubah apa pun.",
+        finalCall: "Tidak ada jalan lain untuk maju. Kita harus bertindak.",
+        seeLess: "Lebih Sedikit ↑",
+
+        childrenCheers: "Keceriaan Anak-Anak",
+        hope1: "Jangan biarkan harapan mereka berlalu.",
+        hope2: "Jangan biarkan impian mereka memudar.",
+        hope3: "Jangan biarkan cita-cita mereka terhenti.",
+
+        whatSupport: "APA YANG KAMI DUKUNG?",
+        support1: "Biarkan mereka terus mengejar impian dan cita-cita mereka, meraih harapan.",
+        support2: "Biarkan uluran tangan kita menjadi bagian dari perjalanan mereka.",
+        support3: "Sekecil apa pun kontribusi kita, itu dapat membantu membentuk masa depan mereka.",
+
+        donateBitcoin: "DONASI BITCOIN",
+        bitcoinAddress: "ALAMAT BITCOIN",
+        donateUsdt: "DONASI USDT",
+        copy: "SALIN",
+
+        bitcoinCopied: "Alamat Bitcoin berhasil disalin.",
+        usdtTrcCopied: "Alamat USDT TRC20 berhasil disalin.",
+        usdtBepCopied: "Alamat USDT BEP20 berhasil disalin.",
+        unableCopy: "Tidak dapat menyalin. Silakan salin alamat secara manual.",
+
+        warningTitle: "Penting — Sebelum Mengirim Bitcoin dan USDT",
+        warning1: "Periksa alamat Bitcoin dan USDT dengan teliti sebelum mengirim dana. Pastikan alamat yang Anda salin benar-benar tepat. Transaksi Bitcoin dan USDT umumnya tidak dapat dibatalkan, dan dana yang dikirim ke alamat yang salah mungkin tidak dapat dikembalikan.",
+        neverShare: "Jangan pernah membagikan private key atau seed phrase kepada siapa pun.",
+        warning2Rest: "Keduanya memberikan akses ke dompet Bitcoin dan USDT Anda dan harus selalu dirahasiakan. NARA tidak akan pernah meminta private key, seed phrase, kata sandi, atau informasi pemulihan dompet Anda.",
+        warning3: "Kirim hanya sejumlah yang mampu Anda berikan, dan pastikan Anda memahami risikonya sebelum melakukan donasi.",
+
+        disclaimer: "PENAFIAN",
+        disclaimer1: "NARA bukan penasihat investasi.",
+        disclaimer2: "Tidak ada janji keuntungan atau pengembalian dana.",
+        disclaimer3: "Tidak ada kewajiban atau tekanan untuk berdonasi.",
+        disclaimer4: "Silakan berkontribusi hanya jika Anda mampu dan bersedia.",
+        disclaimer5: "Donasi Bitcoin bersifat sukarela dan dilakukan atas risiko Anda sendiri.",
+        disclaimer6: "Pastikan Anda memahami risikonya sebelum berdonasi."
+    },
+
+    vi: {
+        pageTitle: "NARA — Một Đứa Trẻ Là Một Tương Lai",
+
+        whoHow: "NARA LÀ AI & HOẠT ĐỘNG NHƯ THẾ NÀO",
+        calledBy: "Được dẫn dắt bởi lòng trắc ẩn.",
+        drivenBy: "Được thúc đẩy bởi sự quan tâm.",
+        committed: "Cam kết hành động thực tế.",
+
+        whyMatters: "TẠI SAO ĐIỀU NÀY QUAN TRỌNG?",
+        whyIntro: "Một đứa trẻ không bao giờ nên mất đi cơ hội học tập chỉ vì cuộc sống mang đến cho em ít hơn.",
+        readMore: "Đọc Thêm →",
+
+        education: "Giáo dục không chỉ là lớp học. Đó là cánh cửa đến một tương lai khác — và đôi khi, một hành động quan tâm nhỏ bé có thể giữ cánh cửa ấy luôn mở.",
+        understanding: "Chúng ta có thể nhìn thấy nhu cầu. Chúng ta có thể hiểu sự khó khăn. Nhưng chỉ hiểu thôi thì không thay đổi được điều gì.",
+        finalCall: "Không có con đường nào khác để tiến về phía trước. Chúng ta phải hành động.",
+        seeLess: "Thu Gọn ↑",
+
+        childrenCheers: "Niềm Vui Của Trẻ Em",
+        hope1: "Đừng để hy vọng của các em trôi qua.",
+        hope2: "Đừng để ước mơ của các em phai nhạt.",
+        hope3: "Đừng để khát vọng của các em dang dở.",
+
+        whatSupport: "CHÚNG TA HỖ TRỢ ĐIỀU GÌ?",
+        support1: "Hãy để các em tiếp tục theo đuổi ước mơ và khát vọng, hướng tới hy vọng.",
+        support2: "Hãy để những bàn tay giúp đỡ của chúng ta trở thành một phần trong hành trình của các em.",
+        support3: "Dù sự đóng góp của chúng ta nhỏ đến đâu, nó vẫn có thể góp phần định hình tương lai của các em.",
+
+        donateBitcoin: "QUYÊN GÓP BITCOIN",
+        bitcoinAddress: "ĐỊA CHỈ BITCOIN",
+        donateUsdt: "QUYÊN GÓP USDT",
+        copy: "SAO CHÉP",
+
+        bitcoinCopied: "Đã sao chép địa chỉ Bitcoin.",
+        usdtTrcCopied: "Đã sao chép địa chỉ USDT TRC20.",
+        usdtBepCopied: "Đã sao chép địa chỉ USDT BEP20.",
+        unableCopy: "Không thể sao chép. Vui lòng sao chép địa chỉ thủ công.",
+
+        warningTitle: "Quan trọng — Trước Khi Gửi Bitcoin và USDT",
+        warning1: "Vui lòng kiểm tra kỹ địa chỉ Bitcoin và USDT trước khi gửi tiền. Hãy chắc chắn rằng địa chỉ bạn đã sao chép hoàn toàn chính xác. Giao dịch Bitcoin và USDT thường không thể đảo ngược và tiền gửi sai địa chỉ có thể không thể thu hồi.",
+        neverShare: "Không bao giờ chia sẻ private key hoặc seed phrase của bạn với bất kỳ ai.",
+        warning2Rest: "Chúng cho phép truy cập vào ví Bitcoin và USDT của bạn và phải luôn được giữ bí mật. NARA sẽ không bao giờ yêu cầu private key, seed phrase, mật khẩu hoặc thông tin khôi phục ví của bạn.",
+        warning3: "Chỉ gửi số tiền bạn có khả năng đóng góp và hãy chắc chắn rằng bạn hiểu rõ các rủi ro trước khi quyên góp.",
+
+        disclaimer: "TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM",
+        disclaimer1: "NARA không phải là cố vấn đầu tư.",
+        disclaimer2: "Không có cam kết về lợi nhuận hoặc hoàn trả tiền.",
+        disclaimer3: "Không có nghĩa vụ hoặc áp lực phải quyên góp.",
+        disclaimer4: "Chỉ đóng góp nếu bạn có khả năng và tự nguyện.",
+        disclaimer5: "Đóng góp Bitcoin là tự nguyện và được thực hiện theo rủi ro của riêng bạn.",
+        disclaimer6: "Hãy chắc chắn rằng bạn hiểu rõ các rủi ro trước khi quyên góp."
+    },
+
+    zh: {
+        pageTitle: "NARA — 一个孩子就是一个未来",
+        whoHow: "NARA 是谁 & 如何行动",
+        calledBy: "因关怀而召唤。",
+        drivenBy: "因爱与关怀而行动。",
+        committed: "致力于真正的行动。",
+        whyMatters: "为什么这很重要？",
+        whyIntro: "孩子不应该仅仅因为生活给予他们更少，就失去学习的机会。",
+        readMore: "阅读更多 →",
+        education: "教育不仅仅是课堂。它是一扇通往不同未来的门——有时，一个小小的关怀行动就能让这扇门保持开放。",
+        understanding: "我们可以看到需求，也可以理解他们的困难。但仅仅理解并不能改变任何事情。",
+        finalCall: "没有其他前进的道路。我们必须行动。",
+        seeLess: "收起 ↑",
+        childrenCheers: "孩子们的欢笑",
+        hope1: "不要让他们的希望错过。",
+        hope2: "不要让他们的梦想消逝。",
+        hope3: "不要让他们的理想止步。",
+        whatSupport: "我们支持什么？",
+        support1: "让他们继续追逐梦想和理想，拥抱希望。",
+        support2: "让我们的援手成为他们人生旅程的一部分。",
+        support3: "无论我们的贡献多么微小，都可以帮助塑造他们的未来。",
+        donateBitcoin: "捐赠比特币",
+        bitcoinAddress: "比特币地址",
+        donateUsdt: "捐赠 USDT",
+        copy: "复制",
+        bitcoinCopied: "比特币地址已复制。",
+        usdtTrcCopied: "USDT TRC20 地址已复制。",
+        usdtBepCopied: "USDT BEP20 地址已复制。",
+        unableCopy: "无法复制，请手动复制地址。",
+        warningTitle: "重要 — 发送 Bitcoin 和 USDT 前",
+        warning1: "发送资金前，请仔细检查 Bitcoin 和 USDT 地址。确保您复制的地址完全正确。Bitcoin 和 USDT 交易通常无法撤销，发送到错误地址的资金可能无法追回。",
+        neverShare: "绝不要向任何人分享您的私钥或助记词。",
+        warning2Rest: "它们可以访问您的 Bitcoin 和 USDT 钱包，必须始终保密。NARA 永远不会向您索要私钥、助记词、密码或钱包恢复信息。",
+        warning3: "请只发送您能够承受的金额，并在捐赠前确保您了解相关风险。",
+        disclaimer: "免责声明",
+        disclaimer1: "NARA 不是投资顾问。",
+        disclaimer2: "不承诺任何利润或资金返还。",
+        disclaimer3: "没有义务或压力要求您捐赠。",
+        disclaimer4: "请仅在您有能力并愿意的情况下捐赠。",
+        disclaimer5: "Bitcoin 捐赠是自愿的，风险由您自行承担。",
+        disclaimer6: "捐赠前请确保您了解相关风险。"
+    },
+
+    ja: {
+        pageTitle: "NARA — 子どもは未来",
+        whoHow: "NARAとは & どのように活動するか",
+        calledBy: "思いやりに導かれて。",
+        drivenBy: "支える心によって動く。",
+        committed: "実際の行動に取り組む。",
+        whyMatters: "なぜ大切なのか？",
+        whyIntro: "子どもは、人生が自分に与えてくれたものが少ないという理由だけで、学ぶ機会を失ってはいけません。",
+        readMore: "続きを読む →",
+        education: "教育は教室だけではありません。それは別の未来への扉です。そして時には、小さな思いやりがその扉を開いたままにします。",
+        understanding: "私たちは必要性を見ることができます。苦しみを理解することもできます。しかし、理解するだけでは何も変わりません。",
+        finalCall: "前に進むための別の道はありません。私たちは行動しなければなりません。",
+        seeLess: "閉じる ↑",
+        childrenCheers: "子どもたちの笑顔",
+        hope1: "子どもたちの希望を通り過ぎさせないでください。",
+        hope2: "子どもたちの夢を消さないでください。",
+        hope3: "子どもたちの志を途切れさせないでください。",
+        whatSupport: "私たちは何を支援するのか？",
+        support1: "子どもたちが夢と希望を追い続けられるように。",
+        support2: "私たちの支援の手を、その旅の一部にしてください。",
+        support3: "どんなに小さな貢献でも、未来を形作る助けになります。",
+        donateBitcoin: "ビットコインを寄付",
+        bitcoinAddress: "ビットコインアドレス",
+        donateUsdt: "USDTを寄付",
+        copy: "コピー",
+        bitcoinCopied: "Bitcoinアドレスをコピーしました。",
+        usdtTrcCopied: "USDT TRC20アドレスをコピーしました。",
+        usdtBepCopied: "USDT BEP20アドレスをコピーしました。",
+        unableCopy: "コピーできません。アドレスを手動でコピーしてください。",
+        warningTitle: "重要 — BitcoinとUSDTを送る前に",
+        warning1: "送金する前にBitcoinとUSDTのアドレスをよく確認してください。コピーしたアドレスが完全に正しいことを確認してください。BitcoinとUSDTの取引は通常取り消すことができず、間違ったアドレスに送った資金は回収できない場合があります。",
+        neverShare: "秘密鍵やシードフレーズを誰にも絶対に共有しないでください。",
+        warning2Rest: "それらはBitcoinとUSDTウォレットへのアクセスを可能にするため、常に秘密にしてください。NARAが秘密鍵、シードフレーズ、パスワード、ウォレット復元情報を求めることはありません。",
+        warning3: "無理なく寄付できる金額だけを送信し、寄付する前にリスクを理解してください。",
+        disclaimer: "免責事項",
+        disclaimer1: "NARAは投資アドバイザーではありません。",
+        disclaimer2: "利益や資金返還を保証するものではありません。",
+        disclaimer3: "寄付する義務や圧力はありません。",
+        disclaimer4: "可能であり、希望する場合のみ寄付してください。",
+        disclaimer5: "Bitcoinの寄付は任意であり、ご自身の責任で行ってください。",
+        disclaimer6: "寄付する前にリスクを十分に理解してください。"
+    },
+
+    ko: {
+        pageTitle: "NARA — 아이는 미래입니다",
+        whoHow: "NARA는 누구이며 어떻게 활동하는가",
+        calledBy: "연민으로 부름받고.",
+        drivenBy: "관심과 사랑으로 움직이며.",
+        committed: "실천을 위해 헌신합니다.",
+        whyMatters: "왜 중요한가요?",
+        whyIntro: "아이는 단지 삶이 자신에게 덜 주었다는 이유만으로 배울 기회를 잃어서는 안 됩니다.",
+        readMore: "더 보기 →",
+        education: "교육은 교실 그 이상입니다. 그것은 다른 미래로 가는 문이며, 때로는 작은 관심과 도움이 그 문을 열어 둡니다.",
+        understanding: "우리는 필요를 볼 수 있고 어려움을 이해할 수 있습니다. 하지만 이해만으로는 아무것도 바뀌지 않습니다.",
+        finalCall: "앞으로 나아갈 다른 길은 없습니다. 우리는 행동해야 합니다.",
+        seeLess: "접기 ↑",
+        childrenCheers: "아이들의 웃음",
+        hope1: "아이들의 희망이 지나가도록 두지 마세요.",
+        hope2: "아이들의 꿈이 사라지도록 두지 마세요.",
+        hope3: "아이들의 꿈과 열망이 멈추지 않도록 해주세요.",
+        whatSupport: "무엇을 지원하나요?",
+        support1: "아이들이 꿈과 열망을 계속 따라가며 희망을 향해 나아가도록 해주세요.",
+        support2: "우리의 도움의 손길이 아이들의 여정의 일부가 되도록 해주세요.",
+        support3: "아무리 작은 기여라도 아이들의 미래를 만드는 데 도움이 될 수 있습니다.",
+        donateBitcoin: "비트코인 기부",
+        bitcoinAddress: "비트코인 주소",
+        donateUsdt: "USDT 기부",
+        copy: "복사",
+        bitcoinCopied: "비트코인 주소가 복사되었습니다.",
+        usdtTrcCopied: "USDT TRC20 주소가 복사되었습니다.",
+        usdtBepCopied: "USDT BEP20 주소가 복사되었습니다.",
+        unableCopy: "복사할 수 없습니다. 주소를 직접 복사해 주세요.",
+        warningTitle: "중요 — Bitcoin 및 USDT를 보내기 전에",
+        warning1: "송금하기 전에 Bitcoin 및 USDT 주소를 주의 깊게 확인하세요. 복사한 주소가 정확한지 확인하세요. Bitcoin 및 USDT 거래는 일반적으로 되돌릴 수 없으며 잘못된 주소로 보낸 자금은 복구되지 않을 수 있습니다.",
+        neverShare: "개인 키나 시드 문구를 누구와도 절대 공유하지 마세요.",
+        warning2Rest: "이는 Bitcoin 및 USDT 지갑에 접근할 수 있게 하므로 항상 비밀로 유지해야 합니다. NARA는 개인 키, 시드 문구, 비밀번호 또는 지갑 복구 정보를 요구하지 않습니다.",
+        warning3: "감당할 수 있는 금액만 보내고 기부하기 전에 위험을 이해했는지 확인하세요.",
+        disclaimer: "면책 조항",
+        disclaimer1: "NARA는 투자 자문사가 아닙니다.",
+        disclaimer2: "수익이나 자금 반환을 약속하지 않습니다.",
+        disclaimer3: "기부 의무나 압박은 없습니다.",
+        disclaimer4: "가능하고 원할 때만 기부해 주세요.",
+        disclaimer5: "Bitcoin 기부는 자발적이며 본인의 책임하에 이루어집니다.",
+        disclaimer6: "기부하기 전에 위험을 충분히 이해하세요."
+    },
+
+    th: {
+        pageTitle: "NARA — เด็กหนึ่งคนคืออนาคต",
+        whoHow: "NARA คือใคร & ทำงานอย่างไร",
+        calledBy: "ขับเคลื่อนด้วยความเมตตา",
+        drivenBy: "ขับเคลื่อนด้วยความห่วงใย",
+        committed: "มุ่งมั่นสู่การลงมือทำจริง",
+        whyMatters: "ทำไมเรื่องนี้จึงสำคัญ?",
+        whyIntro: "เด็กไม่ควรต้องสูญเสียโอกาสในการเรียนรู้เพียงเพราะชีวิตมอบสิ่งต่าง ๆ ให้พวกเขาน้อยกว่า",
+        readMore: "อ่านเพิ่มเติม →",
+        education: "การศึกษาเป็นมากกว่าห้องเรียน มันคือประตูสู่อนาคตที่แตกต่าง และบางครั้งการช่วยเหลือเล็ก ๆ ก็สามารถทำให้ประตูนั้นยังคงเปิดอยู่",
+        understanding: "เรามองเห็นความต้องการและเข้าใจความยากลำบากได้ แต่การเข้าใจเพียงอย่างเดียวไม่สามารถเปลี่ยนแปลงอะไรได้",
+        finalCall: "ไม่มีหนทางอื่นที่จะก้าวไปข้างหน้า เราต้องลงมือทำ",
+        seeLess: "ย่อ ↑",
+        childrenCheers: "รอยยิ้มของเด็ก ๆ",
+        hope1: "อย่าปล่อยให้ความหวังของพวกเขาผ่านไป",
+        hope2: "อย่าปล่อยให้ความฝันของพวกเขาจางหาย",
+        hope3: "อย่าปล่อยให้ความมุ่งหวังของพวกเขาหยุดลง",
+        whatSupport: "เราสนับสนุนอะไร?",
+        support1: "ให้พวกเขายังคงวิ่งตามความฝันและความปรารถนาไปสู่ความหวัง",
+        support2: "ให้มือที่ยื่นช่วยเหลือของเราเป็นส่วนหนึ่งของการเดินทางของพวกเขา",
+        support3: "ไม่ว่าการช่วยเหลือของเราจะเล็กเพียงใด ก็สามารถช่วยสร้างอนาคตของพวกเขาได้",
+        donateBitcoin: "บริจาค BITCOIN",
+        bitcoinAddress: "ที่อยู่ BITCOIN",
+        donateUsdt: "บริจาค USDT",
+        copy: "คัดลอก",
+        bitcoinCopied: "คัดลอกที่อยู่ Bitcoin แล้ว",
+        usdtTrcCopied: "คัดลอกที่อยู่ USDT TRC20 แล้ว",
+        usdtBepCopied: "คัดลอกที่อยู่ USDT BEP20 แล้ว",
+        unableCopy: "ไม่สามารถคัดลอกได้ กรุณาคัดลอกที่อยู่ด้วยตนเอง",
+        warningTitle: "สำคัญ — ก่อนส่ง Bitcoin และ USDT",
+        warning1: "โปรดตรวจสอบที่อยู่ Bitcoin และ USDT อย่างละเอียดก่อนส่งเงิน ตรวจสอบให้แน่ใจว่าที่อยู่ที่คัดลอกถูกต้องทุกประการ ธุรกรรม Bitcoin และ USDT โดยทั่วไปไม่สามารถย้อนกลับได้ และเงินที่ส่งไปยังที่อยู่ผิดอาจไม่สามารถกู้คืนได้",
+        neverShare: "อย่าเปิดเผย private key หรือ seed phrase ของคุณกับใคร",
+        warning2Rest: "ข้อมูลเหล่านี้สามารถเข้าถึงกระเป๋า Bitcoin และ USDT ของคุณได้ และควรเก็บเป็นความลับเสมอ NARA จะไม่ขอ private key, seed phrase, รหัสผ่าน หรือข้อมูลกู้คืนกระเป๋าของคุณ",
+        warning3: "ส่งเฉพาะจำนวนเงินที่คุณสามารถให้ได้ และตรวจสอบว่าคุณเข้าใจความเสี่ยงก่อนบริจาค",
+        disclaimer: "ข้อจำกัดความรับผิดชอบ",
+        disclaimer1: "NARA ไม่ใช่ที่ปรึกษาการลงทุน",
+        disclaimer2: "ไม่มีการรับประกันกำไรหรือการคืนเงิน",
+        disclaimer3: "ไม่มีข้อผูกมัดหรือแรงกดดันให้บริจาค",
+        disclaimer4: "โปรดบริจาคเฉพาะเมื่อคุณสามารถและเต็มใจที่จะทำ",
+        disclaimer5: "การบริจาค Bitcoin เป็นไปโดยสมัครใจและอยู่ภายใต้ความเสี่ยงของคุณเอง",
+        disclaimer6: "โปรดทำความเข้าใจความเสี่ยงก่อนบริจาค"
+    },
+
+    fr: {
+        pageTitle: "NARA — Un Enfant Est Un Avenir",
+        whoHow: "QUI EST NARA & COMMENT NOUS AGISSONS",
+        calledBy: "Guidés par la compassion.",
+        drivenBy: "Animés par la bienveillance.",
+        committed: "Engagés dans une action réelle.",
+        whyMatters: "POURQUOI EST-CE IMPORTANT ?",
+        whyIntro: "Un enfant ne devrait jamais perdre la possibilité d'apprendre simplement parce que la vie lui a donné moins.",
+        readMore: "Lire la suite →",
+        education: "L'éducation est plus qu'une salle de classe. C'est une porte vers un avenir différent — et parfois, un petit geste de solidarité suffit à maintenir cette porte ouverte.",
+        understanding: "Nous pouvons voir les besoins. Nous pouvons comprendre les difficultés. Mais comprendre seul ne change rien.",
+        finalCall: "Il n'y a pas d'autre chemin pour avancer. Nous devons agir.",
+        seeLess: "Réduire ↑",
+        childrenCheers: "La Joie des Enfants",
+        hope1: "Ne laissez pas passer leurs espoirs.",
+        hope2: "Ne laissez pas leurs rêves s'effacer.",
+        hope3: "Ne laissez pas leurs ambitions s'arrêter.",
+        whatSupport: "QUE SOUTENONS-NOUS ?",
+        support1: "Laissons-les continuer à poursuivre leurs rêves et leurs aspirations, en avançant vers l'espoir.",
+        support2: "Que nos mains tendues deviennent une partie de leur parcours.",
+        support3: "Aussi petite soit-elle, notre contribution peut contribuer à façonner leur avenir.",
+        donateBitcoin: "FAIRE UN DON EN BITCOIN",
+        bitcoinAddress: "ADRESSE BITCOIN",
+        donateUsdt: "FAIRE UN DON EN USDT",
+        copy: "COPIER",
+        bitcoinCopied: "Adresse Bitcoin copiée.",
+        usdtTrcCopied: "Adresse USDT TRC20 copiée.",
+        usdtBepCopied: "Adresse USDT BEP20 copiée.",
+        unableCopy: "Impossible de copier. Veuillez copier l'adresse manuellement.",
+        warningTitle: "Important — Avant d'envoyer du Bitcoin et de l'USDT",
+        warning1: "Vérifiez attentivement l'adresse Bitcoin et USDT avant d'envoyer des fonds. Assurez-vous que l'adresse copiée est parfaitement correcte. Les transactions Bitcoin et USDT sont généralement irréversibles et les fonds envoyés à une mauvaise adresse peuvent être irrécupérables.",
+        neverShare: "Ne partagez jamais votre clé privée ou votre phrase de récupération avec qui que ce soit.",
+        warning2Rest: "Elles permettent d'accéder à votre portefeuille Bitcoin et USDT et doivent rester privées. NARA ne vous demandera jamais votre clé privée, votre phrase de récupération, votre mot de passe ou vos informations de récupération.",
+        warning3: "N'envoyez que ce que vous pouvez vous permettre de donner et assurez-vous de comprendre les risques avant de faire un don.",
+        disclaimer: "AVIS DE NON-RESPONSABILITÉ",
+        disclaimer1: "NARA n'est pas un conseiller en investissement.",
+        disclaimer2: "Aucune promesse de profit ou de remboursement n'est faite.",
+        disclaimer3: "Il n'y a aucune obligation ni pression pour faire un don.",
+        disclaimer4: "Veuillez contribuer uniquement si vous le pouvez et le souhaitez.",
+        disclaimer5: "Les dons en Bitcoin sont volontaires et effectués à vos propres risques.",
+        disclaimer6: "Assurez-vous de comprendre les risques avant de faire un don."
+    },
+
+    de: {
+        pageTitle: "NARA — Ein Kind Ist Eine Zukunft",
+        whoHow: "WER & WIE NARA",
+        calledBy: "Von Mitgefühl bewegt.",
+        drivenBy: "Von Fürsorge getragen.",
+        committed: "Dem echten Handeln verpflichtet.",
+        whyMatters: "WARUM IST DAS WICHTIG?",
+        whyIntro: "Ein Kind sollte niemals die Chance zu lernen verlieren, nur weil das Leben ihm weniger gegeben hat.",
+        readMore: "Mehr lesen →",
+        education: "Bildung ist mehr als ein Klassenzimmer. Sie ist eine Tür zu einer anderen Zukunft — und manchmal hält eine kleine Geste der Fürsorge diese Tür offen.",
+        understanding: "Wir können den Bedarf sehen. Wir können die Schwierigkeiten verstehen. Aber Verständnis allein verändert nichts.",
+        finalCall: "Es gibt keinen anderen Weg nach vorn. Wir müssen handeln.",
+        seeLess: "Weniger anzeigen ↑",
+        childrenCheers: "Die Freude der Kinder",
+        hope1: "Lass ihre Hoffnungen nicht vorbeiziehen.",
+        hope2: "Lass ihre Träume nicht verblassen.",
+        hope3: "Lass ihre Ziele nicht unerreicht bleiben.",
+        whatSupport: "WAS UNTERSTÜTZEN WIR?",
+        support1: "Lassen wir sie ihre Träume und Wünsche weiterverfolgen und nach Hoffnung greifen.",
+        support2: "Lassen wir unsere helfenden Hände Teil ihres Weges werden.",
+        support3: "Egal wie klein unser Beitrag ist, er kann helfen, ihre Zukunft zu gestalten.",
+        donateBitcoin: "BITCOIN SPENDEN",
+        bitcoinAddress: "BITCOIN-ADRESSE",
+        donateUsdt: "USDT SPENDEN",
+        copy: "KOPIEREN",
+        bitcoinCopied: "Bitcoin-Adresse kopiert.",
+        usdtTrcCopied: "USDT TRC20-Adresse kopiert.",
+        usdtBepCopied: "USDT BEP20-Adresse kopiert.",
+        unableCopy: "Kopieren nicht möglich. Bitte kopieren Sie die Adresse manuell.",
+        warningTitle: "Wichtig — Vor dem Senden von Bitcoin und USDT",
+        warning1: "Überprüfen Sie die Bitcoin- und USDT-Adresse sorgfältig, bevor Sie Geld senden. Stellen Sie sicher, dass die kopierte Adresse exakt stimmt. Bitcoin- und USDT-Transaktionen sind in der Regel nicht rückgängig zu machen und an eine falsche Adresse gesendete Gelder können möglicherweise nicht zurückgeholt werden.",
+        neverShare: "Geben Sie niemals Ihren privaten Schlüssel oder Ihre Seed-Phrase an andere weiter.",
+        warning2Rest: "Damit kann auf Ihre Bitcoin- und USDT-Wallet zugegriffen werden. Diese Informationen müssen geheim bleiben. NARA wird Sie niemals nach Ihrem privaten Schlüssel, Ihrer Seed-Phrase, Ihrem Passwort oder Ihren Wallet-Wiederherstellungsdaten fragen.",
+        warning3: "Senden Sie nur einen Betrag, den Sie sich leisten können, und stellen Sie sicher, dass Sie die Risiken verstehen, bevor Sie spenden.",
+        disclaimer: "HAFTUNGSAUSSCHLUSS",
+        disclaimer1: "NARA ist kein Anlageberater.",
+        disclaimer2: "Es wird kein Gewinn oder eine Rückzahlung versprochen.",
+        disclaimer3: "Es besteht keine Verpflichtung oder kein Druck zu spenden.",
+        disclaimer4: "Bitte leisten Sie nur dann einen Beitrag, wenn Sie dazu in der Lage und bereit sind.",
+        disclaimer5: "Bitcoin-Spenden sind freiwillig und erfolgen auf eigenes Risiko.",
+        disclaimer6: "Bitte stellen Sie sicher, dass Sie die Risiken vor einer Spende verstehen."
+    },
+
+    es: {
+        pageTitle: "NARA — Un Niño Es Un Futuro",
+        whoHow: "QUIÉN & CÓMO NARA",
+        calledBy: "Llamados por la compasión.",
+        drivenBy: "Impulsados por el cuidado.",
+        committed: "Comprometidos con la acción real.",
+        whyMatters: "¿POR QUÉ ES IMPORTANTE?",
+        whyIntro: "Un niño nunca debería perder la oportunidad de aprender simplemente porque la vida le dio menos.",
+        readMore: "Leer más →",
+        education: "La educación es más que un aula. Es una puerta hacia un futuro diferente — y a veces, un pequeño acto de cuidado mantiene esa puerta abierta.",
+        understanding: "Podemos ver la necesidad. Podemos entender la dificultad. Pero comprender por sí solo no cambia nada.",
+        finalCall: "No hay otro camino para avanzar. Debemos actuar.",
+        seeLess: "Ver menos ↑",
+        childrenCheers: "La Alegría de los Niños",
+        hope1: "No dejes que sus esperanzas pasen de largo.",
+        hope2: "No dejes que sus sueños se desvanezcan.",
+        hope3: "No dejes que sus aspiraciones se queden atrás.",
+        whatSupport: "¿QUÉ APOYAMOS?",
+        support1: "Dejemos que sigan persiguiendo sus sueños y aspiraciones, buscando esperanza.",
+        support2: "Dejemos que nuestras manos solidarias sean parte de su camino.",
+        support3: "Por pequeña que sea nuestra contribución, puede ayudar a construir su futuro.",
+        donateBitcoin: "DONAR BITCOIN",
+        bitcoinAddress: "DIRECCIÓN DE BITCOIN",
+        donateUsdt: "DONAR USDT",
+        copy: "COPIAR",
+        bitcoinCopied: "Dirección de Bitcoin copiada.",
+        usdtTrcCopied: "Dirección USDT TRC20 copiada.",
+        usdtBepCopied: "Dirección USDT BEP20 copiada.",
+        unableCopy: "No se puede copiar. Copia la dirección manualmente.",
+        warningTitle: "Importante — Antes de enviar Bitcoin y USDT",
+        warning1: "Comprueba cuidadosamente la dirección de Bitcoin y USDT antes de enviar fondos. Asegúrate de que la dirección copiada sea exactamente correcta. Las transacciones de Bitcoin y USDT generalmente son irreversibles y los fondos enviados a una dirección incorrecta podrían no recuperarse.",
+        neverShare: "Nunca compartas tu clave privada ni tu frase semilla con nadie.",
+        warning2Rest: "Permiten acceder a tu billetera de Bitcoin y USDT y deben mantenerse siempre privadas. NARA nunca te pedirá tu clave privada, frase semilla, contraseña ni información de recuperación.",
+        warning3: "Envía solo lo que puedas permitirte donar y asegúrate de comprender los riesgos antes de realizar una donación.",
+        disclaimer: "AVISO",
+        disclaimer1: "NARA no es un asesor de inversiones.",
+        disclaimer2: "No se promete ningún beneficio ni devolución de fondos.",
+        disclaimer3: "No existe obligación ni presión para donar.",
+        disclaimer4: "Contribuye solo si puedes y deseas hacerlo.",
+        disclaimer5: "Las donaciones de Bitcoin son voluntarias y se realizan bajo tu propio riesgo.",
+        disclaimer6: "Asegúrate de comprender los riesgos antes de donar."
+    },
+
+    pt: {
+        pageTitle: "NARA — Uma Criança É Um Futuro",
+        whoHow: "QUEM & COMO NARA",
+        calledBy: "Chamados pela compaixão.",
+        drivenBy: "Movidos pelo cuidado.",
+        committed: "Comprometidos com ações reais.",
+        whyMatters: "POR QUE ISSO IMPORTA?",
+        whyIntro: "Uma criança nunca deveria perder a oportunidade de aprender simplesmente porque a vida lhe deu menos.",
+        readMore: "Leia mais →",
+        education: "A educação é mais do que uma sala de aula. É uma porta para um futuro diferente — e às vezes, um pequeno gesto de cuidado mantém essa porta aberta.",
+        understanding: "Podemos ver a necessidade. Podemos compreender a dificuldade. Mas compreender sozinho não muda nada.",
+        finalCall: "Não há outro caminho a seguir. Precisamos agir.",
+        seeLess: "Ver menos ↑",
+        childrenCheers: "A Alegria das Crianças",
+        hope1: "Não deixe que suas esperanças passem.",
+        hope2: "Não deixe que seus sonhos desapareçam.",
+        hope3: "Não deixe que suas aspirações fiquem para trás.",
+        whatSupport: "O QUE APOIAMOS?",
+        support1: "Deixe que continuem correndo atrás de seus sonhos e aspirações, buscando esperança.",
+        support2: "Que nossas mãos que ajudam façam parte de sua jornada.",
+        support3: "Por menor que seja nossa contribuição, ela pode ajudar a moldar o futuro deles.",
+        donateBitcoin: "DOAR BITCOIN",
+        bitcoinAddress: "ENDEREÇO BITCOIN",
+        donateUsdt: "DOAR USDT",
+        copy: "COPIAR",
+        bitcoinCopied: "Endereço Bitcoin copiado.",
+        usdtTrcCopied: "Endereço USDT TRC20 copiado.",
+        usdtBepCopied: "Endereço USDT BEP20 copiado.",
+        unableCopy: "Não foi possível copiar. Copie o endereço manualmente.",
+        warningTitle: "Importante — Antes de enviar Bitcoin e USDT",
+        warning1: "Verifique cuidadosamente o endereço Bitcoin e USDT antes de enviar fundos. Certifique-se de que o endereço copiado está exatamente correto. As transações de Bitcoin e USDT geralmente são irreversíveis e os fundos enviados para um endereço errado podem não ser recuperados.",
+        neverShare: "Nunca compartilhe sua chave privada ou frase-semente com ninguém.",
+        warning2Rest: "Elas permitem acesso à sua carteira Bitcoin e USDT e devem permanecer privadas. A NARA nunca pedirá sua chave privada, frase-semente, senha ou informações de recuperação da carteira.",
+        warning3: "Envie apenas o que você pode doar e certifique-se de entender os riscos antes de fazer uma doação.",
+        disclaimer: "AVISO LEGAL",
+        disclaimer1: "A NARA não é uma consultora de investimentos.",
+        disclaimer2: "Não há promessa de lucro ou devolução de fundos.",
+        disclaimer3: "Não há obrigação ou pressão para doar.",
+        disclaimer4: "Contribua apenas se puder e quiser fazê-lo.",
+        disclaimer5: "As doações em Bitcoin são voluntárias e realizadas por sua conta e risco.",
+        disclaimer6: "Certifique-se de compreender os riscos antes de doar."
+    },
+
+    it: {
+        pageTitle: "NARA — Un Bambino È Un Futuro",
+        whoHow: "CHI & COME NARA",
+        calledBy: "Chiamati dalla compassione.",
+        drivenBy: "Guidati dalla cura.",
+        committed: "Impegnati nell'azione concreta.",
+        whyMatters: "PERCHÉ È IMPORTANTE?",
+        whyIntro: "Un bambino non dovrebbe mai perdere l'opportunità di imparare semplicemente perché la vita gli ha dato meno.",
+        readMore: "Leggi di più →",
+        education: "L'istruzione è più di una classe. È una porta verso un futuro diverso — e a volte un piccolo gesto di cura mantiene quella porta aperta.",
+        understanding: "Possiamo vedere il bisogno. Possiamo comprendere la difficoltà. Ma comprendere da solo non cambia nulla.",
+        finalCall: "Non c'è altra strada per andare avanti. Dobbiamo agire.",
+        seeLess: "Mostra meno ↑",
+        childrenCheers: "La Gioia dei Bambini",
+        hope1: "Non lasciare che le loro speranze passino.",
+        hope2: "Non lasciare che i loro sogni svaniscano.",
+        hope3: "Non lasciare che le loro aspirazioni si fermino.",
+        whatSupport: "COSA SOSTENIAMO?",
+        support1: "Lasciamoli continuare a inseguire i loro sogni e le loro aspirazioni, verso la speranza.",
+        support2: "Lasciamo che le nostre mani tese diventino parte del loro viaggio.",
+        support3: "Per quanto piccolo possa essere, il nostro contributo può aiutare a costruire il loro futuro.",
+        donateBitcoin: "DONA BITCOIN",
+        bitcoinAddress: "INDIRIZZO BITCOIN",
+        donateUsdt: "DONA USDT",
+        copy: "COPIA",
+        bitcoinCopied: "Indirizzo Bitcoin copiato.",
+        usdtTrcCopied: "Indirizzo USDT TRC20 copiato.",
+        usdtBepCopied: "Indirizzo USDT BEP20 copiato.",
+        unableCopy: "Impossibile copiare. Copia manualmente l'indirizzo.",
+        warningTitle: "Importante — Prima di inviare Bitcoin e USDT",
+        warning1: "Controlla attentamente l'indirizzo Bitcoin e USDT prima di inviare fondi. Assicurati che l'indirizzo copiato sia esattamente corretto. Le transazioni Bitcoin e USDT sono generalmente irreversibili e i fondi inviati a un indirizzo errato potrebbero non essere recuperabili.",
+        neverShare: "Non condividere mai la tua chiave privata o la seed phrase con nessuno.",
+        warning2Rest: "Consentono l'accesso al tuo portafoglio Bitcoin e USDT e devono rimanere sempre private. NARA non ti chiederà mai la chiave privata, la seed phrase, la password o le informazioni di recupero del portafoglio.",
+        warning3: "Invia solo ciò che puoi permetterti di donare e assicurati di comprendere i rischi prima di effettuare una donazione.",
+        disclaimer: "DISCLAIMER",
+        disclaimer1: "NARA non è un consulente finanziario.",
+        disclaimer2: "Non viene promessa alcuna forma di profitto o restituzione dei fondi.",
+        disclaimer3: "Non c'è alcun obbligo o pressione a donare.",
+        disclaimer4: "Contribuisci solo se puoi e desideri farlo.",
+        disclaimer5: "Le donazioni Bitcoin sono volontarie e vengono effettuate a proprio rischio.",
+        disclaimer6: "Assicurati di comprendere i rischi prima di donare."
+    },
+
+    nl: {
+        pageTitle: "NARA — Een Kind Is Een Toekomst",
+        whoHow: "WIE & HOE NARA",
+        calledBy: "Geroepen door medeleven.",
+        drivenBy: "Gedreven door zorg.",
+        committed: "Toegewijd aan echte actie.",
+        whyMatters: "WAAROM IS DIT BELANGRIJK?",
+        whyIntro: "Een kind zou nooit de kans om te leren mogen verliezen alleen omdat het leven hem of haar minder heeft gegeven.",
+        readMore: "Lees meer →",
+        education: "Onderwijs is meer dan een klaslokaal. Het is een deur naar een andere toekomst — en soms houdt een klein gebaar van zorg die deur open.",
+        understanding: "We kunnen de behoefte zien. We kunnen de moeilijkheden begrijpen. Maar begrip alleen verandert niets.",
+        finalCall: "Er is geen andere weg vooruit. We moeten handelen.",
+        seeLess: "Minder weergeven ↑",
+        childrenCheers: "De Blijdschap van Kinderen",
+        hope1: "Laat hun hoop niet voorbijgaan.",
+        hope2: "Laat hun dromen niet vervagen.",
+        hope3: "Laat hun ambities niet stoppen.",
+        whatSupport: "WAT ONDERSTEUNEN WIJ?",
+        support1: "Laat hen hun dromen en ambities blijven najagen, op weg naar hoop.",
+        support2: "Laat onze helpende handen deel worden van hun reis.",
+        support3: "Hoe klein onze bijdrage ook is, ze kan helpen hun toekomst vorm te geven.",
+        donateBitcoin: "DONEER BITCOIN",
+        bitcoinAddress: "BITCOIN-ADRES",
+        donateUsdt: "DONEER USDT",
+        copy: "KOPIËREN",
+        bitcoinCopied: "Bitcoin-adres gekopieerd.",
+        usdtTrcCopied: "USDT TRC20-adres gekopieerd.",
+        usdtBepCopied: "USDT BEP20-adres gekopieerd.",
+        unableCopy: "Kopiëren mislukt. Kopieer het adres handmatig.",
+        warningTitle: "Belangrijk — Voordat u Bitcoin en USDT verstuurt",
+        warning1: "Controleer het Bitcoin- en USDT-adres zorgvuldig voordat u geld verstuurt. Zorg ervoor dat het gekopieerde adres exact klopt. Bitcoin- en USDT-transacties zijn doorgaans onomkeerbaar en geld dat naar een verkeerd adres wordt gestuurd, kan mogelijk niet worden teruggehaald.",
+        neverShare: "Deel uw privésleutel of seed phrase nooit met iemand.",
+        warning2Rest: "Deze geven toegang tot uw Bitcoin- en USDT-wallet en moeten altijd privé blijven. NARA zal nooit om uw privésleutel, seed phrase, wachtwoord of wallet-herstelgegevens vragen.",
+        warning3: "Stuur alleen wat u zich kunt veroorloven te geven en zorg ervoor dat u de risico's begrijpt voordat u doneert.",
+        disclaimer: "DISCLAIMER",
+        disclaimer1: "NARA is geen beleggingsadviseur.",
+        disclaimer2: "Er wordt geen winst of terugbetaling van geld beloofd.",
+        disclaimer3: "Er is geen verplichting of druk om te doneren.",
+        disclaimer4: "Draag alleen bij als u daartoe in staat en bereid bent.",
+        disclaimer5: "Bitcoin-donaties zijn vrijwillig en worden op eigen risico gedaan.",
+        disclaimer6: "Zorg ervoor dat u de risico's begrijpt voordat u doneert."
+    },
+
+    tr: {
+        pageTitle: "NARA — Bir Çocuk Bir Gelecektir",
+        whoHow: "NARA KİM & NASIL ÇALIŞIYOR",
+        calledBy: "Merhametle çağrıldık.",
+        drivenBy: "Özenle hareket ediyoruz.",
+        committed: "Gerçek eyleme bağlıyız.",
+        whyMatters: "NEDEN ÖNEMLİ?",
+        whyIntro: "Bir çocuk, hayat ona daha azını verdi diye öğrenme fırsatını asla kaybetmemelidir.",
+        readMore: "Devamını Oku →",
+        education: "Eğitim bir sınıftan daha fazlasıdır. Farklı bir geleceğe açılan bir kapıdır — ve bazen küçük bir yardım o kapıyı açık tutar.",
+        understanding: "İhtiyacı görebiliriz. Zorlukları anlayabiliriz. Ancak yalnızca anlamak hiçbir şeyi değiştirmez.",
+        finalCall: "İlerlemek için başka yol yok. Harekete geçmeliyiz.",
+        seeLess: "Daha Az Göster ↑",
+        childrenCheers: "Çocukların Neşesi",
+        hope1: "Umutlarının kaybolup gitmesine izin vermeyin.",
+        hope2: "Hayallerinin solmasına izin vermeyin.",
+        hope3: "Hedeflerinin yarıda kalmasına izin vermeyin.",
+        whatSupport: "NEYİ DESTEKLİYORUZ?",
+        support1: "Hayallerinin ve hedeflerinin peşinden koşmaya, umuda ulaşmaya devam etmelerine izin verin.",
+        support2: "Yardım ellerimizin onların yolculuğunun bir parçası olmasına izin verin.",
+        support3: "Katkımız ne kadar küçük olursa olsun, geleceklerini şekillendirmeye yardımcı olabilir.",
+        donateBitcoin: "BITCOIN BAĞIŞI",
+        bitcoinAddress: "BITCOIN ADRESİ",
+        donateUsdt: "USDT BAĞIŞI",
+        copy: "KOPYALA",
+        bitcoinCopied: "Bitcoin adresi kopyalandı.",
+        usdtTrcCopied: "USDT TRC20 adresi kopyalandı.",
+        usdtBepCopied: "USDT BEP20 adresi kopyalandı.",
+        unableCopy: "Kopyalanamadı. Lütfen adresi manuel olarak kopyalayın.",
+        warningTitle: "Önemli — Bitcoin ve USDT Göndermeden Önce",
+        warning1: "Para göndermeden önce Bitcoin ve USDT adresini dikkatlice kontrol edin. Kopyaladığınız adresin tamamen doğru olduğundan emin olun. Bitcoin ve USDT işlemleri genellikle geri alınamaz ve yanlış adrese gönderilen fonlar geri alınamayabilir.",
+        neverShare: "Özel anahtarınızı veya seed phrase'inizi asla kimseyle paylaşmayın.",
+        warning2Rest: "Bunlar Bitcoin ve USDT cüzdanınıza erişim sağlar ve her zaman gizli tutulmalıdır. NARA sizden özel anahtarınızı, seed phrase'inizi, şifrenizi veya cüzdan kurtarma bilgilerinizi asla istemez.",
+        warning3: "Yalnızca verebileceğiniz miktarı gönderin ve bağış yapmadan önce riskleri anladığınızdan emin olun.",
+        disclaimer: "SORUMLULUK REDDİ",
+        disclaimer1: "NARA bir yatırım danışmanı değildir.",
+        disclaimer2: "Kâr veya para iadesi konusunda hiçbir garanti verilmez.",
+        disclaimer3: "Bağış yapma zorunluluğu veya baskısı yoktur.",
+        disclaimer4: "Lütfen yalnızca gücünüz yetiyorsa ve istiyorsanız katkıda bulunun.",
+        disclaimer5: "Bitcoin bağışları gönüllüdür ve kendi sorumluluğunuzda yapılır.",
+        disclaimer6: "Bağış yapmadan önce riskleri anladığınızdan emin olun."
+    },
+
+    ru: {
+        pageTitle: "NARA — Ребёнок — Это Будущее",
+        whoHow: "КТО ТАКАЯ NARA И КАК МЫ РАБОТАЕМ",
+        calledBy: "Призваны состраданием.",
+        drivenBy: "Движимы заботой.",
+        committed: "Посвящены реальным действиям.",
+        whyMatters: "ПОЧЕМУ ЭТО ВАЖНО?",
+        whyIntro: "Ребёнок никогда не должен лишаться возможности учиться только потому, что жизнь дала ему меньше.",
+        readMore: "Читать далее →",
+        education: "Образование — это больше, чем классная комната. Это дверь в другое будущее — и иногда небольшой акт заботы помогает оставить эту дверь открытой.",
+        understanding: "Мы можем видеть потребность. Мы можем понимать трудности. Но одного понимания недостаточно, чтобы что-то изменить.",
+        finalCall: "Другого пути вперёд нет. Мы должны действовать.",
+        seeLess: "Свернуть ↑",
+        childrenCheers: "Радость Детей",
+        hope1: "Не позволяйте их надеждам пройти мимо.",
+        hope2: "Не позволяйте их мечтам угаснуть.",
+        hope3: "Не позволяйте их стремлениям остановиться.",
+        whatSupport: "ЧТО МЫ ПОДДЕРЖИВАЕМ?",
+        support1: "Пусть они продолжают идти к своим мечтам и стремлениям, тянувшись к надежде.",
+        support2: "Пусть наши руки помощи станут частью их пути.",
+        support3: "Каким бы маленьким ни был наш вклад, он может помочь сформировать их будущее.",
+        donateBitcoin: "ПОЖЕРТВОВАТЬ BITCOIN",
+        bitcoinAddress: "АДРЕС BITCOIN",
+        donateUsdt: "ПОЖЕРТВОВАТЬ USDT",
+        copy: "КОПИРОВАТЬ",
+        bitcoinCopied: "Адрес Bitcoin скопирован.",
+        usdtTrcCopied: "Адрес USDT TRC20 скопирован.",
+        usdtBepCopied: "Адрес USDT BEP20 скопирован.",
+        unableCopy: "Не удалось скопировать. Скопируйте адрес вручную.",
+        warningTitle: "Важно — Перед отправкой Bitcoin и USDT",
+        warning1: "Внимательно проверьте адрес Bitcoin и USDT перед отправкой средств. Убедитесь, что скопированный адрес полностью верен. Транзакции Bitcoin и USDT обычно необратимы, и средства, отправленные на неправильный адрес, могут быть невозвратными.",
+        neverShare: "Никогда не сообщайте никому свой приватный ключ или seed-фразу.",
+        warning2Rest: "Они дают доступ к вашему Bitcoin и USDT-кошельку и всегда должны оставаться конфиденциальными. NARA никогда не попросит ваш приватный ключ, seed-фразу, пароль или данные для восстановления кошелька.",
+        warning3: "Отправляйте только ту сумму, которую можете себе позволить, и убедитесь, что понимаете риски перед пожертвованием.",
+        disclaimer: "ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ",
+        disclaimer1: "NARA не является инвестиционным консультантом.",
+        disclaimer2: "Никакая прибыль или возврат средств не гарантируются.",
+        disclaimer3: "Нет обязанности или давления для пожертвования.",
+        disclaimer4: "Вносите вклад только в том случае, если вы можете и хотите это сделать.",
+        disclaimer5: "Пожертвования Bitcoin являются добровольными и осуществляются на ваш собственный риск.",
+        disclaimer6: "Перед пожертвованием убедитесь, что понимаете риски."
+    },
+
+    ar: {
+        pageTitle: "NARA — الطفل هو المستقبل",
+        whoHow: "من هي NARA وكيف تعمل؟",
+        calledBy: "بدافع من الرحمة.",
+        drivenBy: "بدافع من الرعاية.",
+        committed: "ملتزمون بالعمل الحقيقي.",
+        whyMatters: "لماذا هذا مهم؟",
+        whyIntro: "لا ينبغي أبداً أن يفقد الطفل فرصة التعلم لمجرد أن الحياة منحته أقل.",
+        readMore: "اقرأ المزيد ←",
+        education: "التعليم أكثر من مجرد فصل دراسي. إنه باب إلى مستقبل مختلف — وأحياناً يمكن لعمل صغير من الرعاية أن يبقي هذا الباب مفتوحاً.",
+        understanding: "يمكننا رؤية الحاجة. ويمكننا فهم المعاناة. لكن الفهم وحده لا يغير شيئاً.",
+        finalCall: "لا يوجد طريق آخر للمضي قدماً. يجب أن نتحرك.",
+        seeLess: "عرض أقل ↑",
+        childrenCheers: "فرحة الأطفال",
+        hope1: "لا تدع آمالهم تمر.",
+        hope2: "لا تدع أحلامهم تتلاشى.",
+        hope3: "لا تدع طموحاتهم تتوقف.",
+        whatSupport: "ماذا ندعم؟",
+        support1: "دعهم يواصلون السعي وراء أحلامهم وطموحاتهم والوصول إلى الأمل.",
+        support2: "دع أيدينا المساعدة تصبح جزءاً من رحلتهم.",
+        support3: "مهما كانت مساهمتنا صغيرة، يمكنها أن تساعد في تشكيل مستقبلهم.",
+        donateBitcoin: "تبرع بالبيتكوين",
+        bitcoinAddress: "عنوان البيتكوين",
+        donateUsdt: "تبرع بـ USDT",
+        copy: "نسخ",
+        bitcoinCopied: "تم نسخ عنوان Bitcoin.",
+        usdtTrcCopied: "تم نسخ عنوان USDT TRC20.",
+        usdtBepCopied: "تم نسخ عنوان USDT BEP20.",
+        unableCopy: "تعذر النسخ. يرجى نسخ العنوان يدوياً.",
+        warningTitle: "مهم — قبل إرسال Bitcoin و USDT",
+        warning1: "يرجى التحقق بعناية من عنوان Bitcoin وUSDT قبل إرسال أي أموال. تأكد من أن العنوان الذي نسخته صحيح تماماً. عادةً ما تكون معاملات Bitcoin وUSDT غير قابلة للعكس، وقد لا يمكن استرداد الأموال المرسلة إلى عنوان خاطئ.",
+        neverShare: "لا تشارك مفتاحك الخاص أو عبارة الاسترداد مع أي شخص أبداً.",
+        warning2Rest: "فهما يمنحان الوصول إلى محفظة Bitcoin وUSDT الخاصة بك ويجب أن يظلا سريين دائماً. لن تطلب منك NARA أبداً مفتاحك الخاص أو عبارة الاسترداد أو كلمة المرور أو معلومات استعادة المحفظة.",
+        warning3: "أرسل فقط ما يمكنك تحمله، وتأكد من فهمك للمخاطر قبل التبرع.",
+        disclaimer: "إخلاء المسؤولية",
+        disclaimer1: "NARA ليست مستشاراً استثمارياً.",
+        disclaimer2: "لا يوجد وعد بالربح أو بإعادة الأموال.",
+        disclaimer3: "لا يوجد أي التزام أو ضغط للتبرع.",
+        disclaimer4: "يرجى المساهمة فقط إذا كنت قادراً وراغباً في ذلك.",
+        disclaimer5: "تبرعات Bitcoin طوعية وتتم على مسؤوليتك الخاصة.",
+        disclaimer6: "يرجى التأكد من فهم المخاطر قبل التبرع."
+    },
+
+    hi: {
+        pageTitle: "NARA — एक बच्चा एक भविष्य है",
+        whoHow: "NARA कौन है और कैसे काम करता है",
+        calledBy: "करुणा से प्रेरित।",
+        drivenBy: "देखभाल से संचालित।",
+        committed: "वास्तविक कार्य के लिए प्रतिबद्ध।",
+        whyMatters: "यह क्यों महत्वपूर्ण है?",
+        whyIntro: "किसी बच्चे को केवल इसलिए सीखने का अवसर नहीं खोना चाहिए क्योंकि जीवन ने उसे कम दिया है।",
+        readMore: "और पढ़ें →",
+        education: "शिक्षा केवल एक कक्षा नहीं है। यह एक अलग भविष्य की ओर जाने वाला द्वार है — और कभी-कभी देखभाल का एक छोटा सा कार्य उस द्वार को खुला रख सकता है।",
+        understanding: "हम आवश्यकता को देख सकते हैं। हम संघर्ष को समझ सकते हैं। लेकिन केवल समझना कुछ नहीं बदलता।",
+        finalCall: "आगे बढ़ने का कोई दूसरा रास्ता नहीं है। हमें कार्य करना होगा।",
+        seeLess: "कम देखें ↑",
+        childrenCheers: "बच्चों की खुशी",
+        hope1: "उनकी उम्मीदों को यूँ ही गुजरने न दें।",
+        hope2: "उनके सपनों को फीका न पड़ने दें।",
+        hope3: "उनकी आकांक्षाओं को रुकने न दें।",
+        whatSupport: "हम किसका समर्थन करते हैं?",
+        support1: "उन्हें अपने सपनों और आकांक्षाओं की ओर आगे बढ़ने दें और आशा तक पहुँचने दें।",
+        support2: "हमारे मदद के हाथ उनकी यात्रा का हिस्सा बनें।",
+        support3: "हमारा योगदान कितना भी छोटा क्यों न हो, यह उनके भविष्य को आकार देने में मदद कर सकता है।",
+        donateBitcoin: "BITCOIN दान करें",
+        bitcoinAddress: "BITCOIN पता",
+        donateUsdt: "USDT दान करें",
+        copy: "कॉपी",
+        bitcoinCopied: "Bitcoin पता कॉपी हो गया।",
+        usdtTrcCopied: "USDT TRC20 पता कॉपी हो गया।",
+        usdtBepCopied: "USDT BEP20 पता कॉपी हो गया।",
+        unableCopy: "कॉपी नहीं हो सका। कृपया पता मैन्युअल रूप से कॉपी करें।",
+        warningTitle: "महत्वपूर्ण — Bitcoin और USDT भेजने से पहले",
+        warning1: "धन भेजने से पहले Bitcoin और USDT पते की सावधानीपूर्वक जाँच करें। सुनिश्चित करें कि कॉपी किया गया पता बिल्कुल सही है। Bitcoin और USDT लेनदेन आमतौर पर वापस नहीं किए जा सकते और गलत पते पर भेजी गई राशि वापस नहीं मिल सकती।",
+        neverShare: "अपनी निजी कुंजी या seed phrase कभी भी किसी के साथ साझा न करें।",
+        warning2Rest: "इनसे आपके Bitcoin और USDT वॉलेट तक पहुँच मिलती है और इन्हें हमेशा निजी रखना चाहिए। NARA आपसे कभी भी निजी कुंजी, seed phrase, पासवर्ड या वॉलेट रिकवरी जानकारी नहीं मांगेगा।",
+        warning3: "केवल उतनी ही राशि भेजें जितनी आप दे सकते हैं और दान करने से पहले जोखिमों को समझ लें।",
+        disclaimer: "अस्वीकरण",
+        disclaimer1: "NARA निवेश सलाहकार नहीं है।",
+        disclaimer2: "लाभ या धन वापसी का कोई वादा नहीं किया जाता।",
+        disclaimer3: "दान करने की कोई बाध्यता या दबाव नहीं है।",
+        disclaimer4: "कृपया तभी योगदान करें जब आप सक्षम और इच्छुक हों।",
+        disclaimer5: "Bitcoin दान स्वैच्छिक हैं और आपके अपने जोखिम पर किए जाते हैं।",
+        disclaimer6: "दान करने से पहले सुनिश्चित करें कि आप जोखिमों को समझते हैं।"
+    }
+
+};
+
+
+/* =========================================================
+   DETECT BROWSER LANGUAGE
+   ========================================================= */
+
+function detectNaraLanguage() {
+
+    const browserLanguages =
+        navigator.languages ||
+        [navigator.language || "en"];
+
+    for (const language of browserLanguages) {
+
+        const code =
+            language
+                .toLowerCase()
+                .split("-")[0];
+
+        if (naraTranslations[code]) {
+            return code;
+        }
+    }
+
+    return "en";
+}
+
+
+/* =========================================================
+   GET CURRENT TRANSLATION
+   ========================================================= */
+
+function naraText(key) {
+
+    const language =
+        window.naraLanguage || "en";
+
+    return (
+        naraTranslations[language]?.[key] ||
+        naraTranslations.en[key] ||
+        ""
+    );
+}
+
+
+/* =========================================================
+   APPLY LANGUAGE
+   ========================================================= */
+
+function applyNaraLanguage() {
+
+    const language =
+        detectNaraLanguage();
+
+    const translations =
+        naraTranslations[language] ||
+        naraTranslations.en;
+
+    window.naraLanguage = language;
+
+    document.documentElement.lang =
+        language;
+
+    document.documentElement.dir =
+        language === "ar"
+            ? "rtl"
+            : "ltr";
+
+    document.title =
+        translations.pageTitle;
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(function(element) {
+
+            const key =
+                element.getAttribute("data-i18n");
+
+            if (translations[key]) {
+
+                element.textContent =
+                    translations[key];
+
+            }
+
+        });
+
+}
+
+
+/* =========================================================
+   READ MORE
+   ========================================================= */
+
+function showMore() {
+
+    const moreContent =
+        document.getElementById("moreContent");
+
+    const readMoreButton =
+        document.querySelector(".read-more-button");
+
+    if (!moreContent || !readMoreButton) {
+        return;
+    }
+
+    moreContent.style.display =
+        "block";
+
+    readMoreButton.style.display =
+        "none";
+}
+
+
+/* =========================================================
+   SEE LESS
+   ========================================================= */
+
+function showLess() {
+
+    const moreContent =
+        document.getElementById("moreContent");
+
+    const readMoreButton =
+        document.querySelector(".read-more-button");
+
+    if (!moreContent || !readMoreButton) {
+        return;
+    }
+
+    moreContent.style.display =
+        "none";
+
+    readMoreButton.style.display =
+        "inline-block";
+}
+
+
+/* =========================================================
+   COPY FUNCTION
+   Works with Android / modern browsers
+   ========================================================= */
+
+function copyText(text, successMessage, errorMessage, messageElement) {
+
+    if (
+        navigator.clipboard &&
+        window.isSecureContext
+    ) {
+
+        navigator.clipboard
+            .writeText(text)
+            .then(function() {
+
+                messageElement.innerText =
+                    successMessage;
+
+            })
+            .catch(function() {
+
+                fallbackCopy(
+                    text,
+                    successMessage,
+                    errorMessage,
+                    messageElement
+                );
+
+            });
+
+    } else {
+
+        fallbackCopy(
+            text,
+            successMessage,
+            errorMessage,
+            messageElement
+        );
+
+    }
+}
+
+
+/* =========================================================
+   FALLBACK COPY
+   ========================================================= */
+
+function fallbackCopy(
+    text,
+    successMessage,
+    errorMessage,
+    messageElement
+) {
+
+    const textarea =
+        document.createElement("textarea");
+
+    textarea.value =
+        text;
+
+    textarea.style.position =
+        "fixed";
+
+    textarea.style.left =
+        "-9999px";
+
+    textarea.style.top =
+        "0";
+
+    document.body.appendChild(
+        textarea
+    );
+
+    textarea.focus();
+
+    textarea.select();
+
+    try {
+
+        const successful =
+            document.execCommand("copy");
+
+        if (successful) {
+
+            messageElement.innerText =
+                successMessage;
+
+        } else {
+
+            messageElement.innerText =
+                errorMessage;
+
+        }
+
+    } catch (error) {
+
+        messageElement.innerText =
+            errorMessage;
+
+    }
+
+    document.body.removeChild(
+        textarea
+    );
+}
+
+
+/* =========================================================
+   COPY BITCOIN
+   ========================================================= */
+
+function copyBitcoinAddress() {
+
+    const addressElement =
+        document.getElementById(
+            "bitcoinAddress"
+        );
+
+    const messageElement =
+        document.getElementById(
+            "copyMessage"
+        );
+
+    if (
+        !addressElement ||
+        !messageElement
+    ) {
+        return;
+    }
+
+    const address =
+        addressElement.innerText.trim();
+
+    copyText(
+        address,
+        naraText("bitcoinCopied"),
+        naraText("unableCopy"),
+        messageElement
+    );
+}
+
+
+/* =========================================================
+   COPY USDT TRC20
+   ========================================================= */
+
+function copyUsdtTrc20() {
+
+    const addressElement =
+        document.getElementById(
+            "usdtTrc20Address"
+        );
+
+    const messageElement =
+        document.getElementById(
+            "usdtTrc20Message"
+        );
+
+    if (
+        !addressElement ||
+        !messageElement
+    ) {
+        return;
+    }
+
+    const address =
+        addressElement.innerText.trim();
+
+    copyText(
+        address,
+        naraText("usdtTrcCopied"),
+        naraText("unableCopy"),
+        messageElement
+    );
+}
+
+
+/* =========================================================
+   COPY USDT BEP20
+   ========================================================= */
+
+function copyUsdtBep20() {
+
+    const addressElement =
+        document.getElementById(
+            "usdtBep20Address"
+        );
+
+    const messageElement =
+        document.getElementById(
+            "usdtBep20Message"
+        );
+
+    if (
+        !addressElement ||
+        !messageElement
+    ) {
+        return;
+    }
+
+    const address =
+        addressElement.innerText.trim();
+
+    copyText(
+        address,
+        naraText("usdtBepCopied"),
+        naraText("unableCopy"),
+        messageElement
+    );
+}
+
+
+/* =========================================================
+   START NARA
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        applyNaraLanguage();
+
+    }
+);
+
+</script>
