@@ -20,6 +20,7 @@ body {
     background: #ffffff;
 }
 
+
 /* =========================
    HEADER
    ========================= */
@@ -129,6 +130,81 @@ body {
 
 
 /* =========================
+   CHILREN CHEERS
+   ========================= */
+
+.children-cheers {
+    width: 100%;
+    background: #ffffff;
+
+    padding: 20px 18px 60px 18px;
+}
+
+.children-cheers h2 {
+    margin: 0 0 30px 0;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+
+    color: #151515;
+
+    line-height: 1.2;
+}
+
+
+/* =========================
+   PHOTO GALLERY
+   ========================= */
+
+.children-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+.children-gallery img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    border-radius: 0;
+}
+
+
+/* =========================
+   GALLERY MESSAGE
+   ========================= */
+
+.children-message {
+    margin-top: 38px;
+
+    padding: 0 8px;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 700;
+
+    color: #333333;
+
+    line-height: 1.45;
+}
+
+
+/* =========================
    MOBILE
    ========================= */
 
@@ -155,11 +231,12 @@ body {
         margin-bottom: 7px;
     }
 
+
     .why-matters {
         padding-top: 10px;
         padding-left: 24px;
         padding-right: 24px;
-        padding-bottom: 55px;
+        padding-bottom: 50px;
     }
 
     .why-matters h2 {
@@ -172,6 +249,28 @@ body {
         line-height: 1.55;
     }
 
+
+    .children-cheers {
+        padding: 15px 12px 50px 12px;
+    }
+
+    .children-cheers h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .children-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7px;
+    }
+
+    .children-message {
+        margin-top: 30px;
+        font-size: 17px;
+        line-height: 1.45;
+        padding: 0 5px;
+    }
+
 }
 
 </style>
@@ -180,6 +279,7 @@ body {
 
 <body>
 
+
 <!-- =========================
      NARA HEADER
      ========================= -->
@@ -187,6 +287,7 @@ body {
 <div class="header">
     <img src="header.png" alt="A Child Is A Future">
 </div>
+
 
 
 <!-- =========================
@@ -208,6 +309,7 @@ body {
     </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -239,6 +341,44 @@ body {
         <p class="final-call">
             There is no other way forward. We must act.
         </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CHILDREN CHEERS
+     ========================= -->
+
+<section class="children-cheers">
+
+    <h2>Children Cheers</h2>
+
+
+    <div class="children-gallery">
+
+        <img src="Child1.jpg" alt="Children together">
+
+        <img src="Child2.jpg" alt="Children receiving certificates">
+
+        <img src="Child3.jpg" alt="Children together at home">
+
+        <img src="Child4.jpg" alt="Children together">
+
+        <img src="Child5.jpg" alt="Children celebrating together">
+
+        <img src="Child6.jpg" alt="Children together">
+
+    </div>
+
+
+    <div class="children-message">
+
+        Don't let their hopes pass by.<br>
+        Don't let their dreams fade away.<br>
+        Don't let their ambitions fall short.
 
     </div>
 
