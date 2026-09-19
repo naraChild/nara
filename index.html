@@ -27,6 +27,211 @@ body {
 
 
 /* =========================
+   NARA LANDING PAGE
+   ========================= */
+
+#naraLanding {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: #111111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 24px;
+
+    overflow-y: auto;
+}
+
+.landing-content {
+    width: 100%;
+    max-width: 430px;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   LANDING TITLE
+   ========================= */
+
+.landing-title {
+    margin-bottom: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.05;
+
+    color: #ffffff;
+}
+
+.landing-title span {
+    display: block;
+
+    color: #f4d35e;
+}
+
+
+/* =========================
+   LANDING MESSAGE
+   ========================= */
+
+.landing-message {
+    margin-bottom: 35px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.5;
+
+    color: #dddddd;
+}
+
+
+/* =========================
+   ENTER BUTTON
+   ========================= */
+
+.landing-enter-button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    border: 1px solid #ffffff;
+
+    background: #ffffff;
+    color: #111111;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.landing-enter-button:hover {
+    background: #f4d35e;
+    border-color: #f4d35e;
+}
+
+
+/* =========================
+   EMAIL FORM
+   ========================= */
+
+#naraSignup {
+    display: none;
+
+    width: 100%;
+    max-width: 400px;
+
+    margin: 0 auto;
+}
+
+.signup-title {
+    margin-bottom: 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.signup-text {
+    margin-bottom: 25px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.45;
+
+    color: #cccccc;
+}
+
+.signup-field {
+    width: 100%;
+
+    margin-bottom: 14px;
+}
+
+.signup-field input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #777777;
+
+    background: #ffffff;
+    color: #111111;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.signup-field input:focus {
+    border-color: #f4d35e;
+}
+
+.signup-button {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 13px;
+
+    border: 1px solid #ffffff;
+
+    background: #ffffff;
+    color: #111111;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background: #f4d35e;
+    border-color: #f4d35e;
+}
+
+.signup-note {
+    margin-top: 14px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #999999;
+}
+
+
+/* =========================
+   MAIN WEBSITE
+   ========================= */
+
+#naraMain {
+    display: none;
+}
+
+
+/* =========================
    HEADER
    ========================= */
 
@@ -157,10 +362,6 @@ body {
     color: #151515;
 
     cursor: pointer;
-}
-
-.read-more-button::after {
-    content: "";
 }
 
 
@@ -576,6 +777,14 @@ body {
 
 @media (max-width: 600px) {
 
+    .landing-title {
+        font-size: 34px;
+    }
+
+    .landing-message {
+        font-size: 16px;
+    }
+
     .who-how {
         padding-top: 48px;
         padding-left: 24px;
@@ -596,7 +805,6 @@ body {
     .nara-statement p {
         margin-bottom: 7px;
     }
-
 
     .why-matters {
         padding-top: 10px;
@@ -621,7 +829,6 @@ body {
         font-size: 16px;
     }
 
-
     .children-cheers {
         padding: 15px 12px 50px 12px;
     }
@@ -641,7 +848,6 @@ body {
         font-size: 17px;
         line-height: 1.45;
     }
-
 
     .what-we-support {
         padding: 10px 24px 50px 24px;
@@ -664,7 +870,6 @@ body {
     .usdt-donation {
         margin-top: 32px;
     }
-
 
     .disclaimer {
         padding: 10px 24px 45px 24px;
@@ -689,11 +894,110 @@ body {
 
 
 <!-- =========================
+     NARA LANDING PAGE
+     ========================= -->
+
+<div id="naraLanding">
+
+    <div class="landing-content">
+
+        <!-- FIRST SCREEN -->
+
+        <div id="landingWelcome">
+
+            <h1 class="landing-title">
+                A Child Is
+                <span>A Future</span>
+            </h1>
+
+            <p class="landing-message">
+                Every child deserves a chance to learn,
+                grow, and dream.
+            </p>
+
+            <button
+                type="button"
+                class="landing-enter-button"
+                onclick="showSignup()">
+                ENTER NARA
+            </button>
+
+        </div>
+
+
+        <!-- NAME + EMAIL -->
+
+        <div id="naraSignup">
+
+            <h2 class="signup-title">
+                Stay Connected with NARA
+            </h2>
+
+            <p class="signup-text">
+                Enter your name and email to stay connected
+                with NARA and receive future updates.
+            </p>
+
+
+            <div class="signup-field">
+
+                <input
+                    type="text"
+                    id="visitorName"
+                    placeholder="Your Name"
+                    autocomplete="name">
+
+            </div>
+
+
+            <div class="signup-field">
+
+                <input
+                    type="email"
+                    id="visitorEmail"
+                    placeholder="Your Email"
+                    autocomplete="email">
+
+            </div>
+
+
+            <button
+                type="button"
+                class="signup-button"
+                onclick="enterNara()">
+                ENTER NARA
+            </button>
+
+
+            <p class="signup-note">
+                Your information should only be used to stay
+                connected with NARA.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MAIN NARA WEBSITE
+     ========================= -->
+
+<div id="naraMain">
+
+
+<!-- =========================
      NARA HEADER
      ========================= -->
 
 <div class="header">
-    <img src="header.png" alt="A Child Is A Future">
+
+    <img
+        src="header.png"
+        alt="A Child Is A Future">
+
 </div>
 
 
@@ -728,13 +1032,11 @@ body {
 
     <div class="read-more-section">
 
-        <!-- SHORT VERSION -->
         <p class="read-more-intro">
             A child should never have to lose the chance to learn simply because life gave them less.
         </p>
 
 
-        <!-- READ MORE BUTTON -->
         <button
             type="button"
             class="read-more-button"
@@ -743,7 +1045,6 @@ body {
         </button>
 
 
-        <!-- FULL CONTENT -->
         <div id="moreContent" class="more-content">
 
             <p>
@@ -761,7 +1062,6 @@ body {
             </p>
 
 
-            <!-- SEE LESS AT THE END -->
             <button
                 type="button"
                 class="see-less-button"
@@ -839,130 +1139,130 @@ body {
     </div>
 
 
+<!-- =========================
+     BITCOIN DONATION
+     ========================= -->
+
+<div class="bitcoin-donation">
+
+    <h3>DONATE BITCOIN</h3>
+
+    <p class="bitcoin-label">
+        BITCOIN ADDRESS
+    </p>
+
+    <div class="bitcoin-box">
+
+        <span id="bitcoinAddress">
+            166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+        </span>
+
+        <button
+            type="button"
+            onclick="copyBitcoinAddress()">
+            COPY
+        </button>
+
+    </div>
+
+    <p id="copyMessage" class="copy-message"></p>
+
+
     <!-- =========================
-         BITCOIN DONATION
+         USDT DONATION
          ========================= -->
 
-    <div class="bitcoin-donation">
+    <div class="usdt-donation">
 
-        <h3>DONATE BITCOIN</h3>
-
-        <p class="bitcoin-label">
-            BITCOIN ADDRESS
-        </p>
-
-        <div class="bitcoin-box">
-
-            <span id="bitcoinAddress">
-                166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
-            </span>
-
-            <button
-                type="button"
-                onclick="copyBitcoinAddress()">
-                COPY
-            </button>
-
-        </div>
-
-        <p id="copyMessage" class="copy-message"></p>
+        <h3>DONATE USDT</h3>
 
 
-        <!-- =========================
-             USDT DONATION
-             ========================= -->
+        <!-- USDT TRC20 -->
 
-        <div class="usdt-donation">
+        <div class="usdt-item">
 
-            <h3>DONATE USDT</h3>
+            <p class="usdt-label">
+                USDT TRC20
+            </p>
 
+            <div class="usdt-box">
 
-            <!-- USDT TRC20 -->
+                <span id="usdtTrc20Address">
+                    TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
+                </span>
 
-            <div class="usdt-item">
-
-                <p class="usdt-label">
-                    USDT TRC20
-                </p>
-
-                <div class="usdt-box">
-
-                    <span id="usdtTrc20Address">
-                        TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
-                    </span>
-
-                    <button
-                        type="button"
-                        onclick="copyUsdtTrc20()">
-                        COPY
-                    </button>
-
-                </div>
-
-                <p id="usdtTrc20Message" class="usdt-copy-message"></p>
+                <button
+                    type="button"
+                    onclick="copyUsdtTrc20()">
+                    COPY
+                </button>
 
             </div>
 
-
-            <!-- USDT BEP20 -->
-
-            <div class="usdt-item">
-
-                <p class="usdt-label">
-                    USDT BEP20
-                </p>
-
-                <div class="usdt-box">
-
-                    <span id="usdtBep20Address">
-                        0x5a56e760f487c252f3f878e5a5e3719b39d63075
-                    </span>
-
-                    <button
-                        type="button"
-                        onclick="copyUsdtBep20()">
-                        COPY
-                    </button>
-
-                </div>
-
-                <p id="usdtBep20Message" class="usdt-copy-message"></p>
-
-            </div>
+            <p id="usdtTrc20Message" class="usdt-copy-message"></p>
 
         </div>
 
 
-        <!-- Bitcoin Warning -->
+        <!-- USDT BEP20 -->
 
-        <div class="bitcoin-warning">
+        <div class="usdt-item">
 
-            <h4>Important — Before You Send Bitcoin and USDT</h4>
-
-            <p>
-                Please carefully check the Bitcoin and USDT address before sending any funds.
-                Make sure the address you copied is exactly correct.
-                Bitcoin and USDT transactions are generally irreversible, and funds sent
-                to the wrong address may not be recoverable.
+            <p class="usdt-label">
+                USDT BEP20
             </p>
 
-            <p>
-                <strong>
-                    Never share your private key or seed phrase with anyone.
-                </strong>
-                They give access to your Bitcoin and USDT wallet and should always remain private.
-                NARA will never ask you for your private key, seed phrase, password,
-                or wallet recovery information.
-            </p>
+            <div class="usdt-box">
 
-            <p>
-                Please send only what you can afford to give, and make sure you
-                understand the risks before making a donation.
-            </p>
+                <span id="usdtBep20Address">
+                    0x5a56e760f487c252f3f878e5a5e3719b39d63075
+                </span>
+
+                <button
+                    type="button"
+                    onclick="copyUsdtBep20()">
+                    COPY
+                </button>
+
+            </div>
+
+            <p id="usdtBep20Message" class="usdt-copy-message"></p>
 
         </div>
 
     </div>
+
+
+    <!-- Bitcoin Warning -->
+
+    <div class="bitcoin-warning">
+
+        <h4>Important — Before You Send Bitcoin and USDT</h4>
+
+        <p>
+            Please carefully check the Bitcoin and USDT address before sending any funds.
+            Make sure the address you copied is exactly correct.
+            Bitcoin and USDT transactions are generally irreversible, and funds sent
+            to the wrong address may not be recoverable.
+        </p>
+
+        <p>
+            <strong>
+                Never share your private key or seed phrase with anyone.
+            </strong>
+            They give access to your Bitcoin and USDT wallet and should always remain private.
+            NARA will never ask you for your private key, seed phrase, password,
+            or wallet recovery information.
+        </p>
+
+        <p>
+            Please send only what you can afford to give, and make sure you
+            understand the risks before making a donation.
+        </p>
+
+    </div>
+
+</div>
 
 </section>
 
@@ -1006,11 +1306,98 @@ body {
 </section>
 
 
+</div>
+
+
 <!-- =========================
      JAVASCRIPT
      ========================= -->
 
 <script>
+
+
+/* =========================
+   SHOW SIGNUP
+   ========================= */
+
+function showSignup() {
+
+    document.getElementById("landingWelcome").style.display = "none";
+
+    document.getElementById("naraSignup").style.display = "block";
+
+}
+
+
+/* =========================
+   ENTER NARA
+   ========================= */
+
+function enterNara() {
+
+    const name =
+        document.getElementById("visitorName").value.trim();
+
+    const email =
+        document.getElementById("visitorEmail").value.trim();
+
+
+    /* Check Name */
+
+    if (name === "") {
+
+        alert("Please enter your name.");
+
+        document.getElementById("visitorName").focus();
+
+        return;
+
+    }
+
+
+    /* Check Email */
+
+    if (email === "") {
+
+        alert("Please enter your email.");
+
+        document.getElementById("visitorEmail").focus();
+
+        return;
+
+    }
+
+
+    /* Basic email validation */
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+    if (!emailPattern.test(email)) {
+
+        alert("Please enter a valid email address.");
+
+        document.getElementById("visitorEmail").focus();
+
+        return;
+
+    }
+
+
+    /*
+       Form is valid.
+       Open NARA main website.
+    */
+
+    document.getElementById("naraLanding").style.display = "none";
+
+    document.getElementById("naraMain").style.display = "block";
+
+    window.scrollTo(0, 0);
+
+}
+
 
 /* =========================
    READ MORE
@@ -1018,14 +1405,17 @@ body {
 
 function showMore() {
 
-    const moreContent = document.getElementById("moreContent");
-    const readMoreButton = document.querySelector(".read-more-button");
+    const moreContent =
+        document.getElementById("moreContent");
 
-    /* Tampilkan isi lengkap */
+    const readMoreButton =
+        document.querySelector(".read-more-button");
+
+
     moreContent.style.display = "block";
 
-    /* Hilangkan Read More */
     readMoreButton.style.display = "none";
+
 }
 
 
@@ -1035,13 +1425,15 @@ function showMore() {
 
 function showLess() {
 
-    const moreContent = document.getElementById("moreContent");
-    const readMoreButton = document.querySelector(".read-more-button");
+    const moreContent =
+        document.getElementById("moreContent");
 
-    /* Sembunyikan isi lengkap */
+    const readMoreButton =
+        document.querySelector(".read-more-button");
+
+
     moreContent.style.display = "none";
 
-    /* Tampilkan kembali Read More */
     readMoreButton.style.display = "inline-block";
 
 }
@@ -1054,14 +1446,21 @@ function showLess() {
 function copyBitcoinAddress() {
 
     const address =
-        document.getElementById("bitcoinAddress").innerText.trim();
+        document.getElementById("bitcoinAddress")
+        .innerText
+        .trim();
 
-    navigator.clipboard.writeText(address).then(function() {
+
+    navigator.clipboard.writeText(address)
+
+    .then(function() {
 
         document.getElementById("copyMessage").innerText =
             "Bitcoin address copied.";
 
-    }).catch(function() {
+    })
+
+    .catch(function() {
 
         document.getElementById("copyMessage").innerText =
             "Unable to copy. Please copy the address manually.";
@@ -1078,14 +1477,21 @@ function copyBitcoinAddress() {
 function copyUsdtTrc20() {
 
     const address =
-        document.getElementById("usdtTrc20Address").innerText.trim();
+        document.getElementById("usdtTrc20Address")
+        .innerText
+        .trim();
 
-    navigator.clipboard.writeText(address).then(function() {
+
+    navigator.clipboard.writeText(address)
+
+    .then(function() {
 
         document.getElementById("usdtTrc20Message").innerText =
             "USDT TRC20 address copied.";
 
-    }).catch(function() {
+    })
+
+    .catch(function() {
 
         document.getElementById("usdtTrc20Message").innerText =
             "Unable to copy. Please copy the address manually.";
@@ -1102,14 +1508,21 @@ function copyUsdtTrc20() {
 function copyUsdtBep20() {
 
     const address =
-        document.getElementById("usdtBep20Address").innerText.trim();
+        document.getElementById("usdtBep20Address")
+        .innerText
+        .trim();
 
-    navigator.clipboard.writeText(address).then(function() {
+
+    navigator.clipboard.writeText(address)
+
+    .then(function() {
 
         document.getElementById("usdtBep20Message").innerText =
             "USDT BEP20 address copied.";
 
-    }).catch(function() {
+    })
+
+    .catch(function() {
 
         document.getElementById("usdtBep20Message").innerText =
             "Unable to copy. Please copy the address manually.";
