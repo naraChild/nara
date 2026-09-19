@@ -1,566 +1,807 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NARA — Our Activities</title>
+<title>NARA — Activities</title>
 
 <style>
 
-/* =========================================================
+/* =========================
    BASIC
-   ========================================================= */
+   ========================= */
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
-    background: #000;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-header {
-    text-align: center;
-    padding: 28px 20px 20px;
-}
-
-header h1 {
+    margin: 0;
+    background: #ffffff;
+    color: #171717;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 32px;
-    font-weight: bold;
 }
 
-header h1 span {
-    color: #ffd400;
+
+/* =========================
+   HEADER / BANNER
+   ========================= */
+
+.activities-header {
+    width: 100%;
+    max-width: 980px;
+    height: 170px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0 0 24px 24px;
 }
 
-header p {
-    margin-top: 8px;
-    color: #aaa;
+.activities-header img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================
+   MAIN PAGE
+   ========================= */
+
+.activities-page {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 18px 28px 50px;
+}
+
+
+/* =========================
+   BACK TO NARA
+   ========================= */
+
+.back-nara {
+    display: inline-block;
+
+    color: #222;
+    font-family: Arial, sans-serif;
     font-size: 14px;
-}
+    font-weight: 700;
 
+    text-decoration: none;
 
-/* =========================================================
-   TITLE
-   ========================================================= */
+    border-bottom: 2px solid #ffd400;
 
-.activities-title {
-    text-align: center;
-    padding: 35px 20px 30px;
-}
-
-.activities-title h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 30px;
+    padding-bottom: 3px;
     margin-bottom: 12px;
 }
 
-.activities-title h2 span {
-    color: #ffd400;
+.back-nara:hover {
+    color: #c49d00;
 }
 
-.activities-title p {
+
+/* =========================
+   TITLE
+   ========================= */
+
+.activities-title {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 44px;
+    line-height: 1.05;
+}
+
+.activities-intro {
     max-width: 650px;
-    margin: auto;
-    color: #ccc;
-    font-size: 14px;
-    line-height: 1.7;
+
+    margin: 12px auto 28px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 17px;
+    line-height: 1.45;
 }
 
 
-/* =========================================================
+/* =========================
    PHOTO GRID
-   ========================================================= */
+   ========================= */
 
-.activities-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 10px 20px 50px;
-}
+.photo-grid {
 
-.activities-grid {
     display: grid;
 
-    /* 3 FOTO DALAM 1 BARIS */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
-    gap: 20px;
+    gap: 16px;
+
+    max-width: 850px;
+
+    margin: 0 auto;
 }
 
 
-/* =========================================================
+/* =========================
    PHOTO CARD
-   ========================================================= */
+   ========================= */
 
-.activity-card {
-    background: #111;
-    border: 1px solid #292929;
-    border-radius: 10px;
+.photo-card {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
     overflow: hidden;
+
+    background: #eeeeee;
+
+    border-radius: 5px;
+
+    cursor: zoom-in;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.10);
 }
 
+.photo-card img {
 
-/* =========================================================
-   PHOTO
-   ========================================================= */
-
-.activity-card img {
     width: 100%;
-    height: 230px;
+    height: 100%;
 
     display: block;
 
     object-fit: cover;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.photo-card:hover img {
+
+    transform:
+        scale(1.035);
 }
 
 
-/* =========================================================
-   CAPTION
-   ========================================================= */
+/* =========================
+   ZOOM / LIGHTBOX
+   ========================= */
 
-.activity-caption {
-    padding: 14px 15px 17px;
-}
+.lightbox {
 
-.activity-caption h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
+    position: fixed;
 
-.activity-caption p {
-    color: #aaa;
-    font-size: 12px;
-}
+    inset: 0;
 
+    display: none;
 
-/* =========================================================
-   VIDEO
-   ========================================================= */
-
-.video-section {
-    max-width: 850px;
-    margin: 20px auto 60px;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.video-section h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 27px;
-    margin-bottom: 20px;
-}
-
-.video-section h2 span {
-    color: #ffd400;
-}
-
-.video-box {
-    min-height: 180px;
-
-    border: 1px dashed #555;
-    border-radius: 10px;
-
-    display: flex;
     align-items: center;
     justify-content: center;
 
-    color: #777;
-    background: #0d0d0d;
+    padding: 50px 70px;
+
+    background:
+        rgba(0,0,0,0.88);
+
+    z-index: 9999;
 }
 
-.video-box p {
-    font-size: 13px;
+.lightbox.show {
+    display: flex;
 }
 
 
-/* =========================================================
-   BACK BUTTON
-   ========================================================= */
+/* BIG PHOTO */
 
-.back-section {
-    text-align: center;
-    padding-bottom: 50px;
-}
+.zoom-image {
 
-.back-button {
-    display: inline-block;
+    max-width: 88vw;
 
-    padding: 12px 25px;
+    max-height: 88vh;
 
-    background: #fff;
-    color: #000;
+    width: auto;
+    height: auto;
 
-    text-decoration: none;
+    object-fit: contain;
 
     border-radius: 6px;
 
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.back-button:hover {
-    background: #ffd400;
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.45);
 }
 
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* =========================
+   CLOSE BUTTON
+   ========================= */
 
-footer {
-    border-top: 1px solid #222;
-    text-align: center;
+.close-btn {
 
-    padding: 25px 20px 30px;
+    position: fixed;
 
-    color: #777;
-    font-size: 12px;
+    top: 18px;
+    right: 24px;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.90);
+
+    color: #111;
+
+    font-size: 30px;
+
+    line-height: 40px;
+
+    cursor: pointer;
+
+    z-index: 10001;
 }
 
-footer strong {
-    color: #fff;
+
+/* =========================
+   PREVIOUS / NEXT
+   ========================= */
+
+.nav-btn {
+
+    position: fixed;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.18);
+
+    color: #ffffff;
+
+    font-size: 34px;
+
+    line-height: 44px;
+
+    cursor: pointer;
+
+    z-index: 10000;
+}
+
+.nav-btn:hover {
+
+    background:
+        rgba(255,255,255,0.32);
+}
+
+.prev-btn {
+    left: 22px;
+}
+
+.next-btn {
+    right: 22px;
 }
 
 
-/* =========================================================
+/* =========================
    MOBILE
-   ========================================================= */
+   ========================= */
 
 @media (max-width: 700px) {
 
-    .activities-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+    .activities-header {
+
+        height: 118px;
+
+        border-radius:
+            0 0 18px 18px;
     }
 
-    .activity-card img {
-        height: 180px;
+
+    .activities-page {
+
+        padding:
+            14px 14px 40px;
     }
 
-}
 
+    .back-nara {
 
-@media (max-width: 480px) {
+        font-size: 12px;
 
-    header h1 {
-        font-size: 26px;
+        margin-bottom: 10px;
     }
 
-    .activities-title h2 {
-        font-size: 26px;
+
+    .activities-title {
+
+        font-size: 36px;
     }
 
-    .activities-container {
-        padding-left: 12px;
-        padding-right: 12px;
+
+    .activities-intro {
+
+        font-size: 15px;
+
+        margin-bottom: 22px;
     }
 
-    .activities-grid {
-        grid-template-columns: 1fr;
+
+    .photo-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 9px;
     }
 
-    .activity-card img {
-        height: auto;
+
+    .photo-card {
+
+        border-radius: 3px;
     }
 
+
+    .lightbox {
+
+        padding:
+            35px 18px;
+    }
+
+
+    .zoom-image {
+
+        max-width: 94vw;
+
+        max-height: 82vh;
+    }
+
+
+    .close-btn {
+
+        top: 10px;
+        right: 12px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 27px;
+
+        line-height: 36px;
+    }
+
+
+    .nav-btn {
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 29px;
+
+        line-height: 38px;
+    }
+
+
+    .prev-btn {
+        left: 7px;
+    }
+
+    .next-btn {
+        right: 7px;
+    }
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-     ========================================================= -->
+     GANTI Act.dewii9.jpg DENGAN FOTO HEADER BARU NANTI
+     ===================================================== -->
 
-<header>
+<header class="activities-header">
 
-    <h1>
-        NARA — <span>A Child Is A Future</span>
-    </h1>
-
-    <p>
-        Moments of care, hope and action.
-    </p>
+    <img
+        src="Act.dewii9.jpg"
+        alt="NARA"
+    >
 
 </header>
 
 
 
-<!-- =========================================================
-     TITLE
-     ========================================================= -->
+<main class="activities-page">
 
-<section class="activities-title">
 
-    <h2>
-        OUR <span>ACTIVITIES</span>
-    </h2>
-
-    <p>
-        Every action begins with compassion.
-        Here we share moments and memories
-        from NARA's journey.
-    </p>
-
-</section>
-
-
-
-<!-- =========================================================
-     PHOTO GALLERY
-     ========================================================= -->
-
-<section class="activities-container">
-
-    <div class="activities-grid">
-
-
-        <!-- =================================================
-             PHOTO 1
-             ================================================= -->
-
-        <div class="activity-card">
-
-            <img
-                src="Child1.jpg"
-                alt="NARA Activity 1"
-            >
-
-            <div class="activity-caption">
-
-                <h3>
-                    NARA Activity
-                </h3>
-
-                <p>
-                    A moment from our journey.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             PHOTO 2
-             ================================================= -->
-
-        <div class="activity-card">
-
-            <img
-                src="Child2.jpg"
-                alt="NARA Activity 2"
-            >
-
-            <div class="activity-caption">
-
-                <h3>
-                    NARA Activity
-                </h3>
-
-                <p>
-                    A moment from our journey.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             PHOTO 3
-             ================================================= -->
-
-        <div class="activity-card">
-
-            <img
-                src="Child3.jpg"
-                alt="NARA Activity 3"
-            >
-
-            <div class="activity-caption">
-
-                <h3>
-                    NARA Activity
-                </h3>
-
-                <p>
-                    A moment from our journey.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             PHOTO 4
-             ================================================= -->
-
-        <div class="activity-card">
-
-            <img
-                src="Child4.jpg"
-                alt="NARA Activity 4"
-            >
-
-            <div class="activity-caption">
-
-                <h3>
-                    NARA Activity
-                </h3>
-
-                <p>
-                    A moment from our journey.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             PHOTO 5
-             ================================================= -->
-
-        <div class="activity-card">
-
-            <img
-                src="Child5.jpg"
-                alt="NARA Activity 5"
-            >
-
-            <div class="activity-caption">
-
-                <h3>
-                    NARA Activity
-                </h3>
-
-                <p>
-                    A moment from our journey.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             PHOTO 6
-             ================================================= -->
-
-        <div class="activity-card">
-
-            <img
-                src="Child6.jpg"
-                alt="NARA Activity 6"
-            >
-
-            <div class="activity-caption">
-
-                <h3>
-                    NARA Activity
-                </h3>
-
-                <p>
-                    A moment from our journey.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     VIDEO SECTION
-     ========================================================= -->
-
-<section class="video-section">
-
-    <h2>
-        NARA <span>VIDEOS</span>
-    </h2>
-
-    <div class="video-box">
-
-        <p>
-            NARA activity videos will appear here.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     BACK TO NARA
-     ========================================================= -->
-
-<section class="back-section">
+    <!-- =========================
+         BACK TO NARA
+         ========================= -->
 
     <a
         href="index.html"
-        class="back-button"
-    >
+        class="back-nara">
+
         ← BACK TO NARA
+
     </a>
 
-</section>
 
 
+    <!-- =========================
+         TITLE
+         ========================= -->
 
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
+    <h1 class="activities-title">
 
-<footer>
+        Activities
 
-    <p>
-        <strong>NARA</strong> — A Child Is A Future
+    </h1>
+
+
+    <p class="activities-intro">
+
+        Real moments. Happy faces. A brighter tomorrow.<br>
+
+        Here are some of the activities and programs
+        we've been part of.
+
     </p>
 
-    <p>
-        Every child deserves a future.
-    </p>
 
-</footer>
+
+    <!-- =====================================================
+         PHOTO GALLERY
+         ===================================================== -->
+
+    <section class="photo-grid">
+
+
+        <!-- PHOTO 1 -->
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(0)">
+
+            <img
+                src="Act1.jpg"
+                alt="NARA Activity 1">
+
+        </div>
+
+
+
+        <!-- PHOTO 2 -->
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(1)">
+
+            <img
+                src="Act2.jpg"
+                alt="NARA Activity 2">
+
+        </div>
+
+
+
+        <!-- PHOTO 3 -->
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(2)">
+
+            <img
+                src="Act3.jpg"
+                alt="NARA Activity 3">
+
+        </div>
+
+
+
+        <!-- PHOTO 4 -->
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(3)">
+
+            <img
+                src="Act4.jpg"
+                alt="NARA Activity 4">
+
+        </div>
+
+
+
+        <!-- PHOTO 5 -->
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(4)">
+
+            <img
+                src="Act5.jpg"
+                alt="NARA Activity 5">
+
+        </div>
+
+
+
+        <!-- PHOTO 6 -->
+
+        <div
+            class="photo-card"
+            onclick="openLightbox(5)">
+
+            <img
+                src="Act6.jpg"
+                alt="NARA Activity 6">
+
+        </div>
+
+
+    </section>
+
+
+
+</main>
+
+
+
+<!-- =====================================================
+     ZOOM LIGHTBOX
+     ===================================================== -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="backgroundClose(event)">
+
+
+    <!-- CLOSE -->
+
+    <button
+        class="close-btn"
+        onclick="closeLightbox()">
+
+        ×
+
+    </button>
+
+
+
+    <!-- PREVIOUS -->
+
+    <button
+        class="nav-btn prev-btn"
+        onclick="
+            changePhoto(-1);
+            event.stopPropagation();
+        ">
+
+        ‹
+
+    </button>
+
+
+
+    <!-- LARGE PHOTO -->
+
+    <img
+        id="zoomImage"
+        class="zoom-image"
+        src=""
+        alt="NARA Activity"
+        onclick="event.stopPropagation();"
+    >
+
+
+
+    <!-- NEXT -->
+
+    <button
+        class="nav-btn next-btn"
+        onclick="
+            changePhoto(1);
+            event.stopPropagation();
+        ">
+
+        ›
+
+    </button>
+
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   PHOTO LIST
+
+   NANTI CUKUP GANTI NAMA FILE DI SINI
+   ===================================================== */
+
+const activityPhotos = [
+
+    "Act1.jpg",
+
+    "Act2.jpg",
+
+    "Act3.jpg",
+
+    "Act4.jpg",
+
+    "Act5.jpg",
+
+    "Act6.jpg"
+
+];
+
+
+let currentPhoto = 0;
+
+
+
+/* =====================================================
+   OPEN ZOOM
+   ===================================================== */
+
+function openLightbox(index) {
+
+    currentPhoto = index;
+
+    document.getElementById("zoomImage").src =
+        activityPhotos[currentPhoto];
+
+    document
+        .getElementById("lightbox")
+        .classList.add("show");
+
+    document.body.style.overflow =
+        "hidden";
+}
+
+
+
+/* =====================================================
+   CLOSE ZOOM
+   ===================================================== */
+
+function closeLightbox() {
+
+    document
+        .getElementById("lightbox")
+        .classList.remove("show");
+
+    document.body.style.overflow =
+        "";
+}
+
+
+
+/* =====================================================
+   NEXT / PREVIOUS
+   ===================================================== */
+
+function changePhoto(direction) {
+
+    currentPhoto += direction;
+
+
+    if (currentPhoto < 0) {
+
+        currentPhoto =
+            activityPhotos.length - 1;
+    }
+
+
+    if (
+        currentPhoto >=
+        activityPhotos.length
+    ) {
+
+        currentPhoto = 0;
+    }
+
+
+    document.getElementById("zoomImage").src =
+        activityPhotos[currentPhoto];
+}
+
+
+
+/* =====================================================
+   CLICK OUTSIDE PHOTO = CLOSE
+   ===================================================== */
+
+function backgroundClose(event) {
+
+    if (
+        event.target.id ===
+        "lightbox"
+    ) {
+
+        closeLightbox();
+    }
+}
+
+
+
+/* =====================================================
+   KEYBOARD
+   ===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        const lightbox =
+            document.getElementById(
+                "lightbox"
+            );
+
+
+        if (
+            !lightbox.classList.contains(
+                "show"
+            )
+        ) {
+
+            return;
+        }
+
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeLightbox();
+        }
+
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+            changePhoto(-1);
+        }
+
+
+        if (
+            event.key === "ArrowRight"
+        ) {
+
+            changePhoto(1);
+        }
+
+    }
+);
+
+</script>
 
 
 </body>
-
 </html>
