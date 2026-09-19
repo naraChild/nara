@@ -1,1 +1,397 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Child's Story — NARA</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f4ee;
+    color: #333;
+    line-height: 1.8;
+}
+
+.page {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 25px 18px 60px;
+}
+
+/* BACK TO NARA */
+.back-button {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 8px 0;
+    color: #6d4c41;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    color: #a66a3f;
+}
+
+/* PAGE TITLE */
+.page-title {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.page-title h1 {
+    font-size: 38px;
+    font-weight: 500;
+    color: #4d3b32;
+    letter-spacing: 0.5px;
+}
+
+.page-title p {
+    margin-top: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #8a8179;
+    letter-spacing: 0.5px;
+}
+
+/* STORY POST */
+.story-post {
+    background: #ffffff;
+    border: 1px solid #e6dfd5;
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 20px rgba(80, 60, 40, 0.06);
+}
+
+/* PHOTO */
+.story-photo {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.story-photo img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 3px;
+}
+
+/* CATEGORY */
+.story-category {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #a66a3f;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* TITLE */
+.story-title {
+    font-size: 29px;
+    line-height: 1.3;
+    color: #44352d;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.story-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 25px;
+}
+
+/* DIVIDER */
+.story-divider {
+    width: 55px;
+    height: 2px;
+    background: #c89b72;
+    margin: 24px 0;
+}
+
+/* STORY TEXT */
+.story-text p {
+    margin-bottom: 18px;
+    font-size: 16px;
+    color: #4a4541;
+}
+
+.story-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* CLOSING */
+.story-closing {
+    margin-top: 30px;
+    padding: 24px;
+    background: #faf7f1;
+    border-left: 3px solid #c89b72;
+}
+
+.story-closing p {
+    font-size: 15px;
+    color: #625a54;
+    font-style: italic;
+}
+
+/* FUTURE STORIES */
+.future-story {
+    background: transparent;
+    border: 1px dashed #d9cec1;
+    border-radius: 4px;
+    padding: 35px 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.future-story h2 {
+    font-size: 21px;
+    color: #6a5b51;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.future-story p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #9a918a;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 1px solid #e1d9cf;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #999;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .page {
+        padding: 18px 12px 45px;
+    }
+
+    .page-title {
+        margin-bottom: 28px;
+    }
+
+    .page-title h1 {
+        font-size: 30px;
+    }
+
+    .page-title p {
+        font-size: 12px;
+    }
+
+    .story-post {
+        padding: 18px;
+        margin-bottom: 25px;
+    }
+
+    .story-photo img {
+        max-height: 420px;
+    }
+
+    .story-title {
+        font-size: 24px;
+    }
+
+    .story-text p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .story-closing {
+        padding: 18px;
+    }
+
+    .future-story {
+        padding: 28px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- BACK TO NARA -->
+    <a href="index.html" class="back-button">
+        ← Back to NARA
+    </a>
+
+
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+
+        <h1>A Child's Story</h1>
+
+        <p>
+            Stories of children and young people who keep holding on to hope.
+        </p>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- STORY 01 — HAGEL -->
+    <!-- ================================= -->
+
+    <article class="story-post">
+
+        <div class="story-photo">
+
+            <img src="hagel.jpg"
+                 alt="Hagel and his sister">
+
+        </div>
+
+
+        <div class="story-category">
+            A Child's Story · 01
+        </div>
+
+
+        <h2 class="story-title">
+            Hagel Decozar P. — A Story of a Childhood Lost
+        </h2>
+
+
+        <div class="story-subtitle">
+            A story about hardship, family, education, and the courage to keep going.
+        </div>
+
+
+        <div class="story-divider"></div>
+
+
+        <div class="story-text">
+
+            <p>
+                Hagel was born into an ordinary family, but life was far from ordinary.
+            </p>
+
+            <p>
+                His family lived under constant economic pressure. His parents often
+                had different principles and perspectives, and arguments gradually
+                became part of everyday life.
+            </p>
+
+            <p>
+                Hagel grew up surrounded by conflict and physical violence rather
+                than warmth and security. That environment shaped him. His heart
+                became harder as he learned how to survive.
+            </p>
+
+            <p>
+                Despite everything he experienced, Hagel carried a strong desire
+                to learn.
+            </p>
+
+            <p>
+                His education, however, was never stable. He moved from one school
+                to another, and much of his childhood and teenage years were lost
+                to circumstances beyond his control.
+            </p>
+
+            <p>
+                Today, at the age of 25, Hagel is still pursuing his university
+                education while working night shifts to support himself and his
+                family.
+            </p>
+
+            <p>
+                His father works, but the family income remains unstable. Since
+                2017, Hagel has lived with his mother and younger sister, who is
+                also still in school.
+            </p>
+
+            <p>
+                Life remains a daily struggle, but Hagel continues.
+            </p>
+
+            <p>
+                His story is not simply a story of hardship. It is the story of a
+                young person who continues to hold on to education despite the
+                circumstances surrounding him.
+            </p>
+
+        </div>
+
+
+        <!-- CLOSING MESSAGE -->
+        <div class="story-closing">
+
+            <p>
+                This is only one story among millions. Other children and young
+                people face economic hardship, family conflict, violence, and
+                instability that can affect both their emotional well-being and
+                their ability to learn.
+            </p>
+
+            <p style="margin-top:15px;">
+                Behind every child struggling at school, there may be an unseen
+                story. Behind every missed opportunity, there may be a child who
+                simply needed someone to believe in them.
+            </p>
+
+            <p style="margin-top:15px;">
+                NARA exists from the belief that a child's circumstances should
+                not determine the limits of their future.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- ================================= -->
+    <!-- MORE STORIES -->
+    <!-- ================================= -->
+
+    <div class="future-story">
+
+        <h2>More Stories Will Follow</h2>
+
+        <p>
+            Other children's stories will be shared here — each with their own
+            journey, challenges, dreams, and hope for a better future.
+        </p>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        © NARA — A Child, A Future
+
+    </footer>
+
+</div>
+
+</body>
+</html>
