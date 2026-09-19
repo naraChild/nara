@@ -3,819 +3,367 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NARA Children's Future</title>
-<meta name="description" content="NARA Children's Future — creating educational opportunities and brighter futures for children.">
+
+<title>A Child's Story — NARA</title>
 
 <style>
-:root{
---gold:#dfa000;
---gold2:#c88700;
---yellow:#ffd21c;
---ink:#17202a;
---cream:#fffaf0;
---white:#fff;
-}
-*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-header{
-position:sticky;top:0;z-index:1000;background:#fff;
-box-shadow:0 2px 15px rgba(0,0,0,.09)
-}
-.navbar{
-max-width:1200px;min-height:70px;margin:auto;padding:10px 25px;
-display:flex;align-items:center;justify-content:space-between
-}
-.logo{display:flex;align-items:center;gap:10px}
-.logo-mark{
-width:45px;height:45px;border-radius:50%;background:var(--gold);
-color:#fff;display:grid;place-items:center;font-size:24px;font-weight:bold
-}
-.logo-text{font-size:22px;font-weight:800;line-height:1.05}
-.logo-text span{display:block;font-size:12px;font-weight:500}
-.nav-links{
-display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700
-}
-.nav-links a:hover{color:var(--gold2)}
-.donate-nav{
-background:var(--gold);color:#fff!important;padding:10px 19px;border-radius:30px
-}
-.menu-btn{
-display:none;border:0;background:transparent;font-size:30px;cursor:pointer
-}
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        background: #f7f4ee;
+        color: #333;
+        line-height: 1.8;
+    }
 
-.hero{
-width:100%;aspect-ratio:3/1;position:relative;overflow:hidden;background:#35434a
-}
-.hero-photo{
-position:absolute;inset:0 auto 0 0;width:56%;height:100%;
-object-fit:cover;object-position:center
-}
-.hero:after{
-content:"";position:absolute;inset:0;
-background:linear-gradient(90deg,rgba(0,0,0,.02),rgba(10,20,25,.12) 40%,rgba(15,25,30,.68) 67%,rgba(10,18,22,.82));
-pointer-events:none
-}
-.sun{
-position:absolute;right:5%;top:3%;width:85px;height:85px;border-radius:50%;
-background:rgba(255,211,35,.72);filter:blur(18px);
-box-shadow:0 0 40px 20px rgba(255,190,20,.35),0 0 100px 50px rgba(255,190,20,.15);
-z-index:2
-}
-.hero-content{
-position:absolute;z-index:3;right:6%;top:50%;transform:translateY(-50%);width:43%
-}
-.hero-child{
-color:#fff;font:italic bold clamp(27px,5vw,72px)/.95 Georgia,serif;
-text-shadow:2px 3px 8px rgba(0,0,0,.55)
-}
-.hero-future{
-color:var(--yellow);
-font:italic bold clamp(39px,6vw,88px)/.95 "Brush Script MT","Segoe Script",cursive;
-text-shadow:3px 4px 8px rgba(0,0,0,.6)
-}
-.hero-line{
-width:70%;height:5px;background:var(--yellow);margin-top:10px;
-transform:rotate(-3deg);border-radius:5px
-}
+    .page {
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 25px 18px 60px;
+    }
 
-.container{width:min(1100px,92%);margin:auto}
-section{padding:55px 0}
-#mission,#story,#donate{background:#fff}
-.section-title{
-color:var(--gold2);font-size:clamp(29px,4vw,45px);
-font-weight:900;margin-bottom:12px
-}
-.section-text{font-size:18px;color:#202830}
+    /* BACK BUTTON */
+    .back-link {
+        display: inline-block;
+        margin-bottom: 25px;
+        color: #6d4c41;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+    }
 
-.story-intro{font-size:20px;max-width:850px;margin-bottom:16px}
-.story-highlight{
-font-size:20px;font-weight:700;color:var(--gold2);margin-top:18px
-}
+    .back-link:hover {
+        color: #a66a3f;
+    }
 
-.gallery{
-margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px
-}
-.gallery-item{
-height:190px;overflow:hidden;border-radius:12px;background:#ddd;
-box-shadow:0 5px 18px rgba(0,0,0,.12)
-}
-.gallery-item img{
-width:100%;height:100%;object-fit:cover;transition:.35s
-}
-.gallery-item:hover img{transform:scale(1.05)}
-.photo-note{text-align:center;color:#666;font-size:14px;margin-top:15px}
+    /* PAGE TITLE */
+    .page-title {
+        text-align: center;
+        margin-bottom: 38px;
+    }
 
-.impact{background:#fff8e8}
-.impact-grid{
-display:grid;grid-template-columns:1fr 1fr;gap:35px
-}
-.impact-title{
-color:var(--gold2);font-size:28px;font-weight:900;margin-bottom:7px
-}
-.impact-text{font-size:18px}
+    .page-title h1 {
+        font-size: 38px;
+        font-weight: 500;
+        color: #4d3b32;
+        letter-spacing: 0.5px;
+    }
 
-.donation-card{
-background:linear-gradient(135deg,#fffaf0,#fff4d6);
-border-radius:20px;padding:35px;
-box-shadow:0 8px 30px rgba(0,0,0,.09)
-}
-.donation-grid{
-display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center
-}
-.donation-title{
-color:var(--gold2);font-size:32px;font-weight:900;margin-bottom:10px
-}
-.donation-text{font-size:17px;margin-bottom:18px}
+    .page-title p {
+        margin-top: 7px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #8a8179;
+        letter-spacing: 0.5px;
+    }
 
-.btn{
-display:inline-flex;align-items:center;justify-content:center;gap:8px;
-border:0;cursor:pointer;background:var(--gold);color:#fff;font-weight:800;
-padding:13px 24px;border-radius:30px;font-size:16px;transition:.2s
-}
-.btn:hover{background:var(--gold2);transform:translateY(-2px)}
+    /* STORY POST */
+    .story-post {
+        background: #ffffff;
+        border: 1px solid #e6dfd5;
+        border-radius: 4px;
+        padding: 30px;
+        margin-bottom: 35px;
+        box-shadow: 0 5px 20px rgba(80, 60, 40, 0.06);
+    }
 
-.wallet-box{
-background:#fff;border:1px solid #e5d7b5;border-radius:14px;padding:16px
-}
-.wallet-label{
-font-size:13px;font-weight:800;color:#777;margin-bottom:7px
-}
-.wallet-address{
-font:15px monospace;word-break:break-all;margin-bottom:12px;
-background:#fafafa;padding:10px;border-radius:8px
-}
-.copy-btn{
-background:#222;color:#fff;border:0;padding:10px 16px;
-border-radius:20px;cursor:pointer;font-weight:700
-}
-.copy-btn:hover{background:#000}
-.copy-message{margin-left:8px;font-size:13px;color:var(--gold2)}
+    .story-photo {
+        width: 100%;
+        margin-bottom: 25px;
+        text-align: center;
+    }
 
-.support{background:#fffaf0}
-.support-grid{
-display:grid;grid-template-columns:repeat(3,1fr);gap:30px
-}
-.support-title{
-color:var(--gold2);font-size:22px;font-weight:900;margin-bottom:8px
-}
-.support-text{font-size:16px}
+    .story-photo img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        display: block;
+        border-radius: 3px;
+    }
 
-.disclaimer{background:#fff8e8}
-.disclaimer-box{
-background:#fff;border-left:5px solid var(--gold);border-radius:12px;
-padding:24px;box-shadow:0 4px 18px rgba(0,0,0,.06)
-}
-.disclaimer-box p{margin-bottom:10px}
-.disclaimer-box p:last-child{margin-bottom:0}
+    .story-category {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #a66a3f;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
 
-.thank-you{
-text-align:center;background:#202b31;color:#fff;padding:60px 20px
-}
-.thank-you h2{
-color:var(--yellow);font:italic 42px Georgia,serif;margin-bottom:15px
-}
-.thank-you p{font-size:18px;max-width:750px;margin:0 auto 12px}
-.thank-you .final-line{color:#fff;font-weight:700;margin-top:22px}
+    .story-title {
+        font-size: 29px;
+        line-height: 1.3;
+        color: #44352d;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
 
-footer{
-background:#11181c;color:#aaa;text-align:center;padding:18px;font-size:13px
-}
+    .story-subtitle {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        color: #999;
+        margin-bottom: 25px;
+    }
 
-/* CHILD STORY */
-.child-story{background:#fff}
-.story-card{max-width:900px;margin:auto}
-.story-photo{
-width:100%;max-height:560px;object-fit:cover;border-radius:18px;
-box-shadow:0 8px 30px rgba(0,0,0,.14);margin:20px 0 10px
-}
-.story-photo-caption{
-text-align:center;color:#777;font-size:13px;margin-bottom:28px
-}
-.story-subtitle{
-font-size:20px;color:#4b5359;margin-bottom:25px
-}
-.story-card p{font-size:18px;margin-bottom:20px}
-.story-lead{font-size:21px!important;font-weight:700}
-.story-highlight{
-margin:28px 0;padding:24px 26px;background:#fff8e8;
-border-left:5px solid var(--gold);border-radius:10px;
-font-size:20px;font-weight:700
-}
-.story-closing{
-margin-top:30px;padding:26px;background:#fffaf0;
-border:1px solid #eadbb8;border-radius:14px
-}
-.story-closing h3{
-color:var(--gold2);font-size:24px;margin-bottom:8px
-}
+    .story-text p {
+        margin-bottom: 18px;
+        font-size: 16px;
+        color: #4a4541;
+    }
 
-@media(max-width:760px){
-.navbar{min-height:62px;padding:8px 15px}
-.logo-mark{width:38px;height:38px;font-size:20px}
-.logo-text{font-size:18px}
-.menu-btn{display:block}
-.nav-links{
-display:none;position:absolute;top:62px;left:0;right:0;background:#fff;
-flex-direction:column;gap:0;padding:8px 20px 18px;
-box-shadow:0 8px 15px rgba(0,0,0,.1)
-}
-.nav-links.show{display:flex}
-.nav-links a{width:100%;padding:12px;text-align:center}
+    .story-text p:last-child {
+        margin-bottom: 0;
+    }
 
-.hero{width:100%;aspect-ratio:3/1;min-height:0;max-height:none}
-.hero-photo{width:55%;height:100%}
-.hero-content{right:3%;width:48%}
-.hero-child{font-size:clamp(21px,7vw,42px)}
-.hero-future{font-size:clamp(29px,9vw,55px)}
-.hero-line{height:3px;width:80%}
-.sun{width:50px;height:50px}
+    .story-divider {
+        width: 55px;
+        height: 2px;
+        background: #c89b72;
+        margin: 24px 0;
+    }
 
-section{padding:35px 0}
-.section-title{font-size:30px}
-.section-text{font-size:16px}
-.story-intro,.story-highlight{font-size:17px}
+    /* CLOSING MESSAGE */
+    .story-closing {
+        margin-top: 30px;
+        padding: 24px;
+        background: #faf7f1;
+        border-left: 3px solid #c89b72;
+    }
 
-.gallery{grid-template-columns:repeat(2,1fr);gap:8px}
-.gallery-item{height:125px;border-radius:8px}
+    .story-closing p {
+        font-size: 15px;
+        color: #625a54;
+        font-style: italic;
+    }
 
-.impact-grid{grid-template-columns:1fr;gap:25px}
-.impact-title{font-size:25px}
+    /* FUTURE STORY PLACEHOLDER */
+    .future-story {
+        background: transparent;
+        border: 1px dashed #d9cec1;
+        border-radius: 4px;
+        padding: 35px 25px;
+        text-align: center;
+        margin-top: 10px;
+    }
 
-.donation-card{padding:22px 17px}
-.donation-grid{grid-template-columns:1fr;gap:28px}
-.donation-title{font-size:28px}
-.wallet-address{font-size:13px}
+    .future-story h2 {
+        font-size: 21px;
+        color: #6a5b51;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
 
-.support-grid{grid-template-columns:1fr;gap:25px}
-.thank-you h2{font-size:35px}
+    .future-story p {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        color: #9a918a;
+    }
 
-.story-photo{max-height:420px;border-radius:12px;margin-top:15px}
-.story-subtitle{font-size:17px}
-.story-card p{font-size:17px}
-.story-lead{font-size:19px!important}
-.story-highlight{padding:20px;font-size:18px}
-}
+    /* FOOTER */
+    footer {
+        text-align: center;
+        margin-top: 45px;
+        padding-top: 25px;
+        border-top: 1px solid #e1d9cf;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #999;
+    }
 
-@media(max-width:380px){
-.hero-child{font-size:20px}
-.hero-future{font-size:28px}
-.gallery-item{height:105px}
-}
+    /* MOBILE */
+    @media (max-width: 600px) {
+
+        .page {
+            padding: 18px 12px 45px;
+        }
+
+        .page-title {
+            margin-bottom: 28px;
+        }
+
+        .page-title h1 {
+            font-size: 30px;
+        }
+
+        .page-title p {
+            font-size: 12px;
+        }
+
+        .story-post {
+            padding: 18px;
+            margin-bottom: 25px;
+        }
+
+        .story-photo img {
+            max-height: 420px;
+        }
+
+        .story-title {
+            font-size: 24px;
+        }
+
+        .story-text p {
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .story-closing {
+            padding: 18px;
+        }
+
+        .future-story {
+            padding: 28px 18px;
+        }
+    }
 </style>
 </head>
 
 <body>
 
-<header>
-<nav class="navbar">
+<div class="page">
 
-<a href="#home" class="logo">
-<div class="logo-mark">♥</div>
-<div class="logo-text">
-NARA
-<span>Children's Future</span>
-</div>
-</a>
+    <!-- BACK TO NARA -->
+    <a href="index.html" class="back-link">← Back to NARA</a>
 
-<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <h1>A Child's Story</h1>
+        <p>Stories of children and young people who keep holding on to hope.</p>
+    </div>
 
-<div class="nav-links" id="navLinks">
 
-<a href="#home" onclick="closeMenu()">Home</a>
-<a href="#mission" onclick="closeMenu()">Our Mission</a>
-<a href="#story" onclick="closeMenu()">Our Story</a>
-<a href="#gallery" onclick="closeMenu()">Gallery</a>
-<a href="#child-story" onclick="closeMenu()">A Child's Story</a>
-<a href="#donate" onclick="closeMenu()">Donate</a>
-<a href="#about" onclick="closeMenu()">About</a>
+    <!-- ========================= -->
+    <!-- STORY POST 01 — HAGEL -->
+    <!-- ========================= -->
 
-<a href="#donate" class="donate-nav" onclick="closeMenu()">₿ Donate BTC</a>
+    <article class="story-post">
 
-</div>
-</nav>
-</header>
+        <div class="story-photo">
+            <img src="hagel.jpg" alt="Hagel and his sister">
+        </div>
 
-<main id="home">
+        <div class="story-category">
+            A Child's Story · 01
+        </div>
 
-<section class="hero">
+        <h2 class="story-title">
+            Hagel Decozar P. — A Story of a Childhood Lost
+        </h2>
 
-<img class="hero-photo"
-src="1789699903727.png"
-alt="A mother and child">
+        <div class="story-subtitle">
+            A story about hardship, family, education, and the courage to keep going.
+        </div>
 
-<div class="sun"></div>
+        <div class="story-divider"></div>
 
-<div class="hero-content">
-<div class="hero-child">A Child,</div>
-<div class="hero-future">A Future</div>
-<div class="hero-line"></div>
-</div>
+        <div class="story-text">
 
-</section>
+            <p>
+                Hagel was born into an ordinary family, but life was far from ordinary.
+            </p>
 
-<section id="mission">
-<div class="container">
+            <p>
+                His family lived under constant economic pressure. His parents often
+                had different principles and perspectives, and arguments gradually
+                became part of everyday life.
+            </p>
 
-<h2 class="section-title">Our Mission</h2>
+            <p>
+                Hagel grew up surrounded by conflict and physical violence rather
+                than warmth and security. That environment shaped him. His heart
+                became harder as he learned how to survive.
+            </p>
 
-<p class="section-text">
-NARA believes that every child deserves the opportunity
-to learn, grow, and build a brighter future.
-</p>
+            <p>
+                Despite everything he experienced, Hagel carried a strong desire
+                to learn.
+            </p>
 
-<br>
+            <p>
+                His education, however, was never stable. He moved from one school
+                to another, and much of his childhood and teenage years were lost
+                to circumstances beyond his control.
+            </p>
 
-<p class="section-text">
-Our mission is to help create meaningful opportunities
-for children through education, care, kindness, and
-support from people who believe in their potential.
-</p>
+            <p>
+                Today, at the age of 25, Hagel is still pursuing his university
+                education while working night shifts to support himself and his
+                family.
+            </p>
 
-</div>
-</section>
+            <p>
+                His father works, but the family income remains unstable. Since
+                2017, Hagel has lived with his mother and younger sister, who is
+                also still in school.
+            </p>
 
-<section id="story">
-<div class="container">
+            <p>
+                Life remains a daily struggle, but Hagel continues.
+            </p>
 
-<h2 class="section-title">Our Story</h2>
+            <p>
+                His story is not simply a story of hardship. It is the story of a
+                young person who continues to hold on to education despite the
+                circumstances surrounding him.
+            </p>
 
-<p class="story-intro">
-Every child carries a dream. Some dream of becoming
-a teacher, a doctor, an engineer, an artist — or simply
-having the chance to learn.
-</p>
+        </div>
 
-<p class="story-intro">
-But for many children, the distance between a dream
-and reality can begin with something as simple as a
-book, a school uniform, or the opportunity to stay in school.
-</p>
+        <div class="story-closing">
 
-<p class="story-highlight">
-We believe no child's future should be decided
-by the circumstances they were born into.
-</p>
+            <p>
+                This is only one story among millions. Other children and young
+                people face economic hardship, family conflict, violence, and
+                instability that can affect both their emotional well-being and
+                their ability to learn.
+            </p>
 
-<p class="section-text" style="margin-top:18px;">
-NARA Children's Future was built around a simple hope:
-that when people choose to care, even a small act of
-support can become part of a child's journey toward
-a brighter tomorrow.
-</p>
+            <p style="margin-top: 15px;">
+                Behind every child struggling at school, there may be an unseen
+                story. Behind every missed opportunity, there may be a child who
+                simply needed someone to believe in them.
+            </p>
 
-</div>
-</section>
+            <p style="margin-top: 15px;">
+                NARA exists from the belief that a child's circumstances should
+                not determine the limits of their future.
+            </p>
 
-<section id="gallery">
-<div class="container">
+        </div>
 
-<h2 class="section-title">Our Children</h2>
+    </article>
 
-<p class="section-text">
-Every photograph represents a moment, a memory,
-and a reminder that behind every child is a future
-worth protecting.
-</p>
 
-<div class="gallery">
+    <!-- ========================= -->
+    <!-- FUTURE STORY -->
+    <!-- ========================= -->
 
-<div class="gallery-item">
-<img src="nara-02.jpg" alt="Children together" loading="lazy">
-</div>
+    <div class="future-story">
 
-<div class="gallery-item">
-<img src="nara-03.jpg" alt="Children together" loading="lazy">
-</div>
+        <h2>More Stories Will Follow</h2>
 
-<div class="gallery-item">
-<img src="nara-04.jpg" alt="Children receiving certificates" loading="lazy">
-</div>
+        <p>
+            Other children's stories will be shared here — each with their own
+            journey, challenges, dreams, and hope for a better future.
+        </p>
 
-<div class="gallery-item">
-<img src="nara-05.jpg" alt="Two children together" loading="lazy">
-</div>
+    </div>
 
-<div class="gallery-item">
-<img src="nara-06.jpg" alt="Children and teachers" loading="lazy">
-</div>
 
-<div class="gallery-item">
-<img src="nara-07.jpg" alt="Children together" loading="lazy">
-</div>
+    <!-- FOOTER -->
 
-</div>
-
-<p class="photo-note">
-These photographs are presented as part of the
-NARA education story.
-</p>
+    <footer>
+        © NARA — A Child, A Future
+    </footer>
 
 </div>
-</section>
-
-<section class="impact">
-<div class="container">
-
-<div class="impact-grid">
-
-<div>
-<h2 class="impact-title">Why Should We Care?</h2>
-<p class="impact-text">
-Every child deserves the chance to learn, dream,
-and build a better future.
-</p>
-</div>
-
-<div>
-<h2 class="impact-title">What Can We Do?</h2>
-<p class="impact-text">
-A small act of kindness can become part of a much
-larger opportunity for a child.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="donate">
-<div class="container">
-
-<div class="donation-card">
-<div class="donation-grid">
-
-<div>
-
-<h2 class="donation-title">How You Can Be Part</h2>
-
-<p class="donation-text">
-Supporting a child's education is not about changing
-the whole world at once. It is about helping one child
-have a better chance at tomorrow.
-</p>
-
-<p class="donation-text">
-If you genuinely wish to contribute, you may support
-the educational purpose described on this website
-through Bitcoin.
-</p>
-
-<a href="#about" class="btn">Learn More</a>
-
-</div>
-
-<div>
-
-<h2 class="donation-title">How to Donate</h2>
-
-<div class="wallet-box">
-
-<div class="wallet-label">
-BITCOIN DONATION ADDRESS
-</div>
-
-<div class="wallet-address" id="btcAddress">
-166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
-</div>
-
-<button class="copy-btn" onclick="copyBTC()">
-📋 Copy Address
-</button>
-
-<span class="copy-message" id="copyMessage"></span>
-
-</div>
-
-</div>
-
-</div>
-</div>
-</div>
-</section>
-
-<!-- A CHILD'S STORY -->
-
-<section id="child-story" class="child-story">
-<div class="container">
-<div class="story-card">
-
-<h2 class="section-title">A Child's Story</h2>
-
-<h3 class="impact-title" style="font-size:32px;margin-bottom:5px;">
-Hagel Decozar P.
-</h3>
-
-<p class="story-subtitle">
-A story of hardship, perseverance, education, and hope for a better future.
-</p>
-
-<img
-class="story-photo"
-src="hagel.jpg"
-alt="Hagel Decozar P. during childhood with his sister">
-
-<p class="story-photo-caption">
-Hagel Decozar P. during his childhood.
-</p>
-
-<p class="story-lead">
-A Story of a Childhood Lost
-</p>
-
-<p>
-Hagel Decozar P. was born into an ordinary family, but life was far from ordinary.
-</p>
-
-<p>
-His family lived under constant economic pressure. His parents often had different
-principles, different perspectives, and different ways of facing life. Arguments
-became a part of everyday life, and Hagel grew up surrounded by conflict rather
-than the warmth and security that every child deserves.
-</p>
-
-<p>
-From a young age, he witnessed physical violence within his home. The environment
-around him was harsh, and over time, it shaped him. His heart became hardened as
-he learned to survive circumstances that a child should never have had to endure.
-</p>
-
-<p>
-Yet, despite everything, one thing remained strong within him:
-<strong>his desire to learn.</strong>
-</p>
-
-<p>
-Hagel always had a strong determination to continue his education. His schooling,
-however, was far from stable. He had to move from one school to another, adapting
-again and again to circumstances beyond his control.
-</p>
-
-<div class="story-highlight">
-He lost much of his childhood.<br>
-He lost much of his teenage years.
-</div>
-
-<p>
-While many young people experience childhood as a time of play, friendship, and
-discovery, Hagel experienced something very different.
-</p>
-
-<p>
-Today, at the age of 25, Hagel is still pursuing his university education while
-working night shifts to support himself and his family.
-</p>
-
-<p>
-His father works, but his income is not stable. Since 2017, Hagel has lived with
-his mother and his younger sister, who is also still in school. Life remains a
-daily struggle, yet Hagel continues to move forward.
-</p>
-
-<p>
-His story is not simply about hardship. It is about a young person who continues
-to hold on to education despite the circumstances that have repeatedly tried to
-take it away from him.
-</p>
-
-<p>
-Hagel's story is only one small story among millions.
-</p>
-
-<p>
-Around the world, there are children and young people who may be facing similar
-struggles today — growing up under economic hardship, family conflict, violence,
-instability, and circumstances that can deeply affect their emotional well-being
-and their ability to learn.
-</p>
-
-<p>
-Behind every child who struggles at school, there may be a story that we cannot see.
-</p>
-
-<p>
-Behind every missed opportunity, there may be a child who simply needed someone
-to believe in them.
-</p>
-
-<div class="story-closing">
-
-<h3>Why NARA Exists</h3>
-
-<p>
-This is part of the reason NARA exists. NARA was born from a simple belief:
-that a child's circumstances should not be allowed to determine the limits of
-their future.
-</p>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="about" class="disclaimer">
-<div class="container">
-
-<h2 class="section-title">Disclaimer</h2>
-
-<div class="disclaimer-box">
-
-<p><strong>This is not an investment.</strong></p>
-
-<p>
-There is no investment opportunity associated
-with NARA Children's Future.
-</p>
-
-<p>
-Donations are completely voluntary.
-No financial return, profit, reward, or guaranteed
-outcome is promised.
-</p>
-
-<p>
-Contributions are intended to support the
-educational purpose described on this website.
-</p>
-
-<p>
-Please contribute only if you are comfortable
-doing so and never send private keys, seed phrases,
-passwords, or other confidential information.
-</p>
-
-</div>
-</div>
-</section>
-
-<section class="support">
-<div class="container">
-
-<div class="support-grid">
-
-<div>
-<h3 class="support-title">Education</h3>
-<p class="support-text">
-Support may help with educational needs such as
-learning materials, school-related expenses,
-supplies, transportation, and other necessary
-education-related costs.
-</p>
-</div>
-
-<div>
-<h3 class="support-title">Transparency</h3>
-<p class="support-text">
-The Bitcoin address displayed here is a public
-receiving address. Bitcoin transactions can be
-independently verified on the public blockchain.
-</p>
-</div>
-
-<div>
-<h3 class="support-title">Our Commitment</h3>
-<p class="support-text">
-We believe meaningful change begins by giving
-children opportunities to learn, grow, dream,
-and shape their own future.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="thank-you">
-
-<h2>Thank You</h2>
-
-<p>
-We do not ask anyone to give out of pressure,
-guilt, or obligation.
-</p>
-
-<p>
-We simply hope that those who care about the future
-of children will consider helping consciously,
-responsibly, and with an open heart.
-</p>
-
-<p>
-This is not about asking to be rescued.
-It is about recognizing that a child's future can be
-strengthened when people choose to care.
-</p>
-
-<p class="final-line">
-To everyone who has taken the time to read,
-share, encourage, or support this journey —
-thank you.
-</p>
-
-<p>
-Your attention, kindness, trust, and consideration
-are sincerely appreciated.
-</p>
-
-</section>
-
-</main>
-
-<footer>
-NARA Children's Future © 2026
-</footer>
-
-<script>
-
-function toggleMenu(){
-document.getElementById("navLinks").classList.toggle("show");
-}
-
-function closeMenu(){
-document.getElementById("navLinks").classList.remove("show");
-}
-
-function copyBTC(){
-
-const address=document.getElementById("btcAddress").innerText.trim();
-const message=document.getElementById("copyMessage");
-
-if(navigator.clipboard && window.isSecureContext){
-
-navigator.clipboard.writeText(address)
-.then(function(){
-showCopied();
-})
-.catch(function(){
-fallbackCopy(address);
-});
-
-}else{
-fallbackCopy(address);
-}
-
-}
-
-function showCopied(){
-
-const message=document.getElementById("copyMessage");
-
-message.innerText="Copied ✓";
-
-setTimeout(function(){
-message.innerText="";
-},2500);
-
-}
-
-function fallbackCopy(address){
-
-const textarea=document.createElement("textarea");
-
-textarea.value=address;
-textarea.style.position="fixed";
-textarea.style.opacity="0";
-
-document.body.appendChild(textarea);
-
-textarea.focus();
-textarea.select();
-
-try{
-
-document.execCommand("copy");
-showCopied();
-
-}catch(e){
-
-document.getElementById("copyMessage").innerText="Please copy manually.";
-
-}
-
-document.body.removeChild(textarea);
-}
-
-document.addEventListener("click",function(e){
-
-const menu=document.getElementById("navLinks");
-const button=document.querySelector(".menu-btn");
-
-if(
-window.innerWidth<=760 &&
-!menu.contains(e.target) &&
-!button.contains(e.target)
-){
-
-menu.classList.remove("show");
-
-}
-
-});
-
-</script>
 
 </body>
 </html>
