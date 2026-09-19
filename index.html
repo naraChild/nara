@@ -1380,17 +1380,52 @@ body {
 <script>
 
 /* =========================================================
-   LANDING PAGE
+   NARA ACCESS MEMORY
    ========================================================= */
 
-/* Hide main website when page first loads */
+/*
+   NARA remembers that the visitor has already entered
+   the main website.
 
-document.getElementById("naraMain").style.display = "none";
+   Only the access status is stored.
+   Name and email are NOT stored.
+*/
+
+const naraAccessGranted =
+    localStorage.getItem("naraAccessGranted") === "true";
 
 
 /* =========================
-   SHOW SIGNUP
+   INITIAL PAGE STATE
    ========================= */
+
+if (naraAccessGranted) {
+
+    /*
+       Visitor has already entered NARA.
+       Skip the landing page completely.
+    */
+
+    document.getElementById("naraLanding").style.display = "none";
+
+    document.getElementById("naraMain").style.display = "block";
+
+} else {
+
+    /*
+       First visit.
+       Show landing page and hide NARA.
+    */
+
+    document.getElementById("naraLanding").style.display = "flex";
+
+    document.getElementById("naraMain").style.display = "none";
+}
+
+
+/* =========================================================
+   SHOW SIGNUP
+   ========================================================= */
 
 function showSignup() {
 
@@ -1400,9 +1435,9 @@ function showSignup() {
 }
 
 
-/* =========================
+/* =========================================================
    ENTER NARA
-   ========================= */
+   ========================================================= */
 
 function enterNara(event) {
 
@@ -1418,7 +1453,9 @@ function enterNara(event) {
         document.getElementById("signupError");
 
 
-    /* CHECK NAME */
+    /* =========================
+       CHECK NAME
+       ========================= */
 
     if (!name) {
 
@@ -1431,7 +1468,9 @@ function enterNara(event) {
     }
 
 
-    /* CHECK EMAIL */
+    /* =========================
+       CHECK EMAIL
+       ========================= */
 
     const emailPattern =
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -1447,22 +1486,40 @@ function enterNara(event) {
     }
 
 
-    /* VALID */
+    /* =========================
+       VALID
+       ========================= */
 
     error.style.display = "none";
 
 
-    /* HIDE LANDING */
+    /* =========================
+       REMEMBER NARA ACCESS
+       ========================= */
+
+    localStorage.setItem(
+        "naraAccessGranted",
+        "true"
+    );
+
+
+    /* =========================
+       HIDE LANDING
+       ========================= */
 
     document.getElementById("naraLanding").style.display = "none";
 
 
-    /* SHOW MAIN NARA */
+    /* =========================
+       SHOW MAIN NARA
+       ========================= */
 
     document.getElementById("naraMain").style.display = "block";
 
 
-    /* START AT TOP */
+    /* =========================
+       START AT TOP
+       ========================= */
 
     window.scrollTo(0, 0);
 }
