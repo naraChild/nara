@@ -392,10 +392,6 @@ body {
     cursor: pointer;
 }
 
-.read-more-button::after {
-    content: "";
-}
-
 
 /* =========================
    MORE CONTENT
@@ -525,6 +521,82 @@ body {
     color: #333333;
 
     line-height: 1.45;
+}
+
+
+/* =========================================================
+   GET CLOSER — ACTIVITIES LINK
+   ========================================================= */
+
+.get-closer {
+    width: 100%;
+    background: #ffffff;
+
+    text-align: center;
+
+    padding: 10px 20px 45px;
+}
+
+.get-closer-text {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #151515;
+}
+
+.get-closer-arrow {
+    display: inline-block;
+
+    margin: 0 10px;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    color: #151515;
+}
+
+.get-closer-link {
+    display: inline-block;
+
+    color: #ffd400;
+
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    animation: naraBlink 1s infinite;
+}
+
+
+/* =========================
+   BLINK
+   ========================= */
+
+@keyframes naraBlink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0.15;
+    }
+
+}
+
+
+/* =========================
+   HOVER
+   ========================= */
+
+.get-closer-link:hover {
+    color: #151515;
 }
 
 
@@ -908,6 +980,28 @@ body {
     }
 
 
+    /* =========================
+       GET CLOSER MOBILE
+       ========================= */
+
+    .get-closer {
+        padding: 5px 15px 40px;
+    }
+
+    .get-closer-text {
+        font-size: 19px;
+    }
+
+    .get-closer-arrow {
+        font-size: 24px;
+        margin: 0 7px;
+    }
+
+    .get-closer-link {
+        font-size: 24px;
+    }
+
+
     .what-we-support {
         padding: 10px 24px 50px 24px;
     }
@@ -959,10 +1053,6 @@ body {
 
 <div id="naraLanding">
 
-    <!-- =========================
-         FIRST SCREEN
-         ========================= -->
-
     <div class="landing-content" id="naraWelcome">
 
         <div class="landing-welcome">
@@ -987,10 +1077,6 @@ body {
 
     </div>
 
-
-    <!-- =========================
-         NAME & EMAIL SCREEN
-         ========================= -->
 
     <div class="landing-content" id="naraSignup">
 
@@ -1086,14 +1172,9 @@ body {
 
     <div class="read-more-section">
 
-        <!-- SHORT VERSION -->
-
         <p class="read-more-intro">
             A child should never have to lose the chance to learn simply because life gave them less.
         </p>
-
-
-        <!-- READ MORE BUTTON -->
 
         <button
             type="button"
@@ -1101,9 +1182,6 @@ body {
             onclick="showMore()">
             Read More →
         </button>
-
-
-        <!-- FULL CONTENT -->
 
         <div id="moreContent" class="more-content">
 
@@ -1120,9 +1198,6 @@ body {
             <p class="final-call">
                 There is NO WAY OUT but TAKE AN ACTION
             </p>
-
-
-            <!-- SEE LESS AT THE END -->
 
             <button
                 type="button"
@@ -1170,6 +1245,29 @@ body {
         Don't let their ambitions fall short.
 
     </div>
+
+</section>
+
+
+<!-- =========================================================
+     GET CLOSER — ACTIVITIES
+     ========================================================= -->
+
+<section class="get-closer">
+
+    <span class="get-closer-text">
+        LET GET CLOSER
+    </span>
+
+    <span class="get-closer-arrow">
+        →
+    </span>
+
+    <a
+        href="activities.html"
+        class="get-closer-link">
+        CLICK HERE
+    </a>
 
 </section>
 
@@ -1239,8 +1337,6 @@ body {
             <h3>DONATE USDT</h3>
 
 
-            <!-- USDT TRC20 -->
-
             <div class="usdt-item">
 
                 <p class="usdt-label">
@@ -1265,8 +1361,6 @@ body {
 
             </div>
 
-
-            <!-- USDT BEP20 -->
 
             <div class="usdt-item">
 
@@ -1370,7 +1464,6 @@ body {
 </section>
 
 </div>
-<!-- END NARA MAIN WEBSITE -->
 
 
 <!-- =========================================================
@@ -1383,14 +1476,6 @@ body {
    NARA ACCESS MEMORY
    ========================================================= */
 
-/*
-   NARA remembers that the visitor has already entered
-   the main website.
-
-   Only the access status is stored.
-   Name and email are NOT stored.
-*/
-
 const naraAccessGranted =
     localStorage.getItem("naraAccessGranted") === "true";
 
@@ -1401,21 +1486,11 @@ const naraAccessGranted =
 
 if (naraAccessGranted) {
 
-    /*
-       Visitor has already entered NARA.
-       Skip the landing page completely.
-    */
-
     document.getElementById("naraLanding").style.display = "none";
 
     document.getElementById("naraMain").style.display = "block";
 
 } else {
-
-    /*
-       First visit.
-       Show landing page and hide NARA.
-    */
 
     document.getElementById("naraLanding").style.display = "flex";
 
@@ -1453,10 +1528,6 @@ function enterNara(event) {
         document.getElementById("signupError");
 
 
-    /* =========================
-       CHECK NAME
-       ========================= */
-
     if (!name) {
 
         error.innerText =
@@ -1467,10 +1538,6 @@ function enterNara(event) {
         return;
     }
 
-
-    /* =========================
-       CHECK EMAIL
-       ========================= */
 
     const emailPattern =
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -1486,16 +1553,8 @@ function enterNara(event) {
     }
 
 
-    /* =========================
-       VALID
-       ========================= */
-
     error.style.display = "none";
 
-
-    /* =========================
-       REMEMBER NARA ACCESS
-       ========================= */
 
     localStorage.setItem(
         "naraAccessGranted",
@@ -1503,23 +1562,9 @@ function enterNara(event) {
     );
 
 
-    /* =========================
-       HIDE LANDING
-       ========================= */
-
     document.getElementById("naraLanding").style.display = "none";
 
-
-    /* =========================
-       SHOW MAIN NARA
-       ========================= */
-
     document.getElementById("naraMain").style.display = "block";
-
-
-    /* =========================
-       START AT TOP
-       ========================= */
 
     window.scrollTo(0, 0);
 }
@@ -1537,13 +1582,7 @@ function showMore() {
     const readMoreButton =
         document.querySelector(".read-more-button");
 
-
-    /* Tampilkan isi lengkap */
-
     moreContent.style.display = "block";
-
-
-    /* Hilangkan Read More */
 
     readMoreButton.style.display = "none";
 }
@@ -1561,13 +1600,7 @@ function showLess() {
     const readMoreButton =
         document.querySelector(".read-more-button");
 
-
-    /* Sembunyikan isi lengkap */
-
     moreContent.style.display = "none";
-
-
-    /* Tampilkan kembali Read More */
 
     readMoreButton.style.display = "inline-block";
 }
