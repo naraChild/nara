@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NARA — A Child Is A Future</title>
 
@@ -26,9 +26,12 @@ html {
 body {
     margin: 0;
     padding: 0;
+
     background: #ffffff;
     color: #111111;
+
     font-family: Georgia, "Times New Roman", serif;
+
     line-height: 1.55;
 }
 
@@ -42,13 +45,22 @@ img {
    ========================================================= */
 
 #naraLanding {
+
     position: fixed;
+
     inset: 0;
+
     z-index: 9999;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow-y: auto;
 
     background: #000000;
 
@@ -56,11 +68,16 @@ img {
 }
 
 .landing-box {
+
     width: min(520px, 100%);
+
+    margin: auto;
+
     text-align: center;
 }
 
 .landing-photo {
+
     display: block;
 
     width: 100%;
@@ -72,15 +89,23 @@ img {
 }
 
 .landing-title {
+
     margin-top: 18px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-weight: bold;
 
-    line-height: 1.05;
+    line-height: 1.02;
+
+    text-align: center;
 }
 
 .landing-title .white {
+
     display: block;
 
     color: #ffffff;
@@ -89,6 +114,7 @@ img {
 }
 
 .landing-title .yellow {
+
     display: block;
 
     color: #ffd21c;
@@ -99,47 +125,70 @@ img {
 }
 
 .landing-form {
+
+    width: 100%;
+
     margin-top: 25px;
 }
 
 .landing-form input {
+
     display: block;
 
     width: 100%;
 
     margin: 10px 0;
+
     padding: 13px 15px;
 
-    border: 1px solid #777;
+    border: 1px solid #777777;
+
     border-radius: 3px;
 
     background: #ffffff;
+
     color: #111111;
 
-    font-family: inherit;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 16px;
 }
 
 .landing-button {
+
+    display: block;
+
     width: 100%;
 
     margin-top: 8px;
+
     padding: 14px 18px;
 
     border: none;
+
     border-radius: 3px;
 
     background: #ffd21c;
+
     color: #111111;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
 }
 
 .landing-button:hover {
+
     opacity: 0.9;
 }
 
@@ -149,6 +198,7 @@ img {
    ========================================================= */
 
 #naraMain {
+
     display: none;
 
     width: 100%;
@@ -157,12 +207,11 @@ img {
 
 /* =========================================================
    HEADER
-   IMPORTANT:
    header.png SUDAH BERISI FOTO + A CHILD IS A FUTURE
-   JANGAN TAMBAHKAN TEXT HEADER LAGI
    ========================================================= */
 
 .header {
+
     width: 100%;
 
     margin: 0;
@@ -174,10 +223,12 @@ img {
 }
 
 .header img {
+
     display: block;
 
     width: 100%;
     max-width: 100%;
+
     height: auto;
 
     margin: 0;
@@ -190,9 +241,11 @@ img {
    ========================================================= */
 
 .container {
+
     width: min(1180px, 94%);
 
     margin: 0 auto;
+
     padding: 45px 0 60px;
 }
 
@@ -202,9 +255,11 @@ img {
    ========================================================= */
 
 .content-grid {
+
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 55px;
 
@@ -217,35 +272,43 @@ img {
    ========================================================= */
 
 .section {
+
     margin-bottom: 42px;
 }
 
 .section h2 {
+
     margin: 0 0 8px;
 
-    font-size: clamp(24px, 3vw, 34px);
+    font-size:
+        clamp(24px, 3vw, 34px);
 
     line-height: 1.15;
 }
 
 .section h3 {
+
     margin: 20px 0 8px;
 
     font-size: 22px;
 }
 
 .section p {
+
     margin: 7px 0;
 
     font-size: 17px;
 }
 
 .italic {
+
     font-style: italic;
 }
 
 .bold-italic {
+
     font-weight: bold;
+
     font-style: italic;
 }
 
@@ -256,6 +319,7 @@ img {
 
 .read-more,
 .see-less {
+
     color: #111111;
 
     text-decoration: underline;
@@ -266,6 +330,7 @@ img {
 }
 
 .full-text {
+
     display: none;
 }
 
@@ -275,15 +340,18 @@ img {
    ========================================================= */
 
 .children-title {
+
     margin-bottom: 15px !important;
 
     font-style: italic;
 }
 
 .children-gallery {
+
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 6px;
 
@@ -291,9 +359,11 @@ img {
 }
 
 .children-gallery img {
+
     display: block;
 
     width: 100%;
+
     aspect-ratio: 1.35 / 1;
 
     object-fit: cover;
@@ -302,6 +372,7 @@ img {
 }
 
 .children-message {
+
     margin-top: 20px;
 
     text-align: center;
@@ -309,6 +380,7 @@ img {
     font-size: 17px;
 
     font-weight: bold;
+
     font-style: italic;
 }
 
@@ -318,13 +390,15 @@ img {
    ========================================================= */
 
 .activities-link {
+
     display: block;
 
     margin: 40px 0;
 
     color: #111111;
 
-    font-size: clamp(20px, 2.5vw, 28px);
+    font-size:
+        clamp(20px, 2.5vw, 28px);
 
     font-weight: bold;
 
@@ -334,6 +408,7 @@ img {
 }
 
 .activities-link .click-here {
+
     color: #e5ad00;
 
     text-decoration: underline;
@@ -345,123 +420,162 @@ img {
    ========================================================= */
 
 .support-intro {
+
     margin-bottom: 20px;
 }
 
 .support-intro p {
+
     margin: 6px 0;
 }
 
 
 /* =========================================================
    DONATION
-   BTC + USDT DALAM SATU BAGIAN
+   SAMA SEPERTI ACTIVITIES.HTML
    ========================================================= */
 
-.donation-box {
+.donation-section {
+
     width: 100%;
 
-    border: 1px solid #cccccc;
-
-    background: #fafafa;
-
     margin-top: 20px;
+
+    padding: 35px 20px 40px;
+
+    background: #f5f5f5;
+
+    border-radius: 16px;
 }
 
 .donation-title {
-    margin: 0;
 
-    padding: 16px 18px;
+    margin: 0 0 25px;
 
-    font-size: 25px;
+    text-align: center;
 
-    font-weight: bold;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    border-bottom: 1px solid #cccccc;
+    font-size: 28px;
+
+    font-weight: 700;
 }
 
-.donation-item {
-    padding: 18px;
 
-    border-bottom: 1px solid #dddddd;
+/* =========================================================
+   DONATION BOX
+   ========================================================= */
+
+.donation-box {
+
+    max-width: 760px;
+
+    margin: 0 auto 18px;
+
+    padding: 20px;
+
+    background: #151515;
+
+    border-radius: 12px;
 }
 
-.donation-item:last-child {
-    border-bottom: none;
+.donation-label {
+
+    margin-bottom: 10px;
+
+    color: #ffd400;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.8px;
 }
 
-.donation-item h3 {
-    margin: 0 0 8px;
+.donation-address {
 
-    font-size: 20px;
-}
-
-.network {
-    margin: 0 0 7px;
-
-    font-size: 15px;
-
-    font-weight: bold;
-}
-
-.address-row {
-    display: flex;
+    display: block;
 
     width: 100%;
 
-    overflow: hidden;
-
-    border: 1px solid #222222;
-
-    border-radius: 2px;
-}
-
-.address {
-    flex: 1;
-
-    min-width: 0;
-
-    padding: 11px 12px;
+    padding: 12px 13px;
 
     background: #ffffff;
 
-    color: #111111;
+    color: #151515;
+
+    border-radius: 7px;
 
     font-family: Arial, sans-serif;
 
-    font-size: 14px;
+    font-size: 13px;
+
+    line-height: 1.5;
 
     word-break: break-all;
+
+    user-select: all;
 }
 
 .copy-button {
-    flex: 0 0 80px;
+
+    margin-top: 12px;
+
+    padding: 9px 18px;
 
     border: none;
 
-    background: #000000;
-    color: #ffffff;
+    border-radius: 6px;
+
+    background: #ffd400;
+
+    color: #151515;
 
     font-family: Arial, sans-serif;
 
     font-size: 13px;
-    font-weight: bold;
+
+    font-weight: 900;
 
     cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .copy-button:hover {
-    background: #222222;
+
+    background: #ffffff;
+
+    transform: translateY(-1px);
 }
 
-.copy-status {
-    margin: 6px 0 0;
 
-    font-size: 13px;
+/* =========================================================
+   DONATION NOTE
+   ========================================================= */
+
+.donation-note {
+
+    max-width: 760px;
+
+    margin: 22px auto 0;
+
+    text-align: center;
 
     color: #555555;
 
-    font-style: italic;
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
 }
 
 
@@ -470,6 +584,7 @@ img {
    ========================================================= */
 
 .warning-box {
+
     margin-top: 20px;
 
     padding: 18px;
@@ -480,6 +595,7 @@ img {
 }
 
 .warning-title {
+
     margin: 0 0 8px;
 
     font-size: 20px;
@@ -488,6 +604,7 @@ img {
 }
 
 .warning-box p {
+
     margin: 5px 0;
 
     font-size: 15px;
@@ -499,6 +616,7 @@ img {
    ========================================================= */
 
 .disclaimer {
+
     margin-top: 22px;
 
     padding: 18px;
@@ -507,12 +625,15 @@ img {
 
     color: #555555;
 
+    font-family: Arial, sans-serif;
+
     font-size: 13px;
 
     line-height: 1.5;
 }
 
 .disclaimer strong {
+
     color: #222222;
 }
 
@@ -522,7 +643,9 @@ img {
    ========================================================= */
 
 .footer {
+
     margin-top: 40px;
+
     padding-top: 20px;
 
     border-top: 1px solid #dddddd;
@@ -530,6 +653,8 @@ img {
     text-align: center;
 
     color: #777777;
+
+    font-family: Arial, sans-serif;
 
     font-size: 13px;
 }
@@ -542,109 +667,152 @@ img {
 @media (max-width: 850px) {
 
     .content-grid {
+
         grid-template-columns: 1fr;
 
         gap: 10px;
     }
 
     .container {
+
         width: min(94%, 680px);
 
         padding-top: 35px;
     }
 
     .section {
+
         margin-bottom: 35px;
     }
 }
 
 
 /* =========================================================
-   MOBILE / HP
+   MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
 
     body {
+
         line-height: 1.45;
     }
 
+    #naraLanding {
+
+        align-items: flex-start;
+
+        padding:
+            20px 15px;
+    }
+
+    .landing-box {
+
+        width: 100%;
+
+        max-width: 520px;
+
+        margin:
+            auto 0;
+    }
+
+    .landing-photo {
+
+        width: 100%;
+    }
+
+    .landing-title {
+
+        margin-top: 14px;
+    }
+
+    .landing-title .white {
+
+        font-size:
+            clamp(28px, 8vw, 44px);
+    }
+
+    .landing-title .yellow {
+
+        font-size:
+            clamp(38px, 11vw, 62px);
+    }
+
+    .landing-form {
+
+        margin-top: 18px;
+    }
+
     .container {
+
         width: 92%;
 
         padding-top: 28px;
+
         padding-bottom: 45px;
     }
 
     .section {
+
         margin-bottom: 32px;
     }
 
     .section h2 {
+
         font-size: 25px;
     }
 
     .section p {
+
         font-size: 16px;
     }
 
     .children-gallery {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2, 1fr);
 
         gap: 5px;
     }
 
     .children-gallery img {
+
         aspect-ratio: 1.25 / 1;
     }
 
     .activities-link {
+
         margin: 30px 0;
 
         font-size: 21px;
     }
 
+    .donation-section {
+
+        padding:
+            28px 12px 32px;
+    }
+
     .donation-title {
-        padding: 14px;
 
-        font-size: 22px;
+        font-size: 25px;
     }
 
-    .donation-item {
-        padding: 14px;
+    .donation-box {
+
+        padding: 16px;
     }
 
-    .donation-item h3 {
-        font-size: 18px;
-    }
+    .donation-address {
 
-    .address-row {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .address {
-        width: 100%;
-
-        padding: 11px;
-
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .copy-button {
-        flex: none;
 
         width: 100%;
 
         min-height: 42px;
-    }
-
-    .landing-box {
-        width: 100%;
-    }
-
-    .landing-form {
-        margin-top: 20px;
     }
 }
 
@@ -656,73 +824,91 @@ img {
 @media (max-width: 360px) {
 
     .container {
+
         width: 94%;
     }
 
     .children-gallery {
-        grid-template-columns: 1fr 1fr;
+
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .section h2 {
+
         font-size: 23px;
     }
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
-
 <!-- =======================================================
-     LANDING
+     LANDING PAGE
      ======================================================= -->
 
 <div id="naraLanding">
 
-    <div class="landing-box">
+```
+<div class="landing-box">
 
-        <img
-            src="Act7.jpg"
-            alt="NARA"
-            class="landing-photo"
-        >
+    <img
+        src="Act7.jpg"
+        alt="NARA"
+        class="landing-photo"
+    >
 
-        <div class="landing-title">
-            <span class="white">A Child Is</span>
-            <span class="yellow">A Future</span>
-        </div>
+    <div class="landing-title">
 
-        <form id="naraSignup" class="landing-form">
+        <span class="white">
+            A Child Is
+        </span>
 
-            <input
-                type="text"
-                id="visitorName"
-                placeholder="Your Name"
-                required
-            >
-
-            <input
-                type="email"
-                id="visitorEmail"
-                placeholder="Your Email"
-                required
-            >
-
-            <button
-                type="submit"
-                class="landing-button"
-            >
-                INSTANT ACCESS
-            </button>
-
-        </form>
+        <span class="yellow">
+            A Future
+        </span>
 
     </div>
 
-</div>
 
+    <form
+        id="naraSignup"
+        class="landing-form">
+
+
+        <input
+            type="text"
+            id="visitorName"
+            placeholder="Your Name"
+            required
+        >
+
+
+        <input
+            type="email"
+            id="visitorEmail"
+            placeholder="Your Email"
+            required
+        >
+
+
+        <button
+            type="submit"
+            class="landing-button">
+
+            INSTANT ACCESS
+
+        </button>
+
+    </form>
+
+</div>
+```
+
+</div>
 
 <!-- =======================================================
      MAIN NARA
@@ -730,547 +916,486 @@ img {
 
 <div id="naraMain">
 
+```
+<!-- ===================================================
+     HEADER
+     =================================================== -->
 
-    <!-- ===================================================
-         HEADER
-         HANYA GAMBAR.
-         TIDAK ADA TEXT TAMBAHAN.
-         =================================================== -->
+<div class="header">
 
-    <div class="header">
+    <img
+        src="header.png"
+        alt="NARA"
+    >
 
-        <img
-            src="header.png"
-            alt="NARA"
-        >
+</div>
+
+
+<main class="container">
+
+
+    <!-- =================================================
+         TWO COLUMN CONTENT
+         ================================================= -->
+
+    <div class="content-grid">
+
+
+        <!-- =============================================
+             LEFT COLUMN
+             ============================================= -->
+
+        <div>
+
+
+            <!-- WHO & HOW NARA -->
+
+            <section class="section">
+
+                <h2>
+                    WHO &amp; HOW NARA
+                </h2>
+
+                <p class="italic">
+                    Called by compassion.
+                </p>
+
+                <p class="italic">
+                    Driven by care.
+                </p>
+
+                <p class="italic">
+                    Committed to real action.
+                </p>
+
+            </section>
+
+
+            <!-- WHY IT MATTERS -->
+
+            <section class="section">
+
+                <h2>
+                    WHY IT MATTERS?
+                </h2>
+
+                <p>
+
+                    A child should never have to lose
+                    the chance to learn simply because
+                    life gave them less.
+
+                </p>
+
+
+                <a
+                    href="javascript:void(0)"
+                    class="read-more"
+                    id="readMore">
+
+                    Read More →
+
+                </a>
+
+
+                <div
+                    class="full-text"
+                    id="fullText">
+
+
+                    <p>
+
+                        Education is more than a classroom.
+                        It is a door to a different future —
+                        and sometimes, a small act of care
+                        is what keeps that door open.
+
+                    </p>
+
+
+                    <p>
+
+                        We can see the need.
+                        We can understand the struggle.
+
+                    </p>
+
+
+                    <p class="bold-italic">
+
+                        But understanding alone changes nothing.
+
+                    </p>
+
+
+                    <p class="bold-italic">
+
+                        There is no way forward. We must act.
+
+                    </p>
+
+
+                    <a
+                        href="javascript:void(0)"
+                        class="see-less"
+                        id="seeLess">
+
+                        See Less ↑
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- CHILDREN CHEERS -->
+
+            <section class="section">
+
+                <h2 class="children-title">
+
+                    Children Cheers
+
+                </h2>
+
+
+                <div class="children-gallery">
+
+                    <img
+                        src="Child1.jpg"
+                        alt="Children">
+
+                    <img
+                        src="Child2.jpg"
+                        alt="Children">
+
+                    <img
+                        src="Child3.jpg"
+                        alt="Children">
+
+                    <img
+                        src="Child4.jpg"
+                        alt="Children">
+
+                    <img
+                        src="Child5.jpg"
+                        alt="Children">
+
+                    <img
+                        src="Child6.jpg"
+                        alt="Children">
+
+                </div>
+
+
+                <div class="children-message">
+
+                    <p>
+                        Don't let their hopes pass by.
+                    </p>
+
+                    <p>
+                        Don't let their dreams fade away.
+                    </p>
+
+                    <p>
+                        Don't let their ambitions fall short.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =============================================
+             RIGHT COLUMN
+             ============================================= -->
+
+        <div>
+
+
+            <!-- ACTIVITIES -->
+
+            <section class="section">
+
+                <a
+                    class="activities-link"
+                    href="activities.html">
+
+                    LET'S GET ANY CLOSER →
+
+                    <span class="click-here">
+
+                        CLICK HERE
+
+                    </span>
+
+                </a>
+
+            </section>
+
+
+            <!-- WHAT WE SUPPORT -->
+
+            <section class="section">
+
+                <h2>
+                    WHAT WE SUPPORT?
+                </h2>
+
+
+                <div class="support-intro">
+
+                    <p>
+
+                        Let them keep running toward
+                        their dreams and aspirations,
+                        reaching for hope.
+
+                    </p>
+
+
+                    <p>
+
+                        Please consider supporting only
+                        if you are able and willing to do so.
+
+                    </p>
+
+
+                    <p>
+
+                        Please make sure you understand
+                        the risks before donating or
+                        sending funds.
+
+                    </p>
+
+                </div>
+
+
+                <!-- =====================================
+                     DONATION
+                     ===================================== -->
+
+                <section class="donation-section">
+
+
+                    <h2 class="donation-title">
+
+                        SUPPORT NARA
+
+                    </h2>
+
+
+                    <!-- BITCOIN -->
+
+                    <div class="donation-box">
+
+                        <div class="donation-label">
+
+                            BITCOIN
+
+                        </div>
+
+
+                        <div
+                            class="donation-address"
+                            id="btcAddress">
+
+                            166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="copy-button"
+                            onclick="copyDonation(
+                                'btcAddress',
+                                this
+                            )">
+
+                            COPY
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- USDT TRC20 -->
+
+                    <div class="donation-box">
+
+                        <div class="donation-label">
+
+                            USDT TRC20
+
+                        </div>
+
+
+                        <div
+                            class="donation-address"
+                            id="usdtTrcAddress">
+
+                            TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="copy-button"
+                            onclick="copyDonation(
+                                'usdtTrcAddress',
+                                this
+                            )">
+
+                            COPY
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- USDT BEP20 -->
+
+                    <div class="donation-box">
+
+                        <div class="donation-label">
+
+                            USDT BEP20
+
+                        </div>
+
+
+                        <div
+                            class="donation-address"
+                            id="usdtBepAddress">
+
+                            0x5a56e760f487c252f3f878e5a5e3719b39d63075
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="copy-button"
+                            onclick="copyDonation(
+                                'usdtBepAddress',
+                                this
+                            )">
+
+                            COPY
+
+                        </button>
+
+                    </div>
+
+
+                    <p class="donation-note">
+
+                        Please make sure you send each
+                        cryptocurrency using the correct
+                        network and address.
+
+                    </p>
+
+
+                </section>
+
+
+                <!-- =====================================
+                     WARNING
+                     ===================================== -->
+
+                <div class="warning-box">
+
+                    <p class="warning-title">
+
+                        ⚠ Important — Before You Send
+                        Bitcoin and USDT
+
+                    </p>
+
+
+                    <p>
+
+                        Please carefully check the Bitcoin
+                        and USDT address before sending
+                        any funds.
+
+                    </p>
+
+
+                    <p>
+
+                        Make sure you are using the correct
+                        network. Cryptocurrency transactions
+                        may be irreversible.
+
+                    </p>
+
+                </div>
+
+
+                <!-- =====================================
+                     DISCLAIMER
+                     ===================================== -->
+
+                <div class="disclaimer">
+
+                    <strong>
+                        DISCLAIMER
+                    </strong>
+
+                    <br><br>
+
+                    NARA provides information for supporters
+                    who voluntarily wish to contribute.
+                    Donations are made at the sender's own
+                    discretion and responsibility.
+
+                    <br><br>
+
+                    NARA does not guarantee the recovery of
+                    funds sent to an incorrect address or
+                    through an incorrect cryptocurrency
+                    network.
+
+                    <br><br>
+
+                    Please verify all information carefully
+                    before completing any transaction.
+
+                </div>
+
+            </section>
+
+
+        </div>
 
     </div>
 
 
-    <main class="container">
+    <!-- =================================================
+         FOOTER
+         ================================================= -->
 
+    <div class="footer">
 
-        <!-- =================================================
-             TWO COLUMN CONTENT
-             ================================================= -->
+        NARA — A Child Is A Future
 
-        <div class="content-grid">
+    </div>
 
 
-            <!-- =============================================
-                 LEFT COLUMN
-                 ============================================= -->
-
-            <div>
-
-
-                <!-- WHO & HOW NARA -->
-
-                <section class="section">
-
-                    <h2>WHO &amp; HOW NARA</h2>
-
-                    <p class="italic">
-                        Called by compassion.
-                    </p>
-
-                    <p class="italic">
-                        Driven by care.
-                    </p>
-
-                    <p class="italic">
-                        Committed to real action.
-                    </p>
-
-                </section>
-
-
-                <!-- WHY IT MATTERS -->
-
-                <section class="section">
-
-                    <h2>WHY IT MATTERS?</h2>
-
-                    <p>
-                        A child should never have to lose the chance
-                        to learn simply because life gave them less.
-                    </p>
-
-                    <a
-                        href="javascript:void(0)"
-                        class="read-more"
-                        id="readMore"
-                    >
-                        Read More →
-                    </a>
-
-                    <div
-                        class="full-text"
-                        id="fullText"
-                    >
-
-                        <p>
-                            Education is more than a classroom.
-                            It is a door to a different future —
-                            and sometimes, a small act of care is
-                            what keeps that door open.
-                        </p>
-
-                        <p>
-                            We can see the need.
-                            We can understand the struggle.
-                        </p>
-
-                        <p class="bold-italic">
-                            But understanding alone changes nothing.
-                        </p>
-
-                        <p class="bold-italic">
-                            There is no way forward. We must act.
-                        </p>
-
-                        <a
-                            href="javascript:void(0)"
-                            class="see-less"
-                            id="seeLess"
-                        >
-                            See Less ↑
-                        </a>
-
-                    </div>
-
-                </section>
-
-
-                <!-- CHILDREN CHEERS -->
-
-                <section class="section">
-
-                    <h2 class="children-title">
-                        Children Cheers
-                    </h2>
-
-                    <div class="children-gallery">
-
-                        <img
-                            src="Child1.jpg"
-                            alt="Children"
-                        >
-
-                        <img
-                            src="Child2.jpg"
-                            alt="Children"
-                        >
-
-                        <img
-                            src="Child3.jpg"
-                            alt="Children"
-                        >
-
-                        <img
-                            src="Child4.jpg"
-                            alt="Children"
-                        >
-
-                        <img
-                            src="Child5.jpg"
-                            alt="Children"
-                        >
-
-                        <img
-                            src="Child6.jpg"
-                            alt="Children"
-                        >
-
-                    </div>
-
-                    <div class="children-message">
-
-                        <p>
-                            Don't let their hopes pass by.
-                        </p>
-
-                        <p>
-                            Don't let their dreams fade away.
-                        </p>
-
-                        <p>
-                            Don't let their ambitions fall short.
-                        </p>
-
-                    </div>
-
-                </section>
-
-
-            </div>
-
-
-            <!-- =============================================
-                 RIGHT COLUMN
-                 ============================================= -->
-
-            <div>
-
-
-                <!-- ACTIVITIES -->
-
-                <section class="section">
-
-                    <a
-                        class="activities-link"
-                        href="activities.html"
-                    >
-                        LET'S GET ANY CLOSER →
-                        <span class="click-here">
-                            CLICK HERE
-                        </span>
-                    </a>
-
-                </section>
-
-
-                <!-- WHAT WE SUPPORT -->
-
-                <section class="section">
-
-                    <h2>
-                        WHAT WE SUPPORT?
-                    </h2>
-
-                    <div class="support-intro">
-
-                        <p>
-                            Let them keep running toward their dreams
-                            and aspirations, reaching for hope.
-                        </p>
-
-                        <p>
-                            Please consider supporting only if you
-                            are able and willing to do so.
-                        </p>
-
-                        <p>
-                            Please make sure you understand the risks
-                            before donating or sending funds.
-                        </p>
-
-                    </div>
-
-
-                    <!-- =====================================
-                         ONE DONATION BOX
-                         BTC + USDT VERTICAL
-                         ===================================== -->
-
-                    <div class="donation-box">
-
-                        <h2 class="donation-title">
-                            DONATIONS
-                        </h2>
-
-
-                  
-
-                        <div class="donation-item">
-
-                        
-                                
-
-                            <p class="network">
-                                BITCOIN
-                            </p>
-
-                            <div class="address-row">
-
-                                <div
-                                    
-                              
-                                >
-                                    166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
-                                </div>
-
-                                <button
-                                    type="button"
-                                    class="copy-button"
-                                    onclick="copyAddress(
-                                        'btcAddress',
-                                        'btcStatus',
-                                        this
-                                    )"
-                                >
-                                    COPY
-                                </button>
-
-                            </div>
-
-                            <p
-                                class="copy-status"
-                                id="btcStatus"
-                            >
-            
-                            </p>
-                        
-                              <p
-
-                        </div>
-
-
-                  
-
-                        <div class="donation-item">
-
-                            
-                              
-            
-
-
-                        
-
-                            <p class="network">
-                              USDT TRC20
-                            </p>
-
-                            <div class="address-row">
-
-                                <div
-                                    
-                                >
-                                    TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
-                                </div>
-
-                                <button
-                                    type="button"
-                                    class="copy-button"
-                                    onclick="copyAddress(
-                                        'usdtTrc20Address',
-                                        'trc20Status',
-                                        this
-                                    )"
-                                >
-                                    COPY
-                                </button>
-
-                            </div>
-
-                            <p
-                                class="copy-status"
-                                id="trc20Status"
-                            >
-                        
-                            </p>
-
-
-                  
-
-                            <p
-                                <pclass="network"</p>
-                                  BEP20
-                              
-<!-- ===================================================
-         SUPPORT NARA
-         =================================================== -->
-
-    <section class="donation-section">
-
-
-        <h2 class="donation-title">
-
-            SUPPORT NARA
-
-        </h2>
-
-
-
-        <!-- BITCOIN -->
-
-        <div class="donation-box">
-
-            <div class="donation-label">
-
-                BITCOIN
-
-            </div>
-
-
-            <div
-                class="donation-address"
-                id="btcAddress">
-
-                166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
-
-            </div>
-
-
-            <button
-                class="copy-button"
-                onclick="copyDonation('btcAddress', this)">
-
-                COPY
-
-            </button>
-
-        </div>
-
-
-
-        <!-- USDT TRC20 -->
-
-        <div class="donation-box">
-
-            <div class="donation-label">
-
-                USDT TRC20
-
-            </div>
-
-
-            <div
-                class="donation-address"
-                id="usdtTrcAddress">
-
-                TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
-
-            </div>
-
-
-            <button
-                class="copy-button"
-                onclick="copyDonation('usdtTrcAddress', this)">
-
-                COPY
-
-            </button>
-
-        </div>
-
-
-
-        <!-- USDT BEP20 -->
-
-        <div class="donation-box">
-
-            <div class="donation-label">
-
-                USDT BEP20
-
-            </div>
-
-
-            <div
-                class="donation-address"
-                id="usdtBepAddress">
-
-                0x5a56e760f487c252f3f878e5a5e3719b39d63075
-
-            </div>
-
-
-            <button
-                class="copy-button"
-                onclick="copyDonation('usdtBepAddress', this)">
-
-                COPY
-
-            </button>
-
-        </div>
-
-
-
-        <p class="donation-note">
-
-            Please make sure you send each cryptocurrency
-            using the correct network and address.
-
-        </p>
-
-
-                        </div>
-
-
-                        <!-- =================================
-                             WARNING
-                             ================================= -->
-
-                        <div class="warning-box">
-
-                            <p class="warning-title">
-                                ⚠ Important — Before You Send
-                                Bitcoin and USDT
-                            </p>
-
-                            <p>
-                                Please carefully check the Bitcoin
-                                and USDT address before sending any
-                                funds.
-                            </p>
-
-                            <p>
-                                Make sure you are using the correct
-                                network. Cryptocurrency transactions
-                                may be irreversible.
-                            </p>
-
-                        </div>
-
-
-                        <!-- =================================
-                             DISCLAIMER
-                             ================================= -->
-
-                        <div class="disclaimer">
-
-                            <strong>
-                                DISCLAIMER
-                            </strong>
-
-                            <br><br>
-
-                            NARA provides information for supporters
-                            who voluntarily wish to contribute.
-                            Donations are made at the sender's own
-                            discretion and responsibility.
-
-                            <br><br>
-
-                            NARA does not guarantee the recovery of
-                            funds sent to an incorrect address or
-                            through an incorrect cryptocurrency
-                            network.
-
-                            <br><br>
-
-                            Please verify all information carefully
-                            before completing any transaction.
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             FOOTER
-             ================================================= -->
-
-        <div class="footer">
-
-            NARA — A Child Is A Future
-
-        </div>
-
-
-    </main>
+</main>
+```
 
 </div>
-
 
 <script>
 
@@ -1278,35 +1403,27 @@ img {
    NARA PAGE STATE
    ========================================================= */
 
-/*
-   PENTING:
-
-   index.html
-       = LANDING
-
-   index.html#nara
-       = NARA PAGE
-
-   Jadi kita tidak menggunakan localStorage.
-   Ini mencegah masalah Landing tersimpan terus di browser.
-*/
-
-
 function showLanding() {
 
-    document.getElementById("naraLanding").style.display = "flex";
+    document
+        .getElementById("naraLanding")
+        .style.display = "flex";
 
-    document.getElementById("naraMain").style.display = "none";
-
+    document
+        .getElementById("naraMain")
+        .style.display = "none";
 }
 
 
 function showNara() {
 
-    document.getElementById("naraLanding").style.display = "none";
+    document
+        .getElementById("naraLanding")
+        .style.display = "none";
 
-    document.getElementById("naraMain").style.display = "block";
-
+    document
+        .getElementById("naraMain")
+        .style.display = "block";
 }
 
 
@@ -1328,7 +1445,6 @@ function checkNaraState() {
         showLanding();
 
     }
-
 }
 
 
@@ -1344,7 +1460,9 @@ document.addEventListener(
 
 
         const form =
-            document.getElementById("naraSignup");
+            document.getElementById(
+                "naraSignup"
+            );
 
 
         form.addEventListener(
@@ -1356,16 +1474,20 @@ document.addEventListener(
 
                 const name =
                     document
-                    .getElementById("visitorName")
-                    .value
-                    .trim();
+                        .getElementById(
+                            "visitorName"
+                        )
+                        .value
+                        .trim();
 
 
                 const email =
                     document
-                    .getElementById("visitorEmail")
-                    .value
-                    .trim();
+                        .getElementById(
+                            "visitorEmail"
+                        )
+                        .value
+                        .trim();
 
 
                 if (!name || !email) {
@@ -1375,26 +1497,13 @@ document.addEventListener(
                     );
 
                     return;
-
                 }
 
 
                 /*
-                   PENTING:
-
-                   replaceState digunakan supaya Landing
-                   tidak menjadi halaman history terpisah.
-
-                   Setelah masuk NARA:
-
-                   index.html#nara
-
-                   sehingga dari Activities lalu tekan
-                   browser BACK, browser kembali ke:
-
-                   index.html#nara
-
-                   bukan Landing.
+                   Masuk ke NARA menggunakan #nara.
+                   replaceState mencegah landing menjadi
+                   entry history tambahan.
                 */
 
                 try {
@@ -1415,11 +1524,6 @@ document.addEventListener(
                     showNara();
 
                 } catch (error) {
-
-                    /*
-                       Fallback jika browser tidak mendukung
-                       URL/History dengan baik.
-                    */
 
                     window.location.hash = "nara";
 
@@ -1457,22 +1561,30 @@ document.addEventListener(
     function () {
 
         const readMore =
-            document.getElementById("readMore");
+            document.getElementById(
+                "readMore"
+            );
 
         const seeLess =
-            document.getElementById("seeLess");
+            document.getElementById(
+                "seeLess"
+            );
 
         const fullText =
-            document.getElementById("fullText");
+            document.getElementById(
+                "fullText"
+            );
 
 
         readMore.addEventListener(
             "click",
             function () {
 
-                fullText.style.display = "block";
+                fullText.style.display =
+                    "block";
 
-                readMore.style.display = "none";
+                readMore.style.display =
+                    "none";
 
             }
         );
@@ -1482,9 +1594,11 @@ document.addEventListener(
             "click",
             function () {
 
-                fullText.style.display = "none";
+                fullText.style.display =
+                    "none";
 
-                readMore.style.display = "inline";
+                readMore.style.display =
+                    "inline";
 
             }
         );
@@ -1494,59 +1608,57 @@ document.addEventListener(
 
 
 /* =========================================================
-   COPY ADDRESS
+   COPY DONATION
    ========================================================= */
 
-function copyAddress(
-    addressId,
-    statusId,
+function copyDonation(
+    elementId,
     button
 ) {
 
     const addressElement =
-        document.getElementById(addressId);
-
-    const statusElement =
-        document.getElementById(statusId);
-
-
-    const text =
-        addressElement.innerText.trim();
+        document.getElementById(
+            elementId
+        );
 
 
-    function success() {
+    const address =
+        addressElement
+            .innerText
+            .trim();
 
-        button.innerText = "COPIED";
 
-        statusElement.innerText =
-            "Address copied.";
+    function copied() {
+
+        const originalText =
+            button.innerText;
+
+
+        button.innerText =
+            "COPIED ✓";
+
 
         setTimeout(
             function () {
 
-                button.innerText = "COPY";
-
-                statusElement.innerText =
-                    "Address.";
+                button.innerText =
+                    originalText;
 
             },
             1800
         );
-
     }
 
 
     function failed() {
 
-        statusElement.innerText =
-            "Please copy the address manually.";
-
+        alert(
+            "Unable to copy. Please copy the address manually."
+        );
     }
 
 
-    /*
-       Modern Clipboard
-    */
+    /* Modern Clipboard */
 
     if (
         navigator.clipboard &&
@@ -1554,41 +1666,54 @@ function copyAddress(
     ) {
 
         navigator.clipboard
-            .writeText(text)
-            .then(success)
+            .writeText(address)
+            .then(copied)
             .catch(failed);
 
         return;
-
     }
 
 
-    /*
-       Fallback untuk browser / file lokal
-    */
+    /* Fallback */
 
     const textarea =
-        document.createElement("textarea");
+        document.createElement(
+            "textarea"
+        );
 
-    textarea.value = text;
 
-    textarea.style.position = "fixed";
-    textarea.style.left = "-9999px";
+    textarea.value =
+        address;
 
-    document.body.appendChild(textarea);
+
+    textarea.style.position =
+        "fixed";
+
+    textarea.style.left =
+        "-9999px";
+
+
+    document.body.appendChild(
+        textarea
+    );
+
 
     textarea.focus();
+
     textarea.select();
 
 
     try {
 
         const successful =
-            document.execCommand("copy");
+            document.execCommand(
+                "copy"
+            );
+
 
         if (successful) {
 
-            success();
+            copied();
 
         } else {
 
@@ -1603,7 +1728,9 @@ function copyAddress(
     }
 
 
-    document.body.removeChild(textarea);
+    document.body.removeChild(
+        textarea
+    );
 
 }
 
