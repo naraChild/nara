@@ -1,1 +1,839 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NARA — Digital Opportunity Programme</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#f7f5ef;
+    color:#111;
+    font-family:Georgia,"Times New Roman",serif;
+    line-height:1.65;
+}
+
+a{
+    color:inherit;
+}
+
+.container{
+    width:min(1080px,92%);
+    margin:auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+    min-height:78vh;
+    display:flex;
+    align-items:center;
+    background:#000;
+    color:#fff;
+    padding:70px 0;
+}
+
+.hero-inner{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:70px;
+    align-items:center;
+}
+
+.kicker{
+    font-family:Arial,sans-serif;
+    letter-spacing:3px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:22px;
+    color:#ffd21c;
+}
+
+h1{
+    margin:0;
+    font-size:clamp(52px,8vw,96px);
+    line-height:.95;
+    letter-spacing:-3px;
+}
+
+h1 em{
+    color:#ffd21c;
+    font-weight:normal;
+}
+
+.hero-lead{
+    max-width:650px;
+    margin:30px 0 0;
+    font-size:clamp(20px,2.3vw,28px);
+    color:#e8e8e8;
+}
+
+.hero-note{
+    margin-top:30px;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    color:#aaa;
+}
+
+.mark{
+    width:min(330px,75vw);
+    aspect-ratio:1;
+    margin:auto;
+    border:1px solid #444;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:35px;
+}
+
+.mark strong{
+    display:block;
+    font-family:Arial,sans-serif;
+    font-size:54px;
+    letter-spacing:8px;
+}
+
+.mark span{
+    display:block;
+    margin-top:10px;
+    color:#ffd21c;
+    font-size:15px;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+section{
+    padding:90px 0;
+}
+
+.section-grid{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:60px;
+}
+
+.eyebrow{
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:bold;
+    color:#777;
+}
+
+h2{
+    font-size:clamp(34px,5vw,58px);
+    line-height:1.02;
+    margin:15px 0 25px;
+}
+
+h2 em{
+    font-weight:normal;
+}
+
+.lead{
+    font-size:22px;
+}
+
+
+/* =========================================================
+   PROGRAM
+   ========================================================= */
+
+.program{
+    background:#111;
+    color:#fff;
+}
+
+.program .eyebrow{
+    color:#ffd21c;
+}
+
+.program h2{
+    color:#fff;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:35px;
+}
+
+.card{
+    border:1px solid #333;
+    padding:28px;
+    min-height:190px;
+}
+
+.card-number{
+    font-family:Arial,sans-serif;
+    color:#ffd21c;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+.card h3{
+    font-size:24px;
+    margin:15px 0 10px;
+}
+
+.card p{
+    color:#ccc;
+    margin:0;
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.action{
+    background:#ffd21c;
+}
+
+.action h2{
+    max-width:800px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:35px;
+}
+
+.step{
+    background:#fff;
+    padding:25px;
+    border:1px solid #ddd;
+}
+
+.step strong{
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.step h3{
+    font-size:22px;
+    margin:14px 0 8px;
+}
+
+
+/* =========================================================
+   SUPPORT
+   ========================================================= */
+
+.proof{
+    background:#fff;
+}
+
+.proof-box{
+    border-left:4px solid #111;
+    padding:5px 0 5px 30px;
+    max-width:820px;
+    font-size:20px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact{
+    background:#000;
+    color:#fff;
+    text-align:center;
+}
+
+.contact h2{
+    max-width:850px;
+    margin:15px auto 25px;
+}
+
+.contact p{
+    max-width:700px;
+    margin:0 auto 30px;
+    color:#ccc;
+}
+
+.button{
+    display:inline-block;
+    padding:15px 25px;
+    background:#ffd21c;
+    color:#111;
+    text-decoration:none;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    border-radius:2px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+    background:#000;
+    color:#777;
+    border-top:1px solid #222;
+    padding:25px 0;
+    text-align:center;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:800px){
+
+    .hero-inner,
+    .section-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:65px 0;
+    }
+
+    .mark{
+        width:230px;
+    }
+
+    .mark strong{
+        font-size:40px;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:500px){
+
+    .container{
+        width:90%;
+    }
+
+    h1{
+        letter-spacing:-2px;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        min-height:auto;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     HERO
+     ======================================================= -->
+
+<header class="hero">
+
+    <div class="container hero-inner">
+
+        <div>
+
+            <div class="kicker">
+                NARA — A CHILD IS A FUTURE
+            </div>
+
+            <h1>
+                A digital<br>
+                <em>doorway</em><br>
+                to opportunity.
+            </h1>
+
+            <p class="hero-lead">
+                NARA is building a practical digital initiative
+                to help children and young people discover
+                learning resources, technology, future skills
+                and opportunities.
+            </p>
+
+            <p class="hero-note">
+                DIGITAL OPPORTUNITY PROGRAMME · EARLY DEVELOPMENT
+            </p>
+
+        </div>
+
+
+        <div class="mark"
+             aria-label="NARA">
+
+            <div>
+
+                <strong>
+                    NARA
+                </strong>
+
+                <span>
+                    A CHILD IS A FUTURE
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =======================================================
+     THE IDEA
+     ======================================================= -->
+
+<section>
+
+    <div class="container section-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                THE IDEA
+            </div>
+
+            <h2>
+                Access to technology is not the same as
+                access to opportunity.
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <p class="lead">
+                The digital world is changing how young people
+                learn, communicate, create and prepare for work.
+            </p>
+
+            <p>
+                But useful resources are often scattered,
+                difficult to discover, expensive, or written
+                for people who already know where to look.
+            </p>
+
+            <p>
+                NARA is being built to make that first step easier:
+                helping young people find useful knowledge,
+                digital tools, learning resources and pathways
+                toward future opportunities.
+            </p>
+
+            <p>
+                We are starting small, testing what works,
+                measuring what people actually use, and building
+                from evidence rather than promises.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     DIGITAL OPPORTUNITY PROGRAMME
+     ======================================================= -->
+
+<section class="program">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            NARA DIGITAL OPPORTUNITY PROGRAMME
+        </div>
+
+        <h2>
+            From discovery<br>
+            <em>to possibility.</em>
+        </h2>
+
+        <p class="lead">
+            The programme is designed around four practical areas.
+        </p>
+
+
+        <div class="cards">
+
+
+            <article class="card">
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <h3>
+                    Learn
+                </h3>
+
+                <p>
+                    Curated educational resources that help young
+                    people learn useful digital and future-oriented
+                    skills.
+                </p>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <h3>
+                    Discover
+                </h3>
+
+                <p>
+                    Easier access to useful technology, tools,
+                    scholarships, learning opportunities and
+                    other relevant resources.
+                </p>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <h3>
+                    Build
+                </h3>
+
+                <p>
+                    Practical pathways for young people to
+                    experiment, create, develop skills and turn
+                    knowledge into action.
+                </p>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <div class="card-number">
+                    04
+                </div>
+
+                <h3>
+                    Connect
+                </h3>
+
+                <p>
+                    A growing network of educators, organisations,
+                    technology partners and opportunity providers.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     HOW WE BUILD
+     ======================================================= -->
+
+<section class="action">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            HOW WE BUILD
+        </div>
+
+        <h2>
+            We do not want to promise impact.
+            <br>
+            <em>We want to demonstrate it.</em>
+        </h2>
+
+        <p class="lead">
+            NARA will develop through a simple cycle:
+            build, test, measure and improve.
+        </p>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <strong>
+                    01 — BUILD
+                </strong>
+
+                <h3>
+                    Create
+                </h3>
+
+                <p>
+                    Develop useful digital resources and
+                    an accessible platform.
+                </p>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <strong>
+                    02 — TEST
+                </strong>
+
+                <h3>
+                    Reach
+                </h3>
+
+                <p>
+                    Put the resources in front of real young
+                    people and learning communities.
+                </p>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <strong>
+                    03 — MEASURE
+                </strong>
+
+                <h3>
+                    Learn
+                </h3>
+
+                <p>
+                    Track meaningful usage, engagement
+                    and outcomes.
+                </p>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <strong>
+                    04 — SCALE
+                </strong>
+
+                <h3>
+                    Grow
+                </h3>
+
+                <p>
+                    Improve what works and seek partners
+                    to extend its reach.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     WHAT WE ARE ASKING FOR
+     ======================================================= -->
+
+<section class="proof">
+
+    <div class="container section-grid">
+
+
+        <div>
+
+            <div class="eyebrow">
+                WHAT WE ARE ASKING FOR
+            </div>
+
+            <h2>
+                Not a handout.
+                <br>
+                <em>A chance to build.</em>
+            </h2>
+
+        </div>
+
+
+        <div>
+
+            <div class="proof-box">
+
+                <p>
+                    NARA is looking for organisations that can
+                    help us move from an early digital initiative
+                    toward a measurable programme for young people.
+                </p>
+
+                <p>
+                    We are open to appropriate forms of support
+                    including funding, mentorship, technology,
+                    partnerships, educational expertise and
+                    introductions to organisations working toward
+                    similar goals.
+                </p>
+
+                <p>
+                    Any support will be connected to clearly
+                    defined programme activities and transparent
+                    progress reporting.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PARTNERSHIP
+     ======================================================= -->
+
+<section class="contact">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            PARTNERSHIP
+        </div>
+
+        <h2>
+            Help us turn a digital doorway
+            into a path toward the future.
+        </h2>
+
+        <p>
+            NARA is currently developing its first Digital
+            Opportunity Programme and welcomes conversations
+            with organisations that believe every child should
+            have a chance to discover what is possible.
+        </p>
+
+        <a class="button"
+           href="mailto:hello@nara.global?subject=NARA%20Digital%20Opportunity%20Programme">
+
+            Talk to NARA
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <strong>
+            NARA
+        </strong>
+
+        &nbsp;·&nbsp;
+
+        A Child Is A Future
+
+        &nbsp;·&nbsp;
+
+        <span id="year"></span>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>
