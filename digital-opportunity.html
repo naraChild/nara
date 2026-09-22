@@ -1,47 +1,490 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Digital Opportunity</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nara | Digital Opportunities</title>
+
+  <meta name="description"
+        content="Discover curated digital opportunities, tools, and ideas from Nara. Explore new possibilities and take your next step into the digital world.">
+
+  <meta name="robots" content="index, follow">
+
+  <style>
+    :root {
+      --bg: #f7f8fc;
+      --card: rgba(255, 255, 255, 0.88);
+      --text: #151827;
+      --muted: #687084;
+      --accent: #6c63ff;
+      --accent-dark: #5148d9;
+      --border: rgba(21, 24, 39, 0.08);
+      --shadow: 0 20px 60px rgba(30, 35, 70, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(108, 99, 255, 0.12), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(91, 192, 235, 0.10), transparent 35%),
+        var(--bg);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      padding: 28px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+
+    /* HERO */
+
+    .hero {
+      text-align: center;
+      padding: 80px 0 55px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,.7);
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    /* OPPORTUNITIES */
+
+    .opportunities {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      padding: 25px 0 70px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(15px);
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 28px 70px rgba(30, 35, 70, 0.16);
+      border-color: rgba(108, 99, 255, .25);
+    }
+
+    .card-number {
+      color: var(--accent);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+    }
+
+    .card h2 {
+      font-size: 1.55rem;
+      line-height: 1.25;
+      letter-spacing: -.7px;
+      margin-bottom: 13px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .95rem;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: var(--text);
+      color: white;
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 700;
+      transition:
+        background .25s ease,
+        transform .25s ease;
+    }
+
+    .button:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .button::after {
+      content: "→";
+      transition: transform .25s ease;
+    }
+
+    .button:hover::after {
+      transform: translateX(4px);
+    }
+
+    /* FEATURE CARD */
+
+    .card.featured {
+      grid-column: span 2;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(108, 99, 255, .12),
+          rgba(255,255,255,.9)
+        );
+    }
+
+    .featured-content {
+      max-width: 760px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 35px 0 45px;
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--muted);
+      font-size: .82rem;
+      margin-bottom: 8px;
+    }
+
+    .affiliate {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: .72rem;
+      color: #8a91a2;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+
+      header {
+        padding: 22px 0;
+      }
+
+      .nav-label {
+        display: none;
+      }
+
+      .hero {
+        padding: 55px 0 40px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .opportunities {
+        grid-template-columns: 1fr;
+      }
+
+      .card.featured {
+        grid-column: span 1;
+      }
+
+      .card {
+        padding: 27px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Digital Opportunity</h1>
+<header>
+  <div class="container nav">
+    <div class="brand">Nara<span>.</span></div>
+    <div class="nav-label">Digital Opportunities</div>
+  </div>
+</header>
 
-<p>NaraChilds</p>
-<a href="https://5dce88ili4j5z7taqjz9m5zhmv.hop.clickbank.net">
-View NaraChilds
-</a>
+<main>
 
-<hr>
+  <section class="hero container">
 
-<p>NaraCheers</p>
-<a href="https://bd8a5mddd1i9ukubmi3etyslnp.hop.clickbank.net">
-View NaraCheers
-</a>
+    <div class="eyebrow">
+      Explore • Learn • Grow
+    </div>
 
-<hr>
+    <h1>
+      Discover Your Next
+      <span>Digital Opportunity.</span>
+    </h1>
 
-<p>NaraCute</p>
-<a href="https://eb7ad8ldna3iss57djvgk4pjlb.hop.clickbank.net">
-View NaraCute
-</a>
+    <p>
+      Welcome to Nara's curated digital space — where ideas,
+      technology, creativity, and opportunity come together.
+      Explore something new and take your next step forward.
+    </p>
 
-<hr>
+  </section>
 
-<p>NaraKids</p>
-<a href="https://51bb6dpefdlz3r99lj0hkxntcb.hop.clickbank.net">
-View NaraKids
-</a>
 
-<hr>
+  <section class="container opportunities">
 
-<p>NaraKid</p>
-<a href="https://c33807jedaw4cw5-hk0bjx0qgh.hop.clickbank.net">
-View NaraKid
-</a>
+    <!-- 01 -->
+
+    <article class="card featured">
+
+      <div class="featured-content">
+
+        <div class="card-number">
+          01 — DIGITAL DISCOVERY
+        </div>
+
+        <h2>
+          Turn Curiosity Into Digital Possibility
+        </h2>
+
+        <p>
+          The digital world is evolving every day.
+          Explore a new perspective, discover useful possibilities,
+          and see where the right digital opportunity can take you.
+        </p>
+
+        <a
+          class="button"
+          href="https://5dce88ili4j5z7taqjz9m5zhmv.hop.clickbank.net"
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+        >
+          Explore the Opportunity
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- 02 -->
+
+    <article class="card">
+
+      <div class="card-number">
+        02 — SMARTER POSSIBILITIES
+      </div>
+
+      <h2>
+        Make Technology Work Smarter for You
+      </h2>
+
+      <p>
+        Discover a fresh way to approach the digital landscape
+        and uncover possibilities designed to help you move
+        forward with greater clarity.
+      </p>
+
+      <a
+        class="button"
+        href="https://bd8a5mddd1i9ukubmi3etyslnp.hop.clickbank.net"
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+      >
+        Discover More
+      </a>
+
+    </article>
+
+
+    <!-- 03 -->
+
+    <article class="card">
+
+      <div class="card-number">
+        03 — CREATIVE ADVANTAGE
+      </div>
+
+      <h2>
+        Give Your Ideas a Digital Advantage
+      </h2>
+
+      <p>
+        Great ideas become more powerful when paired with
+        the right tools. Explore possibilities that can inspire
+        your next creative move.
+      </p>
+
+      <a
+        class="button"
+        href="https://eb7ad8ldna3iss57djvgk4pjlb.hop.clickbank.net"
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+      >
+        Explore the Possibilities
+      </a>
+
+    </article>
+
+
+    <!-- 04 -->
+
+    <article class="card">
+
+      <div class="card-number">
+        04 — FUTURE READY
+      </div>
+
+      <h2>
+        Build a Digital Mindset for Tomorrow
+      </h2>
+
+      <p>
+        Technology keeps moving forward.
+        Stay curious, keep learning, and discover ideas that
+        can help you become more prepared for what's next.
+      </p>
+
+      <a
+        class="button"
+        href="https://51bb6dpefdlz3r99lj0hkxntcb.hop.clickbank.net"
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+      >
+        See What's Next
+      </a>
+
+    </article>
+
+
+    <!-- 05 -->
+
+    <article class="card">
+
+      <div class="card-number">
+        05 — YOUR NEXT STEP
+      </div>
+
+      <h2>
+        One Click Could Open a New Direction
+      </h2>
+
+      <p>
+        Sometimes progress starts with simply exploring.
+        Take a moment to discover another digital possibility
+        and decide where you want to go from there.
+      </p>
+
+      <a
+        class="button"
+        href="https://c33807jedaw4cw5-hk0bjx0qgh.hop.clickbank.net"
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+      >
+        Take the Next Step
+      </a>
+
+    </article>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+
+    <p>
+      © 2026 Nara. Explore. Learn. Grow.
+    </p>
+
+    <p class="affiliate">
+      Disclosure: Some links on this page are affiliate links.
+      If you choose to make a purchase through them, Nara may
+      receive a commission at no additional cost to you.
+    </p>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
+```
