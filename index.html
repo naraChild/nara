@@ -9,7 +9,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="google-site-verification" content="FJ2goiJRDA-v3cyrYaVDx0USrEQ-yCJgqYDrVZPWqUc" />
-   
+
+<meta name="description" content="NARA — A Child Is A Future. Discover NARA's mission, activities, digital opportunities, learning initiatives, and ways to support children's future.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link rel="canonical" href="https://narachild.github.io/nara/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NARA — A Child Is A Future">
+<meta property="og:description" content="Discover NARA's mission, activities, digital opportunities, learning initiatives, and ways to support children's future.">
+<meta property="og:url" content="https://narachild.github.io/nara/">
+<meta property="og:site_name" content="NARA">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NARA — A Child Is A Future">
+<meta name="twitter:description" content="Discover NARA's mission, activities, digital opportunities, learning initiatives, and ways to support children's future.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "NARA — A Child Is A Future",
+  "url": "https://narachild.github.io/nara/",
+  "description": "Discover NARA's mission, activities, digital opportunities, learning initiatives, and ways to support children's future.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "NARA",
+    "url": "https://narachild.github.io/nara/"
+  }
+}
+</script>
+
 <title>NARA — A Child Is A Future</title>
 
 <style>
@@ -166,7 +197,6 @@ img {
 
 /* =========================================================
    HEADER
-   header.png SUDAH BERISI FOTO + A CHILD IS A FUTURE
    ========================================================= */
 
 .header {
@@ -295,23 +325,56 @@ img {
 
 
 /* =========================================================
-   ACTIVITIES LINK
+   NARA MAIN NAVIGATION
    ========================================================= */
 
-.activities-link {
-    display: block;
-    margin: 40px 0;
-
-    color: #111111;
-    font-size: clamp(20px, 2.5vw, 28px);
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
+.nara-navigation {
+    display: grid;
+    gap: 14px;
+    margin: 10px 0 40px;
 }
 
-.activities-link .click-here {
+.nara-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    padding: 18px 20px;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: clamp(17px, 2.2vw, 23px);
+    font-weight: bold;
+    line-height: 1.3;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nara-nav-link:hover {
+    background: #fffaf0;
+    border-color: #e5ad00;
+    transform: translateY(-1px);
+}
+
+.nara-nav-label {
+    display: block;
+}
+
+.nara-nav-action {
     color: #e5ad00;
     text-decoration: underline;
+    white-space: nowrap;
+    font-size: 0.8em;
 }
 
 
@@ -691,9 +754,20 @@ img {
         aspect-ratio: 1.25 / 1;
     }
 
-    .activities-link {
-        margin: 30px 0;
-        font-size: 21px;
+    .nara-navigation {
+        gap: 10px;
+        margin: 20px 0 30px;
+    }
+
+    .nara-nav-link {
+        display: block;
+        padding: 16px;
+        text-align: center;
+    }
+
+    .nara-nav-action {
+        display: block;
+        margin-top: 7px;
     }
 
     .affiliate-section {
@@ -778,7 +852,7 @@ img {
 
         <img
             src="naralogo.jpg"
-            alt="NARA"
+            alt="NARA — A Child Is A Future"
             class="landing-photo"
         >
 
@@ -843,7 +917,7 @@ img {
 
         <img
             src="header.png"
-            alt="NARA"
+            alt="NARA — A Child Is A Future"
         >
 
     </div>
@@ -962,696 +1036,20 @@ img {
 
                         <img
                             src="Child1.jpg"
-                            alt="Children"
+                            alt="NARA children"
+                            loading="lazy"
                         >
 
                         <img
                             src="Child2.jpg"
-                            alt="Children"
+                            alt="NARA children"
+                            loading="lazy"
                         >
 
                         <img
                             src="Child3.jpg"
-                            alt="Children"
+                            alt="NARA children"
+                            loading="lazy"
                         >
 
-                        <img
-                            src="Child4.jpg"
-                            alt="Children"
-                        >
-
-                        <img
-                            src="Child5.jpg"
-                            alt="Children"
-                        >
-
-                        <img
-                            src="Child6.jpg"
-                            alt="Children"
-                        >
-
-                    </div>
-
-
-                    <div class="children-message">
-
-                        <p>
-                            Don't let their hopes pass by.
-                        </p>
-
-                        <p>
-                            Don't let their dreams fade away.
-                        </p>
-
-                        <p>
-                            Don't let their ambitions fall short.
-                        </p>
-
-                    </div>
-
-                </section>
-
-            </div>
-
-
-            <!-- =============================================
-                 RIGHT COLUMN
-                 ============================================= -->
-
-            <div>
-
-
-                <!-- ACTIVITIES -->
-
-                <section class="section">
-
-                    <a
-                        class="activities-link"
-                        href="activities.html"
-                    >
-                        LET'S GET CLOSER →
-                        <span class="click-here">
-                            CLICK HERE
-                        </span>
-                    </a>
-
-                </section>
-
-
-                <!-- =================================================
-                     DIGITAL OPPORTUNITY PROGRAMME
-                     ================================================= -->
-
-                <section class="section">
-
-                    <a
-                        href="digital-opportunity.html"
-                        style="
-                            display:block;
-                            margin:25px 0 35px;
-                            color:#111111;
-                            font-size:clamp(20px, 2.5vw, 28px);
-                            font-weight:bold;
-                            text-decoration:none;
-                            text-align:center;
-                        "
-                    >
-                        NARA DIGITAL OPPORTUNITY PROGRAMME →
-                        <span style="
-                            color:#e5ad00;
-                            text-decoration:underline;
-                        ">
-                            EXPLORE HERE
-                        </span>
-                    </a>
-
-                </section>
-
-
-                <!-- WHAT WE SUPPORT -->
-
-                <section class="section">
-
-                    <h2>
-                        WHAT WE SUPPORT?
-                    </h2>
-
-
-                    <div class="support-intro">
-
-                        <p>
-                            Let them keep running toward
-                            their dreams and aspirations,
-                            reaching for hope.
-                        </p>
-
-                        <p>
-                            Please consider supporting only
-                            if you are able and willing to do so.
-                        </p>
-
-                        <p>
-                            Please make sure you understand
-                            the risks before donating or
-                            sending funds.
-                        </p>
-
-                    </div>
-
-
-                    <!-- =================================================
-                         NARA AFFILIATE
-                         ================================================= -->
-
-                    <section class="affiliate-section">
-
-                        <h3>
-                            NARA RECOMMENDS
-                        </h3>
-
-                        <p class="affiliate-intro">
-                            Discover tools that can help children
-                            learn, grow, and prepare for their future.
-                        </p>
-
-
-                        <div class="affiliate-card">
-
-                            <h4>
-                                StarSpark AI
-                            </h4>
-
-                            <p class="affiliate-tagline">
-                                Help them learn.
-                            </p>
-
-                            <p class="affiliate-description">
-                                A personal AI learning platform
-                                for K–12 students.
-                            </p>
-
-                            <a
-                                href="https://www.starspark.ai/?via=Nara"
-                                class="affiliate-button"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                HELP THEM LEARN →
-                            </a>
-
-                        </div>
-
-
-                        <p class="affiliate-disclosure">
-                            Affiliate disclosure: Some links on NARA
-                            may be affiliate links. If you make a
-                            purchase or subscription through an
-                            affiliate link, NARA may receive a
-                            commission at no additional cost to you.
-                        </p>
-
-                    </section>
-
-
-                    <!-- =====================================
-                         DONATION
-                         ===================================== -->
-
-                    <section class="donation-section">
-
-                        <h2 class="donation-title">
-                            DONATE TO NARA
-                        </h2>
-
-
-                        <!-- BITCOIN -->
-
-                        <div class="donation-box">
-
-                            <div class="donation-label">
-                                BITCOIN
-                            </div>
-
-                            <div
-                                class="donation-address"
-                                id="btcAddress"
-                            >
-                                166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
-                            </div>
-
-                            <button
-                                type="button"
-                                class="copy-button"
-                                onclick="copyDonation(
-                                    'btcAddress',
-                                    this
-                                )"
-                            >
-                                COPY
-                            </button>
-
-                        </div>
-
-
-                        <!-- USDT TRC20 -->
-
-                        <div class="donation-box">
-
-                            <div class="donation-label">
-                                USDT TRC20
-                            </div>
-
-                            <div
-                                class="donation-address"
-                                id="usdtTrcAddress"
-                            >
-                                TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
-                            </div>
-
-                            <button
-                                type="button"
-                                class="copy-button"
-                                onclick="copyDonation(
-                                    'usdtTrcAddress',
-                                    this
-                                )"
-                            >
-                                COPY
-                            </button>
-
-                        </div>
-
-
-                        <!-- USDT BEP20 -->
-
-                        <div class="donation-box">
-
-                            <div class="donation-label">
-                                USDT BEP20
-                            </div>
-
-                            <div
-                                class="donation-address"
-                                id="usdtBepAddress"
-                            >
-                                0x5a56e760f487c252f3f878e5a5e3719b39d63075
-                            </div>
-
-                            <button
-                                type="button"
-                                class="copy-button"
-                                onclick="copyDonation(
-                                    'usdtBepAddress',
-                                    this
-                                )"
-                            >
-                                COPY
-                            </button>
-
-                        </div>
-
-
-                        <p class="donation-note">
-                            Please make sure you send each
-                            cryptocurrency using the correct
-                            network and address.
-                        </p>
-
-                    </section>
-
-
-                    <!-- =====================================
-                         WARNING
-                         ===================================== -->
-
-                    <div class="warning-box">
-
-                        <p class="warning-title">
-                            ⚠ Important — Before You Send
-                            Bitcoin and USDT
-                        </p>
-
-                        <p>
-                            Please carefully check the Bitcoin
-                            and USDT address before sending
-                            any funds.
-                        </p>
-
-                        <p>
-                            Make sure you are using the correct
-                            network. Cryptocurrency transactions
-                            may be irreversible.
-                        </p>
-
-                    </div>
-
-
-                    <!-- =====================================
-                         DISCLAIMER
-                         ===================================== -->
-
-                    <div class="disclaimer">
-
-                        <strong>
-                            DISCLAIMER
-                        </strong>
-
-                        <br><br>
-
-                        NARA provides information for supporters
-                        who voluntarily wish to contribute.
-                        Donations are made at the sender's own
-                        discretion and responsibility.
-
-                        <br><br>
-
-                        NARA does not guarantee the recovery of
-                        funds sent to an incorrect address or
-                        through an incorrect cryptocurrency
-                        network.
-
-                        <br><br>
-
-                        Please verify all information carefully
-                        before completing any transaction.
-
-                    </div>
-
-                </section>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             FOOTER
-             ================================================= -->
-
-        <div class="footer">
-            NARA — A Child Is A Future
-        </div>
-
-
-    </main>
-
-</div>
-
-
-<script>
-
-/* =========================================================
-   NARA PAGE STATE
-   ========================================================= */
-
-function showLanding() {
-
-    document
-        .getElementById("naraLanding")
-        .style.display = "flex";
-
-    document
-        .getElementById("naraMain")
-        .style.display = "none";
-}
-
-
-function showNara() {
-
-    document
-        .getElementById("naraLanding")
-        .style.display = "none";
-
-    document
-        .getElementById("naraMain")
-        .style.display = "block";
-}
-
-
-/* =========================================================
-   CHECK URL
-   ========================================================= */
-
-function checkNaraState() {
-
-    const hash =
-        window.location.hash.toLowerCase();
-
-    if (hash === "#nara") {
-
-        showNara();
-
-    } else {
-
-        showLanding();
-
-    }
-}
-
-
-/* =========================================================
-   LANDING FORM
-   ========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        checkNaraState();
-
-        const form =
-            document.getElementById(
-                "naraSignup"
-            );
-
-        form.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-                const name =
-                    document
-                        .getElementById(
-                            "visitorName"
-                        )
-                        .value
-                        .trim();
-
-                const email =
-                    document
-                        .getElementById(
-                            "visitorEmail"
-                        )
-                        .value
-                        .trim();
-
-                if (!name || !email) {
-
-                    alert(
-                        "Please enter your name and email."
-                    );
-
-                    return;
-                }
-
-                try {
-
-                    const currentUrl =
-                        new URL(
-                            window.location.href
-                        );
-
-                    currentUrl.hash = "nara";
-
-                    window.history.replaceState(
-                        { nara: true },
-                        "",
-                        currentUrl.href
-                    );
-
-                    showNara();
-
-                } catch (error) {
-
-                    window.location.hash = "nara";
-
-                    showNara();
-
-                }
-
-            }
-        );
-
-    }
-);
-
-
-/* =========================================================
-   HASH CHANGE
-   ========================================================= */
-
-window.addEventListener(
-    "hashchange",
-    function () {
-
-        checkNaraState();
-
-    }
-);
-
-
-/* =========================================================
-   READ MORE / SEE LESS
-   ========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        const readMore =
-            document.getElementById(
-                "readMore"
-            );
-
-        const seeLess =
-            document.getElementById(
-                "seeLess"
-            );
-
-        const fullText =
-            document.getElementById(
-                "fullText"
-            );
-
-        readMore.addEventListener(
-            "click",
-            function () {
-
-                fullText.style.display =
-                    "block";
-
-                readMore.style.display =
-                    "none";
-
-            }
-        );
-
-        seeLess.addEventListener(
-            "click",
-            function () {
-
-                fullText.style.display =
-                    "none";
-
-                readMore.style.display =
-                    "inline";
-
-            }
-        );
-
-    }
-);
-
-
-/* =========================================================
-   COPY DONATION
-   ========================================================= */
-
-function copyDonation(
-    elementId,
-    button
-) {
-
-    const addressElement =
-        document.getElementById(
-            elementId
-        );
-
-    const address =
-        addressElement
-            .innerText
-            .trim();
-
-
-    function copied() {
-
-        const originalText =
-            button.innerText;
-
-        button.innerText =
-            "COPIED ✓";
-
-        setTimeout(
-            function () {
-
-                button.innerText =
-                    originalText;
-
-            },
-            1800
-        );
-    }
-
-
-    function failed() {
-
-        alert(
-            "Unable to copy. Please copy the address manually."
-        );
-
-    }
-
-
-    /* Modern Clipboard */
-
-    if (
-        navigator.clipboard &&
-        window.isSecureContext
-    ) {
-
-        navigator.clipboard
-            .writeText(address)
-            .then(copied)
-            .catch(failed);
-
-        return;
-    }
-
-
-    /* Fallback */
-
-    const textarea =
-        document.createElement(
-            "textarea"
-        );
-
-    textarea.value =
-        address;
-
-    textarea.style.position =
-        "fixed";
-
-    textarea.style.left =
-        "-9999px";
-
-    document.body.appendChild(
-        textarea
-    );
-
-    textarea.focus();
-    textarea.select();
-
-    try {
-
-        const successful =
-            document.execCommand(
-                "copy"
-            );
-
-        if (successful) {
-
-            copied();
-
-        } else {
-
-            failed();
-
-        }
-
-    } catch (error) {
-
-        failed();
-
-    }
-
-    document.body.removeChild(
-        textarea
-    );
-
-}
-
-</script>
-
-</body>
-</html>
+                       
