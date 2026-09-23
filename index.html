@@ -3,12 +3,12 @@
 
 <head>
 
-<meta name='impact-site-verification' value='4dc62c8b-51b4-46ed-bbd4-87af75d42a62'>
+<meta name="impact-site-verification" content="4dc62c8b-51b4-46ed-bbd4-87af75d42a62">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification" content="FJ2goiJRDA-v3cyrYaVDx0USrEQ-yCJgqYDrVZPWqUc" />
+<meta name="google-site-verification" content="FJ2goiJRDA-v3cyrYaVDx0USrEQ-yCJgqYDrVZPWqUc">
 
 <meta name="description" content="NARA — A Child Is A Future. Discover NARA's mission, activities, digital opportunities, learning initiatives, and ways to support children's future.">
 
@@ -45,10 +45,6 @@
 
 <style>
 
-/* =========================================================
-   BASIC
-   ========================================================= */
-
 * {
     box-sizing: border-box;
 }
@@ -63,205 +59,165 @@ body {
     background: #ffffff;
     color: #111111;
     font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.55;
+    line-height: 1.7;
 }
 
-img {
-    max-width: 100%;
-}
-
-
-/* =========================================================
-   LANDING PAGE
-   ========================================================= */
+/* =========================
+   LANDING SCREEN
+========================= */
 
 #naraLanding {
     position: fixed;
     inset: 0;
     z-index: 9999;
-
+    background: #000000;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    width: 100%;
-    height: 100vh;
-
+    padding: 25px;
     overflow-y: auto;
-
-    background: #000000;
-    padding: 20px;
 }
 
 .landing-box {
-    width: min(520px, 100%);
-    margin: auto;
+    width: 100%;
+    max-width: 520px;
     text-align: center;
+    padding: 30px 22px;
 }
 
 .landing-photo {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
     display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 4px;
+    margin: 0 auto 25px;
+    border: 2px solid rgba(255,255,255,0.7);
 }
 
 .landing-title {
-    margin-top: 18px;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-weight: bold;
-    line-height: 1.02;
-    text-align: center;
+    margin: 0;
+    font-size: 34px;
+    font-weight: normal;
+    letter-spacing: 4px;
 }
 
-.landing-title .white {
-    display: block;
-    color: #ffffff;
-    font-size: clamp(30px, 8vw, 58px);
-}
-
-.landing-title .yellow {
-    display: block;
-    color: #ffd21c;
-    font-size: clamp(42px, 11vw, 78px);
-    font-style: italic;
+.landing-subtitle {
+    margin: 8px 0 28px;
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #dddddd;
 }
 
 .landing-form {
     width: 100%;
-    margin-top: 25px;
+    max-width: 380px;
+    margin: 0 auto;
 }
 
 .landing-form input {
-    display: block;
     width: 100%;
-    margin: 10px 0;
-    padding: 13px 15px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    background: #111111;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    outline: none;
+}
 
-    border: 1px solid #777777;
-    border-radius: 3px;
+.landing-form input:focus {
+    border-color: #ffffff;
+}
 
-    background: #ffffff;
-    color: #111111;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 16px;
+.landing-form input::placeholder {
+    color: #aaaaaa;
 }
 
 .landing-button {
-    display: block;
     width: 100%;
-    margin-top: 8px;
     padding: 14px 18px;
-
-    border: none;
-    border-radius: 3px;
-
-    background: #ffd21c;
-    color: #111111;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 16px;
+    margin-top: 4px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #000000;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
     font-weight: bold;
+    letter-spacing: 2px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .landing-button:hover {
-    opacity: 0.9;
+    background: #dddddd;
 }
 
+.landing-note {
+    margin-top: 18px;
+    font-size: 12px;
+    color: #999999;
+}
 
-/* =========================================================
-   MAIN NARA
-   ========================================================= */
+/* =========================
+   MAIN PAGE
+========================= */
 
 #naraMain {
     display: none;
-    width: 100%;
+    min-height: 100vh;
 }
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
 
 .header {
     width: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    line-height: 0;
 }
 
 .header img {
     display: block;
     width: 100%;
-    max-width: 100%;
     height: auto;
-    margin: 0;
-    padding: 0;
 }
 
-
-/* =========================================================
-   MAIN CONTENT
-   ========================================================= */
+/* =========================
+   CONTAINER
+========================= */
 
 .container {
-    width: min(1180px, 94%);
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 45px 0 60px;
+    padding: 45px 25px 60px;
 }
-
-
-/* =========================================================
-   DESKTOP GRID
-   ========================================================= */
 
 .content-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    gap: 45px;
     align-items: start;
 }
 
-
-/* =========================================================
-   SECTION
-   ========================================================= */
-
 .section {
-    margin-bottom: 42px;
+    margin-bottom: 45px;
 }
 
 .section h2 {
-    margin: 0 0 8px;
-    font-size: clamp(24px, 3vw, 34px);
-    line-height: 1.15;
-}
-
-.section h3 {
-    margin: 20px 0 8px;
-    font-size: 22px;
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 2px;
 }
 
 .section p {
-    margin: 7px 0;
-    font-size: 17px;
+    margin: 0 0 15px;
 }
 
 .italic {
@@ -273,400 +229,238 @@ img {
     font-style: italic;
 }
 
-
-/* =========================================================
-   WHY IT MATTERS
-   ========================================================= */
+/* =========================
+   READ MORE
+========================= */
 
 .read-more,
 .see-less {
+    display: inline-block;
+    margin-top: 5px;
     color: #111111;
-    text-decoration: underline;
-    cursor: pointer;
-    font-weight: normal;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #111111;
+}
+
+.read-more:hover,
+.see-less:hover {
+    opacity: 0.65;
 }
 
 .full-text {
     display: none;
+    margin-top: 15px;
 }
 
-
-/* =========================================================
-   CHILDREN CHEERS
-   ========================================================= */
+/* =========================
+   CHILDREN GALLERY
+========================= */
 
 .children-title {
-    margin-bottom: 15px !important;
-    font-style: italic;
+    text-align: center;
 }
 
 .children-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-    width: 100%;
+    gap: 14px;
+    margin-top: 22px;
 }
 
 .children-gallery img {
-    display: block;
     width: 100%;
-    aspect-ratio: 1.35 / 1;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 2px;
+    display: block;
+    border-radius: 4px;
 }
 
 .children-message {
-    margin-top: 20px;
+    margin-top: 22px;
     text-align: center;
-    font-size: 17px;
-    font-weight: bold;
     font-style: italic;
+    color: #444444;
 }
 
-
-/* =========================================================
-   NARA MAIN NAVIGATION
-   ========================================================= */
+/* =========================
+   NARA NAVIGATION
+========================= */
 
 .nara-navigation {
-    display: grid;
-    gap: 14px;
-    margin: 10px 0 40px;
+    border: 1px solid #dddddd;
+    padding: 24px;
+    margin-bottom: 30px;
+    background: #fafafa;
+}
+
+.nara-navigation h2 {
+    margin-top: 0;
+    font-size: 21px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
 }
 
 .nara-nav-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
-
-    padding: 18px 20px;
-
-    border: 1px solid #d8d8d8;
-    border-radius: 8px;
-
-    background: #ffffff;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #e5e5e5;
     color: #111111;
-
     text-decoration: none;
+}
 
-    font-size: clamp(17px, 2.2vw, 23px);
-    font-weight: bold;
-    line-height: 1.3;
-
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
+.nara-nav-link:last-child {
+    border-bottom: none;
 }
 
 .nara-nav-link:hover {
-    background: #fffaf0;
-    border-color: #e5ad00;
-    transform: translateY(-1px);
+    opacity: 0.6;
 }
 
 .nara-nav-label {
-    display: block;
-}
-
-.nara-nav-action {
-    color: #e5ad00;
-    text-decoration: underline;
-    white-space: nowrap;
-    font-size: 0.8em;
-}
-
-
-/* =========================================================
-   SUPPORT
-   ========================================================= */
-
-.support-intro {
-    margin-bottom: 20px;
-}
-
-.support-intro p {
-    margin: 6px 0;
-}
-
-
-/* =========================================================
-   NARA AFFILIATE
-   ========================================================= */
-
-.affiliate-section {
-    width: 100%;
-    margin: 30px 0 25px;
-    padding: 28px 22px;
-
-    border: 1px solid #111111;
-    background: #ffffff;
-
-    text-align: center;
-}
-
-.affiliate-section h3 {
-    margin: 0 0 10px;
-    font-size: 24px;
-    color: #111111;
-}
-
-.affiliate-intro {
-    max-width: 620px;
-    margin: 0 auto 22px;
-
-    font-size: 16px;
-    line-height: 1.55;
-    color: #333333;
-}
-
-.affiliate-card {
-    max-width: 520px;
-    margin: 0 auto;
-    padding: 24px 20px;
-
-    background: #111111;
-    color: #ffffff;
-
-    border-radius: 4px;
-}
-
-.affiliate-card h4 {
-    margin: 0 0 6px;
-    font-size: 22px;
-    color: #ffd21c;
-}
-
-.affiliate-tagline {
-    margin: 0 0 10px;
-    font-size: 17px;
     font-weight: bold;
 }
 
-.affiliate-description {
-    max-width: 430px;
-    margin: 0 auto 20px;
+.nara-nav-action {
+    font-size: 13px;
+    white-space: nowrap;
+}
 
-    font-size: 15px;
-    line-height: 1.6;
-    color: #ffffff;
+/* =========================
+   AFFILIATE SECTION
+========================= */
+
+.affiliate-section {
+    margin-bottom: 35px;
+}
+
+.affiliate-card {
+    border: 1px solid #dddddd;
+    padding: 25px;
+    background: #ffffff;
+}
+
+.affiliate-card h3 {
+    margin-top: 0;
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.affiliate-card p {
+    margin-bottom: 18px;
 }
 
 .affiliate-button {
     display: inline-block;
-
-    padding: 13px 22px;
-
-    background: #ffd21c;
-    color: #111111;
-
+    padding: 12px 20px;
+    background: #111111;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-
+    border: 1px solid #111111;
     border-radius: 3px;
-
-    transition: opacity 0.2s ease;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
 }
 
 .affiliate-button:hover {
-    opacity: 0.88;
+    background: #ffffff;
+    color: #111111;
 }
 
 .affiliate-disclosure {
-    max-width: 620px;
-    margin: 18px auto 0;
-
-    font-size: 12px;
-    line-height: 1.5;
-    color: #555555;
+    margin-top: 12px;
+    font-size: 11px;
+    color: #777777;
 }
 
-
-/* =========================================================
+/* =========================
    DONATION
-   ========================================================= */
+========================= */
 
 .donation-section {
-    width: 100%;
     margin-top: 20px;
-    padding: 35px 20px 40px;
-
-    background: #f5f5f5;
-    border-radius: 16px;
+    margin-bottom: 40px;
 }
-
-.donation-title {
-    margin: 0 0 25px;
-
-    text-align: center;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 28px;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   DONATION BOX
-   ========================================================= */
 
 .donation-box {
-    max-width: 760px;
-    margin: 0 auto 18px;
-    padding: 20px;
-
-    background: #151515;
-    border-radius: 12px;
+    border: 1px solid #cccccc;
+    padding: 25px;
+    background: #fafafa;
 }
 
-.donation-label {
-    margin-bottom: 10px;
-
-    color: #ffd400;
-
-    font-family: Arial, sans-serif;
-    font-size: 17px;
-    font-weight: 900;
-    letter-spacing: 0.8px;
+.donation-box h2 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: normal;
 }
 
 .donation-address {
-    display: block;
-    width: 100%;
-
-    padding: 12px 13px;
-
+    padding: 15px;
+    margin: 15px 0;
     background: #ffffff;
-    color: #151515;
-
-    border-radius: 7px;
-
+    border: 1px solid #dddddd;
+    word-break: break-word;
     font-family: Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.5;
-
-    word-break: break-all;
-    user-select: all;
+    font-size: 14px;
 }
 
 .copy-button {
-    margin-top: 12px;
-    padding: 9px 18px;
-
-    border: none;
-    border-radius: 6px;
-
-    background: #ffd400;
-    color: #151515;
-
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 900;
-
+    padding: 10px 18px;
+    border: 1px solid #111111;
+    background: #111111;
+    color: #ffffff;
     cursor: pointer;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+    font-family: Georgia, "Times New Roman", serif;
+    border-radius: 3px;
 }
 
 .copy-button:hover {
     background: #ffffff;
-    transform: translateY(-1px);
+    color: #111111;
 }
 
-
-/* =========================================================
-   DONATION NOTE
-   ========================================================= */
-
-.donation-note {
-    max-width: 760px;
-    margin: 22px auto 0;
-
-    text-align: center;
-
-    color: #555555;
-
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-
-/* =========================================================
+/* =========================
    WARNING
-   ========================================================= */
+========================= */
 
-.warning-box {
-    margin-top: 20px;
-    padding: 18px;
-
-    border: 1px solid #c9c9c9;
-    background: #fffdf2;
+.warning {
+    padding: 18px 20px;
+    margin: 30px 0;
+    border-left: 4px solid #111111;
+    background: #f5f5f5;
+    font-size: 13px;
 }
 
-.warning-title {
-    margin: 0 0 8px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.warning-box p {
-    margin: 5px 0;
-    font-size: 15px;
-}
-
-
-/* =========================================================
+/* =========================
    DISCLAIMER
-   ========================================================= */
+========================= */
 
 .disclaimer {
-    margin-top: 22px;
-    padding: 18px;
-
-    border-top: 1px solid #cccccc;
-
-    color: #555555;
-
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.disclaimer strong {
-    color: #222222;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer {
-    margin-top: 40px;
-    padding-top: 20px;
-
+    padding: 25px 0;
     border-top: 1px solid #dddddd;
-
-    text-align: center;
-
-    color: #777777;
-
-    font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
+    color: #666666;
 }
 
+/* =========================
+   FOOTER
+========================= */
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+footer {
+    border-top: 1px solid #dddddd;
+    padding: 25px;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 850px) {
 
@@ -675,176 +469,79 @@ img {
         gap: 10px;
     }
 
+    .children-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .container {
-        width: min(94%, 680px);
-        padding-top: 35px;
+        padding: 35px 20px 50px;
     }
 
-    .section {
-        margin-bottom: 35px;
-    }
 }
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
 
 @media (max-width: 600px) {
 
-    body {
-        line-height: 1.45;
-    }
-
-    #naraLanding {
-        align-items: flex-start;
-        padding: 20px 15px;
-    }
-
-    .landing-box {
-        width: 100%;
-        max-width: 520px;
-        margin: auto 0;
+    .landing-title {
+        font-size: 28px;
+        letter-spacing: 3px;
     }
 
     .landing-photo {
-        width: 100%;
-    }
-
-    .landing-title {
-        margin-top: 14px;
-    }
-
-    .landing-title .white {
-        font-size: clamp(28px, 8vw, 44px);
-    }
-
-    .landing-title .yellow {
-        font-size: clamp(38px, 11vw, 62px);
-    }
-
-    .landing-form {
-        margin-top: 18px;
+        width: 110px;
+        height: 110px;
     }
 
     .container {
-        width: 92%;
-        padding-top: 28px;
-        padding-bottom: 45px;
-    }
-
-    .section {
-        margin-bottom: 32px;
+        padding: 30px 16px 45px;
     }
 
     .section h2 {
-        font-size: 25px;
-    }
-
-    .section p {
-        font-size: 16px;
-    }
-
-    .children-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
-    }
-
-    .children-gallery img {
-        aspect-ratio: 1.25 / 1;
-    }
-
-    .nara-navigation {
-        gap: 10px;
-        margin: 20px 0 30px;
-    }
-
-    .nara-nav-link {
-        display: block;
-        padding: 16px;
-        text-align: center;
-    }
-
-    .nara-nav-action {
-        display: block;
-        margin-top: 7px;
-    }
-
-    .affiliate-section {
-        margin-top: 25px;
-        padding: 22px 15px;
-    }
-
-    .affiliate-section h3 {
         font-size: 21px;
     }
 
-    .affiliate-card {
-        padding: 22px 15px;
+    .children-gallery {
+        gap: 9px;
     }
 
-    .affiliate-card h4 {
-        font-size: 20px;
+    .nara-navigation {
+        padding: 18px;
     }
 
-    .affiliate-button {
-        width: 100%;
-        display: block;
-    }
-
-    .donation-section {
-        padding: 28px 12px 32px;
-    }
-
-    .donation-title {
-        font-size: 25px;
-    }
-
+    .affiliate-card,
     .donation-box {
-        padding: 16px;
+        padding: 20px;
     }
 
-    .donation-address {
-        font-size: 12px;
-    }
-
-    .copy-button {
-        width: 100%;
-        min-height: 42px;
-    }
 }
-
-
-/* =========================================================
-   VERY SMALL HP
-   ========================================================= */
 
 @media (max-width: 360px) {
 
-    .container {
-        width: 94%;
+    .landing-box {
+        padding: 20px 12px;
+    }
+
+    .landing-title {
+        font-size: 24px;
+    }
+
+    .landing-subtitle {
+        font-size: 12px;
+        letter-spacing: 2px;
     }
 
     .children-gallery {
         grid-template-columns: 1fr 1fr;
     }
 
-    .section h2 {
-        font-size: 23px;
-    }
 }
 
 </style>
-
-</head>
-
-
+  
 <body>
 
-
-<!-- =======================================================
-     LANDING PAGE
-     ======================================================= -->
+<!-- =========================
+     NARA LANDING
+========================= -->
 
 <div id="naraLanding">
 
@@ -852,39 +549,35 @@ img {
 
         <img
             src="naralogo.jpg"
-            alt="NARA — A Child Is A Future"
+            alt="NARA"
             class="landing-photo"
         >
 
-        <div class="landing-title">
+        <h1 class="landing-title">
+            A CHILD IS
+        </h1>
 
-            <span class="white">
-                A Child Is
-            </span>
-
-            <span class="yellow">
-                A Future
-            </span>
-
+        <div class="landing-subtitle">
+            A FUTURE
         </div>
 
-
-        <form
-            id="naraSignup"
-            class="landing-form"
-        >
+        <form class="landing-form" id="naraForm">
 
             <input
                 type="text"
                 id="visitorName"
+                name="name"
                 placeholder="Your Name"
+                autocomplete="name"
                 required
             >
 
             <input
                 type="email"
                 id="visitorEmail"
+                name="email"
                 placeholder="Your Email"
+                autocomplete="email"
                 required
             >
 
@@ -897,45 +590,39 @@ img {
 
         </form>
 
+        <div class="landing-note">
+            Welcome to NARA — A Child Is A Future.
+        </div>
+
     </div>
 
 </div>
 
 
-<!-- =======================================================
-     MAIN NARA
-     ======================================================= -->
+<!-- =========================
+     MAIN NARA WEBSITE
+========================= -->
 
 <div id="naraMain">
 
-
-    <!-- ===================================================
-         HEADER
-         =================================================== -->
-
-    <div class="header">
+    <header class="header">
 
         <img
             src="header.png"
             alt="NARA — A Child Is A Future"
         >
 
-    </div>
+    </header>
 
 
     <main class="container">
 
-
-        <!-- =================================================
-             TWO COLUMN CONTENT
-             ================================================= -->
-
         <div class="content-grid">
 
 
-            <!-- =============================================
+            <!-- =========================
                  LEFT COLUMN
-                 ============================================= -->
+            ========================= -->
 
             <div>
 
@@ -944,9 +631,7 @@ img {
 
                 <section class="section">
 
-                    <h2>
-                        WHO &amp; HOW NARA
-                    </h2>
+                    <h2>WHO &amp; HOW NARA</h2>
 
                     <p class="italic">
                         Called by compassion.
@@ -960,6 +645,18 @@ img {
                         Committed to real action.
                     </p>
 
+                    <p>
+                        NARA believes that every child deserves
+                        the opportunity to learn, grow, and dream
+                        about a better future.
+                    </p>
+
+                    <p>
+                        We connect compassion with meaningful
+                        action — creating opportunities that can
+                        help children move forward.
+                    </p>
+
                 </section>
 
 
@@ -967,14 +664,12 @@ img {
 
                 <section class="section">
 
-                    <h2>
-                        WHY IT MATTERS?
-                    </h2>
+                    <h2>WHY IT MATTERS?</h2>
 
                     <p>
-                        A child should never have to lose
-                        the chance to learn simply because
-                        life gave them less.
+                        A child should never have to lose the
+                        chance to learn simply because life gave
+                        them less.
                     </p>
 
                     <a
@@ -985,7 +680,6 @@ img {
                         Read More →
                     </a>
 
-
                     <div
                         class="full-text"
                         id="fullText"
@@ -994,8 +688,8 @@ img {
                         <p>
                             Education is more than a classroom.
                             It is a door to a different future —
-                            and sometimes, a small act of care
-                            is what keeps that door open.
+                            and sometimes, a small act of care is
+                            what keeps that door open.
                         </p>
 
                         <p>
@@ -1024,7 +718,7 @@ img {
                 </section>
 
 
-                <!-- CHILDREN CHEERS -->
+                <!-- CHILDREN -->
 
                 <section class="section">
 
@@ -1052,4 +746,454 @@ img {
                             loading="lazy"
                         >
 
-                       
+                    </div>
+
+                    <p class="children-message">
+                        Every smile carries a story.
+                        Every child carries a future.
+                    </p>
+
+                </section>
+
+
+                <!-- SUPPORT THE FUTURE -->
+
+                <section class="section">
+
+                    <h2>SUPPORT THE FUTURE</h2>
+
+                    <p>
+                        A better future is built through small
+                        actions taken consistently.
+                    </p>
+
+                    <p>
+                        Your attention, support, ideas, and
+                        contribution can become part of a
+                        meaningful journey for children.
+                    </p>
+
+                </section>
+
+
+            </div>
+
+
+            <!-- =========================
+                 RIGHT COLUMN
+            ========================= -->
+
+            <div>
+
+
+                <!-- NARA NAVIGATION -->
+
+                <div class="nara-navigation">
+
+                    <h2>
+                        EXPLORE NARA
+                    </h2>
+
+                    <a
+                        href="about.html"
+                        class="nara-nav-link"
+                    >
+
+                        <span class="nara-nav-label">
+                            About NARA
+                        </span>
+
+                        <span class="nara-nav-action">
+                            Explore →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="digital-apportunity.html"
+                        class="nara-nav-link"
+                    >
+
+                        <span class="nara-nav-label">
+                            Digital Opportunities
+                        </span>
+
+                        <span class="nara-nav-action">
+                            Discover →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="learning.html"
+                        class="nara-nav-link"
+                    >
+
+                        <span class="nara-nav-label">
+                            Learning
+                        </span>
+
+                        <span class="nara-nav-action">
+                            Learn →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="support.html"
+                        class="nara-nav-link"
+                    >
+
+                        <span class="nara-nav-label">
+                            Support NARA
+                        </span>
+
+                        <span class="nara-nav-action">
+                            Support →
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- DIGITAL OPPORTUNITY -->
+
+                <section class="affiliate-section">
+
+                    <div class="affiliate-card">
+
+                        <h3>
+                            NARA Digital Opportunity
+                        </h3>
+
+                        <p>
+                            Discover selected digital tools,
+                            opportunities, and resources that
+                            may help you learn, create, and
+                            build new possibilities.
+                        </p>
+
+                        <a
+                            href="digital-apportunity.html"
+                            class="affiliate-button"
+                        >
+                            EXPLORE OPPORTUNITIES →
+                        </a>
+
+                        <div class="affiliate-disclosure">
+                            Some links may be affiliate links.
+                            If you purchase through them,
+                            NARA may receive a commission at
+                            no additional cost to you.
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- DONATION -->
+
+                <section class="donation-section">
+
+                    <div class="donation-box">
+
+                        <h2>
+                            SUPPORT NARA
+                        </h2>
+
+                        <p>
+                            If you would like to support
+                            NARA's mission, you may use
+                            the donation information below.
+                        </p>
+
+                        <div
+                            class="donation-address"
+                            id="donationAddress"
+                        >
+                            Donation address will be
+                            published here.
+                        </div>
+
+                        <button
+                            type="button"
+                            class="copy-button"
+                            id="copyDonation"
+                        >
+                            COPY ADDRESS
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             WARNING
+        ========================= -->
+
+        <div class="warning">
+
+            <strong>Please Note:</strong>
+
+            NARA shares information and opportunities
+            for educational and informational purposes.
+            Always review the terms, conditions, pricing,
+            and legitimacy of any third-party service
+            before taking action.
+
+        </div>
+
+
+        <!-- =========================
+             DISCLAIMER
+        ========================= -->
+
+        <div class="disclaimer">
+
+            <strong>Disclaimer:</strong>
+
+            NARA does not guarantee the results,
+            availability, pricing, or performance of
+            third-party products, services, platforms,
+            or opportunities mentioned on this website.
+
+            Affiliate relationships, where applicable,
+            will be disclosed.
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © <span id="currentYear"></span>
+        NARA — A Child Is A Future.
+
+    </footer>
+
+</div>
+<!-- =========================
+     BAGIAN 3
+     NARA FOOTER CONTENT
+========================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================
+       NARA LANDING ACCESS
+    ========================= */
+
+    const landing = document.getElementById("naraLanding");
+    const main = document.getElementById("naraMain");
+    const form = document.getElementById("naraForm");
+
+    const accessGranted =
+        localStorage.getItem("naraAccessGranted");
+
+    if (accessGranted === "true") {
+        landing.style.display = "none";
+        main.style.display = "block";
+    }
+
+    if (form) {
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("visitorName").value.trim();
+
+            const email =
+                document.getElementById("visitorEmail").value.trim();
+
+            if (!name || !email) {
+                return;
+            }
+
+            localStorage.setItem(
+                "naraVisitorName",
+                name
+            );
+
+            localStorage.setItem(
+                "naraVisitorEmail",
+                email
+            );
+
+            localStorage.setItem(
+                "naraAccessGranted",
+                "true"
+            );
+
+            landing.style.display = "none";
+            main.style.display = "block";
+
+            window.scrollTo(0, 0);
+
+        });
+
+    }
+
+
+    /* =========================
+       READ MORE / SEE LESS
+    ========================= */
+
+    const readMore =
+        document.getElementById("readMore");
+
+    const seeLess =
+        document.getElementById("seeLess");
+
+    const fullText =
+        document.getElementById("fullText");
+
+    if (readMore && fullText) {
+
+        readMore.addEventListener("click", function () {
+
+            fullText.style.display = "block";
+            readMore.style.display = "none";
+
+        });
+
+    }
+
+    if (seeLess && fullText) {
+
+        seeLess.addEventListener("click", function () {
+
+            fullText.style.display = "none";
+
+            if (readMore) {
+                readMore.style.display = "inline-block";
+            }
+
+        });
+
+    }
+
+
+    /* =========================
+       COPY DONATION ADDRESS
+    ========================= */
+
+    const copyButton =
+        document.getElementById("copyDonation");
+
+    const donationAddress =
+        document.getElementById("donationAddress");
+
+    if (copyButton && donationAddress) {
+
+        copyButton.addEventListener("click", function () {
+
+            const text =
+                donationAddress.innerText.trim();
+
+            if (
+                navigator.clipboard &&
+                window.isSecureContext
+            ) {
+
+                navigator.clipboard.writeText(text)
+                    .then(function () {
+
+                        copyButton.textContent =
+                            "COPIED ✓";
+
+                        setTimeout(function () {
+
+                            copyButton.textContent =
+                                "COPY ADDRESS";
+
+                        }, 2000);
+
+                    });
+
+            } else {
+
+                const temporary =
+                    document.createElement("textarea");
+
+                temporary.value = text;
+
+                temporary.style.position = "fixed";
+                temporary.style.opacity = "0";
+
+                document.body.appendChild(temporary);
+
+                temporary.focus();
+                temporary.select();
+
+                try {
+
+                    document.execCommand("copy");
+
+                    copyButton.textContent =
+                        "COPIED ✓";
+
+                    setTimeout(function () {
+
+                        copyButton.textContent =
+                            "COPY ADDRESS";
+
+                    }, 2000);
+
+                } catch (error) {
+
+                    copyButton.textContent =
+                        "COPY FAILED";
+
+                }
+
+                document.body.removeChild(temporary);
+
+            }
+
+        });
+
+    }
+
+
+    /* =========================
+       CURRENT YEAR
+    ========================= */
+
+    const currentYear =
+        document.getElementById("currentYear");
+
+    if (currentYear) {
+
+        currentYear.textContent =
+            new Date().getFullYear();
+
+    }
+
+});
+
+</script>
+
+
+</body>
+
+</html>
