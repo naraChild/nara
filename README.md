@@ -1,2 +1,2 @@
 # bitcoin-education-donation
-one pen for one child
+a child is a future
