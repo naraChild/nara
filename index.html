@@ -226,3 +226,768 @@
     /* SIDEBAR */
     aside {
       position: sticky;
+      top: 75px;
+    }
+
+    .side-card {
+      background: #fff;
+      padding: 22px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    }
+
+    .side-card h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .explore-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .explore-list li {
+      border-bottom: 1px solid #eee;
+    }
+
+    .explore-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .explore-list a {
+      display: block;
+      padding: 12px 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .explore-list a:hover {
+      text-decoration: underline;
+    }
+
+    .opportunity-card {
+      background: #111;
+      color: #fff;
+    }
+
+    .opportunity-card a {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* READ MORE */
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .full-text {
+      display: none;
+      margin-top: 18px;
+    }
+
+    /* DONATION */
+    #donation {
+      scroll-margin-top: 80px;
+    }
+
+    .donation-intro {
+      color: #555;
+    }
+
+    .donation-box {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 18px;
+      margin: 16px 0;
+      background: #fafafa;
+    }
+
+    .donation-label {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 9px;
+      letter-spacing: 0.5px;
+    }
+
+    .donation-address {
+      padding: 12px;
+      border-radius: 7px;
+      background: #fff;
+      border: 1px solid #ddd;
+      font-family: monospace;
+      font-size: 14px;
+      word-break: break-all;
+      margin-bottom: 10px;
+    }
+
+    .copy-button {
+      border: 0;
+      background: #111;
+      color: #fff;
+      padding: 9px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .copy-button:hover {
+      opacity: 0.85;
+    }
+
+    .donation-note {
+      font-size: 14px;
+      color: #666;
+      margin-top: 18px;
+    }
+
+    /* WARNING / DISCLAIMER */
+    .warning {
+      background: #fff8e1;
+      border-left: 5px solid #e0a800;
+      padding: 16px 18px;
+      margin: 25px 0;
+      border-radius: 6px;
+    }
+
+    .disclaimer {
+      font-size: 13px;
+      color: #666;
+      padding: 0 5px;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 28px 18px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: static;
+      }
+
+      .children-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .site-nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+      }
+
+      .site-nav a {
+        font-size: 13px;
+        padding: 9px 11px;
+      }
+
+      main {
+        padding: 20px 12px 40px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      section h2 {
+        font-size: 24px;
+      }
+
+      .children-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+      }
+
+      .donation-address {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LANDING PAGE -->
+  <div id="naraLanding">
+    <div class="landing-inner">
+
+      <img
+        src="naralogo.jpg"
+        alt="NARA logo"
+        class="landing-logo"
+      >
+
+      <h1>A CHILD IS A FUTURE</h1>
+
+      <h2>Welcome to NARA</h2>
+
+      <p>
+        NARA is committed to creating opportunities and supporting
+        a better future for children.
+      </p>
+
+      <form class="landing-form" id="landingForm">
+        <input
+          type="text"
+          id="visitorName"
+          placeholder="Your name"
+          autocomplete="name"
+        >
+
+        <input
+          type="email"
+          id="visitorEmail"
+          placeholder="Your email"
+          autocomplete="email"
+        >
+
+        <button type="submit">
+          ENTER NARA
+        </button>
+      </form>
+
+      <button
+        type="button"
+        class="skip-button"
+        id="skipLanding"
+      >
+        Skip
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- MAIN WEBSITE -->
+  <div id="naraMain">
+
+    <header>
+      <img
+        src="header.png"
+        alt="NARA — A Child Is A Future"
+      >
+    </header>
+
+
+    <!-- FIVE NAVIGATION ITEMS -->
+    <nav class="site-nav" aria-label="Main navigation">
+
+      <a href="#nara">
+        Home
+      </a>
+
+      <a href="activities.html">
+        Activities
+      </a>
+
+      <a href="digital-opportunity.html">
+        Digital Opportunities
+      </a>
+
+      <a href="affiliates.html">
+        Digital Picks
+      </a>
+
+      <a href="#donation">
+        Support NARA
+      </a>
+
+    </nav>
+
+
+    <main id="nara">
+
+      <div class="content-grid">
+
+        <div>
+
+          <!-- WHO & HOW -->
+          <section id="who-how">
+
+            <h2>WHO &amp; HOW</h2>
+
+            <p class="intro-text">
+              NARA believes that every child deserves an opportunity
+              to grow, learn, dream and build a better future.
+            </p>
+
+            <p>
+              Through community support, digital opportunities and
+              meaningful activities, NARA seeks to connect people
+              who want to contribute with initiatives that can make
+              a positive difference in children's lives.
+            </p>
+
+          </section>
+
+
+          <!-- WHY IT MATTERS -->
+          <section id="why-matters">
+
+            <h2>WHY IT MATTERS</h2>
+
+            <p>
+              A child's future is shaped by the opportunities,
+              education, support and environment available today.
+              Small contributions can become meaningful support
+              when people work together.
+            </p>
+
+            <p>
+              NARA aims to encourage awareness and participation
+              so that more children can have access to opportunities
+              that help them move forward.
+            </p>
+
+            <div class="full-text" id="moreWhy">
+
+              <p>
+                Supporting children is not only about immediate
+                assistance. It is also about creating possibilities
+                for education, personal development, creativity,
+                confidence and independence.
+              </p>
+
+              <p>
+                NARA welcomes people who want to learn more,
+                participate in activities, explore digital
+                opportunities or contribute to the mission.
+              </p>
+
+            </div>
+
+            <a
+              href="#moreWhy"
+              class="read-more"
+              id="readMore"
+            >
+              Read More
+            </a>
+
+            <a
+              href="#why-matters"
+              class="read-more"
+              id="seeLess"
+              style="display:none;"
+            >
+              See Less
+            </a>
+
+          </section>
+
+
+          <!-- CHILDREN CHEERS -->
+          <section id="children">
+
+            <h2>CHILDREN CHEERS</h2>
+
+            <p>
+              Every smile represents hope, possibility and a future
+              worth supporting.
+            </p>
+
+            <div class="children-grid">
+
+              <img src="Child1.jpg" alt="Children supported by NARA">
+              <img src="Child2.jpg" alt="Children supported by NARA">
+              <img src="Child3.jpg" alt="Children supported by NARA">
+              <img src="Child4.jpg" alt="Children supported by NARA">
+              <img src="Child5.jpg" alt="Children supported by NARA">
+              <img src="Child6.jpg" alt="Children supported by NARA">
+
+            </div>
+
+          </section>
+
+
+          <!-- SUPPORT -->
+          <section id="support">
+
+            <h2>SUPPORT THE FUTURE</h2>
+
+            <p>
+              There are different ways to support NARA and its
+              mission. You can explore our activities, discover
+              digital opportunities, or make a direct contribution.
+            </p>
+
+            <p>
+              Your support can help create opportunities for
+              children and communities.
+            </p>
+
+          </section>
+
+
+          <!-- DONATION -->
+          <section id="donation">
+
+            <h2>SUPPORT NARA</h2>
+
+            <p class="donation-intro">
+              If you would like to support NARA, you can contribute
+              using one of the cryptocurrency addresses below.
+            </p>
+
+
+            <!-- BITCOIN -->
+            <div class="donation-box">
+
+              <div class="donation-label">
+                BITCOIN
+              </div>
+
+              <div class="donation-address">
+                166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+              </div>
+
+              <button
+                type="button"
+                class="copy-button"
+                onclick="copyDonationAddress('166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ', this)"
+              >
+                COPY
+              </button>
+
+            </div>
+
+
+            <!-- USDT TRC20 -->
+            <div class="donation-box">
+
+              <div class="donation-label">
+                USDT TRC20
+              </div>
+
+              <div class="donation-address">
+                TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
+              </div>
+
+              <button
+                type="button"
+                class="copy-button"
+                onclick="copyDonationAddress('TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb', this)"
+              >
+                COPY
+              </button>
+
+            </div>
+
+
+            <!-- USDT BEP20 -->
+            <div class="donation-box">
+
+              <div class="donation-label">
+                USDT BEP20
+              </div>
+
+              <div class="donation-address">
+                0x5a56e760f487c252f3f878e5a5e3719b39d63075
+              </div>
+
+              <button
+                type="button"
+                class="copy-button"
+                onclick="copyDonationAddress('0x5a56e760f487c252f3f878e5a5e3719b39d63075', this)"
+              >
+                COPY
+              </button>
+
+            </div>
+
+
+            <p class="donation-note">
+              Please make sure you send each cryptocurrency using
+              the correct network and address.
+            </p>
+
+          </section>
+
+        </div>
+
+
+        <!-- SIDEBAR -->
+        <aside>
+
+          <!-- FIVE EXPLORE LINKS -->
+          <div class="side-card">
+
+            <h2>EXPLORE NARA</h2>
+
+            <ul class="explore-list">
+
+              <li>
+                <a href="#nara">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="activities.html">
+                  Activities
+                </a>
+              </li>
+
+              <li>
+                <a href="digital-opportunity.html">
+                  Digital Opportunities
+                </a>
+              </li>
+
+              <li>
+                <a href="affiliates.html">
+                  Digital Picks
+                </a>
+              </li>
+
+              <li>
+                <a href="#donation">
+                  Support NARA
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- DIGITAL OPPORTUNITY -->
+          <div class="side-card opportunity-card">
+
+            <h2>
+              DIGITAL OPPORTUNITY
+            </h2>
+
+            <p>
+              Discover digital opportunities available through
+              NARA.
+            </p>
+
+            <a href="digital-opportunity.html">
+              EXPLORE
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+
+      <!-- NOTICE -->
+      <div class="warning">
+
+        <strong>Important Notice</strong>
+
+        <p>
+          Please verify all information carefully before making
+          any financial contribution. Cryptocurrency transactions
+          are generally irreversible.
+        </p>
+
+      </div>
+
+
+      <!-- DISCLAIMER -->
+      <div class="disclaimer">
+
+        <p>
+          NARA provides information about its mission, activities
+          and opportunities for visitors. Information may be
+          updated from time to time.
+        </p>
+
+      </div>
+
+    </main>
+
+
+    <footer>
+
+      <p>
+        &copy; <span id="currentYear"></span> NARA — A Child Is A Future
+      </p>
+
+      <p>
+        All rights reserved.
+      </p>
+
+    </footer>
+
+  </div>
+
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const landing = document.getElementById("naraLanding");
+      const main = document.getElementById("naraMain");
+      const form = document.getElementById("landingForm");
+      const skip = document.getElementById("skipLanding");
+
+      const readMore = document.getElementById("readMore");
+      const seeLess = document.getElementById("seeLess");
+      const moreWhy = document.getElementById("moreWhy");
+
+      function showMain() {
+        landing.style.display = "none";
+        main.style.display = "block";
+      }
+
+      /* ENTER NARA */
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        showMain();
+
+        if (history.replaceState) {
+          history.replaceState(null, "", "#nara");
+        }
+      });
+
+
+      /* SKIP */
+      skip.addEventListener("click", function () {
+        showMain();
+
+        if (history.replaceState) {
+          history.replaceState(null, "", "#nara");
+        }
+      });
+
+
+      /* IF USER OPENS WITH #nara */
+      if (window.location.hash === "#nara") {
+        showMain();
+      }
+
+
+      /* READ MORE */
+      readMore.addEventListener("click", function (event) {
+
+        event.preventDefault();
+
+        moreWhy.style.display = "block";
+        readMore.style.display = "none";
+        seeLess.style.display = "inline-block";
+
+      });
+
+
+      /* SEE LESS */
+      seeLess.addEventListener("click", function (event) {
+
+        event.preventDefault();
+
+        moreWhy.style.display = "none";
+        seeLess.style.display = "none";
+        readMore.style.display = "inline-block";
+
+        document.getElementById("why-matters")
+          .scrollIntoView({
+            behavior: "smooth"
+          });
+
+      });
+
+
+      /* YEAR */
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+    });
+
+
+    /* COPY DONATION ADDRESS */
+    function copyDonationAddress(address, button) {
+
+      function copied() {
+        const originalText = button.textContent;
+
+        button.textContent = "COPIED ✓";
+
+        setTimeout(function () {
+          button.textContent = originalText;
+        }, 1800);
+      }
+
+
+      /* Modern clipboard */
+      if (
+        navigator.clipboard &&
+        window.isSecureContext
+      ) {
+
+        navigator.clipboard.writeText(address)
+          .then(function () {
+            copied();
+          })
+          .catch(function () {
+            fallbackCopy(address, copied);
+          });
+
+        return;
+      }
+
+
+      /* Fallback */
+      fallbackCopy(address, copied);
+
+    }
+
+
+    function fallbackCopy(text, callback) {
+
+      const textarea = document.createElement("textarea");
+
+      textarea.value = text;
+
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      textarea.style.top = "0";
+
+      document.body.appendChild(textarea);
+
+      textarea.focus();
+      textarea.select();
+
+      try {
+        document.execCommand("copy");
+        callback();
+      } catch (error) {
+        alert("Please copy the address manually.");
+      }
+
+      document.body.removeChild(textarea);
+
+    }
+
+  </script>
+
+</body>
+</html>
