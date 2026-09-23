@@ -4,7 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <meta name="impact-site-verification"
       value="4dc62c8b-51b4-46ed-bbd4-87af75d42a62">
@@ -13,7 +15,7 @@
       content="FJ2goiJRDA-v3cyrYaVDx0USrEQ-yCJgqYDrVZPWqUc">
 
 <meta name="description"
-      content="NARA — A Child Is A Future. Discover NARA's mission, activities, digital opportunities, learning initiatives, and ways to support children's future.">
+      content="NARA — A Child Is A Future. Discover NARA's mission, activities, digital opportunities, and ways to support children's future.">
 
 <meta name="robots"
       content="index, follow, max-image-preview:large">
@@ -28,7 +30,7 @@
       content="NARA — A Child Is A Future">
 
 <meta property="og:description"
-      content="Discover NARA's mission, activities, digital opportunities, learning initiatives, and ways to support children's future.">
+      content="Discover NARA's mission, activities, digital opportunities, and ways to support children's future.">
 
 <meta property="og:url"
       content="https://narachild.github.io/nara/">
@@ -43,7 +45,7 @@
       content="NARA — A Child Is A Future">
 
 <meta name="twitter:description"
-      content="Discover NARA's mission, digital opportunities, learning initiatives, and ways to support children's future.">
+      content="Discover NARA's mission, activities, digital opportunities, and ways to support children's future.">
 
 <title>NARA — A Child Is A Future</title>
 
@@ -911,7 +913,10 @@ footer {
 </header>
 
 
-<main class="container">
+<main
+    class="container"
+    id="nara"
+>
 
 
 <div class="content-grid">
@@ -1027,38 +1032,44 @@ footer {
 
         <img
             src="Child1.jpg"
-            alt="NARA children"
-            loading="lazy"
+            alt="NARA children 1"
+            loading="eager"
+            decoding="async"
         >
 
         <img
             src="Child2.jpg"
-            alt="NARA children"
-            loading="lazy"
+            alt="NARA children 2"
+            loading="eager"
+            decoding="async"
         >
 
         <img
             src="Child3.jpg"
-            alt="NARA children"
-            loading="lazy"
+            alt="NARA children 3"
+            loading="eager"
+            decoding="async"
         >
 
         <img
             src="Child4.jpg"
-            alt="NARA children"
-            loading="lazy"
+            alt="NARA children 4"
+            loading="eager"
+            decoding="async"
         >
 
         <img
             src="Child5.jpg"
-            alt="NARA children"
-            loading="lazy"
+            alt="NARA children 5"
+            loading="eager"
+            decoding="async"
         >
 
         <img
             src="Child6.jpg"
-            alt="NARA children"
-            loading="lazy"
+            alt="NARA children 6"
+            loading="eager"
+            decoding="async"
         >
 
     </div>
@@ -1117,10 +1128,11 @@ footer {
     <a
         href="activities.html"
         class="nara-nav-link"
+        aria-label="Open NARA Activities"
     >
 
         <span class="nara-nav-label">
-            About NARA
+            Activities
         </span>
 
         <span class="nara-nav-action">
@@ -1133,6 +1145,7 @@ footer {
     <a
         href="digital-opportunity.html"
         class="nara-nav-link"
+        aria-label="Open NARA Digital Opportunities"
     >
 
         <span class="nara-nav-label">
@@ -1149,14 +1162,15 @@ footer {
     <a
         href="affiliates.html"
         class="nara-nav-link"
+        aria-label="Open NARA Digital Picks"
     >
 
         <span class="nara-nav-label">
-            Learning
+            Digital Picks
         </span>
 
         <span class="nara-nav-action">
-            Learn →
+            Explore →
         </span>
 
     </a>
@@ -1165,6 +1179,7 @@ footer {
     <a
         href="#donation"
         class="nara-nav-link"
+        aria-label="Go to NARA Support"
     >
 
         <span class="nara-nav-label">
@@ -1335,7 +1350,7 @@ document.addEventListener(
 
 
     /* ==========================================
-       LANDING
+       ELEMENTS
     ========================================== */
 
     const landing =
@@ -1354,17 +1369,59 @@ document.addEventListener(
         );
 
 
-    if (landing) {
+    /* ==========================================
+       SHOW MAIN
+    ========================================== */
 
-        landing.style.display =
-            "flex";
+    function showMain() {
+
+        if (landing) {
+
+            landing.style.display =
+                "none";
+
+        }
+
+        if (main) {
+
+            main.style.display =
+                "block";
+
+        }
 
     }
 
-    if (main) {
 
-        main.style.display =
-            "none";
+    /* ==========================================
+       INITIAL LANDING STATE
+       
+       If another NARA page sends the visitor
+       back using index.html#nara, skip landing.
+    ========================================== */
+
+    const hasNaraHash =
+        window.location.hash === "#nara";
+
+
+    if (hasNaraHash) {
+
+        showMain();
+
+    } else {
+
+        if (landing) {
+
+            landing.style.display =
+                "flex";
+
+        }
+
+        if (main) {
+
+            main.style.display =
+                "none";
+
+        }
 
     }
 
@@ -1410,18 +1467,19 @@ document.addEventListener(
                 }
 
 
-                if (landing) {
-
-                    landing.style.display =
-                        "none";
-
-                }
+                showMain();
 
 
-                if (main) {
+                if (
+                    window.location.hash !==
+                    "#nara"
+                ) {
 
-                    main.style.display =
-                        "block";
+                    history.replaceState(
+                        null,
+                        "",
+                        "#nara"
+                    );
 
                 }
 
@@ -1569,6 +1627,14 @@ document.addEventListener(
                                     },
                                     2000
                                 );
+
+                            }
+                        )
+                        .catch(
+                            function () {
+
+                                copyButton.textContent =
+                                    "COPY FAILED";
 
                             }
                         );
