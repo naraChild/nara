@@ -13,7 +13,7 @@
       content="FJ2goiJRDA-v3cyrYaVDx0USrEQ-yCJgqYDrVZPWqUc">
 
 <meta name="description"
-      content="NARA — A Child Is A Future. Discover NARA's mission, digital opportunities, learning initiatives, and ways to support children's future.">
+      content="NARA — A Child Is A Future. Discover NARA's mission, activities, digital opportunities, learning initiatives, and ways to support children's future.">
 
 <meta name="robots"
       content="index, follow, max-image-preview:large">
@@ -28,7 +28,7 @@
       content="NARA — A Child Is A Future">
 
 <meta property="og:description"
-      content="Discover NARA's mission, digital opportunities, learning initiatives, and ways to support children's future.">
+      content="Discover NARA's mission, activities, digital opportunities, learning initiatives, and ways to support children's future.">
 
 <meta property="og:url"
       content="https://narachild.github.io/nara/">
@@ -50,9 +50,9 @@
 
 <style>
 
-/* ================================
+/* =====================================================
    GLOBAL
-================================ */
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -65,121 +65,142 @@ html {
 body {
     margin: 0;
     padding: 0;
+
     background: #ffffff;
     color: #111111;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     line-height: 1.7;
 }
 
-button,
-input {
-    font-family: inherit;
-}
 
-
-/* ================================
+/* =====================================================
    LANDING PAGE
-================================ */
+===================================================== */
 
 #naraLanding {
+
     position: fixed;
+
     inset: 0;
+
     z-index: 99999;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     min-height: 100vh;
 
+    padding: 22px;
+
     background:
         radial-gradient(
             circle at center,
-            #242424 0%,
-            #090909 55%,
+            #292929 0%,
+            #0a0a0a 55%,
             #000000 100%
         );
-
-    padding: 25px;
 }
 
 .landing-box {
+
     width: 100%;
-    max-width: 480px;
+
+    max-width: 470px;
+
+    padding: 38px 28px 40px;
 
     text-align: center;
 
-    padding: 35px 28px 40px;
+    border-radius: 20px;
 
-    border: 1px solid rgba(255,255,255,.18);
+    border:
+        1px solid
+        rgba(255,255,255,.18);
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,.07),
+            rgba(255,255,255,.08),
             rgba(255,255,255,.015)
         );
 
     box-shadow:
-        0 25px 80px rgba(0,0,0,.65);
-
-    border-radius: 20px;
+        0 25px 80px
+        rgba(0,0,0,.65);
 }
 
 .landing-photo {
+
     display: block;
 
-    width: 130px;
-    height: 130px;
-
-    object-fit: cover;
+    width: 125px;
+    height: 125px;
 
     margin: 0 auto 25px;
 
+    object-fit: cover;
+
     border-radius: 50%;
 
-    border: 2px solid rgba(255,255,255,.7);
+    border:
+        2px solid
+        rgba(255,255,255,.75);
 
     box-shadow:
-        0 12px 40px rgba(0,0,0,.55);
+        0 12px 40px
+        rgba(0,0,0,.55);
 }
 
 .landing-title {
+
     margin: 0;
 
     color: #ffffff;
 
-    font-size: clamp(34px, 8vw, 58px);
-
-    letter-spacing: 5px;
+    font-size:
+        clamp(34px, 8vw, 58px);
 
     line-height: 1.05;
+
+    letter-spacing: 5px;
 }
 
 .landing-subtitle {
-    margin-top: 4px;
+
+    margin-top: 5px;
 
     color: #dddddd;
 
-    font-size: clamp(22px, 5vw, 34px);
+    font-size:
+        clamp(22px, 5vw, 34px);
 
     letter-spacing: 8px;
 }
 
 .landing-form {
+
     margin-top: 30px;
 }
 
 .landing-form input {
-    width: 100%;
 
     display: block;
+
+    width: 100%;
 
     margin-bottom: 12px;
 
     padding: 14px 16px;
 
-    border: 1px solid #777;
+    border:
+        1px solid #777777;
 
     border-radius: 8px;
 
@@ -193,13 +214,16 @@ input {
 }
 
 .landing-form input:focus {
+
     border-color: #ffffff;
 
     box-shadow:
-        0 0 0 2px rgba(255,255,255,.12);
+        0 0 0 2px
+        rgba(255,255,255,.15);
 }
 
 .landing-button {
+
     width: 100%;
 
     padding: 15px 20px;
@@ -222,12 +246,14 @@ input {
 }
 
 .landing-button:hover {
+
     background: #dddddd;
 
     transform: translateY(-2px);
 }
 
 .landing-note {
+
     margin-top: 18px;
 
     color: #aaaaaa;
@@ -236,26 +262,35 @@ input {
 }
 
 
-/* ================================
+/* =====================================================
    MAIN
-================================ */
+===================================================== */
 
 #naraMain {
+
     display: none;
 }
 
+
+/* =====================================================
+   HEADER
+===================================================== */
+
 .header {
+
     width: 100%;
 
-    overflow: hidden;
-
     background: #000000;
+
+    overflow: hidden;
 }
 
 .header img {
+
     display: block;
 
     width: 100%;
+
     height: auto;
 
     max-height: 430px;
@@ -263,22 +298,32 @@ input {
     object-fit: cover;
 }
 
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
 .container {
+
     width: 100%;
 
     max-width: 1200px;
 
     margin: 0 auto;
 
-    padding: 45px 25px 60px;
+    padding:
+        45px
+        25px
+        60px;
 }
 
 
-/* ================================
+/* =====================================================
    GRID
-================================ */
+===================================================== */
 
 .content-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -291,17 +336,17 @@ input {
 }
 
 
-/* ================================
+/* =====================================================
    SECTIONS
-================================ */
+===================================================== */
 
 .section {
+
     margin-bottom: 45px;
 }
 
-.section h2,
-.nara-navigation h2,
-.donation-box h2 {
+.section h2 {
+
     margin-top: 0;
 
     margin-bottom: 18px;
@@ -314,26 +359,33 @@ input {
 }
 
 .section p {
-    margin: 0 0 15px;
+
+    margin:
+        0
+        0
+        15px;
 }
 
 .italic {
+
     font-style: italic;
 }
 
 .bold-italic {
+
     font-weight: bold;
 
     font-style: italic;
 }
 
 
-/* ================================
+/* =====================================================
    READ MORE
-================================ */
+===================================================== */
 
 .read-more,
 .see-less {
+
     display: inline-block;
 
     margin-top: 4px;
@@ -344,30 +396,30 @@ input {
 
     text-decoration: none;
 
-    border-bottom: 1px solid #111111;
+    border-bottom:
+        1px solid #111111;
 }
 
 .read-more:hover,
 .see-less:hover {
+
     opacity: .6;
 }
 
 .full-text {
+
     display: none;
 
     margin-top: 15px;
 }
 
 
-/* ================================
-   CHILDREN
-================================ */
-
-.children-title {
-    margin-bottom: 20px;
-}
+/* =====================================================
+   CHILDREN GALLERY
+===================================================== */
 
 .children-gallery {
+
     display: grid;
 
     grid-template-columns:
@@ -377,38 +429,42 @@ input {
 }
 
 .children-gallery img {
+
+    display: block;
+
     width: 100%;
 
     aspect-ratio: 1 / 1;
 
     object-fit: cover;
 
-    display: block;
-
-    border-radius: 8px;
+    border-radius: 9px;
 
     background: #eeeeee;
 }
 
 .children-message {
+
     margin-top: 18px;
 
-    font-style: italic;
-
     text-align: center;
+
+    font-style: italic;
 }
 
 
-/* ================================
+/* =====================================================
    EXPLORE NARA
-================================ */
+===================================================== */
 
 .nara-navigation {
-    padding: 25px;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 
-    border: 1px solid #dddddd;
+    padding: 26px;
+
+    border:
+        1px solid #dddddd;
 
     border-radius: 12px;
 
@@ -416,10 +472,18 @@ input {
 }
 
 .nara-navigation h2 {
+
+    margin-top: 0;
+
     margin-bottom: 18px;
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
 }
 
 .nara-nav-link {
+
     display: flex;
 
     align-items: center;
@@ -432,97 +496,52 @@ input {
 
     padding: 15px 0;
 
-    border-bottom: 1px solid #dddddd;
+    border-bottom:
+        1px solid #dddddd;
 
     color: #111111;
 
     text-decoration: none;
 
-    cursor: pointer;
+    transition: .2s;
 }
 
 .nara-nav-link:last-child {
+
     border-bottom: 0;
 }
 
 .nara-nav-link:hover {
-    padding-left: 6px;
+
+    padding-left: 7px;
 }
 
 .nara-nav-label {
+
     font-weight: bold;
 }
 
 .nara-nav-action {
-    font-size: 13px;
 
-    white-space: nowrap;
+    font-size: 13px;
 
     opacity: .65;
+
+    white-space: nowrap;
 }
 
 
-/* ================================
-   INTERNAL PANELS
-================================ */
-
-.nara-panel {
-    display: none;
-
-    margin-bottom: 30px;
-
-    padding: 30px;
-
-    border: 1px solid #dddddd;
-
-    border-radius: 12px;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.05);
-}
-
-.nara-panel.active {
-    display: block;
-}
-
-.nara-panel h2 {
-    margin-top: 0;
-
-    letter-spacing: 2px;
-}
-
-.panel-close {
-    display: inline-block;
-
-    margin-top: 15px;
-
-    padding: 9px 15px;
-
-    border: 1px solid #111111;
-
-    border-radius: 6px;
-
-    background: #111111;
-
-    color: #ffffff;
-
-    cursor: pointer;
-
-    font-size: 13px;
-}
-
-
-/* ================================
-   DIGITAL OPPORTUNITY
-================================ */
+/* =====================================================
+   DIGITAL OPPORTUNITY CARD
+===================================================== */
 
 .affiliate-section {
+
     margin-bottom: 30px;
 }
 
 .affiliate-card {
+
     padding: 28px;
 
     border-radius: 12px;
@@ -532,10 +551,12 @@ input {
     color: #ffffff;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,.12);
+        0 15px 40px
+        rgba(0,0,0,.12);
 }
 
 .affiliate-card h3 {
+
     margin-top: 0;
 
     margin-bottom: 12px;
@@ -544,10 +565,12 @@ input {
 }
 
 .affiliate-card p {
+
     color: #dddddd;
 }
 
 .affiliate-button {
+
     display: inline-block;
 
     margin-top: 8px;
@@ -568,12 +591,14 @@ input {
 }
 
 .affiliate-button:hover {
+
     background: #dddddd;
 
     transform: translateY(-2px);
 }
 
 .affiliate-disclosure {
+
     margin-top: 18px;
 
     color: #999999;
@@ -584,34 +609,48 @@ input {
 }
 
 
-/* ================================
+/* =====================================================
    DONATION
-================================ */
+===================================================== */
 
 .donation-section {
+
     margin-top: 20px;
 }
 
 .donation-box {
+
     padding: 28px;
 
-    border: 1px solid #cccccc;
+    border:
+        1px solid #cccccc;
 
     border-radius: 12px;
 
     background: #fafafa;
 }
 
-.donation-address {
-    margin-top: 18px;
+.donation-box h2 {
 
-    padding: 16px;
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    letter-spacing: 2px;
+}
+
+.donation-address {
+
+    margin-top: 18px;
 
     min-height: 70px;
 
+    padding: 16px;
+
     word-break: break-word;
 
-    border: 1px solid #dddddd;
+    border:
+        1px solid #dddddd;
 
     border-radius: 8px;
 
@@ -625,6 +664,7 @@ input {
 }
 
 .copy-button {
+
     margin-top: 12px;
 
     padding: 11px 17px;
@@ -637,26 +677,28 @@ input {
 
     color: #ffffff;
 
-    cursor: pointer;
+    font-size: 12px;
 
     font-weight: bold;
 
-    font-size: 12px;
-
     letter-spacing: 1px;
+
+    cursor: pointer;
 }
 
 .copy-button:hover {
+
     background: #333333;
 }
 
 
-/* ================================
+/* =====================================================
    NOTICE
-================================ */
+===================================================== */
 
 .warning,
 .disclaimer {
+
     margin-top: 25px;
 
     padding: 18px 20px;
@@ -669,25 +711,30 @@ input {
 }
 
 .warning {
+
     background: #f4f4f4;
 
-    border-left: 4px solid #111111;
+    border-left:
+        4px solid #111111;
 }
 
 .disclaimer {
+
     background: #fafafa;
 
-    border: 1px solid #eeeeee;
+    border:
+        1px solid #eeeeee;
 
     color: #555555;
 }
 
 
-/* ================================
+/* =====================================================
    FOOTER
-================================ */
+===================================================== */
 
 footer {
+
     padding: 28px 20px;
 
     text-align: center;
@@ -700,21 +747,17 @@ footer {
 }
 
 
-/* ================================
-   RESPONSIVE
-================================ */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 850px) {
 
     .content-grid {
+
         grid-template-columns: 1fr;
 
-        gap: 25px;
-    }
-
-    .children-gallery {
-        grid-template-columns:
-            repeat(3, 1fr);
+        gap: 20px;
     }
 
 }
@@ -723,27 +766,39 @@ footer {
 @media (max-width: 600px) {
 
     .container {
-        padding: 30px 17px 45px;
+
+        padding:
+            30px
+            17px
+            45px;
     }
 
     .landing-box {
-        padding: 30px 20px 32px;
+
+        padding:
+            30px
+            20px
+            32px;
     }
 
     .landing-photo {
+
         width: 105px;
         height: 105px;
     }
 
     .landing-title {
+
         letter-spacing: 3px;
     }
 
     .landing-subtitle {
+
         letter-spacing: 5px;
     }
 
     .children-gallery {
+
         grid-template-columns:
             repeat(2, 1fr);
 
@@ -751,9 +806,9 @@ footer {
     }
 
     .nara-navigation,
-    .nara-panel,
     .affiliate-card,
     .donation-box {
+
         padding: 22px;
     }
 
@@ -763,18 +818,10 @@ footer {
 @media (max-width: 360px) {
 
     .children-gallery {
+
         grid-template-columns: 1fr;
     }
 
-}
-
-
-/* ================================
-   HIDDEN
-================================ */
-
-.hidden {
-    display: none !important;
 }
 
 </style>
@@ -785,9 +832,9 @@ footer {
 <body>
 
 
-<!-- ==================================================
-     LANDING PAGE
-================================================== -->
+<!-- =====================================================
+     LANDING
+===================================================== -->
 
 <div id="naraLanding">
 
@@ -847,9 +894,9 @@ footer {
 
 
 
-<!-- ==================================================
-     MAIN WEBSITE
-================================================== -->
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
 <div id="naraMain">
 
@@ -864,16 +911,15 @@ footer {
 </header>
 
 
-
 <main class="container">
 
 
 <div class="content-grid">
 
 
-<!-- ==================================================
-     LEFT COLUMN
-================================================== -->
+<!-- =====================================================
+     LEFT
+===================================================== -->
 
 <div>
 
@@ -926,16 +972,15 @@ footer {
 
     <a
         href="#"
-        class="read-more"
         id="readMore"
+        class="read-more"
     >
         Read More →
     </a>
 
-
     <div
-        class="full-text"
         id="fullText"
+        class="full-text"
     >
 
         <p>
@@ -960,8 +1005,8 @@ footer {
 
         <a
             href="#"
-            class="see-less"
             id="seeLess"
+            class="see-less"
         >
             See Less ↑
         </a>
@@ -974,7 +1019,7 @@ footer {
 
 <section class="section">
 
-    <h2 class="children-title">
+    <h2>
         Children Cheers
     </h2>
 
@@ -994,6 +1039,24 @@ footer {
 
         <img
             src="Child3.jpg"
+            alt="NARA children"
+            loading="lazy"
+        >
+
+        <img
+            src="Child4.jpg"
+            alt="NARA children"
+            loading="lazy"
+        >
+
+        <img
+            src="Child5.jpg"
+            alt="NARA children"
+            loading="lazy"
+        >
+
+        <img
+            src="Child6.jpg"
             alt="NARA children"
             loading="lazy"
         >
@@ -1033,14 +1096,16 @@ footer {
 
 
 
-<!-- ==================================================
-     RIGHT COLUMN
-================================================== -->
+<!-- =====================================================
+     RIGHT
+===================================================== -->
 
 <div>
 
 
-<!-- EXPLORE -->
+<!-- =====================================================
+     EXPLORE NARA
+===================================================== -->
 
 <div class="nara-navigation">
 
@@ -1050,9 +1115,8 @@ footer {
 
 
     <a
-        href="#about"
+        href="activities.html"
         class="nara-nav-link"
-        data-panel="aboutPanel"
     >
 
         <span class="nara-nav-label">
@@ -1067,9 +1131,8 @@ footer {
 
 
     <a
-        href="#digital"
+        href="digital-opportunity.html"
         class="nara-nav-link"
-        data-panel="digitalPanel"
     >
 
         <span class="nara-nav-label">
@@ -1084,9 +1147,8 @@ footer {
 
 
     <a
-        href="#learning"
+        href="affiliates.html"
         class="nara-nav-link"
-        data-panel="learningPanel"
     >
 
         <span class="nara-nav-label">
@@ -1101,9 +1163,8 @@ footer {
 
 
     <a
-        href="#support"
+        href="#donation"
         class="nara-nav-link"
-        data-panel="supportPanel"
     >
 
         <span class="nara-nav-label">
@@ -1120,172 +1181,9 @@ footer {
 
 
 
-<!-- ==================================================
-     ABOUT PANEL
-================================================== -->
-
-<section
-    class="nara-panel"
-    id="aboutPanel"
->
-
-    <h2>
-        ABOUT NARA
-    </h2>
-
-    <p>
-        NARA stands for a simple belief:
-        <strong>A Child Is A Future.</strong>
-    </p>
-
-    <p>
-        NARA is built around compassion,
-        opportunity, learning, and meaningful
-        action for a better future.
-    </p>
-
-    <p>
-        This space shares ideas, information,
-        opportunities, and initiatives intended
-        to create positive possibilities.
-    </p>
-
-    <button
-        class="panel-close"
-        type="button"
-    >
-        CLOSE
-    </button>
-
-</section>
-
-
-
-<!-- ==================================================
-     DIGITAL PANEL
-================================================== -->
-
-<section
-    class="nara-panel"
-    id="digitalPanel"
->
-
-    <h2>
-        DIGITAL OPPORTUNITIES
-    </h2>
-
-    <p>
-        Discover selected digital tools,
-        resources, platforms, and opportunities
-        that may help you learn, create, and
-        build new possibilities.
-    </p>
-
-    <p>
-        NARA may receive a commission when
-        applicable affiliate links are used.
-        This does not increase the price paid
-        by the user.
-    </p>
-
-    <a
-        href="digital-apportunity.html"
-        class="affiliate-button"
-    >
-        OPEN DIGITAL OPPORTUNITIES →
-    </a>
-
-    <button
-        class="panel-close"
-        type="button"
-    >
-        CLOSE
-    </button>
-
-</section>
-
-
-
-<!-- ==================================================
-     LEARNING PANEL
-================================================== -->
-
-<section
-    class="nara-panel"
-    id="learningPanel"
->
-
-    <h2>
-        LEARNING
-    </h2>
-
-    <p>
-        Learning creates possibilities.
-    </p>
-
-    <p>
-        NARA encourages continuous learning
-        through accessible knowledge,
-        digital resources, practical ideas,
-        and useful educational opportunities.
-    </p>
-
-    <p>
-        Start with one idea.
-        Learn one thing.
-        Take one action.
-    </p>
-
-    <button
-        class="panel-close"
-        type="button"
-    >
-        CLOSE
-    </button>
-
-</section>
-
-
-
-<!-- ==================================================
-     SUPPORT PANEL
-================================================== -->
-
-<section
-    class="nara-panel"
-    id="supportPanel"
->
-
-    <h2>
-        SUPPORT NARA
-    </h2>
-
-    <p>
-        Supporting NARA can take many forms:
-        sharing information, contributing ideas,
-        supporting opportunities, or making a
-        direct contribution.
-    </p>
-
-    <p>
-        Every meaningful action can become
-        part of a larger journey.
-    </p>
-
-    <button
-        class="panel-close"
-        type="button"
-    >
-        CLOSE
-    </button>
-
-</section>
-
-
-
-<!-- ==================================================
-     DIGITAL OPPORTUNITY CARD
-================================================== -->
+<!-- =====================================================
+     DIGITAL OPPORTUNITY
+===================================================== -->
 
 <section class="affiliate-section">
 
@@ -1303,7 +1201,7 @@ footer {
         </p>
 
         <a
-            href="digital-apportunity.html"
+            href="digital-opportunity.html"
             class="affiliate-button"
         >
             EXPLORE OPPORTUNITIES →
@@ -1324,9 +1222,9 @@ footer {
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      DONATION
-================================================== -->
+===================================================== -->
 
 <section
     class="donation-section"
@@ -1372,9 +1270,9 @@ footer {
 
 
 
-<!-- ==================================================
-     NOTICE
-================================================== -->
+<!-- =====================================================
+     WARNING
+===================================================== -->
 
 <div class="warning">
 
@@ -1389,6 +1287,10 @@ footer {
 </div>
 
 
+
+<!-- =====================================================
+     DISCLAIMER
+===================================================== -->
 
 <div class="disclaimer">
 
@@ -1408,7 +1310,6 @@ footer {
 </main>
 
 
-
 <footer>
 
     ©
@@ -1422,9 +1323,9 @@ footer {
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      JAVASCRIPT
-================================================== -->
+===================================================== -->
 
 <script>
 
@@ -1433,34 +1334,44 @@ document.addEventListener(
     function () {
 
 
-    /* =========================================
-       LANDING PAGE
-    ========================================= */
+    /* ==========================================
+       LANDING
+    ========================================== */
 
     const landing =
-        document.getElementById("naraLanding");
+        document.getElementById(
+            "naraLanding"
+        );
 
     const main =
-        document.getElementById("naraMain");
+        document.getElementById(
+            "naraMain"
+        );
 
     const form =
-        document.getElementById("naraForm");
+        document.getElementById(
+            "naraForm"
+        );
 
-
-    /* ALWAYS START AT LANDING */
 
     if (landing) {
-        landing.style.display = "flex";
+
+        landing.style.display =
+            "flex";
+
     }
 
     if (main) {
-        main.style.display = "none";
+
+        main.style.display =
+            "none";
+
     }
 
 
-    /* =========================================
-       ENTER NARA
-    ========================================= */
+    /* ==========================================
+       INSTANT ACCESS
+    ========================================== */
 
     if (form) {
 
@@ -1470,37 +1381,55 @@ document.addEventListener(
 
                 event.preventDefault();
 
+
                 const name =
                     document
-                    .getElementById("visitorName")
+                    .getElementById(
+                        "visitorName"
+                    )
                     .value
                     .trim();
+
 
                 const email =
                     document
-                    .getElementById("visitorEmail")
+                    .getElementById(
+                        "visitorEmail"
+                    )
                     .value
                     .trim();
 
 
-                if (!name || !email) {
+                if (
+                    !name ||
+                    !email
+                ) {
+
                     return;
+
                 }
 
 
                 if (landing) {
-                    landing.style.display = "none";
+
+                    landing.style.display =
+                        "none";
+
                 }
+
 
                 if (main) {
-                    main.style.display = "block";
+
+                    main.style.display =
+                        "block";
+
                 }
 
 
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
+                window.scrollTo(
+                    0,
+                    0
+                );
 
             }
         );
@@ -1508,124 +1437,9 @@ document.addEventListener(
     }
 
 
-
-    /* =========================================
-       EXPLORE NARA PANELS
-    ========================================= */
-
-    const navLinks =
-        document.querySelectorAll(
-            ".nara-nav-link"
-        );
-
-    const panels =
-        document.querySelectorAll(
-            ".nara-panel"
-        );
-
-
-    navLinks.forEach(
-        function (link) {
-
-            link.addEventListener(
-                "click",
-                function (event) {
-
-                    event.preventDefault();
-
-                    const panelId =
-                        link.getAttribute(
-                            "data-panel"
-                        );
-
-
-                    panels.forEach(
-                        function (panel) {
-
-                            panel.classList.remove(
-                                "active"
-                            );
-
-                        }
-                    );
-
-
-                    const target =
-                        document.getElementById(
-                            panelId
-                        );
-
-
-                    if (target) {
-
-                        target.classList.add(
-                            "active"
-                        );
-
-                        setTimeout(
-                            function () {
-
-                                target.scrollIntoView({
-                                    behavior: "smooth",
-                                    block: "start"
-                                });
-
-                            },
-                            50
-                        );
-
-                    }
-
-                }
-            );
-
-        }
-    );
-
-
-
-    /* =========================================
-       CLOSE PANELS
-    ========================================= */
-
-    const closeButtons =
-        document.querySelectorAll(
-            ".panel-close"
-        );
-
-
-    closeButtons.forEach(
-        function (button) {
-
-            button.addEventListener(
-                "click",
-                function () {
-
-                    const panel =
-                        button.closest(
-                            ".nara-panel"
-                        );
-
-
-                    if (panel) {
-
-                        panel.classList.remove(
-                            "active"
-                        );
-
-                    }
-
-                }
-            );
-
-        }
-    );
-
-
-
-    /* =========================================
+    /* ==========================================
        READ MORE
-    ========================================= */
+    ========================================== */
 
     const readMore =
         document.getElementById(
@@ -1643,7 +1457,10 @@ document.addEventListener(
         );
 
 
-    if (readMore && fullText) {
+    if (
+        readMore &&
+        fullText
+    ) {
 
         readMore.addEventListener(
             "click",
@@ -1663,7 +1480,10 @@ document.addEventListener(
     }
 
 
-    if (seeLess && fullText) {
+    if (
+        seeLess &&
+        fullText
+    ) {
 
         seeLess.addEventListener(
             "click",
@@ -1673,6 +1493,7 @@ document.addEventListener(
 
                 fullText.style.display =
                     "none";
+
 
                 if (readMore) {
 
@@ -1687,10 +1508,9 @@ document.addEventListener(
     }
 
 
-
-    /* =========================================
-       COPY DONATION
-    ========================================= */
+    /* ==========================================
+       DONATION COPY
+    ========================================== */
 
     const copyButton =
         document.getElementById(
@@ -1712,6 +1532,7 @@ document.addEventListener(
             "click",
             function () {
 
+
                 const text =
                     donationAddress
                     .innerText
@@ -1719,7 +1540,9 @@ document.addEventListener(
 
 
                 if (!text) {
+
                     return;
+
                 }
 
 
@@ -1751,6 +1574,7 @@ document.addEventListener(
                         );
 
                     return;
+
                 }
 
 
@@ -1760,7 +1584,8 @@ document.addEventListener(
                     );
 
 
-                textarea.value = text;
+                textarea.value =
+                    text;
 
                 textarea.style.position =
                     "fixed";
@@ -1798,7 +1623,9 @@ document.addEventListener(
                         2000
                     );
 
-                } catch (error) {
+                }
+
+                catch (error) {
 
                     copyButton.textContent =
                         "COPY FAILED";
@@ -1816,10 +1643,9 @@ document.addEventListener(
     }
 
 
-
-    /* =========================================
-       YEAR
-    ========================================= */
+    /* ==========================================
+       CURRENT YEAR
+    ========================================== */
 
     const year =
         document.getElementById(
