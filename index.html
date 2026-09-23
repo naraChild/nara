@@ -1,1737 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<meta name="impact-site-verification"
-      value="4dc62c8b-51b4-46ed-bbd4-87af75d42a62">
-
-<meta name="google-site-verification"
-      content="FJ2goiJRDA-v3cyrYaVDx0USrEQ-yCJgqYDrVZPWqUc">
-
-<meta name="description"
-      content="NARA — A Child Is A Future. Discover NARA's mission, activities, digital opportunities, and ways to support children's future.">
-
-<meta name="robots"
-      content="index, follow, max-image-preview:large">
-
-<link rel="canonical"
-      href="https://narachild.github.io/nara/">
-
-<meta property="og:type"
-      content="website">
-
-<meta property="og:title"
-      content="NARA — A Child Is A Future">
-
-<meta property="og:description"
-      content="Discover NARA's mission, activities, digital opportunities, and ways to support children's future.">
-
-<meta property="og:url"
-      content="https://narachild.github.io/nara/">
-
-<meta property="og:site_name"
-      content="NARA">
-
-<meta name="twitter:card"
-      content="summary">
-
-<meta name="twitter:title"
-      content="NARA — A Child Is A Future">
-
-<meta name="twitter:description"
-      content="Discover NARA's mission, activities, digital opportunities, and ways to support children's future.">
-
-<title>NARA — A Child Is A Future</title>
-
-
-<style>
-
-/* =====================================================
-   GLOBAL
-===================================================== */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-
-    background: #ffffff;
-    color: #111111;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    line-height: 1.7;
-}
-
-
-/* =====================================================
-   LANDING PAGE
-===================================================== */
-
-#naraLanding {
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 99999;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 100vh;
-
-    padding: 22px;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #292929 0%,
-            #0a0a0a 55%,
-            #000000 100%
-        );
-}
-
-.landing-box {
-
-    width: 100%;
-
-    max-width: 470px;
-
-    padding: 38px 28px 40px;
-
-    text-align: center;
-
-    border-radius: 20px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.18);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.08),
-            rgba(255,255,255,.015)
-        );
-
-    box-shadow:
-        0 25px 80px
-        rgba(0,0,0,.65);
-}
-
-.landing-photo {
-
-    display: block;
-
-    width: 125px;
-    height: 125px;
-
-    margin: 0 auto 25px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border:
-        2px solid
-        rgba(255,255,255,.75);
-
-    box-shadow:
-        0 12px 40px
-        rgba(0,0,0,.55);
-}
-
-.landing-title {
-
-    margin: 0;
-
-    color: #ffffff;
-
-    font-size:
-        clamp(34px, 8vw, 58px);
-
-    line-height: 1.05;
-
-    letter-spacing: 5px;
-}
-
-.landing-subtitle {
-
-    margin-top: 5px;
-
-    color: #dddddd;
-
-    font-size:
-        clamp(22px, 5vw, 34px);
-
-    letter-spacing: 8px;
-}
-
-.landing-form {
-
-    margin-top: 30px;
-}
-
-.landing-form input {
-
-    display: block;
-
-    width: 100%;
-
-    margin-bottom: 12px;
-
-    padding: 14px 16px;
-
-    border:
-        1px solid #777777;
-
-    border-radius: 8px;
-
-    background: #ffffff;
-
-    color: #111111;
-
-    font-size: 16px;
-
-    outline: none;
-}
-
-.landing-form input:focus {
-
-    border-color: #ffffff;
-
-    box-shadow:
-        0 0 0 2px
-        rgba(255,255,255,.15);
-}
-
-.landing-button {
-
-    width: 100%;
-
-    padding: 15px 20px;
-
-    border: 0;
-
-    border-radius: 8px;
-
-    background: #ffffff;
-
-    color: #000000;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-    transition: .25s;
-}
-
-.landing-button:hover {
-
-    background: #dddddd;
-
-    transform: translateY(-2px);
-}
-
-.landing-note {
-
-    margin-top: 18px;
-
-    color: #aaaaaa;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   MAIN
-===================================================== */
-
-#naraMain {
-
-    display: none;
-}
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-.header {
-
-    width: 100%;
-
-    background: #000000;
-
-    overflow: hidden;
-}
-
-.header img {
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    max-height: 430px;
-
-    object-fit: cover;
-}
-
-
-/* =====================================================
-   CONTAINER
-===================================================== */
-
-.container {
-
-    width: 100%;
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding:
-        45px
-        25px
-        60px;
-}
-
-
-/* =====================================================
-   GRID
-===================================================== */
-
-.content-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.35fr)
-        minmax(300px, .85fr);
-
-    gap: 55px;
-
-    align-items: start;
-}
-
-
-/* =====================================================
-   SECTIONS
-===================================================== */
-
-.section {
-
-    margin-bottom: 45px;
-}
-
-.section h2 {
-
-    margin-top: 0;
-
-    margin-bottom: 18px;
-
-    font-size: 25px;
-
-    letter-spacing: 2px;
-
-    line-height: 1.25;
-}
-
-.section p {
-
-    margin:
-        0
-        0
-        15px;
-}
-
-.italic {
-
-    font-style: italic;
-}
-
-.bold-italic {
-
-    font-weight: bold;
-
-    font-style: italic;
-}
-
-
-/* =====================================================
-   READ MORE
-===================================================== */
-
-.read-more,
-.see-less {
-
-    display: inline-block;
-
-    margin-top: 4px;
-
-    color: #111111;
-
-    font-weight: bold;
-
-    text-decoration: none;
-
-    border-bottom:
-        1px solid #111111;
-}
-
-.read-more:hover,
-.see-less:hover {
-
-    opacity: .6;
-}
-
-.full-text {
-
-    display: none;
-
-    margin-top: 15px;
-}
-
-
-/* =====================================================
-   CHILDREN GALLERY
-===================================================== */
-
-.children-gallery {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 14px;
-}
-
-.children-gallery img {
-
-    display: block;
-
-    width: 100%;
-
-    aspect-ratio: 1 / 1;
-
-    object-fit: cover;
-
-    border-radius: 9px;
-
-    background: #eeeeee;
-}
-
-.children-message {
-
-    margin-top: 18px;
-
-    text-align: center;
-
-    font-style: italic;
-}
-
-
-/* =====================================================
-   EXPLORE NARA
-===================================================== */
-
-.nara-navigation {
-
-    margin-bottom: 28px;
-
-    padding: 26px;
-
-    border:
-        1px solid #dddddd;
-
-    border-radius: 12px;
-
-    background: #fafafa;
-}
-
-.nara-navigation h2 {
-
-    margin-top: 0;
-
-    margin-bottom: 18px;
-
-    font-size: 25px;
-
-    letter-spacing: 2px;
-}
-
-.nara-nav-link {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    width: 100%;
-
-    padding: 15px 0;
-
-    border-bottom:
-        1px solid #dddddd;
-
-    color: #111111;
-
-    text-decoration: none;
-
-    transition: .2s;
-}
-
-.nara-nav-link:last-child {
-
-    border-bottom: 0;
-}
-
-.nara-nav-link:hover {
-
-    padding-left: 7px;
-}
-
-.nara-nav-label {
-
-    font-weight: bold;
-}
-
-.nara-nav-action {
-
-    font-size: 13px;
-
-    opacity: .65;
-
-    white-space: nowrap;
-}
-
-
-/* =====================================================
-   DIGITAL OPPORTUNITY CARD
-===================================================== */
-
-.affiliate-section {
-
-    margin-bottom: 30px;
-}
-
-.affiliate-card {
-
-    padding: 28px;
-
-    border-radius: 12px;
-
-    background: #111111;
-
-    color: #ffffff;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,0,0,.12);
-}
-
-.affiliate-card h3 {
-
-    margin-top: 0;
-
-    margin-bottom: 12px;
-
-    font-size: 23px;
-}
-
-.affiliate-card p {
-
-    color: #dddddd;
-}
-
-.affiliate-button {
-
-    display: inline-block;
-
-    margin-top: 8px;
-
-    padding: 13px 18px;
-
-    border-radius: 7px;
-
-    background: #ffffff;
-
-    color: #000000;
-
-    font-weight: bold;
-
-    text-decoration: none;
-
-    transition: .2s;
-}
-
-.affiliate-button:hover {
-
-    background: #dddddd;
-
-    transform: translateY(-2px);
-}
-
-.affiliate-disclosure {
-
-    margin-top: 18px;
-
-    color: #999999;
-
-    font-size: 11px;
-
-    line-height: 1.5;
-}
-
-
-/* =====================================================
-   DONATION
-===================================================== */
-
-.donation-section {
-
-    margin-top: 20px;
-}
-
-.donation-box {
-
-    padding: 28px;
-
-    border:
-        1px solid #cccccc;
-
-    border-radius: 12px;
-
-    background: #fafafa;
-}
-
-.donation-box h2 {
-
-    margin-top: 0;
-
-    margin-bottom: 15px;
-
-    letter-spacing: 2px;
-}
-
-.donation-address {
-
-    margin-top: 18px;
-
-    min-height: 70px;
-
-    padding: 16px;
-
-    word-break: break-word;
-
-    border:
-        1px solid #dddddd;
-
-    border-radius: 8px;
-
-    background: #ffffff;
-
-    font-family:
-        Arial,
-        sans-serif;
-
-    font-size: 13px;
-}
-
-.copy-button {
-
-    margin-top: 12px;
-
-    padding: 11px 17px;
-
-    border: 0;
-
-    border-radius: 6px;
-
-    background: #111111;
-
-    color: #ffffff;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-
-    cursor: pointer;
-}
-
-.copy-button:hover {
-
-    background: #333333;
-}
-
-
-/* =====================================================
-   NOTICE
-===================================================== */
-
-.warning,
-.disclaimer {
-
-    margin-top: 25px;
-
-    padding: 18px 20px;
-
-    border-radius: 8px;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-}
-
-.warning {
-
-    background: #f4f4f4;
-
-    border-left:
-        4px solid #111111;
-}
-
-.disclaimer {
-
-    background: #fafafa;
-
-    border:
-        1px solid #eeeeee;
-
-    color: #555555;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-
-    padding: 28px 20px;
-
-    text-align: center;
-
-    background: #111111;
-
-    color: #aaaaaa;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 850px) {
-
-    .content-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Site Verification -->
+  <meta name="impact-site-verification" content="4dc62c8b-51b4-46ed-bbd4-87af75d42a62">
+  <meta name="google-site-verification" content="FJ2goiJRDA-v3cyrYaVDx0USrEQ-yCJgqYDrVZPWqUc">
+
+  <!-- SEO -->
+  <title>NARA — A Child Is A Future</title>
+  <meta name="description" content="NARA — A Child Is A Future. Discover NARA's mission, activities, digital opportunities, and ways to support children's future.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://narachild.github.io/nara/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NARA — A Child Is A Future">
+  <meta property="og:description" content="Discover NARA's mission, activities, digital opportunities, and ways to support children's future.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://narachild.github.io/nara/">
+  <meta property="og:image" content="https://narachild.github.io/nara/header.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NARA — A Child Is A Future">
+  <meta name="twitter:description" content="Discover NARA's mission, activities, digital opportunities, and ways to support children's future.">
+  <meta name="twitter:image" content="https://narachild.github.io/nara/header.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+    }
 
-@media (max-width: 600px) {
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    .container {
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        padding:
-            30px
-            17px
-            45px;
+    /* =========================
+       LANDING
+    ========================= */
+
+    #naraLanding {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      text-align: center;
     }
 
     .landing-box {
-
-        padding:
-            30px
-            20px
-            32px;
+      width: 100%;
+      max-width: 500px;
     }
 
-    .landing-photo {
-
-        width: 105px;
-        height: 105px;
+    .landing-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin: 0 auto 25px;
     }
 
     .landing-title {
-
-        letter-spacing: 3px;
+      font-size: clamp(38px, 8vw, 72px);
+      line-height: .95;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
     }
 
-    .landing-subtitle {
-
-        letter-spacing: 5px;
+    .landing-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .children-gallery {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 10px;
+    .landing-form input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
     }
 
-    .nara-navigation,
-    .affiliate-card,
-    .donation-box {
-
-        padding: 22px;
+    .landing-form input:focus {
+      border-color: #111;
     }
 
-}
-
-
-@media (max-width: 360px) {
-
-    .children-gallery {
-
-        grid-template-columns: 1fr;
+    .landing-form button {
+      border: 0;
+      border-radius: 8px;
+      padding: 15px;
+      background: #111;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
     }
 
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<!-- =====================================================
-     LANDING
-===================================================== -->
-
-<div id="naraLanding">
-
-    <div class="landing-box">
-
-        <img
-            src="naralogo.jpg"
-            alt="NARA"
-            class="landing-photo"
-        >
-
-        <h1 class="landing-title">
-            A CHILD IS
-        </h1>
-
-        <div class="landing-subtitle">
-            A FUTURE
-        </div>
-
-        <form
-            id="naraForm"
-            class="landing-form"
-        >
-
-            <input
-                type="text"
-                id="visitorName"
-                placeholder="Your Name"
-                autocomplete="name"
-                required
-            >
-
-            <input
-                type="email"
-                id="visitorEmail"
-                placeholder="Your Email"
-                autocomplete="email"
-                required
-            >
-
-            <button
-                type="submit"
-                class="landing-button"
-            >
-                INSTANT ACCESS
-            </button>
-
-        </form>
-
-        <div class="landing-note">
-            Welcome to NARA — A Child Is A Future.
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
-
-<div id="naraMain">
-
-
-<header class="header">
-
-    <img
-        src="header.png"
-        alt="NARA — A Child Is A Future"
-    >
-
-</header>
-
-
-<main
-    class="container"
-    id="nara"
->
-
-
-<div class="content-grid">
-
-
-<!-- =====================================================
-     LEFT
-===================================================== -->
-
-<div>
-
-
-<section class="section">
-
-    <h2>
-        WHO &amp; HOW NARA
-    </h2>
-
-    <p class="italic">
-        Called by compassion.
-    </p>
-
-    <p class="italic">
-        Driven by care.
-    </p>
-
-    <p class="italic">
-        Committed to real action.
-    </p>
-
-    <p>
-        NARA believes that every child deserves
-        the opportunity to learn, grow, and dream
-        about a better future.
-    </p>
-
-    <p>
-        We connect compassion with meaningful
-        action — creating opportunities that can
-        help children move forward.
-    </p>
-
-</section>
-
-
-
-<section class="section">
-
-    <h2>
-        WHY IT MATTERS?
-    </h2>
-
-    <p>
-        A child should never have to lose the
-        chance to learn simply because life gave
-        them less.
-    </p>
-
-    <a
-        href="#"
-        id="readMore"
-        class="read-more"
-    >
-        Read More →
-    </a>
-
-    <div
-        id="fullText"
-        class="full-text"
-    >
-
-        <p>
-            Education is more than a classroom.
-            It is a door to a different future —
-            and sometimes, a small act of care is
-            what keeps that door open.
-        </p>
-
-        <p>
-            We can see the need.
-            We can understand the struggle.
-        </p>
-
-        <p class="bold-italic">
-            But understanding alone changes nothing.
-        </p>
-
-        <p class="bold-italic">
-            There is NO WAY OUT but TAKE AN ACTION
-        </p>
-
-        <a
-            href="#"
-            id="seeLess"
-            class="see-less"
-        >
-            See Less ↑
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<section class="section">
-
-    <h2>
-        Children Cheers
-    </h2>
-
-    <div class="children-gallery">
-
-        <img
-            src="Child1.jpg"
-            alt="NARA children 1"
-            loading="eager"
-            decoding="async"
-        >
-
-        <img
-            src="Child2.jpg"
-            alt="NARA children 2"
-            loading="eager"
-            decoding="async"
-        >
-
-        <img
-            src="Child3.jpg"
-            alt="NARA children 3"
-            loading="eager"
-            decoding="async"
-        >
-
-        <img
-            src="Child4.jpg"
-            alt="NARA children 4"
-            loading="eager"
-            decoding="async"
-        >
-
-        <img
-            src="Child5.jpg"
-            alt="NARA children 5"
-            loading="eager"
-            decoding="async"
-        >
-
-        <img
-            src="Child6.jpg"
-            alt="NARA children 6"
-            loading="eager"
-            decoding="async"
-        >
-
-    </div>
-
-    <p class="children-message">
-        Every smile carries a story.
-        Every child carries a future.
-    </p>
-
-</section>
-
-
-
-<section class="section">
-
-    <h2>
-        SUPPORT THE FUTURE
-    </h2>
-
-    <p>
-        A better future is built through small
-        actions taken consistently.
-    </p>
-
-    <p>
-        Your attention, support, ideas, and
-        contribution can become part of a
-        meaningful journey for children.
-    </p>
-
-</section>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     RIGHT
-===================================================== -->
-
-<div>
-
-
-<!-- =====================================================
-     EXPLORE NARA
-===================================================== -->
-
-<div class="nara-navigation">
-
-    <h2>
-        EXPLORE NARA
-    </h2>
-
-
-    <a
-        href="activities.html"
-        class="nara-nav-link"
-        aria-label="Open NARA Activities"
-    >
-
-        <span class="nara-nav-label">
-            Activities
-        </span>
-
-        <span class="nara-nav-action">
-            Explore →
-        </span>
-
-    </a>
-
-
-    <a
-        href="digital-opportunity.html"
-        class="nara-nav-link"
-        aria-label="Open NARA Digital Opportunities"
-    >
-
-        <span class="nara-nav-label">
-            Digital Opportunities
-        </span>
-
-        <span class="nara-nav-action">
-            Discover →
-        </span>
-
-    </a>
-
-
-    <a
-        href="affiliates.html"
-        class="nara-nav-link"
-        aria-label="Open NARA Digital Picks"
-    >
-
-        <span class="nara-nav-label">
-            Digital Picks
-        </span>
-
-        <span class="nara-nav-action">
-            Explore →
-        </span>
-
-    </a>
-
-
-    <a
-        href="#donation"
-        class="nara-nav-link"
-        aria-label="Go to NARA Support"
-    >
-
-        <span class="nara-nav-label">
-            Support NARA
-        </span>
-
-        <span class="nara-nav-action">
-            Support →
-        </span>
-
-    </a>
-
-</div>
-
-
-
-<!-- =====================================================
-     DIGITAL OPPORTUNITY
-===================================================== -->
-
-<section class="affiliate-section">
-
-    <div class="affiliate-card">
-
-        <h3>
-            NARA Digital Opportunity
-        </h3>
-
-        <p>
-            Discover selected digital tools,
-            opportunities, and resources that
-            may help you learn, create, and
-            build new possibilities.
-        </p>
-
-        <a
-            href="digital-opportunity.html"
-            class="affiliate-button"
-        >
-            EXPLORE OPPORTUNITIES →
-        </a>
-
-        <div class="affiliate-disclosure">
-
-            Some links may be affiliate links.
-            If you purchase through them,
-            NARA may receive a commission at
-            no additional cost to you.
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     DONATION
-===================================================== -->
-
-<section
-    class="donation-section"
-    id="donation"
->
-
-    <div class="donation-box">
-
-        <h2>
-            SUPPORT NARA
-        </h2>
-
-        <p>
-            If you would like to support
-            NARA's mission, you may use
-            the donation information below.
-        </p>
-
-        <div
-            class="donation-address"
-            id="donationAddress"
-        >
-            Donation address will be
-            published here.
-        </div>
-
-        <button
-            type="button"
-            class="copy-button"
-            id="copyDonation"
-        >
-            COPY ADDRESS
-        </button>
-
-    </div>
-
-</section>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     WARNING
-===================================================== -->
-
-<div class="warning">
-
-    <strong>Please Note:</strong>
-
-    NARA shares information and opportunities
-    for educational and informational purposes.
-    Always review the terms, conditions, pricing,
-    and legitimacy of any third-party service
-    before taking action.
-
-</div>
-
-
-
-<!-- =====================================================
-     DISCLAIMER
-===================================================== -->
-
-<div class="disclaimer">
-
-    <strong>Disclaimer:</strong>
-
-    NARA does not guarantee the results,
-    availability, pricing, or performance of
-    third-party products, services, platforms,
-    or opportunities mentioned on this website.
-
-    Affiliate relationships, where applicable,
-    will be disclosed.
-
-</div>
-
-
-</main>
-
-
-<footer>
-
-    ©
-    <span id="currentYear"></span>
-    NARA — A Child Is A Future.
-
-</footer>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-
-    /* ==========================================
-       ELEMENTS
-    ========================================== */
-
-    const landing =
-        document.getElementById(
-            "naraLanding"
-        );
-
-    const main =
-        document.getElementById(
-            "naraMain"
-        );
-
-    const form =
-        document.getElementById(
-            "naraForm"
-        );
-
-
-    /* ==========================================
-       SHOW MAIN
-    ========================================== */
-
-    function showMain() {
-
-        if (landing) {
-
-            landing.style.display =
-                "none";
-
-        }
-
-        if (main) {
-
-            main.style.display =
-                "block";
-
-        }
-
+    .landing-form button:hover {
+      opacity: .85;
     }
 
-
-    /* ==========================================
-       INITIAL LANDING STATE
-       
-       If another NARA page sends the visitor
-       back using index.html#nara, skip landing.
-    ========================================== */
-
-    const hasNaraHash =
-        window.location.hash === "#nara";
-
-
-    if (hasNaraHash) {
-
-        showMain();
-
-    } else {
-
-        if (landing) {
-
-            landing.style.display =
-                "flex";
-
-        }
-
-        if (main) {
-
-            main.style.display =
-                "none";
-
-        }
-
+    .skip-link {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
     }
 
-
-    /* ==========================================
-       INSTANT ACCESS
-    ========================================== */
-
-    if (form) {
-
-        form.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-
-                const name =
-                    document
-                    .getElementById(
-                        "visitorName"
-                    )
-                    .value
-                    .trim();
-
-
-                const email =
-                    document
-                    .getElementById(
-                        "visitorEmail"
-                    )
-                    .value
-                    .trim();
-
-
-                if (
-                    !name ||
-                    !email
-                ) {
-
-                    return;
-
-                }
-
-
-                showMain();
-
-
-                if (
-                    window.location.hash !==
-                    "#nara"
-                ) {
-
-                    history.replaceState(
-                        null,
-                        "",
-                        "#nara"
-                    );
-
-                }
-
-
-                window.scrollTo(
-                    0,
-                    0
-                );
-
-            }
-        );
-
+    .skip-link:hover {
+      color: #000;
     }
 
+    /* =========================
+       MAIN
+    ========================= */
 
-    /* ==========================================
+    #naraMain {
+      display: none;
+    }
+
+    header {
+      width: 100%;
+      background: #fff;
+    }
+
+    .header-image {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid #ddd;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 15px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+
+    .nav-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      transition: .2s;
+    }
+
+    .nav-link:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    /* =========================
+       GRID
+    ========================= */
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+      gap: 30px;
+      align-items: start;
+    }
+
+    section,
+    .side-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    }
+
+    h2 {
+      font-size: 26px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    /* =========================
        READ MORE
-    ========================================== */
+    ========================= */
 
-    const readMore =
-        document.getElementById(
-            "readMore"
-        );
-
-    const seeLess =
-        document.getElementById(
-            "seeLess"
-        );
-
-    const fullText =
-        document.getElementById(
-            "fullText"
-        );
-
-
-    if (
-        readMore &&
-        fullText
-    ) {
-
-        readMore.addEventListener(
-            "click",
-            function (event) {
-
-                event.preventDefault();
-
-                fullText.style.display =
-                    "block";
-
-                readMore.style.display =
-                    "none";
-
-            }
-        );
-
+    #fullText {
+      display: none;
     }
 
-
-    if (
-        seeLess &&
-        fullText
-    ) {
-
-        seeLess.addEventListener(
-            "click",
-            function (event) {
-
-                event.preventDefault();
-
-                fullText.style.display =
-                    "none";
-
-
-                if (readMore) {
-
-                    readMore.style.display =
-                        "inline-block";
-
-                }
-
-            }
-        );
-
+    .read-more {
+      display: inline-block;
+      margin-top: 5px;
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
     }
 
+    /* =========================
+       CHILDREN GALLERY
+    ========================= */
 
-    /* ==========================================
-       DONATION COPY
-    ========================================== */
-
-    const copyButton =
-        document.getElementById(
-            "copyDonation"
-        );
-
-    const donationAddress =
-        document.getElementById(
-            "donationAddress"
-        );
-
-
-    if (
-        copyButton &&
-        donationAddress
-    ) {
-
-        copyButton.addEventListener(
-            "click",
-            function () {
-
-
-                const text =
-                    donationAddress
-                    .innerText
-                    .trim();
-
-
-                if (!text) {
-
-                    return;
-
-                }
-
-
-                if (
-                    navigator.clipboard &&
-                    window.isSecureContext
-                ) {
-
-                    navigator.clipboard
-                        .writeText(text)
-                        .then(
-                            function () {
-
-                                copyButton.textContent =
-                                    "COPIED ✓";
-
-
-                                setTimeout(
-                                    function () {
-
-                                        copyButton.textContent =
-                                            "COPY ADDRESS";
-
-                                    },
-                                    2000
-                                );
-
-                            }
-                        )
-                        .catch(
-                            function () {
-
-                                copyButton.textContent =
-                                    "COPY FAILED";
-
-                            }
-                        );
-
-                    return;
-
-                }
-
-
-                const textarea =
-                    document.createElement(
-                        "textarea"
-                    );
-
-
-                textarea.value =
-                    text;
-
-                textarea.style.position =
-                    "fixed";
-
-                textarea.style.opacity =
-                    "0";
-
-
-                document.body.appendChild(
-                    textarea
-                );
-
-                textarea.focus();
-
-                textarea.select();
-
-
-                try {
-
-                    document.execCommand(
-                        "copy"
-                    );
-
-                    copyButton.textContent =
-                        "COPIED ✓";
-
-
-                    setTimeout(
-                        function () {
-
-                            copyButton.textContent =
-                                "COPY ADDRESS";
-
-                        },
-                        2000
-                    );
-
-                }
-
-                catch (error) {
-
-                    copyButton.textContent =
-                        "COPY FAILED";
-
-                }
-
-
-                document.body.removeChild(
-                    textarea
-                );
-
-            }
-        );
-
+    .children-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 20px;
     }
 
-
-    /* ==========================================
-       CURRENT YEAR
-    ========================================== */
-
-    const year =
-        document.getElementById(
-            "currentYear"
-        );
-
-
-    if (year) {
-
-        year.textContent =
-            new Date().getFullYear();
-
+    .children-gallery img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
     }
 
+    /* =========================
+       EXPLORE NARA
+    ========================= */
 
-});
+    .explore-list {
+      list-style: none;
+    }
 
-</script>
+    .explore-list li {
+      border-bottom: 1px solid #eee;
+    }
 
+    .explore-list li:last-child {
+      border-bottom: 0;
+    }
 
-</body>
+    .explore-list a {
+      display: block;
+      padding: 12px 5px;
+      font-weight: 600;
+      transition: .2s;
+    }
 
-</html>
+    .explore-list a:hover {
+     
