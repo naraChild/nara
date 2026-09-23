@@ -62,19 +62,23 @@ body {
     line-height: 1.7;
 }
 
-/* =========================
-   LANDING SCREEN
-========================= */
+/* LANDING */
 
 #naraLanding {
     position: fixed;
     inset: 0;
-    z-index: 9999;
+    z-index: 99999;
+
+    width: 100%;
+    height: 100%;
+
     background: #000000;
     color: #ffffff;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 25px;
     overflow-y: auto;
 }
@@ -83,49 +87,66 @@ body {
     width: 100%;
     max-width: 520px;
     text-align: center;
-    padding: 30px 22px;
+    padding: 30px 20px;
 }
 
 .landing-photo {
-    width: 130px;
-    height: 130px;
+    display: block;
+
+    width: 135px;
+    height: 135px;
+
     object-fit: cover;
     border-radius: 50%;
-    display: block;
-    margin: 0 auto 25px;
-    border: 2px solid rgba(255,255,255,0.7);
+
+    margin: 0 auto 28px;
+
+    border: 2px solid #ffffff;
 }
 
 .landing-title {
     margin: 0;
-    font-size: 34px;
+
+    font-size: 36px;
+    line-height: 1.2;
+
     font-weight: normal;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 }
 
 .landing-subtitle {
-    margin: 8px 0 28px;
+    margin: 10px 0 30px;
+
     font-size: 15px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+
     color: #dddddd;
 }
 
 .landing-form {
     width: 100%;
-    max-width: 380px;
+    max-width: 390px;
     margin: 0 auto;
 }
 
 .landing-form input {
+    display: block;
+
     width: 100%;
-    padding: 14px 16px;
-    margin-bottom: 12px;
+    height: 50px;
+
+    margin: 0 0 12px;
+    padding: 0 16px;
+
     border: 1px solid #555555;
     border-radius: 4px;
+
     background: #111111;
     color: #ffffff;
+
     font-family: Georgia, "Times New Roman", serif;
     font-size: 15px;
+
     outline: none;
 }
 
@@ -138,19 +159,28 @@ body {
 }
 
 .landing-button {
+    display: block;
+
     width: 100%;
-    padding: 14px 18px;
-    margin-top: 4px;
+    height: 50px;
+
+    margin-top: 6px;
+
     border: 1px solid #ffffff;
     border-radius: 4px;
+
     background: #ffffff;
     color: #000000;
+
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
+
     letter-spacing: 2px;
+
     cursor: pointer;
-    transition: 0.3s ease;
+
+    transition: all 0.3s ease;
 }
 
 .landing-button:hover {
@@ -158,50 +188,66 @@ body {
 }
 
 .landing-note {
-    margin-top: 18px;
+    margin-top: 20px;
+
+    color: #888888;
     font-size: 12px;
-    color: #999999;
 }
 
-/* =========================
-   MAIN PAGE
-========================= */
+
+/* MAIN */
 
 #naraMain {
     display: none;
+
+    width: 100%;
     min-height: 100vh;
 }
+
+
+/* HEADER */
 
 .header {
     width: 100%;
     margin: 0;
     padding: 0;
+
     overflow: hidden;
 }
 
 .header img {
     display: block;
+
     width: 100%;
     height: auto;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+
+/* CONTAINER */
 
 .container {
     width: 100%;
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: 45px 25px 60px;
 }
 
 .content-grid {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(280px, 1fr);
+
     gap: 45px;
+
     align-items: start;
 }
+
+
+/* SECTION */
 
 .section {
     margin-bottom: 45px;
@@ -209,10 +255,14 @@ body {
 
 .section h2 {
     margin: 0 0 18px;
+
     padding-bottom: 10px;
+
     border-bottom: 1px solid #dddddd;
+
     font-size: 24px;
     font-weight: normal;
+
     letter-spacing: 2px;
 }
 
@@ -229,33 +279,36 @@ body {
     font-style: italic;
 }
 
-/* =========================
-   READ MORE
-========================= */
+
+/* READ MORE */
 
 .read-more,
 .see-less {
     display: inline-block;
+
     margin-top: 5px;
+
     color: #111111;
+
     font-weight: bold;
     text-decoration: none;
+
     border-bottom: 1px solid #111111;
 }
 
 .read-more:hover,
 .see-less:hover {
-    opacity: 0.65;
+    opacity: 0.6;
 }
 
 .full-text {
     display: none;
+
     margin-top: 15px;
 }
 
-/* =========================
-   CHILDREN GALLERY
-========================= */
+
+/* CHILDREN */
 
 .children-title {
     text-align: center;
@@ -263,52 +316,73 @@ body {
 
 .children-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 14px;
+
     margin-top: 22px;
 }
 
 .children-gallery img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
     display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
     border-radius: 4px;
 }
 
 .children-message {
     margin-top: 22px;
+
     text-align: center;
+
     font-style: italic;
+
     color: #444444;
 }
 
-/* =========================
-   NARA NAVIGATION
-========================= */
+
+/* NAVIGATION */
 
 .nara-navigation {
-    border: 1px solid #dddddd;
-    padding: 24px;
     margin-bottom: 30px;
+
+    padding: 24px;
+
+    border: 1px solid #dddddd;
+
     background: #fafafa;
 }
 
 .nara-navigation h2 {
-    margin-top: 0;
+    margin: 0 0 10px;
+
     font-size: 21px;
     font-weight: normal;
+
     letter-spacing: 1.5px;
 }
 
 .nara-nav-link {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 15px;
+
     padding: 13px 0;
+
     border-bottom: 1px solid #e5e5e5;
+
     color: #111111;
+
     text-decoration: none;
 }
 
@@ -320,31 +394,37 @@ body {
     opacity: 0.6;
 }
 
+
+/* NAV TEXT */
+
 .nara-nav-label {
     font-weight: bold;
 }
 
 .nara-nav-action {
     font-size: 13px;
+
     white-space: nowrap;
 }
 
-/* =========================
-   AFFILIATE SECTION
-========================= */
+
+/* AFFILIATE */
 
 .affiliate-section {
     margin-bottom: 35px;
 }
 
 .affiliate-card {
-    border: 1px solid #dddddd;
     padding: 25px;
+
+    border: 1px solid #dddddd;
+
     background: #ffffff;
 }
 
 .affiliate-card h3 {
-    margin-top: 0;
+    margin: 0 0 14px;
+
     font-size: 21px;
     font-weight: normal;
 }
@@ -355,15 +435,22 @@ body {
 
 .affiliate-button {
     display: inline-block;
+
     padding: 12px 20px;
-    background: #111111;
-    color: #ffffff;
-    text-decoration: none;
+
     border: 1px solid #111111;
     border-radius: 3px;
+
+    background: #111111;
+    color: #ffffff;
+
+    text-decoration: none;
+
     font-size: 13px;
+
     letter-spacing: 1px;
-    transition: 0.3s ease;
+
+    transition: all 0.3s ease;
 }
 
 .affiliate-button:hover {
@@ -373,13 +460,14 @@ body {
 
 .affiliate-disclosure {
     margin-top: 12px;
+
     font-size: 11px;
+
     color: #777777;
 }
 
-/* =========================
-   DONATION
-========================= */
+
+/* DONATION */
 
 .donation-section {
     margin-top: 20px;
@@ -387,34 +475,48 @@ body {
 }
 
 .donation-box {
-    border: 1px solid #cccccc;
     padding: 25px;
+
+    border: 1px solid #cccccc;
+
     background: #fafafa;
 }
 
 .donation-box h2 {
     margin-top: 0;
+
     font-size: 22px;
     font-weight: normal;
 }
 
 .donation-address {
     padding: 15px;
+
     margin: 15px 0;
+
     background: #ffffff;
+
     border: 1px solid #dddddd;
+
     word-break: break-word;
+
     font-family: Arial, sans-serif;
+
     font-size: 14px;
 }
 
 .copy-button {
     padding: 10px 18px;
+
     border: 1px solid #111111;
+
     background: #111111;
     color: #ffffff;
+
     cursor: pointer;
+
     font-family: Georgia, "Times New Roman", serif;
+
     border-radius: 3px;
 }
 
@@ -423,44 +525,51 @@ body {
     color: #111111;
 }
 
-/* =========================
-   WARNING
-========================= */
+
+/* WARNING */
 
 .warning {
     padding: 18px 20px;
+
     margin: 30px 0;
+
     border-left: 4px solid #111111;
+
     background: #f5f5f5;
+
     font-size: 13px;
 }
 
-/* =========================
-   DISCLAIMER
-========================= */
+
+/* DISCLAIMER */
 
 .disclaimer {
     padding: 25px 0;
+
     border-top: 1px solid #dddddd;
+
     font-size: 12px;
+
     color: #666666;
 }
 
-/* =========================
-   FOOTER
-========================= */
+
+/* FOOTER */
 
 footer {
     border-top: 1px solid #dddddd;
+
     padding: 25px;
+
     text-align: center;
+
     font-size: 12px;
+
     color: #666666;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
+/* RESPONSIVE */
 
 @media (max-width: 850px) {
 
@@ -540,7 +649,7 @@ footer {
 <body>
 
 <!-- =========================
-     NARA LANDING
+     LANDING PAGE
 ========================= -->
 
 <div id="naraLanding">
@@ -561,7 +670,10 @@ footer {
             A FUTURE
         </div>
 
-        <form class="landing-form" id="naraForm">
+        <form
+            class="landing-form"
+            id="naraForm"
+        >
 
             <input
                 type="text"
@@ -600,7 +712,7 @@ footer {
 
 
 <!-- =========================
-     MAIN NARA WEBSITE
+     MAIN NARA
 ========================= -->
 
 <div id="naraMain">
@@ -625,9 +737,6 @@ footer {
             ========================= -->
 
             <div>
-
-
-                <!-- WHO & HOW NARA -->
 
                 <section class="section">
 
@@ -659,8 +768,6 @@ footer {
 
                 </section>
 
-
-                <!-- WHY IT MATTERS -->
 
                 <section class="section">
 
@@ -718,8 +825,6 @@ footer {
                 </section>
 
 
-                <!-- CHILDREN -->
-
                 <section class="section">
 
                     <h2 class="children-title">
@@ -756,8 +861,6 @@ footer {
                 </section>
 
 
-                <!-- SUPPORT THE FUTURE -->
-
                 <section class="section">
 
                     <h2>SUPPORT THE FUTURE</h2>
@@ -775,7 +878,6 @@ footer {
 
                 </section>
 
-
             </div>
 
 
@@ -784,9 +886,6 @@ footer {
             ========================= -->
 
             <div>
-
-
-                <!-- NARA NAVIGATION -->
 
                 <div class="nara-navigation">
 
@@ -860,8 +959,6 @@ footer {
                 </div>
 
 
-                <!-- DIGITAL OPPORTUNITY -->
-
                 <section class="affiliate-section">
 
                     <div class="affiliate-card">
@@ -895,8 +992,6 @@ footer {
 
                 </section>
 
-
-                <!-- DONATION -->
 
                 <section class="donation-section">
 
@@ -932,15 +1027,10 @@ footer {
 
                 </section>
 
-
             </div>
 
         </div>
 
-
-        <!-- =========================
-             WARNING
-        ========================= -->
 
         <div class="warning">
 
@@ -954,10 +1044,6 @@ footer {
 
         </div>
 
-
-        <!-- =========================
-             DISCLAIMER
-        ========================= -->
 
         <div class="disclaimer">
 
@@ -976,10 +1062,6 @@ footer {
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
     <footer>
 
         © <span id="currentYear"></span>
@@ -988,30 +1070,36 @@ footer {
     </footer>
 
 </div>
-<!-- =========================
-     BAGIAN 3
-     NARA FOOTER CONTENT
-========================= -->
-
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
     /* =========================
-       NARA LANDING ACCESS
+       LANDING PAGE
     ========================= */
 
     const landing = document.getElementById("naraLanding");
     const main = document.getElementById("naraMain");
     const form = document.getElementById("naraForm");
 
-    const accessGranted =
-        localStorage.getItem("naraAccessGranted");
+    /*
+      Landing selalu muncul saat halaman dibuka.
+      Setelah form diisi, landing ditutup
+      dan halaman utama ditampilkan.
+    */
 
-    if (accessGranted === "true") {
-        landing.style.display = "none";
-        main.style.display = "block";
+    if (landing) {
+        landing.style.display = "flex";
     }
+
+    if (main) {
+        main.style.display = "none";
+    }
+
+
+    /* =========================
+       INSTANT ACCESS
+    ========================= */
 
     if (form) {
 
@@ -1019,35 +1107,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
             event.preventDefault();
 
+            const nameInput =
+                document.getElementById("visitorName");
+
+            const emailInput =
+                document.getElementById("visitorEmail");
+
             const name =
-                document.getElementById("visitorName").value.trim();
+                nameInput ? nameInput.value.trim() : "";
 
             const email =
-                document.getElementById("visitorEmail").value.trim();
+                emailInput ? emailInput.value.trim() : "";
 
             if (!name || !email) {
                 return;
             }
 
-            localStorage.setItem(
-                "naraVisitorName",
-                name
-            );
+            if (landing) {
+                landing.style.display = "none";
+            }
 
-            localStorage.setItem(
-                "naraVisitorEmail",
-                email
-            );
+            if (main) {
+                main.style.display = "block";
+            }
 
-            localStorage.setItem(
-                "naraAccessGranted",
-                "true"
-            );
-
-            landing.style.display = "none";
-            main.style.display = "block";
-
-            window.scrollTo(0, 0);
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
         });
 
@@ -1055,7 +1142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================
-       READ MORE / SEE LESS
+       READ MORE
     ========================= */
 
     const readMore =
@@ -1067,20 +1154,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const fullText =
         document.getElementById("fullText");
 
+
     if (readMore && fullText) {
 
-        readMore.addEventListener("click", function () {
+        readMore.addEventListener("click", function (event) {
+
+            event.preventDefault();
 
             fullText.style.display = "block";
+
             readMore.style.display = "none";
 
         });
 
     }
 
+
+    /* =========================
+       SEE LESS
+    ========================= */
+
     if (seeLess && fullText) {
 
-        seeLess.addEventListener("click", function () {
+        seeLess.addEventListener("click", function (event) {
+
+            event.preventDefault();
 
             fullText.style.display = "none";
 
@@ -1103,6 +1201,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const donationAddress =
         document.getElementById("donationAddress");
 
+
     if (copyButton && donationAddress) {
 
         copyButton.addEventListener("click", function () {
@@ -1110,12 +1209,17 @@ document.addEventListener("DOMContentLoaded", function () {
             const text =
                 donationAddress.innerText.trim();
 
+
+            /* Modern clipboard */
+
             if (
                 navigator.clipboard &&
                 window.isSecureContext
             ) {
 
-                navigator.clipboard.writeText(text)
+                navigator.clipboard
+                    .writeText(text)
+
                     .then(function () {
 
                         copyButton.textContent =
@@ -1128,47 +1232,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         }, 2000);
 
-                    });
+                    })
 
-            } else {
-
-                const temporary =
-                    document.createElement("textarea");
-
-                temporary.value = text;
-
-                temporary.style.position = "fixed";
-                temporary.style.opacity = "0";
-
-                document.body.appendChild(temporary);
-
-                temporary.focus();
-                temporary.select();
-
-                try {
-
-                    document.execCommand("copy");
-
-                    copyButton.textContent =
-                        "COPIED ✓";
-
-                    setTimeout(function () {
+                    .catch(function () {
 
                         copyButton.textContent =
-                            "COPY ADDRESS";
+                            "COPY FAILED";
 
-                    }, 2000);
+                    });
 
-                } catch (error) {
+                return;
+            }
+
+
+            /* Fallback clipboard */
+
+            const temporaryTextarea =
+                document.createElement("textarea");
+
+            temporaryTextarea.value = text;
+
+            temporaryTextarea.style.position =
+                "fixed";
+
+            temporaryTextarea.style.opacity =
+                "0";
+
+            document.body.appendChild(
+                temporaryTextarea
+            );
+
+            temporaryTextarea.focus();
+
+            temporaryTextarea.select();
+
+
+            try {
+
+                document.execCommand("copy");
+
+                copyButton.textContent =
+                    "COPIED ✓";
+
+                setTimeout(function () {
 
                     copyButton.textContent =
-                        "COPY FAILED";
+                        "COPY ADDRESS";
 
-                }
+                }, 2000);
 
-                document.body.removeChild(temporary);
+            } catch (error) {
+
+                copyButton.textContent =
+                    "COPY FAILED";
 
             }
+
+
+            document.body.removeChild(
+                temporaryTextarea
+            );
 
         });
 
@@ -1181,6 +1304,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const currentYear =
         document.getElementById("currentYear");
+
 
     if (currentYear) {
 
