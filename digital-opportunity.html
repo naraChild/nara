@@ -12,19 +12,25 @@
   <meta name="robots" content="index, follow">
 
   <style>
+
     :root {
       --bg: #08090d;
       --bg-soft: #101219;
       --card: rgba(20, 22, 30, 0.78);
+
       --gold: #d6b36a;
       --gold-light: #f0d99a;
       --gold-dark: #a9853f;
+
       --text: #f7f3ea;
       --muted: #a6a8b1;
+
       --border: rgba(214, 179, 106, 0.18);
       --white-border: rgba(255,255,255,0.08);
+
       --shadow: 0 30px 90px rgba(0,0,0,0.45);
     }
+
 
     * {
       box-sizing: border-box;
@@ -32,9 +38,11 @@
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family:
@@ -54,11 +62,13 @@
           rgba(214,179,106,0.16),
           transparent 38%
         ),
+
         radial-gradient(
           circle at 0% 50%,
           rgba(214,179,106,0.07),
           transparent 30%
         ),
+
         linear-gradient(
           135deg,
           #06070a,
@@ -67,13 +77,18 @@
         );
 
       min-height: 100vh;
+
       line-height: 1.6;
     }
 
+
     body::before {
       content: "";
+
       position: fixed;
+
       inset: 0;
+
       pointer-events: none;
 
       background:
@@ -81,6 +96,7 @@
           rgba(255,255,255,0.015) 1px,
           transparent 1px
         ),
+
         linear-gradient(
           90deg,
           rgba(255,255,255,0.015) 1px,
@@ -97,10 +113,13 @@
         );
     }
 
+
     .container {
       width: min(1160px, 92%);
+
       margin: auto;
     }
+
 
     /* =========================
        HEADER
@@ -108,31 +127,45 @@
 
     header {
       padding: 30px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.05);
     }
+
 
     .nav {
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
     }
 
+
     .brand {
       font-size: 1.45rem;
+
       font-weight: 800;
+
       letter-spacing: -0.8px;
     }
+
 
     .brand span {
       color: var(--gold);
     }
 
+
     .nav-label {
       color: var(--muted);
+
       font-size: 0.75rem;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
     }
+
 
     /* =========================
        HERO
@@ -140,38 +173,51 @@
 
     .hero {
       text-align: center;
+
       padding: 110px 0 80px;
+
       max-width: 900px;
+
       margin: auto;
     }
 
+
     .eyebrow {
       display: inline-flex;
+
       align-items: center;
+
       gap: 9px;
 
       padding: 9px 17px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
+
       border-radius: 999px;
 
-      background: rgba(214,179,106,0.06);
+      background:
+        rgba(214,179,106,0.06);
 
       color: var(--gold-light);
 
       font-size: 0.7rem;
+
       font-weight: 700;
 
       letter-spacing: 2px;
+
       text-transform: uppercase;
 
       margin-bottom: 28px;
     }
 
+
     .eyebrow::before {
       content: "";
 
       width: 6px;
+
       height: 6px;
 
       border-radius: 50%;
@@ -182,21 +228,25 @@
         0 0 12px rgba(214,179,106,0.8);
     }
 
+
     .hero h1 {
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-      font-size: clamp(3rem, 7vw, 6.4rem);
+      font-size:
+        clamp(3rem, 7vw, 6.4rem);
 
       line-height: 0.98;
+
       letter-spacing: -4px;
 
       font-weight: 500;
 
       margin-bottom: 30px;
     }
+
 
     .hero h1 span {
       display: block;
@@ -210,23 +260,29 @@
         );
 
       -webkit-background-clip: text;
+
       background-clip: text;
 
       color: transparent;
     }
 
+
     .hero p {
       max-width: 700px;
+
       margin: auto;
 
       color: var(--muted);
 
       font-size: 1.08rem;
+
       line-height: 1.9;
     }
 
+
     .hero-line {
       width: 80px;
+
       height: 1px;
 
       background:
@@ -240,24 +296,30 @@
       margin: 38px auto 0;
     }
 
+
     /* =========================
-       SECTION
+       SECTION INTRO
     ========================= */
 
     .section-intro {
       text-align: center;
+
       margin-bottom: 35px;
     }
+
 
     .section-intro small {
       color: var(--gold);
 
       font-size: 0.7rem;
+
       font-weight: 700;
 
       letter-spacing: 2.5px;
+
       text-transform: uppercase;
     }
+
 
     .section-intro h2 {
       font-family:
@@ -265,12 +327,14 @@
         "Times New Roman",
         serif;
 
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size:
+        clamp(2rem, 4vw, 3rem);
 
       font-weight: 500;
 
       margin-top: 10px;
     }
+
 
     /* =========================
        CARDS
@@ -287,8 +351,10 @@
       padding-bottom: 100px;
     }
 
+
     .card {
       position: relative;
+
       overflow: hidden;
 
       background:
@@ -298,7 +364,8 @@
           rgba(255,255,255,0.015)
         );
 
-      border: 1px solid var(--white-border);
+      border:
+        1px solid var(--white-border);
 
       border-radius: 26px;
 
@@ -314,15 +381,18 @@
         box-shadow .4s ease;
     }
 
+
     .card::before {
       content: "";
 
       position: absolute;
 
       width: 180px;
+
       height: 180px;
 
       top: -100px;
+
       right: -80px;
 
       background:
@@ -335,6 +405,7 @@
       pointer-events: none;
     }
 
+
     .card:hover {
       transform: translateY(-8px);
 
@@ -345,16 +416,19 @@
         0 35px 100px rgba(0,0,0,0.55);
     }
 
+
     .card-number {
       color: var(--gold);
 
       font-size: 0.68rem;
+
       font-weight: 800;
 
       letter-spacing: 2.5px;
 
       margin-bottom: 22px;
     }
+
 
     .card h3 {
       font-family:
@@ -371,6 +445,7 @@
       margin-bottom: 16px;
     }
 
+
     .card p {
       color: var(--muted);
 
@@ -381,8 +456,9 @@
       margin-bottom: 28px;
     }
 
+
     /* =========================
-       FEATURED
+       FEATURED CARD
     ========================= */
 
     .featured {
@@ -402,6 +478,7 @@
         rgba(214,179,106,0.25);
     }
 
+
     .featured h3 {
       font-size:
         clamp(2rem, 4vw, 3rem);
@@ -409,10 +486,13 @@
       max-width: 760px;
     }
 
+
     .featured p {
       max-width: 760px;
+
       font-size: 1rem;
     }
+
 
     /* =========================
        BUTTON
@@ -422,6 +502,7 @@
       display: inline-flex;
 
       align-items: center;
+
       justify-content: center;
 
       gap: 12px;
@@ -456,6 +537,7 @@
         filter .3s ease;
     }
 
+
     .button::after {
       content: "→";
 
@@ -464,6 +546,7 @@
       transition:
         transform .3s ease;
     }
+
 
     .button:hover {
       transform: translateY(-3px);
@@ -474,9 +557,11 @@
         0 15px 40px rgba(214,179,106,0.28);
     }
 
+
     .button:hover::after {
       transform: translateX(5px);
     }
+
 
     /* =========================
        TRUST
@@ -487,6 +572,7 @@
 
       padding: 0 0 85px;
     }
+
 
     .trust-line {
       width: min(700px, 90%);
@@ -504,6 +590,7 @@
         );
     }
 
+
     .trust p {
       color: #858895;
 
@@ -511,6 +598,7 @@
 
       letter-spacing: 1px;
     }
+
 
     /* =========================
        FOOTER
@@ -525,6 +613,7 @@
       text-align: center;
     }
 
+
     footer p {
       color: #777b88;
 
@@ -532,6 +621,7 @@
 
       margin-bottom: 10px;
     }
+
 
     .affiliate {
       max-width: 720px;
@@ -545,6 +635,7 @@
       line-height: 1.7;
     }
 
+
     /* =========================
        MOBILE
     ========================= */
@@ -555,83 +646,79 @@
         padding: 22px 0;
       }
 
+
       .nav-label {
         display: none;
       }
+
 
       .hero {
         padding: 75px 0 65px;
       }
 
+
       .hero h1 {
         letter-spacing: -2.5px;
       }
+
 
       .hero p {
         font-size: 0.98rem;
       }
 
+
       .opportunities {
         grid-template-columns: 1fr;
       }
 
+
       .featured {
         grid-column: span 1;
+
         padding: 32px;
       }
+
 
       .card {
         padding: 30px;
       }
 
+
       .card h3 {
         font-size: 1.6rem;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-<!-- ==================================================
-     CENTRALIZED AFFILIATE LINK
-     HANYA UBAH URL DI SINI JIKA SUATU SAAT BERUBAH
-================================================== -->
-
-<script>
-  const SPARKAI_AFFILIATE_LINK =
-    "https://starspark.ai/?via=Nara";
-
-  function openSparkAI() {
-    window.open(
-      SPARKAI_AFFILIATE_LINK,
-      "_blank",
-      "noopener,noreferrer"
-    );
-  }
-</script>
-
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
+
   <div class="container nav">
 
     <div class="brand">
       Nara<span>.</span>
     </div>
 
+
     <div class="nav-label">
       Digital Intelligence • Innovation • Possibility
     </div>
 
   </div>
+
 </header>
 
 
+
 <main>
+
 
   <!-- =========================
        HERO
@@ -643,10 +730,12 @@
       The Future Is More Intelligent
     </div>
 
+
     <h1>
       Discover What
       <span>AI Can Unlock.</span>
     </h1>
+
 
     <p>
       Welcome to Nara — a space created for curious minds,
@@ -656,9 +745,11 @@
       when the right tools meet the right idea.
     </p>
 
+
     <div class="hero-line"></div>
 
   </section>
+
 
 
   <!-- =========================
@@ -667,11 +758,13 @@
 
   <section class="container">
 
+
     <div class="section-intro">
 
       <small>
         Curated By Nara
       </small>
+
 
       <h2>
         Explore the Possibilities
@@ -680,12 +773,13 @@
     </div>
 
 
+
     <div class="opportunities">
 
 
-      <!-- =====================
-           BUTTON 01
-      ====================== -->
+      <!-- =========================
+           01
+      ========================= -->
 
       <article class="card featured">
 
@@ -693,9 +787,11 @@
           01 — INTELLIGENT DISCOVERY
         </div>
 
+
         <h3>
           Step Into a Smarter Digital Experience
         </h3>
+
 
         <p>
           Artificial intelligence is changing the way we create,
@@ -704,10 +800,12 @@
           new ways of thinking and unlock more from your ideas.
         </p>
 
+
+        <!-- AFFILIATE LINK 01 -->
+
         <a
           class="button"
           href="https://starspark.ai/?via=Nara"
-          onclick="openSparkAI(); return false;"
           target="_blank"
           rel="noopener noreferrer sponsored"
         >
@@ -717,9 +815,10 @@
       </article>
 
 
-      <!-- =====================
-           BUTTON 02
-      ====================== -->
+
+      <!-- =========================
+           02
+      ========================= -->
 
       <article class="card">
 
@@ -727,9 +826,11 @@
           02 — NEXT-LEVEL CREATIVITY
         </div>
 
+
         <h3>
           Turn Ideas Into New Possibilities
         </h3>
+
 
         <p>
           Your next great idea may already be waiting.
@@ -737,22 +838,25 @@
           transform curiosity into creativity and possibility.
         </p>
 
+
+        <!-- AFFILIATE LINK 02 -->
+
         <a
           class="button"
           href="https://starspark.ai/?via=Nara"
-          onclick="openSparkAI(); return false;"
           target="_blank"
           rel="noopener noreferrer sponsored"
         >
-          Explore AI Possibilities
+          Explore the Experience
         </a>
 
       </article>
 
 
-      <!-- =====================
-           BUTTON 03
-      ====================== -->
+
+      <!-- =========================
+           03
+      ========================= -->
 
       <article class="card">
 
@@ -760,9 +864,11 @@
           03 — INTELLIGENT ADVANTAGE
         </div>
 
+
         <h3>
           Give Your Digital Journey an Edge
         </h3>
+
 
         <p>
           Technology becomes more meaningful when it works
@@ -771,22 +877,25 @@
           your digital world.
         </p>
 
+
+        <!-- AFFILIATE LINK 03 -->
+
         <a
           class="button"
           href="https://starspark.ai/?via=Nara"
-          onclick="openSparkAI(); return false;"
           target="_blank"
           rel="noopener noreferrer sponsored"
         >
-          Unlock New Possibilities
+          See the Possibilities
         </a>
 
       </article>
 
 
-      <!-- =====================
-           BUTTON 04
-      ====================== -->
+
+      <!-- =========================
+           04
+      ========================= -->
 
       <article class="card">
 
@@ -794,9 +903,11 @@
           04 — FUTURE READY
         </div>
 
+
         <h3>
           Explore the Technology Shaping Tomorrow
         </h3>
+
 
         <p>
           The future belongs to those who stay curious.
@@ -804,22 +915,25 @@
           discover how AI is creating entirely new possibilities.
         </p>
 
+
+        <!-- AFFILIATE LINK 04 -->
+
         <a
           class="button"
           href="https://starspark.ai/?via=Nara"
-          onclick="openSparkAI(); return false;"
           target="_blank"
           rel="noopener noreferrer sponsored"
         >
-          Step Into the Future
+          Enter the Future
         </a>
 
       </article>
 
 
-      <!-- =====================
-           BUTTON 05
-      ====================== -->
+
+      <!-- =========================
+           05
+      ========================= -->
 
       <article class="card">
 
@@ -827,9 +941,11 @@
           05 — YOUR NEXT MOVE
         </div>
 
+
         <h3>
           Sometimes One Discovery Changes Everything
         </h3>
+
 
         <p>
           Every journey begins with curiosity.
@@ -838,30 +954,35 @@
           your next digital step could lead.
         </p>
 
+
+        <!-- AFFILIATE LINK 05 -->
+
         <a
           class="button"
           href="https://starspark.ai/?via=Nara"
-          onclick="openSparkAI(); return false;"
           target="_blank"
           rel="noopener noreferrer sponsored"
         >
-          Start Your AI Journey
+          Take Your Next Step
         </a>
 
       </article>
+
 
     </div>
 
   </section>
 
 
+
   <!-- =========================
-       TRUST
+       TRUST STRIP
   ========================= -->
 
   <section class="trust">
 
     <div class="trust-line"></div>
+
 
     <p>
       EXPLORE • DISCOVER • CREATE • EVOLVE
@@ -869,7 +990,9 @@
 
   </section>
 
+
 </main>
+
 
 
 <!-- =========================
@@ -884,6 +1007,7 @@
       © 2026 Nara. All rights reserved.
     </p>
 
+
     <p class="affiliate">
       Disclosure: Some links on this page are affiliate links.
       If you choose to make a purchase through them, Nara may
@@ -893,6 +1017,7 @@
   </div>
 
 </footer>
+
 
 </body>
 </html>
