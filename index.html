@@ -1,1 +1,192 @@
 
+
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <div>
+          <div class="brand-name">NARA DIGITAL</div>
+          <div class="brand-tag">AI · Technology · Human Creativity</div>
+        </div>
+      </div>
+      <div class="nav-note">TECHNOLOGY FOR EVERYONE</div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <img
+            class="hero-art"
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=85"
+            alt="Artificial intelligence and digital technology"
+          >
+
+          <div class="eyebrow">WELCOME TO NARA DIGITAL</div>
+          <h1>The Future Is Not Just for the Few. <span>It's for Everyone.</span></h1>
+
+          <p class="lead">
+            Discover how artificial intelligence and technology can help
+            everyone learn, create, and explore new possibilities.
+            Wherever you are and whatever you do, the future is yours too.
+          </p>
+
+          <a class="button"
+             href="https://www.starspark.ai/?via=Nara"
+             target="_blank"
+             rel="noopener noreferrer sponsored">
+            Explore AI with Starspark ↗
+          </a>
+
+          <p class="small-note">
+            Discover new possibilities with AI. Start exploring today.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <div class="section-label">OUR VISION</div>
+        <h2>Technology should open doors, not build walls.</h2>
+        <p class="section-copy">
+          Nara Digital makes AI and technology easier to understand.
+          We believe creativity, knowledge, and innovation should be
+          accessible to everyone—not only experts or people with technical
+          backgrounds.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">✦</div>
+            <h3>Learn</h3>
+            <p>
+              Explore AI concepts and discover practical ways to use
+              technology in everyday life.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">◎</div>
+            <h3>Explore</h3>
+            <p>
+              Discover digital tools, fresh ideas, and opportunities
+              that can help you move forward.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">↗</div>
+            <h3>Create</h3>
+            <p>
+              Turn your imagination into something useful with creativity
+              and the help of AI.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-section" id="support">
+      <div class="container">
+        <div class="support-panel">
+          <div class="section-label">SUPPORT NARA DIGITAL</div>
+          <h2>Help us keep exploring.</h2>
+
+          <p class="section-copy">
+            If you find our work useful and want to support independent
+            digital creativity, you can contribute using one of the
+            wallet addresses below. Support is entirely optional.
+          </p>
+
+          <div class="wallet">
+            <div class="wallet-head">
+              <h3>Bitcoin (BTC)</h3>
+              <span class="network">BITCOIN NETWORK</span>
+            </div>
+
+            <span class="address" id="btc-address">166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ</span>
+
+            <button class="copy-btn" onclick="copyAddress('btc-address', this)">
+              Copy BTC Address
+            </button>
+          </div>
+
+          <div class="wallet">
+            <div class="wallet-head">
+              <h3>USDT</h3>
+              <span class="network">TRC20 NETWORK</span>
+            </div>
+
+            <span class="address" id="usdt-address">TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb</span>
+
+            <button class="copy-btn" onclick="copyAddress('usdt-address', this)">
+              Copy USDT Address
+            </button>
+          </div>
+
+          <p class="warning">
+            Important: Always verify the wallet address and network before
+            sending. Cryptocurrency transactions are generally irreversible.
+            Only send the supported asset on the correct network.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="section-label">YOUR NEXT DISCOVERY</div>
+        <h2>Curious about what AI can do?</h2>
+        <p>
+          Take the next step and explore an AI platform that may help
+          you learn, create, and work in new ways.
+        </p>
+
+        <a class="button"
+           href="https://www.starspark.ai/?via=Nara"
+           target="_blank"
+           rel="noopener noreferrer sponsored">
+          Explore Starspark ↗
+        </a>
+
+        <p class="small-note">
+          Disclosure: Nara Digital may receive a commission if you sign
+          up through our affiliate link, where applicable.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Nara Digital. AI · Technology · Human Creativity.
+      <br>
+      Made for a future where technology is for everyone.
+    </div>
+  </footer>
+
+  <script>
+    async function copyAddress(id, button) {
+      const address = document.getElementById(id).textContent.trim();
+      const originalText = button.textContent;
+
+      try {
+        await navigator.clipboard.writeText(address);
+        button.textContent = "Copied!";
+      } catch (error) {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(document.getElementById(id));
+        selection.removeAllRanges();
+        selection.addRange(range);
+        button.textContent = "Select and copy";
+      }
+
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
