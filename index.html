@@ -1,86 +1,159 @@
-
-
-      <div class="brand">
-        <div class="brand-mark">N</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>Nara Digital — AI for Everyone</title>
+  <meta name="description" content="Explore AI, technology, and human creativity with Nara Digital. Discover new possibilities and support independent digital creativity.">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #111a2b;
+      --mint: #98e8d5;
+      --white: #f7f8ff;
+      --muted: #bfc9dc;
+      --line: rgba(255,255,255,.11);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--white);
+      font-family: Arial, Helvetica, sans-serif; line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1100px, calc(100% - 36px)); margin: 0 auto; }
+    header { padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 13px; }
+    .brand-mark {
+      width: 48px; height: 48px; display: grid; place-items: center;
+      border-radius: 14px; background: var(--mint); color: var(--bg);
+      font-size: 27px; font-weight: 800;
+    }
+    .brand-name { font-size: clamp(19px, 3.5vw, 27px); font-weight: 800; letter-spacing: 1.4px; line-height: 1.25; }
+    .brand-tag { color: var(--muted); font-size: 12px; }
+    .nav-note { color: var(--mint); font-size: 11px; letter-spacing: 2px; font-weight: 700; }
+    .hero { padding: 35px 0 75px; }
+    .hero-card {
+      padding: clamp(18px, 4vw, 36px); border-radius: 26px;
+      border: 1px solid var(--line); background:
+        radial-gradient(ellipse at 90% 10%, rgba(50,135,190,.18), transparent 42%),
+        #101727;
+      box-shadow: 0 24px 70px rgba(0,0,0,.2);
+    }
+    .hero-art {
+      width: 100%; display: block; aspect-ratio: 16 / 7; object-fit: cover;
+      border-radius: 17px; margin-bottom: 30px;
+      background: #16243b;
+    }
+    .eyebrow, .section-label {
+      color: var(--mint); font-size: 11px; font-weight: 800;
+      letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;
+    }
+    h1 { font-size: clamp(38px, 7vw, 72px); line-height: 1.1; letter-spacing: -2px; margin-bottom: 24px; max-width: 900px; }
+    h1 span { color: var(--mint); }
+    .lead { color: #d0d8e8; max-width: 760px; font-size: clamp(16px, 2.3vw, 21px); margin-bottom: 30px; }
+    .button {
+      min-height: 58px; display: inline-flex; justify-content: center; align-items: center;
+      gap: 12px; padding: 15px 23px; border-radius: 10px;
+      background: var(--mint); color: #101727; font-weight: 800; text-align: center;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: #b8f7e9; }
+    .button.secondary { background: transparent; color: var(--mint); border: 1px solid rgba(152,232,213,.45); }
+    .small-note { color: #9eabc2; font-size: 12px; margin-top: 17px; }
+    section.content { padding: 70px 0; }
+    h2 { font-size: clamp(30px, 5vw, 47px); line-height: 1.2; margin-bottom: 18px; letter-spacing: -1px; }
+    .section-copy { max-width: 720px; color: var(--muted); font-size: 16px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+    .card { border: 1px solid var(--line); border-radius: 15px; padding: 25px; background: rgba(255,255,255,.025); }
+    .card-icon { color: var(--mint); font-size: 25px; margin-bottom: 12px; }
+    .card h3 { font-size: 19px; margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 14px; }
+    .support-section { background: var(--panel); padding: 72px 0; }
+    .support-panel { border: 1px solid rgba(152,232,213,.22); border-radius: 22px; padding: clamp(22px, 4vw, 38px); background: radial-gradient(ellipse at 100% 0%, rgba(152,232,213,.08), transparent 48%); }
+    .wallet { margin-top: 22px; padding: 19px; border: 1px solid var(--line); border-radius: 13px; background: rgba(0,0,0,.15); }
+    .wallet-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .wallet-head h3 { font-size: 17px; }
+    .network { color: var(--mint); font-size: 11px; letter-spacing: 1px; font-weight: 800; }
+    .address { overflow-wrap: anywhere; color: #e1e7f3; font-size: 13px; margin: 8px 0 14px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .copy-btn { border: 1px solid rgba(152,232,213,.45); border-radius: 8px; padding: 9px 13px; background: transparent; color: var(--mint); cursor: pointer; font-weight: 700; font-size: 13px; }
+    .copy-btn:hover { background: rgba(152,232,213,.08); }
+    .warning { color: #aab6ca; font-size: 12px; margin-top: 16px; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: #9da9bf; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 720px) {
+      .hero { padding: 20px 0 52px; }
+      .hero-art { aspect-ratio: 16 / 9; margin-bottom: 23px; }
+      h1 { letter-spacing: -1.1px; }
+      .cards { grid-template-columns: 1fr; }
+      section.content, .support-section { padding: 55px 0; }
+      .button { width: 100%; }
+      .nav-note { font-size: 9px; letter-spacing: 1px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Nara Digital home">
+        <div class="brand-mark">✧</div>
         <div>
           <div class="brand-name">NARA DIGITAL</div>
           <div class="brand-tag">AI · Technology · Human Creativity</div>
         </div>
-      </div>
-      <div class="nav-note">TECHNOLOGY FOR EVERYONE</div>
+      </a>
+      <div class="nav-note">AI FOR EVERYONE</div>
     </div>
   </header>
 
-  <main id="home">
+  <main id="top">
     <section class="hero">
       <div class="container">
         <div class="hero-card">
-          <img
-            class="hero-art"
+          <img class="hero-art"
             src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=85"
-            alt="Artificial intelligence and digital technology"
-          >
-
-          <div class="eyebrow">WELCOME TO NARA DIGITAL</div>
+            alt="Abstract artificial intelligence technology"
+            loading="eager">
+          <p class="eyebrow">A world of possibilities</p>
           <h1>The Future Is Not Just for the Few. <span>It's for Everyone.</span></h1>
-
           <p class="lead">
-            Discover how artificial intelligence and technology can help
-            everyone learn, create, and explore new possibilities.
-            Wherever you are and whatever you do, the future is yours too.
+            Discover how AI and technology can help you think bigger, create more,
+            and unlock new possibilities—wherever you are.
           </p>
-
-          <a class="button"
-             href="https://www.starspark.ai/?via=Nara"
-             target="_blank"
-             rel="noopener noreferrer sponsored">
-            Explore AI with Starspark ↗
+          <a class="button" href="https://www.starspark.ai/?via=Nara" target="_blank" rel="noopener noreferrer sponsored">
+            EXPLORE STARSPARK <span aria-hidden="true">↗</span>
           </a>
-
-          <p class="small-note">
-            Discover new possibilities with AI. Start exploring today.
-          </p>
+          <p class="small-note">Explore an AI learning tool and see whether it fits your needs.</p>
         </div>
       </div>
     </section>
 
     <section class="content">
       <div class="container">
-        <div class="section-label">OUR VISION</div>
+        <p class="section-label">Our perspective</p>
         <h2>Technology should open doors, not build walls.</h2>
         <p class="section-copy">
-          Nara Digital makes AI and technology easier to understand.
-          We believe creativity, knowledge, and innovation should be
-          accessible to everyone—not only experts or people with technical
-          backgrounds.
+          Wherever you come from or whatever you do, you deserve the opportunity
+          to explore what AI can make possible. Start with curiosity, learn at your
+          own pace, and discover your next step.
         </p>
-
         <div class="cards">
           <article class="card">
-            <div class="card-icon">✦</div>
+            <div class="card-icon" aria-hidden="true">✦</div>
             <h3>Learn</h3>
-            <p>
-              Explore AI concepts and discover practical ways to use
-              technology in everyday life.
-            </p>
+            <p>Discover new ideas and explore how AI may support your learning journey.</p>
           </article>
-
           <article class="card">
-            <div class="card-icon">◎</div>
+            <div class="card-icon" aria-hidden="true">◎</div>
             <h3>Explore</h3>
-            <p>
-              Discover digital tools, fresh ideas, and opportunities
-              that can help you move forward.
-            </p>
+            <p>Ask better questions, find fresh perspectives, and imagine new possibilities.</p>
           </article>
-
           <article class="card">
-            <div class="card-icon">↗</div>
+            <div class="card-icon" aria-hidden="true">↗</div>
             <h3>Create</h3>
-            <p>
-              Turn your imagination into something useful with creativity
-              and the help of AI.
-            </p>
+            <p>Turn curiosity into action and build something meaningful, one step at a time.</p>
           </article>
         </div>
       </div>
@@ -89,104 +162,88 @@
     <section class="support-section" id="support">
       <div class="container">
         <div class="support-panel">
-          <div class="section-label">SUPPORT NARA DIGITAL</div>
-          <h2>Help us keep exploring.</h2>
-
+          <p class="section-label">Support independent creativity</p>
+          <h2>Help Nara keep exploring.</h2>
           <p class="section-copy">
-            If you find our work useful and want to support independent
-            digital creativity, you can contribute using one of the
-            wallet addresses below. Support is entirely optional.
+            If you enjoy this project, you can support Nara Digital with a voluntary
+            cryptocurrency contribution. Every contribution is appreciated.
           </p>
 
           <div class="wallet">
             <div class="wallet-head">
-              <h3>Bitcoin (BTC)</h3>
-              <span class="network">BITCOIN NETWORK</span>
+              <h3>Bitcoin</h3>
+              <span class="network">BTC · BITCOIN NETWORK</span>
             </div>
-
-            <span class="address" id="btc-address">166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ</span>
-
-            <button class="copy-btn" onclick="copyAddress('btc-address', this)">
-              Copy BTC Address
-            </button>
+            <p class="address" id="btc-address">166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ</p>
+            <button class="copy-btn" type="button" data-copy="btc-address">Copy BTC address</button>
           </div>
 
           <div class="wallet">
             <div class="wallet-head">
-              <h3>USDT</h3>
-              <span class="network">TRC20 NETWORK</span>
+              <h3>Tether</h3>
+              <span class="network">USDT · TRC20</span>
             </div>
-
-            <span class="address" id="usdt-address">TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb</span>
-
-            <button class="copy-btn" onclick="copyAddress('usdt-address', this)">
-              Copy USDT Address
-            </button>
+            <p class="address" id="usdt-address">TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb</p>
+            <button class="copy-btn" type="button" data-copy="usdt-address">Copy USDT address</button>
           </div>
 
           <p class="warning">
-            Important: Always verify the wallet address and network before
-            sending. Cryptocurrency transactions are generally irreversible.
-            Only send the supported asset on the correct network.
+            Please double-check the wallet address and network before sending.
+            Only send USDT using the TRON (TRC20) network to the USDT address above.
+            Cryptocurrency transfers are generally irreversible.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="final-cta">
+    <section class="content">
       <div class="container">
-        <div class="section-label">YOUR NEXT DISCOVERY</div>
-        <h2>Curious about what AI can do?</h2>
-        <p>
-          Take the next step and explore an AI platform that may help
-          you learn, create, and work in new ways.
+        <p class="section-label">Take your next step</p>
+        <h2>Curiosity is a powerful place to start.</h2>
+        <p class="section-copy">
+          Explore Starspark to learn more about the AI tools it offers and decide
+          whether they are right for you.
         </p>
-
-        <a class="button"
-           href="https://www.starspark.ai/?via=Nara"
-           target="_blank"
-           rel="noopener noreferrer sponsored">
-          Explore Starspark ↗
-        </a>
-
+        <div style="margin-top: 26px;">
+          <a class="button" href="https://www.starspark.ai/?via=Nara" target="_blank" rel="noopener noreferrer sponsored">
+            DISCOVER STARSPARK <span aria-hidden="true">↗</span>
+          </a>
+        </div>
         <p class="small-note">
-          Disclosure: Nara Digital may receive a commission if you sign
-          up through our affiliate link, where applicable.
+          Affiliate disclosure: Nara Digital may earn a commission from qualifying
+          activity through this referral link, at no extra cost to you.
         </p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 Nara Digital. AI · Technology · Human Creativity.
-      <br>
-      Made for a future where technology is for everyone.
+    <div class="container footer-inner">
+      <p>© 2026 Nara Digital. All rights reserved.</p>
+      <p>Curiosity today. Possibilities tomorrow.</p>
     </div>
   </footer>
 
   <script>
-    async function copyAddress(id, button) {
-      const address = document.getElementById(id).textContent.trim();
-      const originalText = button.textContent;
-
-      try {
-        await navigator.clipboard.writeText(address);
-        button.textContent = "Copied!";
-      } catch (error) {
-        const selection = window.getSelection();
-        const range = document.createRange();
-        range.selectNodeContents(document.getElementById(id));
-        selection.removeAllRanges();
-        selection.addRange(range);
-        button.textContent = "Select and copy";
-      }
-
-      setTimeout(() => {
-        button.textContent = originalText;
-      }, 2000);
-    }
+    document.querySelectorAll("[data-copy]").forEach(function(button) {
+      button.addEventListener("click", async function() {
+        const target = document.getElementById(button.dataset.copy);
+        const address = target.textContent.trim();
+        try {
+          await navigator.clipboard.writeText(address);
+          const original = button.textContent;
+          button.textContent = "Copied!";
+          setTimeout(function() { button.textContent = original; }, 1800);
+        } catch (error) {
+          const range = document.createRange();
+          range.selectNodeContents(target);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          button.textContent = "Select and copy address";
+        }
+      });
+    });
   </script>
-
 </body>
 </html>
