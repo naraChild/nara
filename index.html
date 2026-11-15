@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#08111f">
-  <meta name="description" content="Nara Digital explores AI, technology, and human creativity for everyone.">
+  <meta name="description" content="Nara Digital explores AI, technology, education, and human creativity.">
   <title>Nara Digital — AI, Technology & Human Creativity</title>
 
   <style>
@@ -17,13 +18,9 @@
       --border: rgba(255,255,255,.12);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -33,9 +30,7 @@
       line-height: 1.65;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
 
     .container {
       width: min(1080px, 92%);
@@ -60,7 +55,7 @@
     }
 
     .hero {
-      padding: 72px 0 56px;
+      padding: 65px 0 45px;
       text-align: center;
     }
 
@@ -92,58 +87,12 @@
 
     .hero p {
       max-width: 720px;
-      margin: 0 auto 26px;
+      margin: 0 auto;
       color: var(--muted);
       font-size: 1.1rem;
     }
 
-    .button {
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 13px 22px;
-      border-radius: 999px;
-      background: var(--mint);
-      color: #06151a;
-      margin: 6px;
-      transition: transform .2s ease, opacity .2s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      opacity: .92;
-    }
-
-    .button.secondary
-       .hero-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      margin-top: 26px;
-    }
-
-    .hero-link-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 500px;
-      width: 100%;
-    }
-
-    .hero-link-item p {
-      font-size: .95rem;
-      margin: 3px auto 14px;
-      color: var(--muted);
-    } {
-      background: transparent;
-      border: 1px solid var(--mint);
-      color: var(--mint);
-    }
-
-    section {
-      padding: 34px 0 54px;
-    }
+    section { padding: 38px 0 48px; }
 
     h2 {
       font-size: clamp(1.6rem, 3vw, 2.3rem);
@@ -159,24 +108,59 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      gap: 20px;
     }
 
     .card {
       background: rgba(16,29,46,.92);
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 24px;
+      padding: 27px;
     }
 
     .card h3 {
       margin: 0 0 10px;
       color: var(--mint);
+      font-size: 1.4rem;
     }
 
     .card p {
       color: var(--muted);
-      margin: 0 0 16px;
+      margin: 0 0 20px;
+    }
+
+    .card-tagline {
+      color: var(--text) !important;
+      font-weight: 700;
+      margin-bottom: 10px !important;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 700;
+      padding: 13px 22px;
+      border-radius: 999px;
+      background: var(--mint);
+      color: #06151a;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: .92;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--mint);
+      color: var(--mint);
+    }
+
+    .affiliate-button {
+      width: 100%;
+      margin-top: 5px;
     }
 
     .wallet {
@@ -221,12 +205,22 @@
       margin-top: 0;
     }
 
-    .disclaimer ul {
-      padding-left: 22px;
+    .disclaimer ul { padding-left: 22px; }
+
+    .disclaimer li { margin: 10px 0; }
+
+    details summary {
+      color: var(--mint);
+      cursor: pointer;
+      font-weight: 700;
+      margin-top: 12px;
     }
 
-    .disclaimer li {
-      margin: 10px 0;
+    details summary:hover { opacity: .85; }
+
+    .small {
+      font-size: .85rem;
+      color: var(--muted);
     }
 
     footer {
@@ -238,29 +232,17 @@
       font-size: .9rem;
     }
 
-    .small {
-      font-size: .85rem;
-      color: var(--muted);
-    }
-
     @media (max-width: 650px) {
-      .hero {
-        padding-top: 42px;
-      }
+      .hero { padding-top: 42px; }
 
       .hero-image {
         height: 190px;
         border-radius: 15px;
       }
 
-      .grid {
-        grid-template-columns: 1fr;
-      }
+      .grid { grid-template-columns: 1fr; }
 
-      .card,
-      .disclaimer {
-        padding: 19px;
-      }
+      .card, .disclaimer { padding: 20px; }
     }
   </style>
 </head>
@@ -291,64 +273,77 @@
       <p>
         Nara Digital explores artificial intelligence, emerging
         technology, and human creativity—making tomorrow's ideas
-        feel more accessible to everyone, everywhere.
+        more accessible to everyone, everywhere.
       </p>
-
-      <a
-        class="button"
-        href="https://www.starspark.ai/?via=Nara"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Explore Starspark AI</a>
-
-      <a class="button secondary" href="#support">
-        Support Nara Digital
-      </a>
 
     </section>
 
-    <section class="container">
+    <!-- AFFILIATE SERVICES -->
 
-      <h2>Explore the possibilities</h2>
+    <section class="container" id="explore">
+
+      <div class="eyebrow">Discover AI tools</div>
+
+      <h2>Explore AI Possibilities</h2>
 
       <p class="section-intro">
-        Technology is not limited by age, profession, or background.
-        Learn, experiment, and imagine what you can create with AI.
+        Discover tools that can help you learn, create,
+        and explore new possibilities with artificial intelligence.
       </p>
 
       <div class="grid">
 
         <article class="card">
-          <h3>AI for Everyone</h3>
+
+          <h3>Starspark AI</h3>
+
+          <p class="card-tagline">
+            A Smarter Way to Learn.
+          </p>
 
           <p>
-            Discover approachable ways to use AI for learning,
-            creativity, and everyday problem-solving.
+            Discover AI-powered learning tools designed to make
+            education more accessible. Explore math learning,
+            homework support, and new ways to develop your knowledge.
           </p>
 
           <a
-            class="button secondary"
+            class="button affiliate-button"
             href="https://www.starspark.ai/?via=Nara"
             target="_blank"
             rel="noopener noreferrer"
-          >Explore AI</a>
+          >EXPLORE FOR FREE</a>
+
         </article>
 
         <article class="card">
-          <h3>Human Creativity</h3>
 
-          <p>
-            Technology can help us explore new ideas, but curiosity,
-            imagination, and human judgment still matter.
+          <h3>AITuber</h3>
+
+          <p class="card-tagline">
+            Turn Your Ideas into Videos.
           </p>
 
-          <a class="button secondary" href="#support">
-            Support independent projects
-          </a>
+          <p>
+            Explore AI-powered virtual characters and creative
+            digital content. Discover new possibilities for
+            making engaging videos and expressing your ideas.
+          </p>
+
+          <a
+            class="button affiliate-button"
+            href="https://www.aituber.app/?atp=nara"
+            target="_blank"
+            rel="noopener noreferrer"
+          >TRY FOR FREE</a>
+
         </article>
 
       </div>
+
     </section>
+
+    <!-- SUPPORT NARA -->
 
     <section id="support" class="container">
 
@@ -363,46 +358,56 @@
       <div class="grid">
 
         <article class="card">
+
           <h3>Bitcoin (BTC)</h3>
 
           <p class="small">
             Check the address carefully before sending.
           </p>
 
-          <div class="wallet" id="btc-address">166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ</div>
+          <div class="wallet" id="btc-address">
+            166RpR6Ss4HqP3rj3881sb3qsCYKmVqzEZ
+          </div>
 
           <button
             class="copy-button"
             type="button"
             data-copy="btc-address"
-          >Copy BTC address</button>
+          >Copy BTC Address</button>
+
         </article>
 
         <article class="card">
+
           <h3>Tether (USDT) — TRC20</h3>
 
           <p class="small">
             Use the TRON (TRC20) network only for this address.
           </p>
 
-          <div class="wallet" id="usdt-address">TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb</div>
+          <div class="wallet" id="usdt-address">
+            TXR7ayfsm4dQWXLGkJCb1RQ4HAcVjxGxNb
+          </div>
 
           <button
             class="copy-button"
             type="button"
             data-copy="usdt-address"
-          >Copy USDT address</button>
+          >Copy USDT Address</button>
+
         </article>
 
       </div>
 
       <p class="notice" style="margin-top:20px">
         Please verify the wallet address and blockchain network
-        independently before making a transfer. Cryptocurrency
-        transfers are generally irreversible.
+        independently before sending. Cryptocurrency transfers
+        are generally irreversible.
       </p>
 
     </section>
+
+    <!-- CRYPTOCURRENCY DISCLAIMER -->
 
     <section class="container">
 
@@ -411,73 +416,90 @@
         <h3>Cryptocurrency Contribution Disclaimer</h3>
 
         <p>
-          All contributions to Nara Digital using Bitcoin (BTC) or
-          Tether (USDT) are entirely voluntary and are intended solely
-          to support independent creative and digital projects.
+          Contributions to Nara Digital are entirely voluntary
+          and intended solely to support independent creative
+          and digital projects.
         </p>
 
-        <ul>
-          <li>
-            <strong>No guaranteed profits or benefits:</strong>
-            Nara Digital does not promise or guarantee profits,
-            financial returns, rewards, services, or other benefits
-            in exchange for any contribution.
-          </li>
+        <details>
 
-          <li>
-            <strong>No refunds:</strong>
-            Contributions are final and non-refundable, except where
-            a refund is required by applicable law.
-          </li>
+          <summary>READ MORE</summary>
 
-          <li>
-            <strong>Not an investment:</strong>
-            Contributions are not investments, loans, deposits,
-            or purchases of financial products. No repayment is promised.
-          </li>
+          <div>
 
-          <li>
-            <strong>Transaction risks:</strong>
-            Cryptocurrency values can fluctuate. Blockchain transfers
-            are generally irreversible, and incorrect transactions may
-            result in permanent loss of funds.
-          </li>
+            <ul>
 
-          <li>
-            <strong>USDT network:</strong>
-            Use only the TRON (TRC20) network for the USDT address
-            shown above. Always verify the address and network
-            before sending.
-          </li>
+              <li>
+                <strong>No guaranteed profits or benefits:</strong>
+                Nara Digital does not promise or guarantee profits,
+                financial returns, rewards, services, or other benefits
+                in exchange for any contribution.
+              </li>
 
-          <li>
-            <strong>Your responsibility:</strong>
-            You are responsible for ensuring that your contribution
-            complies with applicable laws and tax obligations.
-          </li>
-        </ul>
+              <li>
+                <strong>No refunds:</strong>
+                Contributions are final and non-refundable, except
+                where a refund is required by applicable law.
+              </li>
 
-        <p>
-          By sending cryptocurrency, you acknowledge that your
-          contribution is voluntary, that no financial gain or
-          repayment is promised, and that you understand the risks
-          of digital asset transfers.
-        </p>
+              <li>
+                <strong>Not an investment:</strong>
+                Contributions are not investments, loans, deposits,
+                or purchases of financial products. No repayment
+                is promised.
+              </li>
 
-        <p>
-          Nara Digital does not provide financial, investment, or tax
-          advice. Nothing on this website should be interpreted as
-          an offer of investment or a promise of financial returns.
-        </p>
+              <li>
+                <strong>Transaction risks:</strong>
+                Cryptocurrency values can fluctuate. Blockchain
+                transfers are generally irreversible, and incorrect
+                transactions may result in permanent loss of funds.
+              </li>
+
+              <li>
+                <strong>USDT network:</strong>
+                Use only the TRON (TRC20) network for the USDT
+                address shown above. Always verify the address
+                and network before sending.
+              </li>
+
+              <li>
+                <strong>Your responsibility:</strong>
+                You are responsible for ensuring that your
+                contribution complies with applicable laws
+                and tax obligations.
+              </li>
+
+            </ul>
+
+            <p>
+              By sending cryptocurrency, you acknowledge that your
+              contribution is voluntary, that no financial gain
+              or repayment is promised, and that you understand
+              the risks of digital asset transfers.
+            </p>
+
+            <p>
+              Nara Digital does not provide financial, investment,
+              or tax advice. Nothing on this website should be
+              interpreted as an offer of investment or a promise
+              of financial returns.
+            </p>
+
+          </div>
+
+        </details>
 
       </div>
 
     </section>
 
+    <!-- AFFILIATE DISCLOSURE -->
+
     <section class="container">
 
       <p class="small">
-        <strong>Affiliate disclosure:</strong>
+        <strong>Affiliate Disclosure:</strong>
         Some links on this website may be referral or affiliate links.
         If you sign up or make a qualifying purchase through them,
         Nara Digital may receive a commission at no additional cost
@@ -489,7 +511,9 @@
   </main>
 
   <footer>
+
     <div class="container">
+
       <div>
         <strong>NARA DIGITAL</strong> —
         AI · Technology · Human Creativity
@@ -498,7 +522,9 @@
       <div class="small">
         Created to make technology feel more accessible to everyone.
       </div>
+
     </div>
+
   </footer>
 
   <script>
@@ -515,6 +541,7 @@
         if (!address) return;
 
         try {
+
           await navigator.clipboard.writeText(address);
 
           var originalText = button.textContent;
@@ -525,7 +552,9 @@
           }, 1800);
 
         } catch (error) {
+
           window.prompt("Copy this wallet address:", address);
+
         }
 
       });
